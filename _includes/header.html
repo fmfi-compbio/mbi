@@ -1,0 +1,24 @@
+ <nav class="navbar navbar-light bg-light  navbar-expand-lg">
+	<div class="navbar-header">
+  	  <a class="navbar-brand" href="{{ "/" | relative_url }}"><img src="/viz/img/favicon.png" height="50">&nbsp;&nbsp;{{ site.title | escape }}</a>
+	  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	</div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+	  <ul class="navbar-nav  mr-auto mt-2 mt-lg-0">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <li class="nav-item"><a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>            
+            {%- endif -%}
+          {%- endfor -%}
+          <li class="nav-item"><a class="nav-link" href="https://moodle.uniba.sk/course/view.php?id={{ site.moodle }}">Moodle</a></li>
+       </ul>
+	</div>
+</div>
+</nav>        
