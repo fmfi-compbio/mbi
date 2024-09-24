@@ -8,4 +8,4 @@ moodle: 3302
 
 header_pages:
   - index.md
-  
+  - Rules.md  
