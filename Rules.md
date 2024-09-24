@@ -113,7 +113,7 @@ material tested in the written exam.
     consult any questions during tutorials for biologists.
   - The final report will be due during the exam period, followed by a
     short personal meeting with discussion of the project.
-  - Further details on [separate page](./Project.md).
+  - Further details on [separate page](./Project.html).
 
 ## Academic integrity
 
@@ -142,10 +142,6 @@ used in the report. Similarly for project reports.
 
 When cheating or plagiarism is detected, we will normally assign a grade
 of 0 for the relevant part of the work, with a minimum reduction of the
-final grade by one letter. Cheating on the exam will result in the FX
-grade for the exam. Particularly serious violations of academic
-integrity will be referred to the dean of the faculty.
-
-`     `<sha1>`6szvwj0ysdb2y1m4b4uphtnvpqrfwso`</sha1>  
-`     `<model>`wikitext`</model>  
-`     `<format>`text/x-wiki`</format>
+final grade by one grade. Cheating on the exam will result in the FX
+grade for the exam. Serious violations of academic
+integrity will be also referred to the dean of the faculty.
