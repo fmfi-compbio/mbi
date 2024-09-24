@@ -18,7 +18,7 @@ title: Introduction
 <!---
   - [Mgr. Askar Gafurov, PhD.](http://www.dcs.fmph.uniba.sk/~gafurov/)
     M-25
--->
+--->
   - [doc. Mgr. Tomáš Vinař, PhD.](https://compbio.fmph.uniba.sk/~tvinar/) M-163
   - [Mgr. Jana Černíková](https://sluzby.fmph.uniba.sk/ludia/cernikova6)
   - Consultations can be arranged by e-mail
