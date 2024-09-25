@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-1-BIN-301, 2-AIN-501 Methods in Bioinformatics
+**1-BIN-301, 2-AIN-501 Methods in Bioinformatics**
 
 ### Schedule
 

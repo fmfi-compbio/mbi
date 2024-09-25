@@ -95,7 +95,7 @@ Advice and instructions for the written report from the journal club
   - The report should list the members of the group who have actively
     participated in its work. Students who are not on this list will
     receive zero points for the report.
-(% endif %}
+{% endif %}
 
 ## Exam
 
