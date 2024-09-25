@@ -18,7 +18,8 @@ title: Introduction
   - [doc. Mgr. Tomáš Vinař, PhD.](https://compbio.fmph.uniba.sk/~tvinar/)
   - [Mgr. Jana Černíková](https://sluzby.fmph.uniba.sk/ludia/cernikova6)
   - Consultations can be arranged by e-mail
- {% # - [Mgr. Askar Gafurov, PhD.](http://www.dcs.fmph.uniba.sk/~gafurov/) %}
+ {% # - [Mgr. Askar Gafurov, PhD.](http://www.dcs.fmph.uniba.sk/~gafurov/)
+ %}
 
 ### Course objectives
 
