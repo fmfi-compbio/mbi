@@ -34,11 +34,26 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Sept. 26
 
 #### L: Introduction, course rules, sequencing and genome assembly
-pdf, pdf, video 1 video 2, BV chapter 1
+
+{% include pdf.html file="p-intro" name="pdf 1" show=0 dot=1
+%} {% include pdf.html file="p-seq" name="pdf 2" show=0 dot=1
+%} {% include youtube.html id="3HI-wKmTuSs" name="video 1" show=1 dot=1
+%} {% include youtube.html id="iHt5WPVFd7E" name="video 2" show=1 dot=1
+%} BV chapter 1
+
 #### TI: Introduction to biology
-pdf, notes, ZB chapter 1, video
+
+{% include pdf.html file="ci-introbio" name="pdf" show=0 dot=1
+%} {% include notes.html file="ci01" name="notes" show=0 dot=1
+%} {% include youtube.html id="EtPqUOHTJD4" name="video" show=1 dot=1
+%} ZB chapter 1
+
 #### TB: Introduction to computer science, UCSC genome browser
 pdf, notes
+
+{% include pdf.html file="cb-introcs" name="pdf" show=0 dot=1
+%} {% include notes.html file="cb01" name="notes" show=0 dot=0
+%}
 
 <a name="W2"></a>
 ### Oct. 3
