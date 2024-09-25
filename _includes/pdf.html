@@ -1,0 +1,4 @@
+{% if include.show != 0 %}
+  <a href="/mbi/pdf/{{ include.filename }}.pdf">pdf</a>
+  {% if include.dot != 0 %}·{% endif %}
+{% endif %}
