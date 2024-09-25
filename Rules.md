@@ -67,8 +67,7 @@ paper with arbitrary content (handwritten or printed).
 In the circumstances listed below the full written exam may be replaced by a combination of a shorter written exam and an oral exam. This applies to 
 
 * students who do not pass the exam during the first, regular date, and need the second or even the third attempt,
-* ERASMUS students who do not participate in Slovak lectures and tutorials,
-* all students if circumstances force us to do the exams online.
+* ERASMUS students who do not participate in Slovak lectures and tutorials.
 
 On the oral part of the exam, you should be able to explain the theory behind the questions in the written part (terminology, algorithms, what they are used for etc.).
 
@@ -76,12 +75,12 @@ On the oral part of the exam, you should be able to explain the theory behind th
 ## Project
 
   - The project is done by biology students instead of exam.
-  - More details later
   - We recommend starting working on the project during the semester and
     consult any questions during tutorials for biologists.
   - There will be deadlines for proposing the project and presenting intermediate results.
   - The final report will be due during the exam period, followed by a
     short personal meeting with discussion of the project.
+  - More details later.
   {% if false %}
   - Further details on [separate page](./Project.html).
   {% endif %}
