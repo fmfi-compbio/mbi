@@ -5,43 +5,137 @@ title: Materials
 
 ## Literature
 
-  - **BV**: Brejová, Vinař: Metódy v bioinformatike. (preliminary
-    version of lecture notes in Slovak, only several lectures)
-  - **DEKM**: Durbin, Eddy, Krogh, Mitchison: Biological sequence
-    analysis: Probabilistic Models of Proteins and Nucleic Acids.
-    Cambridge University Press 1998. Can be studied in the FMFI library
-    under code I-INF-D-21
-  - **ZB**: Zvelebil, Baum: Understanding Bioinformatics. Taylor &
-    Francis 2008. Can be studied in the FMFI library under code
-    I-INF-Z-2
+- **BV**: Brejová, Vinař: Metódy v bioinformatike. (preliminary
+  version of lecture notes in Slovak, only several lectures)
+- **DEKM**: Durbin, Eddy, Krogh, Mitchison: Biological sequence
+  analysis: Probabilistic Models of Proteins and Nucleic Acids.
+  Cambridge University Press 1998. Can be studied in the FMFI library
+  under code I-INF-D-21
+- **ZB**: Zvelebil, Baum: Understanding Bioinformatics. Taylor &
+  Francis 2008. Can be studied in the FMFI library under code
+  I-INF-Z-2
 
-For each lecture, we list book chapters best corresponding to the
+For each lecture, we list the book chapters best corresponding to the
 covered material. However, the lecture may differ substantially from the
 listed chapters which serve as the source of additional information.
 
 **Recordings of lectures in Slovak from 2018/19**
 
-  - [playlist on
-    youtube](https://www.youtube.com/playlist?list=PLU2XVjShDFwVeTDmo9Uv2NHWz3ijUjy5p)
-
+- [playlist on youtube](https://www.youtube.com/playlist?list=PLU2XVjShDFwVeTDmo9Uv2NHWz3ijUjy5p)
 
 ## Notes and presentations
 
 L: lecture (everybody), TI: tutorial for computer science/informatics students, TB: tutorial for biology/chemistry/physics students 
 
-[Week 1](#W1) [Week 2](#W2)
+[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 <a name="W1"></a>
 ### Sept. 26
 
 #### L: Introduction, course rules, sequencing and genome assembly
-#### TI: Introduction to biology 
+pdf, pdf, video 1 video 2, BV chapter 1
+#### TI: Introduction to biology
+pdf, notes, ZB chapter 1, video
 #### TB: Introduction to computer science, UCSC genome browser
+pdf, notes
 
-<a name="W1"></a>
+<a name="W2"></a>
 ### Oct. 3
 
-#### L: Genome assembly 2 
-#### TI: Introduction to probability, genome coverage by sequencing reads 
+#### L: Genome assembly 2
+pdf, video
+#### TI: Introduction to probability, genome coverage by sequencing reads,
+pdf, notes, colab
 #### TB: Introduction to dynamic programming, introduction to probability
+pdf, notes
 
+<a name="W3"></a>
+### Oct. 10
+
+#### L: Sequence alignment: Smith-Waterman, Needleman-Wunsch, scoring
+pdf, video, BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2
+#### TI: Introduction to dynamic programming, proteomics
+pdf, notes, colab
+#### TB: Dynamic programming for sequence alignment, dotplots
+pdf, notes
+
+<a name="W4"></a>
+### Oct. 17
+
+#### L: Sequence alignment: heuristic alignment (BLAST), statistical significance of alignments, whole genome alignments, multiple alignments 
+pdf, video, BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5
+#### TI: Advanced algorithms for sequence alignment
+notes
+#### TB: Programs for sequence alignment, scoring schemes
+notes
+
+<a name="W5"></a>
+### Oct. 24
+#### L: Gene finding, hidden Markov models
+pdf, video, BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7
+#### TI:  Fast similarity search, BLAST, MinHash
+pdf
+#### TB:  Hidden Markov models, E-value
+pdf, notes
+
+<a name="W6"></a>
+### Oct. 31
+
+<a name="W7"></a>
+### Nov. 7
+#### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
+pdf , BV chapter 3, DEKM chapter 7,8; ZB chapter 7, 8.1-8.2, video
+#### TI:  Algorithms for HMM
+pdf notes
+#### TB:  Substitution models, bootstrap, tree rooting
+pdf, notes
+
+<a name="W8"></a>
+### Nov. 14
+#### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
+pdf, video, BV chapter 5, ZB chapter 9.8, 10.8, 
+#### TI:  Substitution models
+pdf, notes
+#### TB:  Practical phylogenetic trees
+notes
+
+<a name="W9"></a>
+### Nov. 21
+#### L: Protein structure and function
+pdf, video, DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
+#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM  
+#### TB:  Pfam, PSI-blast, Example of command-line tools  
+notes1, notes2
+
+<a name="W10"></a>
+### Nov. 28
+#### L: Gene expression, clustering, classification, regulatory networks, transcription factors, sequence motifs
+pdf, video, DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
+#### TI:  Examples of biological databases, introduction to context-free grammars
+notes
+#### TB:  Introduction to context-free grammars
+notes
+
+<a name="W11"></a>
+### Dec. 5
+#### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
+pdf, DEKM chapter 10, ZB chapter 11.9, SK video
+#### TI:  Motif finding by EM and Gibbs sampling
+pdf 
+#### TB:  K-means clustering, enrichment, multiple testing correction
+pdf pdf notes
+
+<a name="W12"></a>
+### Dec. 12
+#### L: Population genetics
+pdf, video
+#### TI:  RNA structure 
+#### TB:  Course summary, graphs, microarray data, RNA structure, MEME, transcription factors in SGD, population genetics
+pdf, pdf  notes
+
+<a name="W13"></a>
+### Dec. 17
+#### L: Optional journal club presentations
+#### TI:  Protein threading via integer linear programming, course summary  
+#### TB:  Project consultations 
