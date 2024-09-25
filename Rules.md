@@ -35,6 +35,9 @@ computer science students and one for biologists.
 Journal club is a group activity, where each groups studies one
 scientific paper and rewrites it in their own words.
 
+  - More details later
+
+{% if false %}
   - Each student will select from the provided list the three articles
     that are of highest interest to him/her.
   - According to these preferences, instructors will divide the students
@@ -92,6 +95,7 @@ Advice and instructions for the written report from the journal club
   - The report should list the members of the group who have actively
     participated in its work. Students who are not on this list will
     receive zero points for the report.
+(% endif %}
 
 ## Exam
 
@@ -108,12 +112,16 @@ material tested in the written exam.
 
 ## Project
 
+  - The project is done by biology students instead of exam.
+  - More details later
+  {% if false %}
   - Project topic will be chosen during the semester by November 3.
   - We recommend starting working on the project during the semester and
     consult any questions during tutorials for biologists.
   - The final report will be due during the exam period, followed by a
     short personal meeting with discussion of the project.
   - Further details on [separate page](./Project.html).
+  {% endif %}
 
 ## Academic integrity
 

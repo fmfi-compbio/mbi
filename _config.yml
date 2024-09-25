@@ -4,7 +4,7 @@ exclude: [README.md]
 # TODO: zmenit skolsky rok podla potreby
 title: Methods in Bioinformatics 2024/25
 
-moodle: 3302
+moodle: 2160
 
 header_pages:
   - index.md
