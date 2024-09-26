@@ -105,7 +105,6 @@ title: UCSC Genome browser, Quast, Galaxy
     Quast
       - Ako Contigs/scaffolds file zadáme nahratý súbor, ostatné položky
         necháme predvolené, stlačíme Execute
-      - [Predpočítané výsledky](https://usegalaxy.eu/u/brejova/h/quast)
   - Druhá analýza: porovnanie poskladaných kontigov so správnou
     odpoveďou (ak je známa)
       - [Skutočná E.coli
