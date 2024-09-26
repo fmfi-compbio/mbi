@@ -43,7 +43,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Introduction to biology
 
-{% include pdf.html file="ci-introbio" name="pdf" show=0 dot=1
+{% include pdf.html file="ci-introbio" name="pdf" show=1 dot=1
 %} {% include notes.html file="ci-introbio" name="notes" show=1 dot=1
 %} {% include youtube.html id="EtPqUOHTJD4" name="video" show=1 dot=1
 %} ZB chapter 1
