@@ -17,8 +17,8 @@ title: UCSC Genome browser, Quast, Galaxy
   - On-line grafický nástroj na prezeranie genómov
   - Konfigurovateľný, veľa možností, ale pomerne málo organizmov
   - V programe Firefox choďte na stránku UCSC genome browser
-    <http://genome-euro.ucsc.edu/> (európsky mirror stránky
-    <http://genome.ucsc.edu/> )
+    <https://genome-euro.ucsc.edu/> (európsky mirror stránky
+    <https://genome.ucsc.edu/> )
   - Hore v modrom menu zvoľte Genomes, potom zvoľte ľudský genóm verzia
     hg38. Do okienka `search term` zadajte HOXA2. Vo výsledkoch hľadania
     (Gencode genes) zvoľte gén homeobox A2 na chromozóme 7.
@@ -44,7 +44,7 @@ title: UCSC Genome browser, Quast, Galaxy
 
 ## Sekvenovanie v UCSC genome browseri
 
-  - Vráťte sa na UCSC genome browser <http://genome-euro.ucsc.edu/>
+  - Vráťte sa na UCSC genome browser <https://genome-euro.ucsc.edu/>
   - Pozrieme si niekoľko vecí týkajúcich sa sekvenovania a skladania
     genómov
   - Hore v modrom menu zvoľte Genomes, časť Other
@@ -54,7 +54,7 @@ title: UCSC Genome browser, Quast, Galaxy
   - Na tej istej stránke dole nájdete stručný popis zvolenej verzie
     genómu. **Pre ktoré oblasti genómu máme v hg38 najviac
     alternatívnych verzií?**
-  - Prejdite na región chr21:31,250,000-31,300,000 v hg19 [touto linkou](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr21%3A31250000-31300000).
+  - Prejdite na región chr21:31,250,000-31,300,000 v hg19 [touto linkou](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr21%3A31250000-31300000).
   - Zapnite si tracky Mapability a RepeatMasker na "full"
   - Mapability: nakoľko sa daný úsek opakuje v genóme a či teda vieme
     jednoznačne jeho čítania namapovať pri použití Next generation
@@ -65,7 +65,7 @@ title: UCSC Genome browser, Quast, Galaxy
     **Akému typu opakovania zodpovedá?** (pozrite track RepeatMasker)
   - Pozrite si región
     chr2:110,000,000-110,300,000 v hg19
-    [touto linkou](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr2%3A110000000-110300000), zapnite si tracky "Assembly" a "Gaps".
+    [touto linkou](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr2%3A110000000-110300000), zapnite si tracky "Assembly" a "Gaps".
     **Aká dlhá je neosekvenovaná medzera (gap) v strede tohto regiónu?**
     Približnú veľkosť môžete odčítať z obrázku, presnejší údaj zistíte
     kliknutím na čierny obdĺžnik zodpovedajúci tejto medzere (úplne
@@ -78,12 +78,12 @@ title: UCSC Genome browser, Quast, Galaxy
 
   - Čítania technológie Illumina MiSeq z 500kbp oblasti genómu E.coli
   - Boli poskladané programom [SPAdes](https://github.com/ablab/spades)
-  - Vzniknuté [kontigy](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta)
+  - Vzniknuté [kontigy](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta)
   - Pozrime si štatistiky tohto poskladania v nástroji Quast,
       - [Predpočítané
-        výsledky](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.html)
+        výsledky](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.html)
         a [report v pdf
-        formáte](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.pdf)
+        formáte](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.pdf)
   - Teraz si tento výpočet spustíme v systéme Galaxy
 
 ## Prehľad systému Galaxy
@@ -98,7 +98,7 @@ title: UCSC Genome browser, Quast, Galaxy
   - V strede nastavenia nástroja alebo prezeranie výsledkov
   - Pri serióznom používaní odporúčam vytvoriť si konto a prihlásiť sa
 
-  - Stiahnite si [kontigy](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta),
+  - Stiahnite si [kontigy](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta),
     uložte ako súbor
   - V ľavom menu zvolíme Upload Data a nahráme stiahnutý súbor
   - V časti Tools v ľavom menu zadáme do vyhľadávania Quast, zvolíme
@@ -109,7 +109,7 @@ title: UCSC Genome browser, Quast, Galaxy
   - Druhá analýza: porovnanie poskladaných kontigov so správnou
     odpoveďou (ak je známa)
       - [Skutočná E.coli
-        sekvencia](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/ref.fasta),
+        sekvencia](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/ref.fasta),
         ktorú sme chceli dostať
       - Dá sa zadať do nástroja Quast, ak zvolíte Yes v `Use a reference
         genome` a tento súbor nahráte ako `Reference genome`
@@ -117,8 +117,8 @@ title: UCSC Genome browser, Quast, Galaxy
 Ďalšie dáta pre záujemcov:
 
   - Použité čítania: [prvé čítania z
-    páru](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/miseq_R1.fastq.gz),
+    páru](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/miseq_R1.fastq.gz),
     [druhé čítania z
-    páru](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/miseq_R2.fastq.gz)
+    páru](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/miseq_R2.fastq.gz)
   - Galaxy obsahuje aj program SPAdes na skladanie
 
