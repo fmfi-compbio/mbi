@@ -5,7 +5,7 @@ title: Úvod do biológie pre informatikov
 Užitočné linky
 
 - [Tutoriál molekulárnej biológie](https://www.cs.princeton.edu/~mona/IntroMaterials/hunter-bio-for-CS.pdf)
-- [a ešte jeden](https://cs.brown.edu/courses/csci1810/info/bioprimer.pdf)
+- [a ešte jeden](https://brown-cs181.github.io/quicklinks/bioprimer.pdf)
 
 Pesničky z YouTube:
 

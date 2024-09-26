@@ -9,7 +9,7 @@ title: UCSC Genome browser, Quast, Galaxy
   - Na dolnom okraji obrazovky je lišta s často používanými nástrojmi,
     napr. internetový prehliadač Firefox
   - Vo Firefoxe si otvorte stránku predmetu
-    <https://fmfi-compbio.github.io/mbi/> čast Materials,
+    <https://fmfi-compbio.github.io/mbi/> časť Materials,
     nalistujte materiály k dnešnému cvičeniu
 
 ## UCSC genome browser
@@ -54,8 +54,7 @@ title: UCSC Genome browser, Quast, Galaxy
   - Na tej istej stránke dole nájdete stručný popis zvolenej verzie
     genómu. **Pre ktoré oblasti genómu máme v hg38 najviac
     alternatívnych verzií?**
-  - Prejdite na región chr21:31,250,000-31,300,000 v hg19 touto linkou:
-    [1](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr21%3A31250000-31300000)
+  - Prejdite na región chr21:31,250,000-31,300,000 v hg19 [touto linkou](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr21%3A31250000-31300000).
   - Zapnite si tracky Mapability a RepeatMasker na "full"
   - Mapability: nakoľko sa daný úsek opakuje v genóme a či teda vieme
     jednoznačne jeho čítania namapovať pri použití Next generation
@@ -64,9 +63,9 @@ title: UCSC Genome browser, Quast, Galaxy
     linku "Mapability", môžete si prečítať bližšie detaily.)
   - Približne v strede zobrazeného regiónu je pokles mapovateľnosti.
     **Akému typu opakovania zodpovedá?** (pozrite track RepeatMasker)
-  - Zapnite si tracky "Assembly" a "Gaps" a pozrite si región
-    chr2:110,000,000-110,300,000 v hg19:
-    [2](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr2%3A110000000-110300000)
+  - Pozrite si región
+    chr2:110,000,000-110,300,000 v hg19
+    [touto linkou](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr2%3A110000000-110300000), zapnite si tracky "Assembly" a "Gaps".
     **Aká dlhá je neosekvenovaná medzera (gap) v strede tohto regiónu?**
     Približnú veľkosť môžete odčítať z obrázku, presnejší údaj zistíte
     kliknutím na čierny obdĺžnik zodpovedajúci tejto medzere (úplne
@@ -78,10 +77,8 @@ title: UCSC Genome browser, Quast, Galaxy
 ## QUAST: program na štatistiky o kvalite poskladania genómu
 
   - Čítania technológie Illumina MiSeq z 500kbp oblasti genómu E.coli
-  - Boli poskladané programom SPAdes
-    [3](https://github.com/ablab/spades)
-  - Vzniknuté kontigy sú tu:
-    [4](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta)
+  - Boli poskladané programom [SPAdes](https://github.com/ablab/spades)
+  - Vzniknuté [kontigy](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta)
   - Pozrime si štatistiky tohto poskladania v nástroji Quast,
       - [Predpočítané
         výsledky](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.html)
@@ -101,16 +98,14 @@ title: UCSC Genome browser, Quast, Galaxy
   - V strede nastavenia nástroja alebo prezeranie výsledkov
   - Pri serióznom používaní odporúčam vytvoriť si konto a prihlásiť sa
 
-  - Stiahnite si kontigy
-    [5](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta),
+  - Stiahnite si [kontigy](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta),
     uložte ako súbor
   - V ľavom menu zvolíme Upload Data a nahráme stiahnutý súbor
   - V časti Tools v ľavom menu zadáme do vyhľadávania Quast, zvolíme
     Quast
       - Ako Contigs/scaffolds file zadáme nahratý súbor, ostatné položky
         necháme predvolené, stlačíme Execute
-      - Predpočítané výsledky
-        [6](https://usegalaxy.eu/u/brejova/h/quast)
+      - [Predpočítané výsledky](https://usegalaxy.eu/u/brejova/h/quast)
   - Druhá analýza: porovnanie poskladaných kontigov so správnou
     odpoveďou (ak je známa)
       - [Skutočná E.coli
