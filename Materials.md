@@ -2,6 +2,9 @@
 title: Materials
 ---
 
+**[Week 1](#W1)** · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+
 
 ## Literature
 
@@ -27,9 +30,6 @@ listed chapters which serve as the source of additional information.
 
 L: lecture (everybody), TI: tutorial for computer science/informatics students, TB: tutorial for biology/chemistry/physics students 
 
-[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
-
 <a name="W1"></a>
 ### Sept. 26
 
@@ -44,15 +44,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TI: Introduction to biology
 
 {% include pdf.html file="ci-introbio" name="pdf" show=0 dot=1
-%} {% include notes.html file="ci01" name="notes" show=0 dot=1
+%} {% include notes.html file="ci-introbio" name="notes" show=1 dot=1
 %} {% include youtube.html id="EtPqUOHTJD4" name="video" show=1 dot=1
 %} ZB chapter 1
 
 #### TB: Introduction to computer science, UCSC genome browser
-pdf, notes
 
 {% include pdf.html file="cb-introcs" name="pdf" show=0 dot=1
-%} {% include notes.html file="cb01" name="notes" show=0 dot=0
+%} {% include notes.html file="cb-browser" name="notes" show=1 dot=0
 %}
 
 <a name="W2"></a>
