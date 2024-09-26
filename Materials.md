@@ -50,7 +50,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB: Introduction to computer science, UCSC genome browser
 
-{% include pdf.html file="cb-introcs" name="pdf" show=0 dot=1
+{% include pdf.html file="cb-introcs" name="pdf" show=1 dot=1
 %} {% include notes.html file="cb-browser" name="notes" show=1 dot=0
 %}
 
