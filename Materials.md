@@ -64,6 +64,12 @@ pdf, notes, colab
 #### TB: Introduction to dynamic programming, introduction to probability
 pdf, notes
 
+{% include pdf.html file="cb-dp" name="pdf" show=0 dot=1
+%} {% include notes.html file="cb-prob" name="notes 1" show=0 dot=1
+%} {% include notes.html file="cb-dp" name="notes 2" show=0 dot=1
+%}
+
+
 <a name="W3"></a>
 ### Oct. 10
 

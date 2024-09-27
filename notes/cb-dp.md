@@ -32,9 +32,10 @@ title: "Cvičenie pre biológov: Úvod do dynamického programovania"
     A\[i\]=najmenší počet mincí, ktoré treba na vyplatenie sumy i
   - Ukážme si to na príklade s mincami 1,3,4
 
-
+```
     i      0    1    2    3    4    5    6    7    8    9  
     A[i]   0    1    2    1    1    2    2    2    2    3
+```
 
   - Nevypĺňali sme ju žiadnym konkrétnym postupom, nejde o algoritmus
   - Ale predstavme si, ze teraz chceme vyplniť A\[10\].
@@ -59,6 +60,7 @@ title: "Cvičenie pre biológov: Úvod do dynamického programovania"
     najväčšia minca, lebo A\[-1\] a pod. nie je definované
   - Pre zaujímavosť, program v Pythone, stačí meniť hodnoty m a X:
 
+```Python
     m = [1,3,4]
     X = 11
     k = len(m)
@@ -71,16 +73,18 @@ title: "Cvičenie pre biológov: Úvod do dynamického programovania"
            min = A[i - m[j]]
       A.append(1 + min)
     print(A)
+```
 
   - Ako nájsť, ktoré mince použiť?
   - Pridáme druhú tabuľku B, kde v B\[i\] si pamätáme, ktorá bola
     najlepšia prvá minca, keď sme počítali A\[i\] (ak je viac možností,
     zoberieme ľubovoľnú, napr. najväčšiu)
 
-
+```
     i      0    1    2    3    4    5    6    7    8    9   10   
     A[i]   0    1    2    1    1    2    2    2    2    3    3
     B[i]   -    1    1    3    4    4    3    4    4    4    4
+```
 
   - Potom ak chceme nájsť napr. mince pre 10, vidíme, že prvá bola
     B\[10\]=4. Zvyšok je 6 a prvá minca na vyplatenie 6 je B\[6\]=3.
@@ -88,7 +92,7 @@ title: "Cvičenie pre biológov: Úvod do dynamického programovania"
     Takže najlepšie vyplatenie je 4+3+3
   - Celý program v Pythone:
 
-
+```Python
     m = [1,3,4]
     X = 11
     k = len(m)
@@ -108,6 +112,7 @@ title: "Cvičenie pre biológov: Úvod do dynamického programovania"
     while X > 0:
         print(B[X])
         X = X - B[X]
+```
 
 Dynamické programovanie vo všeobecnosti
 
