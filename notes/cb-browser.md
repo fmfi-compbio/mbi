@@ -1,5 +1,5 @@
 ---
-title: UCSC Genome browser, Quast, Galaxy
+title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
 ---
 
 ## Používanie počítačov v M 217
@@ -74,7 +74,7 @@ title: UCSC Genome browser, Quast, Galaxy
     úsek vyzerá vo verzii hg38 and hs1. Ako sa zmenila dĺžka z
     pôvodných 300kb?
 
-## QUAST: program na štatistiky o kvalite poskladania genómu
+## QUAST: program na štatistiky o kvalite poskladania genómu (nerobili sme)
 
   - Čítania technológie Illumina MiSeq z 500kbp oblasti genómu E.coli
   - Boli poskladané programom [SPAdes](https://github.com/ablab/spades)
@@ -86,7 +86,7 @@ title: UCSC Genome browser, Quast, Galaxy
         formáte](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.pdf)
   - Teraz si tento výpočet spustíme v systéme Galaxy
 
-## Prehľad systému Galaxy
+## Prehľad systému Galaxy (nerobili sme)
 
   - <https://usegalaxy.eu/>
   - Obsahuje veľa bioinformatických nástrojov, ktoré môžete spúšťať
