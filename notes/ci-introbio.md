@@ -1,5 +1,5 @@
 ---
-title: Úvod do biológie pre informatikov
+title: "Cvičenia pre informatikov: Úvod do biológie"
 ---
 
 Užitočné linky

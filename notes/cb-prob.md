@@ -78,10 +78,10 @@ dostaneme
   - Pr(v sekvencii je aspoň jedno A) = Pr(X1=A alebo X2=A) nemôžeme
     počítať ako Pr(X1=A)+Pr(X2=A), lebo sa navzájom nevylučujú a
     prípad, že X1=A a X2=A by sme započítali dvakrát
-  - Správne je $\Pr(X_1=A \mathrm{ alebo } X_2=A)
-    = \Pr(X_1=A) + \Pr(X_1 \ne A \mathrm{ a } X_2=A)
-    = \Pr(X_1=A) + Pr(X_1 \ne A) \cdot Pr(X_2=A)
-    = 0.3+0.7\cdot 0.3 = 0.51$
+  - Správne je $\Pr(X_1=A \,\mathrm{alebo}\, X_2=A)$
+    $= \Pr(X_1=A) + \Pr(X_1 \ne A \,\mathrm{a}\, X_2=A)$
+    $= \Pr(X_1=A) + \Pr(X_1 \ne A) \cdot \Pr(X_2=A)$
+    $= 0.3+0.7\cdot 0.3 = 0.51$
   - Pr(X1=X2) = Pr(X1=X2=A) + Pr(X1=X2=C) + Pr(X1=X2=G) + Pr(X1=X2=T) =
     0.3\*0.3+0.2\*0.2+0.2\*0.2+0.3\*0.3 = 0.26.
   - Ak u označíme pravdepodobnosť u =
