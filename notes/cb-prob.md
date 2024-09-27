@@ -42,13 +42,13 @@ dostaneme
 
   - priemer z možných hodnôt váhovaných ich pravdepodobnosťami
   - v našom príklade
-    \(E(X) = 2\cdot \frac{1}{36} + 3\cdot \frac{2}{36}+ 4\cdot \frac{3}{36}+ 5\cdot \frac{4}{36}+ 6\cdot \frac{5}{36}+ 7\cdot \frac{6}{36}+ 8\cdot \frac{5}{36}+ 9\cdot \frac{4}{36}+ 10\cdot \frac{3}{36}+ 11\cdot \frac{2}{36}+ 12\cdot \frac{1}{36}=7\)
+    $E(X) = 2\cdot \frac{1}{36} + 3\cdot \frac{2}{36}+ 4\cdot \frac{3}{36}+ 5\cdot \frac{4}{36}+ 6\cdot \frac{5}{36}+ 7\cdot \frac{6}{36}+ 8\cdot \frac{5}{36}+ 9\cdot \frac{4}{36}+ 10\cdot \frac{3}{36}+ 11\cdot \frac{2}{36}+ 12\cdot \frac{1}{36}=7$
   - Ak by sme experiment opakovali veľa krát a zrátali priemer hodnôt X,
     ktoré nám vyšli, dostali by sme číslo blízke E(X)
   - Iný výpočet strednej hodnoty:
       - X=X1+X2, kde X1 je hodnota na prvej kocke a X2 je hodnota na
         druhej kocke
-      - \(E(X_1) = 1\cdot \frac{1}{6} + ... + 6\cdot \frac{1}{6}  = 3.5\),
+      - \\(E(X_1) = 1\cdot \frac{1}{6} + ... + 6\cdot \frac{1}{6}  = 3.5\\),
         podobne aj E(X2) = 3.5
       - Platí, že E(X1+X2)=E(X1) + E(X2) a teda E(X) = 3.5 + 3.5 = 7
       - Pozor, pre súčin a iné funkcie takéto vzťahy platiť nemusia,
