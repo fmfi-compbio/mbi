@@ -15,6 +15,23 @@
       color: #327746;
     }
   </style>
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+    },
+    svg: {
+    fontCache: 'global'
+    },
+  };
+  </script>
+
+  <!-- load MathJax -->
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
   <title>{{ site.title }} - {{ page.title }}</title>
 <link rel="shortcut icon" href="/mbi/images/favicon.ico"/>
 </head>
