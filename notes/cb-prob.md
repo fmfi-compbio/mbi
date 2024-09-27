@@ -26,12 +26,11 @@ dostaneme
   - Možné hodnoty: 2,3,...,12
   - Každá dvojica hodnôt (1,1), (1,2),...,(6,6) na kocke rovnako
     pravdepodobná, t.j. pravdepodobnosť 1/36
-  - Súčet 5 môžeme dostať 1+4,2+3,3+2,4+1 - t.j. P(X=5) = 4/36
-  - Súčet 11 môžeme dostať 5+6 alebo 6+5, t.j. P(X=11) = 2/36
+  - Súčet 5 môžeme dostať 1+4,2+3,3+2,4+1 - t.j. Pr(X=5) = 4/36
+  - Súčet 11 môžeme dostať 5+6 alebo 6+5, t.j. Pr(X=11) = 2/36
   - **Rozdelenie pravdepodobnosti:** (tabuľka udávajúca pravdepodobnosť
     pre každú možnú hodnotu)
 
-<!-- end list -->
 
     hodnota i:   2     3     4     5     6     7     8     9     10    11    12
     Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
@@ -48,11 +47,11 @@ dostaneme
   - Iný výpočet strednej hodnoty:
       - X=X1+X2, kde X1 je hodnota na prvej kocke a X2 je hodnota na
         druhej kocke
-      - \\(E(X_1) = 1\cdot \frac{1}{6} + ... + 6\cdot \frac{1}{6}  = 3.5\\),
+      - $E(X_1) = 1\cdot \frac{1}{6} + ... + 6\cdot \frac{1}{6}  = 3.5$,
         podobne aj E(X2) = 3.5
       - Platí, že E(X1+X2)=E(X1) + E(X2) a teda E(X) = 3.5 + 3.5 = 7
       - Pozor, pre súčin a iné funkcie takéto vzťahy platiť nemusia,
-        napr. \(E(X_1 \cdot X_2)\) nie je vždy \(E(X_1) \cdot E(X_2)\)
+        napr. $E(X_1 \cdot X_2)$ nie je vždy $E(X_1) \cdot E(X_2)$
 
 ### Pravdepodobnostný model náhodnej sekvencie
 
@@ -79,8 +78,10 @@ dostaneme
   - Pr(v sekvencii je aspoň jedno A) = Pr(X1=A alebo X2=A) nemôžeme
     počítať ako Pr(X1=A)+Pr(X2=A), lebo sa navzájom nevylučujú a
     prípad, že X1=A a X2=A by sme započítali dvakrát
-  - Správne je Pr(X1 je A alebo X2 je A) = Pr(X1=A) + Pr(X1 \<\> A a
-    X2=A) = Pr(X1=A) + Pr(X1 \<\> A) \* Pr(X2=A) = 0.3+0.7\*0.3 = 0.51
+  - Správne je $\Pr(X_1=A \mathrm{ alebo } X_2=A)
+    = \Pr(X_1=A) + \Pr(X_1 \ne A \mathrm{ a } X_2=A)
+    = \Pr(X_1=A) + Pr(X_1 \ne A) \cdot Pr(X_2=A)
+    = 0.3+0.7\cdot 0.3 = 0.51$
   - Pr(X1=X2) = Pr(X1=X2=A) + Pr(X1=X2=C) + Pr(X1=X2=G) + Pr(X1=X2=T) =
     0.3\*0.3+0.2\*0.2+0.2\*0.2+0.3\*0.3 = 0.26.
   - Ak u označíme pravdepodobnosť u =
@@ -100,18 +101,18 @@ priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
     byť)
   - Ideálne by sme chceli spočítať celú tabuľku pravdepodobností pre V,
     ale uspokojíme sa aj so strednou hodnotou E(V)
-  - Nech Vi je počet výskytov na pozícii i (co je vzdy 0 alebo 1)
-  - \(V = V_1+V_2+\dots+V_{996} = \sum_{i=1}^{996} V_i\)
-  - \(E(V) = E(V_1)+E(V_2)+\dots+E(V_{996}) = 996 E(V_1)\)
-  - \(E(V_1) = 0\cdot \Pr(V_1=0)+1\cdot \Pr(V_1=1) = \Pr(V_1=1) = 0.00162\)
-  - E(V) = 996\*0.00162 = 1.61352
-  - Takze primer AACAT sa v priemere bude v náhodnej sekvencii dĺžky
+  - Nech Vi je počet výskytov na pozícii i (čo je vždy 0 alebo 1)
+  - $V = V_1+V_2+\dots+V_{996} = \sum_{i=1}^{996} V_i$
+  - $E(V) = E(V_1)+E(V_2)+\dots+E(V_{996}) = 996 E(V_1)$
+  - $E(V_1) = 0\cdot \Pr(V_1=0)+1\cdot \Pr(V_1=1) = \Pr(V_1=1) = 0.00162$
+  - $E(V) = 996\cdot 0.00162 = 1.61352$
+  - Takže primer AACAT sa v priemere bude v náhodnej sekvencii dĺžky
     1000 s 40% obsahom GC vyskytovať v priemere cca 1,6 krát
-  - Primery byvaju dlhsie, takze sanca nahodnych vyskytov je ovela
-    mensia, co je to co vacsinou chceme (chceme primer cielit na
-    konkretnu poziciu, nie na vela nahodnych zhod)
+  - Primery bývajú dlhšie, takže šanca náhodných výskytov je oveľa
+    menšia, čo je to, čo vačšinou chceme (chceme primer cieliť na
+    konkrétnu pozíciu, nie na veľa náhodných zhôd)
 
 ## Použitie pravdepodobnosti na analýzu potrebného pokrytia pri sekvenovaní
 
-Pozri [cvičenia pre informatikov](./CI02.md)
+Pozri [cvičenia pre informatikov](./ci-prob.md)
 
