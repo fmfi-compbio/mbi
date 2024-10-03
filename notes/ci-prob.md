@@ -33,15 +33,15 @@ Hodíme 2x kockou, náhodná premenná X bude súčet hodnôt, ktoré dostaneme.
     pre každú možnú hodnotu)
 
 ```
-hodnota i:   2     3     4     5     6     7     8     9     10    11    12
-Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
+hodnota k:   2     3     4     5     6     7     8     9     10    11    12
+Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 ```
 
   - Overte, ze súčet pravdepodobností je 1
 
 ## Stredná hodnota E(X)
 
-  - priemer z možných hodnôt váhovaných ich pravdepodobnosťami
+  - priemer z možných hodnôt váhovaných ich pravdepodobnosťami $E(X)=\sum_k \Pr(X=k)\vdot k$
   - v našom príklade
     $E(X) = 2\cdot \frac{1}{36} + 3\cdot \frac{2}{36}+ 4\cdot \frac{3}{36}+ 5\cdot \frac{4}{36}+ 6\cdot \frac{5}{36}+ 7\cdot \frac{6}{36}+ 8\cdot \frac{5}{36}+ 9\cdot \frac{4}{36}+ 10\cdot \frac{3}{36}+ 11\cdot \frac{2}{36}+ 12\cdot \frac{1}{36}=7$
   - Ak by sme experiment opakovali veľa krát a zrátali priemer hodnôt X,
@@ -57,9 +57,9 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 
 ## Binomické rozdelenie
 
-- Jeden hod mincou: padna hlava (head, H) s pravdepodobnosotu p a znak (tail, T) 1-p
+- Jeden hod mincou: padna hlava (head, H) s pravdepodobnosťou p a znak (tail, T) 1-p
 - N krat hodime mincou, ako X oznacime pocet hlav, ktore padnu
-- Priklad: majme mincu, ktora ma hlavu s pr. p = 1/4 a hodime ju N=3 krat.
+- Priklad: majme mincu, ktora ma hlavu s pravdepodobnosťou p = 1/4 a hodime ju N=3 krat.
 
 ```
     HHH 1/64
@@ -72,21 +72,20 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
     TTT 27/64
 ```
 
-- $\Pr(X_j=3) = 1/64$, $\Pr(X_j=2)=9/64$, $\Pr(X_j=1)=27/64$,
-  $\Pr(X\_j=0)=27/64$
+- $\Pr(X=3) = 1/64$, $\Pr(X=2)=9/64$, $\Pr(X=1)=27/64$,
+  $\Pr(X\=0)=27/64$
 - taketo rozdelenie pravdepodobnosti sa vola binomicke
 - $Pr(X = k) = {N \choose k} p^k (1-p)^(N-k)$, kde
   ${N \choose k} = \frac{N!}{k!(N-k)!}$ a $n! = 1\cdot 2\cdot ...\cdot n$
-- napr pre priklad s troma hodmi kockou $\Pr(X_j=2) = 3!/(2!\cdot 1!)
+- napr pre priklad s troma hodmi kockou $\Pr(X=2) = 3!/(2!\cdot 1!)
   \cdot (1/4)^2 \cdot (3/4)^1 = 9/64$
-- Zle sa pocita pre velke N, preto sa pre male p niekedy pouziva aproximacia
-  Poissonovym rozdelenim s parametrom lambda = Np, ktore ma
+- Zle sa pocita pre velke N, preto sa pre velke N a male p niekedy pouziva aproximacia
+  Poissonovym rozdelenim s parametrom $\lambda = Np$, ktore ma
   $\Pr(X_j = k)=e^{-\lambda}\lambda^k / k!$
 
 
 ## Počítanie pokrytia genómov
 
-  - Pozrite tiež grafy k pravdepodobnosti: 
   - Náš problém: spočítanie pokrytia
       - G = dĺžka genómu, napr. 1 000 000 (predpokladajme, že je
         cirkulárny)
@@ -100,7 +99,6 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
         pokrytých menej ako 3x?
       - Dôležité pri plánovaní experimentov (aké veľké pokrytie
         potrebujem na dosiahnutie určitej kvality)
-
 
   - Pokrytie genómu: predpokladáme, že každé čítanie začína na náhodnej
     pozícii zo všetkých možných G
