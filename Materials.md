@@ -67,7 +67,7 @@ pdf, notes, colab
 
 #### TB: Introduction to dynamic programming, introduction to probability
 
-{% include pdf.html file="cb-dp" name="pdf" show=0 dot=1
+{% include pdf.html file="cb-dp" name="pdf" show=1 dot=1
 %} {% include notes.html file="cb-dp" name="notes 1" show=1 dot=1
 %} {% include notes.html file="cb-prob" name="notes 2" show=1 dot=0
 %} 
