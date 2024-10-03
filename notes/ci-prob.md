@@ -2,25 +2,27 @@
 title: "Cvičenia pre informatikov: Úvod do pravdepodobnosti"
 ---
 
+## Čo je to pravdepodobnosť?
 
-  - Myšlienkový experiment, v ktorom vystupuje náhoda, napr. hod
-    ideálnou kockou/mincou
-  - Výsledkom experimentu je nejaká hodnota (napr. číslo, alebo aj
-    niekoľko čísel, reťazec)
+  - Myšlienkový experiment, v ktorom vystupuje náhoda, napr. hod ideálnou kockou/mincou
+  - Výsledkom experimentu je nejaká hodnota (napr. číslo alebo aj niekoľko čísel, reťazec)
   - Túto neznámu hodnotu budeme volať **náhodná premenná**
   - Zaujíma nás **pravdepodobnosť**, s akou náhodná premenná nadobúda
     jednotlivé možné hodnoty
   - T.j. ak experiment opakujeme veľa krát, ako často uvidíme nejaký
     výsledok
 
-Príklad 1: hodíme idealizovanou kockou, premenná X bude hodnota, ktorú
-dostaneme
+## Príklad 1: Hod kockou
+
+Hodíme idealizovanou kockou, premenná X bude hodnota, ktorú
+dostaneme.
 
   - Možné hodnoty 1,2,..,6, každá rovnako pravdepodobná
   - Pišeme napr. Pr(X=2)=1/6
 
-Príklad 2: hodíme 2x kockou, náhodná premenná X bude súčet hodnôt, ktoré
-dostaneme
+## Príklad 2: Súčet na dvoch kockách
+
+Hodíme 2x kockou, náhodná premenná X bude súčet hodnôt, ktoré dostaneme.
 
   - Možné hodnoty: 2,3,...,12
   - Každá dvojica hodnôt (1,1), (1,2),...,(6,6) na kocke rovnako
@@ -37,7 +39,7 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 
   - Overte, ze súčet pravdepodobností je 1
 
-**Stredná hodnota E(X):**
+## Stredná hodnota E(X)
 
   - priemer z možných hodnôt váhovaných ich pravdepodobnosťami
   - v našom príklade
@@ -52,6 +54,35 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
       - Platí, že E(X1+X2)=E(X1) + E(X2) a teda E(X) = 3.5 + 3.5 = 7
       - Pozor, pre súčin a iné funkcie takéto vzťahy platiť nemusia,
         napr. $E(X_1 \cdot X_2)$ nie je vždy $E(X_1) \cdot E(X_2)$
+
+## Binomické rozdelenie
+
+- Jeden hod mincou: padna hlava (head, H) s pravdepodobnosotu p a znak (tail, T) 1-p
+- N krat hodime mincou, ako X oznacime pocet hlav, ktore padnu
+- Priklad: majme mincu, ktora ma hlavu s pr. p = 1/4 a hodime ju N=3 krat.
+
+```
+    HHH 1/64
+    HHT 3/64
+    HTH 3/64
+    HTT 9/64
+    THH 3/64
+    THT 9/64
+    TTH 9/64
+    TTT 27/64
+```
+
+- $\Pr(X_j=3) = 1/64$, $\Pr(X_j=2)=9/64$, $\Pr(X_j=1)=27/64$,
+  $\Pr(X\_j=0)=27/64$
+- taketo rozdelenie pravdepodobnosti sa vola binomicke
+- $Pr(X = k) = {N \choose k} p^k (1-p)^(N-k)$, kde
+  ${N \choose k} = \frac{N!}{k!(N-k)!}$ a $n! = 1\cdot 2\cdot ...\cdot n$
+- napr pre priklad s troma hodmi kockou $\Pr(X_j=2) = 3!/(2!\cdot 1!)
+  \cdot (1/4)^2 \cdot (3/4)^1 = 9/64$
+- Zle sa pocita pre velke N, preto sa pre male p niekedy pouziva aproximacia
+  Poissonovym rozdelenim s parametrom lambda = Np, ktore ma
+  $\Pr(X_j = k)=e^{-\lambda}\lambda^k / k!$
+
 
 ## Počítanie pokrytia genómov
 
@@ -90,30 +121,8 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
       - i-te čítanie pretina poziciu j s pravdepodobnostou p=L/G
       - to iste ako keby sme N krat hodili mincou, na ktorej spadne
         hlava s pravd. p a znak 1-p a oznacili ako $X_j$ pocet hlav
-      - Priklad: majme mincu, ktora ma hlavu s pr. 1/4 a hodime ju 3x.
-
-```
-    HHH 1/64
-    HHT 3/64
-    HTH 3/64
-    HTT 9/64
-    THH 3/64
-    THT 9/64
-    TTH 9/64
-    TTT 27/64
-```
-
-  - $\Pr(X_j=3) = 1/64$, $\Pr(X_j=2)=9/64$, $\Pr(X_j=1)=27/64$,
-  $\Pr(X\_j=0)=27/64$
-      - taketo rozdelenie pravdepodobnosti sa vola binomicke
-      - $Pr(X_j = k) = {N \choose k} p^k (1-p)^(N-k)$, kde
-        ${N \choose k} = \frac{N!}{k!(N-k)!}$ a $n! = 1\cdot 2\cdot ...\cdot n$
-      - napr pre priklad s troma hodmi kockou $\Pr(X_j=2) = 3!/(2!\cdot 1!)
-        \cdot (1/4)^2 \cdot (3/4)^1 = 9/64$
-      - Zle sa pocita pre velke N, preto sa niekedy pouziva aproximacia
-        Poissonovym rozdelenim s parametrom lambda = Np, ktore ma
-        $\Pr(X_j = k)=e^{-\lambda}\lambda^k / k!$
-      - Spat k sekvenovaniu: vieme spocitat rozdelenie pravdepodobnosti
+      - ide teda o binomické rozdelenie
+      - vieme spocitat rozdelenie pravdepodobnosti
         a tiez napr. Pr(X\_i\<3) = Pr(X\_i=0)+Pr(X\_i=1)+Pr(X\_i=2) =
         0.000045+0.00045+0.0023=0.0028
   - Stredna hodnota poctu baz v celom genome s pokrytim k je
@@ -124,9 +133,8 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
         tak naplanovat, kolko čítaní potrebujeme
 
 Chceme tiež odhadnúť **počet kontigov** (podľa článku E.S. Lander and
-M.S. Waterman. "Genomic mapping by fingerprinting random clones: a
-mathematical analysis." Genomics 2.3 (1988): 231-239
-[1](http://www.cs.cmu.edu/~epxing/Class/10810/readings/lander_waterman.pdf))
+M.S. Waterman. ["Genomic mapping by fingerprinting random clones: a
+mathematical analysis."](http://www.cs.cmu.edu/~epxing/Class/10810/readings/lander_waterman.pdf) Genomics 2.3 (1988): 231-239)
 
   - Ak niekoľko báz vôbec nie je pokrytých čítaniami, preruší sa kontig
   - Vieme, koľko báz je v priemere nepokrytých, ale niektoré môžu byť
@@ -194,21 +202,6 @@ nepokr: 69 koncov: 1    nepokr: 0 koncov: 0
       - Na spresnenie mozeme skusat spravit zlozitejsie modely, alebo
         simulovat data
 
-
-  - Poznamka: pravdepodobnosti z binomickeho rozdelenia mozeme lahko
-    spocitat napr. statistickym softverom R. Tu su prikazy, ktore sa na
-    to hodia, pre pripad, ze by vas to zaujimalo:
-
-    dbinom(10,1e4,0.001);  #(12.5% miest ma pokrytie presne 10)
-    pbinom(10,1e4,0.001,lower.tail=TRUE); #(58% miest ma pokrytie najviac 10)
-    dbinom(0:30,1e4,0.001); #tabulka pravdepodobnosti
-     [1] 4.517335e-05 4.521856e-04 2.262965e-03 7.549258e-03 1.888637e-02
-     [6] 3.779542e-02 6.302390e-02 9.007019e-02 1.126216e-01 1.251601e-01
-    [11] 1.251726e-01 1.137933e-01 9.481826e-02 7.292252e-02 5.207187e-02
-    [16] 3.470068e-02 2.167707e-02 1.274356e-02 7.074795e-03 3.720595e-03
-    [21] 1.858621e-03 8.841718e-04 4.014538e-04 1.743354e-04 7.254524e-05
-    [26] 2.897743e-05 1.112843e-05 4.115040e-06 1.467156e-06 5.050044e-07
-    [31] 1.680146e-07
 
 ## Zhrnutie
 

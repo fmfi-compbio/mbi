@@ -31,9 +31,10 @@ dostaneme
   - **Rozdelenie pravdepodobnosti:** (tabuľka udávajúca pravdepodobnosť
     pre každú možnú hodnotu)
 
-
-    hodnota i:   2     3     4     5     6     7     8     9     10    11    12
-    Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
+```
+hodnota i:   2     3     4     5     6     7     8     9     10    11    12
+Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
+```
 
   - Overte, ze súčet pravdepodobností je 1
 
@@ -114,5 +115,5 @@ priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
 
 ## Použitie pravdepodobnosti na analýzu potrebného pokrytia pri sekvenovaní
 
-Pozri [cvičenia pre informatikov](./ci-prob.md)
+Pozri [cvičenia pre informatikov](./ci-prob.html)
 

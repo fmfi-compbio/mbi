@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-**[Week 1](#W1)** · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+[Week 1](#W1) · **[Week 2](#W2)** · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
 · [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
@@ -58,16 +58,19 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Oct. 3
 
 #### L: Genome assembly 2
-pdf, video
+{% include pdf.html file="p-seq2" name="pdf" show=0 dot=1
+%} {% include youtube.html id="YvZlTL1qyUg" name="video 1" show=1 dot=1
+%}
+
 #### TI: Introduction to probability, genome coverage by sequencing reads,
 pdf, notes, colab
+
 #### TB: Introduction to dynamic programming, introduction to probability
-pdf, notes
 
 {% include pdf.html file="cb-dp" name="pdf" show=0 dot=1
-%} {% include notes.html file="cb-prob" name="notes 1" show=0 dot=1
-%} {% include notes.html file="cb-dp" name="notes 2" show=0 dot=1
-%}
+%} {% include notes.html file="cb-dp" name="notes 1" show=1 dot=1
+%} {% include notes.html file="cb-prob" name="notes 2" show=1 dot=0
+%} 
 
 
 <a name="W3"></a>
