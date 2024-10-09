@@ -9,10 +9,10 @@ title: "Cvičenia pre informatikov: Úvod do dynamického programovania, proteom
 
 ## Uvod do proteomiky
 
-  - Viac informacii: [1](http://www.cs.uwaterloo.ca/~binma/cs882/),
+  <!-- - Viac informacii: [1](http://www.cs.uwaterloo.ca/~binma/cs882/),
     [Bafna,
-    Reinert 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.933&rep=rep1&type=pdf)
-  - Pozri tiež prezentáciu k cvičeniu
+    Reinert 2004](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.933&rep=rep1&type=pdf) -->
+
 
 Gélová elektroforéza (gel electrophoresis) - uvedene pre zaujimavost,
 nerobili sme

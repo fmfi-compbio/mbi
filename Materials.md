@@ -60,7 +60,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### L: Genome assembly 2
 
 {% include pdf.html file="p-seq2" name="pdf" show=1 dot=1
-%} {% include youtube.html id="YvZlTL1qyUg" name="video 1" show=1 dot=0
+%} {% include youtube.html id="YvZlTL1qyUg" name="video" show=1 dot=0
 %}
 
 #### TI: Introduction to probability, genome coverage by sequencing reads,
@@ -83,7 +83,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### L: Sequence alignment: Smith-Waterman, Needleman-Wunsch, scoring
 
 {% include pdf.html file="p-aln1" name="pdf" show=1 dot=1
-%} {% include youtube.html id="0GkhkRiqbl4" name="video 1" show=1 dot=0
+%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=1 dot=0
 %} BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2
 
 #### TI: Introduction to dynamic programming, proteomics
