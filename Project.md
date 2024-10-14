@@ -4,7 +4,7 @@ title: Project for Biologists
 
 According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. You can explore the use of bioinformatics tools and databases relevant for your thesis topic, but you can also work on other topics of interest. You can work in pairs, but each student should focus more on a separate part of the project.
 
-An ideal project uses several tools or databases to explore a single topic and explores these tools in some depth, e.g. by trying several options and comparing them. Try to understand how these tools work and what might be their limitations. These tools ca be alternatives for the same task, subsequent steps in a longer analysis or different analyses looking at different aspects of the same data. 
+An ideal project uses several tools or databases to explore a single topic and explores these tools in some depth, e.g. by trying several options and comparing them. Try to understand how these tools work and what might be their limitations. These tools can be alternatives for the same task, subsequent steps in a longer analysis or separate analyses looking at different aspects of the same data. 
 
 ## Parts of the project
 
@@ -35,9 +35,9 @@ Submit a pdf presentation with more details on your project plans. It should hav
 
 10% of the final grade
 
-By this point you should have at least approximately 25% of your planned work finished and you should have clear plans for finishing the rest. The goal is to obtain feedback on your progress and plans.
+By this point you should have at least approximately **25% of your planned work finished** and you should have **clear plans** for finishing the rest. The goal is to obtain feedback on your progress and plans.
 
-Submit a brief pdf presentation to be presented in 5-10 minutes at a meeting of an instructor and several students. Describe the methods you used so far, what results you obtained, and what are your planned next steps. Mention any questions or problems you have, we will discuss these to help you with the final project.
+Submit a brief pdf presentation to be presented in **5-10 minutes** at a meeting of an instructor and several students. Describe the methods you used so far, what results you obtained, and what are your planned next steps. Mention any questions or problems you have; we will discuss these to help you with the final project.
 
 It is not necessary to proceed strictly according to the plans presented at this point but you should not change the direction of your project too much without an explicit permission from the instructors. 
 

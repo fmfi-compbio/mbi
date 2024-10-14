@@ -85,9 +85,11 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td></td>
     <td>Dec. 20, 2024 22:00</td>
   </tr>
+  <!--
   <tr>
     <td colspan="3">Submit in <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
   </tr>
+  -->
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, initial proposal</b></td>
     <td></td>
