@@ -45,10 +45,10 @@ orientovaného grafu:
   - Potom pocitame dynamickym programovanim, kde A\[u\] je dlzka
     najdlhsej cesty z s do u:
     $A[u] = \max_{v:v\rightarrow u\in E} A[v]+w(v\rightarrow u)$
-    pricom na zaciatku nastavime A\[s\]=0 a na konci mame cenu cesty v
-    A\[t\].
-  - Cas vypoctu je $O(|V|+|E|)$
-  - Vsimnime si, ze tiez dostaneme najdlhsie cesty z s do vsetkych
+    pricom na zaciatku nastavime $A[s]=0$ a na konci mame cenu cesty v
+    $A[t]$.
+  - Cas vypoctu je $O(|V|+|E|)$.
+  - Vsimnime si, ze tiez dostaneme najdlhsie cesty z $s$ do vsetkych
     vrcholov.
 
 Ak tento algoritmus nasadime na graf pre globalne zarovnanie, dostavame
@@ -61,11 +61,11 @@ bez toho, aby sme vzdy vymyslali novu rekurenciu.
 
   - Zarovnanie moze zacat a skoncit hocikde v matici
   - Pridaj startovaci vrchol s, koncovy vrchol t
-  - Pridaj hrany s-\>(i,j) a (i,j)-\>t s cenou 0 pre kazde (i,j)
+  - Pridaj hrany $s\to(i,j)$ a $(i,j)\to t$ s cenou 0 pre kazde (i,j)
   - Opat ekvivalentne s rekurenciou z prednasky
 
 Variant: chceme zarovnat cely retazec X k nejakej casti retazca Y (napr.
-mapovanie sekvenovacich readov na genom)
+mapovanie sekvenovacich citani na genom)
 
   - Iba zmenime hrany z s a hrany do t (ako?)
 

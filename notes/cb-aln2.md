@@ -54,11 +54,11 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
   - Stiahnite si súbor nižšie, uložte si ho a otvorte v Exceli /
     OpenOffice / LibreOffice
       - [ODS
-        formát](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.ods)
+        formát](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.ods)
       - [XLSX formát for
-        Excel](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.xlsx)
+        Excel](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.xlsx)
       - [XLSX English
-        version](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring-en.xlsx)
+        version](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring-en.xlsx)
   - V záložke Matica vyplňte do žltej oblasti vzorce na výpočet
     pravdepodobnosti krátkeho zarovnania, logaritmus pomeru
     pravdepodobnosti a súčet skóre, pričom vo vzorcoch použijete odkazy
@@ -80,10 +80,10 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
   - Program Yass hlada lokalne zarovnania v DNA sekvenciach, zobrazuje
     vo forme dot plotov
   - V novom okne/tabe si otvorte YASS server na adrese
-    <http://bioinfo.lifl.fr/yass/yass.php>
+    <https://bioinfo.lifl.fr/yass/yass.php>
   - V dalsom okne si na stranke UCSC genome browseru si zobrazte oblast
     chr21:9,180,027-9,180,345 vo verzii hg38 ludskeho genomu
-    [1](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345)
+    [1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345)
       - tento región obsahuje **Alu repeat**. Tieto opakovania tvoria
         cca 10% ľudského genómu, viac ako milión kópií
       - zobrazte si DNA sekvenciu tohto useku takto: na hornej modrej
@@ -106,7 +106,7 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
         sama k sebe, druhe je asi to, co chcete)
   - V genome browseri sa presunte na poziciu chr21:8,552,000-8,562,000
     (10kb sekvencie na chromozome 21, s niekolkymi vyskytmi Alu)
-    [2](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
+    [2](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
   - **Chceme teraz porovnat tento usek genomu so sekvenciou Alu pomocou
     YASSu**
       - Ako predtym si stiahnite DNA sekvenciu tohto useku
@@ -154,7 +154,7 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
 
   - Balicek emboss, obsahuje programy na klasicke dynamicke
     programovanie (needle - globalne, water - lokalne), najdu sa na
-    stranke EBI <http://www.ebi.ac.uk/Tools/psa/>
+    stranke EBI <https://www.ebi.ac.uk/Tools/psa/>
   - porovnanie lokalneho a globalneho zarovnania
       - Dva proteiny z rôznych kvasiniek zarovnáme lokálne, globálne a
         globálne s tým, že neplatíme za medzery na koncoch
@@ -190,7 +190,7 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
 
 ### NCBI Blast
 
-  - NCBI BLAST <http://blast.ncbi.nlm.nih.gov/> vela roznych nastrojov
+  - NCBI BLAST <https://blast.ncbi.nlm.nih.gov/> vela roznych nastrojov
     (porovnavanie DNA vs proteiny, pripadne translacia DNA na protein v
     6 ramcoch)
       - Heuristicky algoritmus, moze niektore zarovnania vynechat
@@ -268,7 +268,7 @@ sebou sa objavia male pismena alebo Xka:
 <!-- end list -->
 
   - Pozrieme sa na známy koronavírusový proteín Spike
-      - Nájdime ho na stránke <http://www.uniprot.org/> pod názvom
+      - Nájdime ho na stránke <https://www.uniprot.org/> pod názvom
         SPIKE\_SARS2
       - Pozrime si podrobne jeho stránku, ktoré časti boli predpovedané
         bioinformatickými metódami z prednášky?
@@ -278,7 +278,7 @@ sebou sa objavia male pismena alebo Xka:
 
 ### BLAT, chains, nets v UCSC browseri
 
-  - Program BLAT v UCSC browseri <http://genome-euro.ucsc.edu/> rychlo
+  - Program BLAT v UCSC browseri <https://genome-euro.ucsc.edu/> rychlo
     vyhladava sekvencie v genome, ale nevie najst slabsie podobnosti
       - Vhodne pouzitie: zarovnanie mRNA ku genomu, presne urcenie
         suradnic nejakej sekvencie, a pod.
@@ -289,7 +289,7 @@ sebou sa objavia male pismena alebo Xka:
 
   - Sekvencia uvedena nizsie vznikla pomocou RT-PCR na ľudských cDNA
     knižniciach
-  - Choďte na UCSC genome browser <http://genome-euro.ucsc.edu/> , na
+  - Choďte na UCSC genome browser <https://genome-euro.ucsc.edu/> , na
     modrej lište zvoľte BLAT, zadajte túto sekvenciu a hľadajte ju v
     ľudskom genóme. **Akú podobnosť (IDENTITY) má najsilnejší nájdený
     výskyt? Aký dlhý úsek genómu zasahuje? (SPAN).** Všimnite si, že
@@ -305,7 +305,7 @@ sebou sa objavia male pismena alebo Xka:
     sekvenciu. **Akú podobnosť a dĺžku má najsilnejší nájdený výskyt
     teraz? Na ktorom je chromozóme?**
   - Skúsme to isté v NCBI blaste: Choďte na
-    <http://blast.ncbi.nlm.nih.gov/> zvoľte nucleotide blast, database
+    <https://blast.ncbi.nlm.nih.gov/> zvoľte nucleotide blast, database
     others a z menu reference genomic sequence, organism chicken
     (taxid:9031), program blastn
   - **Aká je dĺžka, identity a E-value najlepšieho zarovnania? Na ktorom
@@ -326,7 +326,3 @@ sebou sa objavia male pismena alebo Xka:
     ACTGTAGGAGGCTCACTTCTCTGGGCAGGCTCTTCAGGCGGTTCCCGCACAAGTTCAGGACCACGATCCG
     GGTCAGTTTCCCCACCTCGGGGAGGGAGAACCCCGGAGCTGGTTGTGAGACAAATTGAGTTTCTGGACCC
     CCGAAAAGCCCCCACAAAAAGCCG
-
-`     `<sha1>`bqt7esni6htyvxcag7m70vnkyke148r`</sha1>  
-`     `<model>`wikitext`</model>  
-`     `<format>`text/x-wiki`</format>
