@@ -41,13 +41,14 @@ orientovaného grafu:
   - Najskor si graf zotriedime topologicky, t.j. usporiadame vrcholy
     tak, aby kazda hrana isla z vrcholu z mensim cislom do vrcholu s
     vacsim cislom. To sa da modifikaciou prehladavania do hlbky v case
-    $O(|V|+|E|)$
+    $O(|V|+|E|)$.
   - Potom pocitame dynamickym programovanim, kde A\[u\] je dlzka
     najdlhsej cesty z s do u:
     $A[u] = \max_{v:v\rightarrow u\in E} A[v]+w(v\rightarrow u)$
     pricom na zaciatku nastavime $A[s]=0$ a na konci mame cenu cesty v
     $A[t]$.
-  - Cas vypoctu je $O(|V|+|E|)$.
+  - Cas vypoctu je
+    $O(|V|+|E|)$.
   - Vsimnime si, ze tiez dostaneme najdlhsie cesty z $s$ do vsetkych
     vrcholov.
 
