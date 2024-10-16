@@ -84,7 +84,7 @@ A  C  G  C  T  C  C
 Pouzijeme bezne dynamicke programovanie pre globalne zarovnanie, ale v
 rekurencii zmenime vypocet penalty za medzeru:
 
-$A[i,j]=\max\left\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]+c(i-1,j,hore), A[i,j-1]+c(i,j-1,vlavo)\right\}$
+$A[i,j]=\max\left\\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]+c(i-1,j,hore), A[i,j-1]+c(i,j-1,vlavo)\right\\}$
 
   - c(i,j,s) = o, ak v policku A\[i,j\] mame sipku sikmo
   - c(i,j,s) = e, ak v policku A\[i,j\] mame inu sipku
@@ -143,7 +143,7 @@ Riesenie 2:
       - Nech $B_k[i,j]$ je najväčší index v riadku k, cez ktorý
         prechádza najkratšia cesta z (0,0) do (i,j)
   - Ako vieme $B_k[i,j]$ spočítať?
-      - ak $A[i,j] = A[i-1,j-1]+w(S[i],T[j])$, potom
+      - ak $A[i,j] = A[i-1,j-1]+s(x_i,y_j)$, potom
         $B_k[i,j]=B_k[i-1,j-1]$.
       - ak $A[i,j]=A[i-1,j]+1$, potom $B_k[i,j]=B_k[i-1,j]$.
       - ak $A[i,j]=A[i,j-1]+1$, potom $B_k[i,j]=B_k[i,j-1]$.
@@ -151,12 +151,12 @@ Riesenie 2:
   - Ak už poznáme $A[i-1,\*\]$ a $B_k[i-1,\*\]$, vieme spočítať $A[i,\*\]$
     a $B_k[i,\*\]$.
       - Stačia nám teda iba dva riadky matíc $A$ a $B_k$.
-  - Nech $k'=B_k[m,n]$. Potom v optimálnom zarovnaní sa $S[1..k]$
-    zarovná s $T[1..k']$ a $S[k+1..m]$ s $T[k'+1..n]$.
+  - Nech $k'=B_k[m,n]$. Potom v optimálnom zarovnaní sa $x_1,\dots,x_k$
+    zarovná s $y_1\dots,y_k'$ a $x_{k+1}\dots x_m$ s $y_{k'+1}\dots y_n$.
       - Toto použijeme na rekurzívny algoritmus na výpočet zarovnania:
 
 ```
-    optA(l1, r1, l2, r2) { // align S[l1..r1] and T[l2..r2]
+    optA(l1, r1, l2, r2) { // align X[l1..r1] and Y[l2..r2]
         if(r1-l1 <= 1 ||  r2-l2 <=1) 
             solve using dynamic programming
         else {
