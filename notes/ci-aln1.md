@@ -5,10 +5,10 @@ title: "Cvičenia pre informatikov: Pokročilé algoritmy na zarovnávanie sekve
 ## Opakovanie dynamického programovania pre globálne zarovnanie
 
 Uvažujme napríklad skórovanie zhoda +1, nezhoda -1, medzera -1 a vstupné
-sekvencie \(X=x_1\dots x_m\) a \(Y=y_1\dots y_n\). Nech s(x,y) je skóre
+sekvencie $X=x_1\dots x_m$ a $Y=y_1\dots y_n$. Nech s(x,y) je skóre
 písmen x a y, t.j. 1 ak sa zhodujú a -1 ak nie. Máme rekurenciu:
 
-$A[i,j]=\max\left\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]-1, A[i,j-1]-1\right\}$
+$A[i,j]=\max\left\\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]-1, A[i,j-1]-1\right\\}$
 
   - Ako presne by sme implementovali?
   - Ako spočítame maticu spätných šípok B?
@@ -41,13 +41,13 @@ orientovaného grafu:
   - Najskor si graf zotriedime topologicky, t.j. usporiadame vrcholy
     tak, aby kazda hrana isla z vrcholu z mensim cislom do vrcholu s
     vacsim cislom. To sa da modifikaciou prehladavania do hlbky v case
-    O(|V|+|E|)
+    $O(|V|+|E|)$
   - Potom pocitame dynamickym programovanim, kde A\[u\] je dlzka
     najdlhsej cesty z s do u:
-    $A[u] = \max_{v:v\rightarrow u\in E} A[v]+c(v\rightarrow u)$
+    $A[u] = \max_{v:v\rightarrow u\in E} A[v]+w(v\rightarrow u)$
     pricom na zaciatku nastavime A\[s\]=0 a na konci mame cenu cesty v
     A\[t\].
-  - Cas vypoctu je O(|V|+|E|)
+  - Cas vypoctu je $O(|V|+|E|)$
   - Vsimnime si, ze tiez dostaneme najdlhsie cesty z s do vsetkych
     vrcholov.
 
@@ -86,7 +86,7 @@ rekurencii zmenime vypocet penalty za medzeru:
 
 $A[i,j]=\max\left\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]+c(i-1,j,hore), A[i,j-1]+c(i,j-1,vlavo)\right\}$
 
-  - c(i,j,s) = o, ak v policku A\[i,j\] mame sipku s
+  - c(i,j,s) = o, ak v policku A\[i,j\] mame sipku sikmo
   - c(i,j,s) = e, ak v policku A\[i,j\] mame inu sipku
 
 Preco toto riesenie nefunguje?
@@ -112,8 +112,8 @@ Riesenie 1:
   - Cas O(mn(m+n)), t.j. kubicky
   - pozor, mame aj cesty, ktore nezopodvedaju ziadnemu spravnemu skore,
     napr. (i.j)-\>(i+1,j)-\>(i+2,j) ma cenou 2o, ale ma mat o+e.
-    Nastastie hrana (i,j)-\>(i+2,j) ma vyssiu cenu, takze ta dlhsia
-    cesta sa nepouzije.
+    Nastastie hrana (i,j)-\>(i+2,j) ma vyssiu cenu o+e, takze cesta s cenou 2o
+    sa nepouzije.
 
 Riesenie 2:
 
@@ -148,8 +148,8 @@ Riesenie 2:
       - ak $A[i,j]=A[i-1,j]+1$, potom $B_k[i,j]=B_k[i-1,j]$.
       - ak $A[i,j]=A[i,j-1]+1$, potom $B_k[i,j]=B_k[i,j-1]$.
       - Toto platí, ak $i>k$. Pre $i=k$ nastavíme $B_k[i,j]=j$
-  - Ak už poznáme $A[i-1,*]$ a $B_k[i-1,*]$, vieme spočítať $A[i,*]$
-    a $B_k[i,*]$.
+  - Ak už poznáme $A[i-1,\*\]$ a $B_k[i-1,\*\]$, vieme spočítať $A[i,\*\]$
+    a $B_k[i,\*\]$.
       - Stačia nám teda iba dva riadky matíc $A$ a $B_k$.
   - Nech $k'=B_k[m,n]$. Potom v optimálnom zarovnaní sa $S[1..k]$
     zarovná s $T[1..k']$ a $S[k+1..m]$ s $T[k'+1..n]$.
@@ -178,14 +178,14 @@ Casova zlozitost:
   - Na hornej úrovni rekurzie spúšťame dynamické programovanie pre celú
     maticu -- čas bude $cN$.
   - Na druhej urovni mame dva podproblemy, velkosti N1 a N2, pricom
-    N1+N2\<=0.5\*N (z kazdeho stlpca matice A najviac polovica riadkov
+    N1+N2\<=N/2 (z kazdeho stlpca matice A najviac polovica riadkov
     pocitana znova)
   - Na tretej urovni mame 4 podproblemy N11, N12, N21, N22, pricom
-    N11+N12 \<= 0.5\*N1 a N21+N22 \<= 0.5\*N2 a teda celkovy sucet
-    podproblemov na druhej urvni je najviac N/4.
+    N11+N12 \<= N1/2 a N21+N22 \<= N2/2 a teda celkovy sucet
+    podproblemov na druhej urovni je najviac N/4.
 
-Na stvrtej urovni je sucet podproblemov najviac N/8 atd, Dostavame
-geometricky rad cN+cn/2+cN/4+... ktoreho sucet je 2cN
+Na stvrtej urovni je sucet podproblemov najviac N/8 atd. Dostavame
+geometricky rad cN+cn/2+cN/4+... ktoreho sucet je 2cN.
 
 ## Vypísanie všetkých najlepších riešení
 
