@@ -78,7 +78,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 23, 2024 22:00</td>
   </tr>
   <tr>
-    <td colspan="3">Please submit the form</td>
+    <td colspan="3">Please submit the form as instructed in [Journal club description)[./Journal_club.html]</td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Journal club report</b></td>

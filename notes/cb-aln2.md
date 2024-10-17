@@ -152,11 +152,11 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
 
   - Balicek emboss, obsahuje programy na klasicke dynamicke
     programovanie (needle - globalne, water - lokalne), najdu sa na
-    stranke EBI <https://www.ebi.ac.uk/Tools/psa/>
+    stranke EBI <https://www.ebi.ac.uk/jdispatcher/psa>
   - porovnanie lokalneho a globalneho zarovnania
       - Dva proteiny z rôznych kvasiniek zarovnáme lokálne, globálne a
         globálne s tým, že neplatíme za medzery na koncoch
-  - sekvencie a vysledne zarovnania: [CB-aln-dp](./CB-aln-dp.md)
+  - sekvencie a vysledne zarovnania: [CB-aln-dp](./cb--aln-dp.md)
   - vo vysledku si vsimnime, kolko ma kazde z nich %identity, %gaps, a
     kam sa zarovna sekvencia IRESPLGG ktora je na pozicii 29 v prvom a
     30 v druhom proteine

@@ -2,10 +2,13 @@
 title: Project for Biologists
 ---
 
-According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. You can explore the use of bioinformatics tools and databases relevant for your thesis topic, but you can also work on other topics of interest. You can work in pairs, but each student should focus more on a separate part of the project.
+According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. Computer science students have an exam instead.
 
 An ideal project uses several tools or databases to explore a single topic and explores these tools in some depth, e.g. by trying several options and comparing them. Try to understand how these tools work and what might be their limitations. These tools can be alternatives for the same task, subsequent steps in a longer analysis or separate analyses looking at different aspects of the same data. 
 
+You can explore the use of bioinformatics tools and databases relevant for your thesis topic, but you can also work on other topics of interest. You can work in pairs, but each student should focus more on a separate part of the project.
+
+ 
 ## Parts of the project
 
 You will submit the final report as well as other documents/presentations as listed below to help you in the process. The deadlines and Moodle links are in the [Tasks subpage](./Tasks.html).
@@ -45,7 +48,7 @@ It is not necessary to proceed strictly according to the plans presented at this
 
 30% of the final grade
 
-Please submit a pdf with your project report. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to interleave them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
+Please submit a pdf with your project report. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
 
 
 #### Introduction
@@ -62,7 +65,7 @@ For each method or website, include the link to the server or link to the softwa
 
 #### Results and discussion
 
-Show the results of the analysis, usually in figures or tables. Discuss if the results are relevant for you and if they seem reliable or in agreement with other sources. If you tried multiple ways of doing similar analyses, describe their differences and what might be causing them. 
+Show the results of the analysis, usually as figures or tables. Discuss if the results are relevant for you and if they seem reliable or in agreement with other sources. If you tried multiple ways of doing similar analyses, describe their differences and what might be causing them. 
 
 #### Conclusion 
 
