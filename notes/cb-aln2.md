@@ -19,9 +19,10 @@ sekvencie dĺžky *n*.
   - Máme jednu sekvenciu ACT a druhú ACC. Aká je pravdepodobnosť, že
     práve tieto sekvencie vygenerujeme v našom modeli R?
   - Nezávislé udalosti pre jednotlivé písmená, t.j.
-    Pr(X1=A)\*Pr(X2=C)\*Pr(X3=T)\*Pr(Y1=A)\*Pr(Y2=C)\*Pr(Y3=C) =
-    0.3\*0.2\*0.3\*0.3\*0.2\*0.2 = 0.000216
-  - Spolu máme v modeli \(4^6 = 4096\) možností ako vygenerovať 2 DNA
+    $\Pr(X1=A)\cdot \Pr(X2=C)\cdot \Pr(X3=T) \cdot \Pr(Y1=A) \cdot \Pr(Y2=C)\cdot \Pr(Y3=C)$
+  - Po dosadení dostaneme
+    $0,3\cdot 0,2\cdot 0,3\cdot 0,3\cdot 0,2\cdot 0,2 = 0,000216$
+  - Spolu máme v modeli $4^6 = 4096$ možností ako vygenerovať dve DNA
     sekvencie dĺžky 3
 
 **Model H (homolog)** reprezentuje zarovnanie vzájomne súvisiacich
@@ -30,17 +31,14 @@ sekvencií
   - máme vrece, v ktorom je napr.
       - po 21% guličiek označených AA, TT
       - po 14% označených CC, GG
-      - po 2.4% označených AC, AG, CA, CT, GA, GT, TC, TG
-      - po 3.6% označených AT, TA
-      - po 1.6% označených CG, GC.
+      - po 2,4% označených AC, AG, CA, CT, GA, GT, TC, TG
+      - po 3,6% označených AT, TA
+      - po 1,6% označených CG, GC.
   - Spolu máme 70% guličiek označených rovnakými písmenami, 30% rôznymi
-
-<!-- end list -->
-
   - *n* krát z vreca vytiahneme guličku a písmená píšeme ako stĺpce
     zarovnania A1, A2,.., An.
   - aká je pravdepodobnosť, ze dostaneme ACT zarovnané s ACC?
-  - Pr(A1=AA)\*Pr(A2=CC)\*Pr(A3=TC) = 0.21\*0.14\*0.024 = 0.0007056
+  - $\Pr(A1=AA)\cdot \Pr(A2=CC)\cdot \Pr(A3=TC) = 0,21\cdot 0,14\cdot 0,024 = 0,0007056$
 
 **Skóre zarovnania** je log Pr(zarovnania v H)/Pr(zarovnania v R), t.j.
 log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
@@ -66,7 +64,6 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
   - Súčet skóre by mal byť zhruba rovný desaťnásobku logaritmu pomeru -
     prečo vidíme rozdiely?
 
-<!-- end list -->
 
   - Potom skúšajte meniť %GC a %identity v horných riadkoch tabuľky a
     pozrite sa, ako to ovplyvní skórovanie. Výsledné skóre zo stĺpca E
