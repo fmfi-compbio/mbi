@@ -87,8 +87,10 @@ rekurencii zmenime vypocet penalty za medzeru:
 
 $A[i,j]=\max\left\\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]+c(i-1,j,hore), A[i,j-1]+c(i,j-1,vlavo)\right\\}$
 
-  - c(i,j,s) = o, ak v policku A\[i,j\] mame sipku sikmo
-  - c(i,j,s) = e, ak v policku A\[i,j\] mame inu sipku
+
+* $c(i,j,s) = e$, ak v políčku $A[i,j]$ máme šípku $s$
+* $c(i,j,s) = o$, ak v políčku $A[i,j]$ máme inú šípku
+
 
 Preco toto riesenie nefunguje?
 

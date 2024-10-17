@@ -83,7 +83,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### L: Sequence alignment: Smith-Waterman, Needleman-Wunsch, scoring
 
 {% include pdf.html file="p-aln1" name="pdf" show=1 dot=1
-%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=1 dot=0
+%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=1 dot=1
 %} BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2
 
 #### TI: Introduction to dynamic programming, proteomics
@@ -103,23 +103,33 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 <a name="W4"></a>
 ### Oct. 17
 
-#### L: Sequence alignment: heuristic alignment (BLAST), statistical significance of alignments, whole genome alignments, multiple alignments 
-pdf, video, BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5
+#### L: Sequence alignment: heuristic alignment (BLAST), statistical significance of alignments, whole genome alignments, multiple alignments
+
+{% include pdf.html file="p-aln2" name="pdf" show=1 dot=1
+%} {% include youtube.html id="jkQGXiqKbxM" name="video" show=1 dot=1
+%} BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5
 
 #### TI: Advanced algorithms for sequence alignment
 
-{% include notes.html file="ci-aln1" name="notes" show=1 dot=0
+{% include notes.html file="ci-aln1" name="notes" show=1 dot=1
+%} {% include pdf.html file="ci-aln1" name="pdf" show=1 dot=0
 %}
 
-#### TB: Programs for sequence alignment, scoring schemes
+#### TB: Programs for sequence alignment, scoring schemes, introduction to projects
 
-{% include notes.html file="cb-aln2" name="notes" show=1 dot=0
-%}
+{% include notes.html file="cb-aln2" name="notes" show=1 dot=1
+%} [Projects](./Project.html)
 
 
 <a name="W5"></a>
 ### Oct. 24
 #### L: Gene finding, hidden Markov models
+
+{% include pdf.html file="p-gene" name="pdf" show=0 dot=1
+%} {% include youtube.html id="??" name="video" show=0 dot=1
+%} 
+
+
 pdf, video, BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7
 #### TI:  Fast similarity search, BLAST, MinHash
 pdf
