@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-[Week 1](#W1) · [Week 2](#W2) · **[Week 3](#W3)** · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · **[Week 4](#W4)** · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
 · [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
@@ -105,10 +105,17 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Sequence alignment: heuristic alignment (BLAST), statistical significance of alignments, whole genome alignments, multiple alignments 
 pdf, video, BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5
+
 #### TI: Advanced algorithms for sequence alignment
-notes
+
+{% include notes.html file="ci-aln1" name="notes" show=1 dot=0
+%}
+
 #### TB: Programs for sequence alignment, scoring schemes
-notes
+
+{% include notes.html file="cb-aln2" name="notes" show=1 dot=0
+%}
+
 
 <a name="W5"></a>
 ### Oct. 24

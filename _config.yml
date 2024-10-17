@@ -9,4 +9,8 @@ moodle: 2160
 header_pages:
   - index.md
   - Rules.md
-  - Materials.md    
+  - Materials.md
+  - Tasks.md
+  - Project.md
+  - Journal_club.md
+
