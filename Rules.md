@@ -35,7 +35,7 @@ Quizes can be found in Moodle. They appear each Thursday at 7pm and are due next
 
 ## Journal club
 
-Journal club is a group activity, where each groups studies one
+Journal club is a group activity, where each group studies one
 scientific paper and rewrites it in their own words.
 
   - Each student will select from the provided list the three articles

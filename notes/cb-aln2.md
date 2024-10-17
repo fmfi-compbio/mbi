@@ -80,10 +80,9 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
   - Program Yass hlada lokalne zarovnania v DNA sekvenciach, zobrazuje
     vo forme dot plotov
   - V novom okne/tabe si otvorte YASS server na adrese
-    <https://bioinfo.lifl.fr/yass/yass.php>
-  - V dalsom okne si na stranke UCSC genome browseru si zobrazte oblast
-    chr21:9,180,027-9,180,345 vo verzii hg38 ludskeho genomu
-    [1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345)
+    <https://bioinfo.univ-lille.fr/yass/yass.php>
+  - V dalsom okne si na stranke UCSC genome browseru si zobrazte [oblast
+    chr21:9,180,027-9,180,345](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345) vo verzii hg38 ludskeho genomu
       - tento región obsahuje **Alu repeat**. Tieto opakovania tvoria
         cca 10% ľudského genómu, viac ako milión kópií
       - zobrazte si DNA sekvenciu tohto useku takto: na hornej modrej
@@ -104,9 +103,8 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
         opakujucej sa casti a kolko zarovnanie obsahuje
         zhod/nezhod/medzier?** (Pozor, prve zarovnanie je cela sekvencia
         sama k sebe, druhe je asi to, co chcete)
-  - V genome browseri sa presunte na poziciu chr21:8,552,000-8,562,000
-    (10kb sekvencie na chromozome 21, s niekolkymi vyskytmi Alu)
-    [2](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
+  - V genome browseri sa presunte na [poziciu chr21:8,552,000-8,562,000](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
+    (10kb na chromozome 21, s niekolkymi vyskytmi Alu)
   - **Chceme teraz porovnat tento usek genomu so sekvenciou Alu pomocou
     YASSu**
       - Ako predtym si stiahnite DNA sekvenciu tohto useku
@@ -134,14 +132,14 @@ log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
       - Candida dubliniensis
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/945/GCF_000026945.1_ASM2694v1/GCF_000026945.1_ASM2694v1_genomic.fna.gz>
   - Predpočítaný výsledok
-    <https://dgenies.toulouse.inra.fr/result/CL9nR_20231012150020>
+    <https://dgenies.toulouse.inra.fr/result/wJkYq_20241017093132>
   - Iná dvojica:
       - Magnusiomyces ingens
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/uid/UIDE01.fasta.gz>
-        [3](https://www.ebi.ac.uk/ena/browser/view/GCA_900497715?show=blobtoolkit)
+        [(web)](https://www.ebi.ac.uk/ena/browser/view/GCA_900497715?show=blobtoolkit)
       - Saprochaete ingens
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/cab/CABVLU01.fasta.gz>
-        [4](https://www.ebi.ac.uk/ena/browser/view/GCA_902498895)
+        [(web)](https://www.ebi.ac.uk/ena/browser/view/GCA_902498895)
 
 ## Príklady praktických programov
 
@@ -163,8 +161,7 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
     kam sa zarovna sekvencia IRESPLGG ktora je na pozicii 29 v prvom a
     30 v druhom proteine
 
-<!-- end list -->
-
+```
     Lokalne zarovnanie
     Length: 588
     Identity:     170/588 (28.9%)
@@ -187,6 +184,7 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
     Similarity:   282/651 (43.3%)
     Gaps:         155/651 (23.8%)
     Score: 608.0
+```
 
 ### NCBI Blast
 
@@ -201,19 +199,21 @@ regiony v ktorych sa velakrat opakuje ta ista aminokyselina
 
   - Priklad (z ucebnice Zvelebil and Baum):
 
-<!-- end list -->
 
+```
     >sp|P04156|PRIO_HUMAN Major prion protein OS=Homo sapiens GN=PRNP PE=1 SV=1
     MANLGCWMLVLFVATWSDLGLCKKRPKPGGWNTGGSRYPGQGSPGGNRYPPQGGGGWGQP
     HGGGWGQPHGGGWGQPHGGGWGQPHGGGWGQGGGTHSQWNKPSKPKTNMKHMAGAAAAGA
     VVGGLGGYMLGSAMSRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCV
     NITIKQHTVTTTTKGENFTETDVKMMERVVEQMCITQYERESQAYYQRGSSMVLFSSPPV
     ILLISFLIFLIVG
+```
 
-  - Hladajme v databaze Reference sequence (Refseq), organizmus human
+  - Hladajme v databaze `Reference sequence (Refseq)`, organizmus `human`
 
 Bez maskovania vypise napr aj toto zarovnanie:
 
+```
     >ref|NP_065842.1| serine/threonine-protein kinase TAO1 isoform 1 [Homo sapiens]
     Length=1001
     
@@ -230,10 +230,12 @@ Bez maskovania vypise napr aj toto zarovnanie:
     Query  26   PKPGGW--NTGGSRYPGQGSPGGNRYPPQGGGGWGQPHGGG---WGQPHGGGWGQPHGGGWG  82
                 P   GW  N  G   P  G P G   PPQ    WG P  GG   WG P G   G P G  
     Sbjct  905  PGASGWSHNPTGGPGPHWGHPMGG--PPQA---WGHPMQGGPQPWGHPSGPMQGVPRGSSMG  961
+```
 
 Ak zapneme maskovanie, toto zarovnanie uz nenajde, v zarovnani sameho so
 sebou sa objavia male pismena alebo Xka:
 
+```
     >ref|NP_000302.1|major prion protein preproprotein [Homo sapiens]
     Length=253
     
@@ -259,20 +261,20 @@ sebou sa objavia male pismena alebo Xka:
     Query  241  illisfliflivG  253
                 ILLISFLIFLIVG
     Sbjct  241  ILLISFLIFLIVG  253
+```
 
+{% if false %}
 ## Uniprot pre projekty
 
   - Prehladny pohlad na proteiny, vela linkov na ine databazy, cast
     vytvarana rucne
-
-<!-- end list -->
-
   - Pozrieme sa na známy koronavírusový proteín Spike
       - Nájdime ho na stránke <https://www.uniprot.org/> pod názvom
         SPIKE\_SARS2
       - Pozrime si podrobne jeho stránku, ktoré časti boli predpovedané
         bioinformatickými metódami z prednášky?
       - Všimnime si niektorú Pfam doménu a pozrime si jej stránku
+{% endif %}
 
 ## Praktické cvičenie pri počítači: BLAT vs BLAST
 
@@ -296,7 +298,7 @@ sebou sa objavia male pismena alebo Xka:
     ostatné výskyty sú oveľa kratšie.
   - V stĺpci ACTIONS si pomocou Details môžete pozrieť detaily
     zarovnania a pomocou Browser si pozrieť príslušný úsek genómu.
-  - V tomto úseku genómu si zapnite track Vertebrate net na full a
+  - V tomto úseku genómu si zapnite track `Vertebrate net` na `full` a
     kliknutím na farebnú čiaru na obrázku pre tento track zistite, **na
     ktorom chromozóme sliepky sa vyskytuje homologický úsek.**
   - Skusme tu istu sekvenciu zarovnat ku genomu sliepky programom Blat:

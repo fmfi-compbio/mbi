@@ -1,8 +1,8 @@
 ---
-title: Journal club
+title: Journal Club
 ---
 
-A brief description of the journal club activity is included in the [course rules](./Rules.html).
+A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club).
 
 Please submit your preferences regarding these papers using [this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 23, 2024, 22:00. In the form, include numbers of three papers from this list in the order of preference.
 
