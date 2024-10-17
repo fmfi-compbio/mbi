@@ -36,12 +36,12 @@ sekvencií
       - po 1,6% označených CG, GC.
   - Spolu máme 70% guličiek označených rovnakými písmenami, 30% rôznymi
   - *n* krát z vreca vytiahneme guličku a písmená píšeme ako stĺpce
-    zarovnania A1, A2,.., An.
+    zarovnania $A_1, A_2,\dots, A_n$.
   - aká je pravdepodobnosť, ze dostaneme ACT zarovnané s ACC?
-  - $\Pr(A1=AA)\cdot \Pr(A2=CC)\cdot \Pr(A3=TC) = 0,21\cdot 0,14\cdot 0,024 = 0,0007056$
+  - $\Pr(A_1=AA)\cdot \Pr(A_2=CC)\cdot \Pr(A_3=TC) = 0,21\cdot 0,14\cdot 0,024 = 0,0007056$
 
 **Skóre zarovnania** je log Pr(zarovnania v H)/Pr(zarovnania v R), t.j.
-log (0.0007056 / 0.000216) = 0.514105 (pre desiatkový logaritmus)
+log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
 
   - kladné skóre znamená, že model H lepšie zodpovedá dátam (zarovnaniu)
     ako model R

@@ -78,7 +78,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 23, 2024 22:00</td>
   </tr>
   <tr>
-    <td colspan="3">Please submit the form as instructed in [Journal club description](./Journal_club.html)</td>
+    <td colspan="3">Please submit the form as instructed in <a href="./Journal_club.html">Journal club description</a>.</td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Journal club report</b></td>
@@ -87,7 +87,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <!--
   <tr>
-    <td colspan="3">Submit in <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
+    <td colspan="3">Submit in <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
   </tr>
   -->
   <tr>
