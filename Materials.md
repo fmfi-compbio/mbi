@@ -126,12 +126,12 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### L: Gene finding, hidden Markov models
 
 {% include pdf.html file="p-gene" name="pdf" show=0 dot=1
-%} {% include youtube.html id="s3NiBeaiHPM" name="video" show=0 dot=1
+%} {% include youtube.html id="s3NiBeaiHPM" name="video" show=1 dot=1
 %} BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7
-
 
 #### TI:  Fast similarity search, BLAST, MinHash
 pdf
+
 #### TB:  Hidden Markov models, E-value
 pdf, notes
 

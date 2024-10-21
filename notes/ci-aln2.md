@@ -32,14 +32,13 @@ title: "Cvičenia pre informatikov: Heuristické zarovnávanie sekvencií"
         jadra)
   
 
-$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\
-\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k\\\\
+$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\\\\\
+\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k
 \\end{array}\\right.$
 
-V druhom riadku $p^i(1-p)$ zodpoveda
-$P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$ a A\[n-i-1\] je
-$P(X_1...X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
-$P(X_1...X_n\mbox{ neobsahuje jadro }| X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
+  - V druhom riadku $p^i(1-p)$ zodpoveda $P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
+  - A\[n-i-1\] je $P(X_1...X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
+$P(X_1...X_n\mbox{ neobsahuje jadro }\| X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
 
 ## Minimizery: ako ušetriť pamäť a čas
 
@@ -178,9 +177,7 @@ formalizuje matematický pojem Jaccardovej miery podobnosti.
 
 Nech $U$ je univerzum slov a nech $A, B \subseteq U$ sú jeho
 podmnožinami (t.j. množiny slov dvoch textov). Potom Jaccardova miera
-podobnosti $J(A, B)$ je definovaná nasledovne:
-
-$J(A, B) := \frac{|A \cap B|}{|A \cup B|}$
+podobnosti $J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|}$
 
 Táto miera nadobúda hodnotu 0 iba v prípade, ak množiny sú disjunktné, a
 hodnotu 1 iba v prípade, že množiny sú totožné. Inak sa jej hodnota
@@ -203,16 +200,13 @@ pokúsiť sa jej hodnotu vypočítať iba približne (t.j. aproximovať).
   - Ak by sme vedeli vzorkovať z $A \cup B$ prvky $u_1, u_2, \dots, u_s$
     (rovnomerne, nezavisle), a pre kazdy prvok $u_i$ by sme vedeli rychlo
     zistit, ci patri do prieniku, mohli by sme odhadnut $J(A, B)$ pomocou
-    nahodnej premennej $X$
-  - $X = \frac{1}{n}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku
-a $X_i=0$ inak
+    nahodnej premennej $X = \frac{1}{n}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku a $X_i=0$ inak
   - Toto sa podoba na zistovanie oblubenosti politika prieskumom
     verejnej mienky, $u_1, u_2, \dots, u_s$ su "respondenti"
   -  Pre kazde $X_i$ mame $E(X_i) = 0 \cdot Pr[X_i = 0] + 1 \cdot Pr[X_i = 1] = Pr[X_i = 1] = J(A, B)$.
   - Z linearity strednej hodnoty $E(X) = E(\frac{1}{n}\sum_{i=1}^n X_i) = \frac{1}{n}\sum_{i=1}^n E[X_i] = J(A, B)$.
   - Z toho vyplýva, že náhodná premenná $X$ je nevychýleným odhadom Jaccardovej miery.
-  - V štatistike základnou mierou kvality nevychýleného odhadu je jeho disperzia, odvodenie pozri nižšie
-  - $Var(X) = \frac{J(A, B) - J^2(A, B)}{s} \le \frac{1}{4s}$
+  - V štatistike základnou mierou kvality nevychýleného odhadu je jeho disperzia, pričom $Var(X) \le \frac{1}{4s}$ (odvodenie pozri nižšie)
   - Pri zvyšujúcej veľkosti vzorky *s* teda klesá disperzia. Podobná situácia ako pri prieskumoch verejnej mierky, kde pri väčšom súbore respondentov dostaneme dôveryhodnejšie výsledky.
 
 **Problémy:**
@@ -281,12 +275,14 @@ dvoch podobných sekvencií z množiny sekvencií môžeme použiť minhash.
   - Napríklad Mash používa k=21, s=1000 (s najmenších v jednej funkcii)
     na porovnávanie genómov, sketch má asi 8kb na genóm (genóm má
     milióny alebo miliardy nukleotidov)
+
+Literatúra
   - Ondov BD, Treangen TJ, Melsted P, Mallonee AB, Bergman NH, Koren S,
     Phillippy AM. [Mash: fast genome and metagenome distance estimation
     using MinHash.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x) Genome Biology. 2016 Dec;17(1):1-4.
     
 
-### Vypocet disperzie
+### Výpočet disperzie 
 
 Binarna premenna $X_i$, kde $P(X_i=1)=p$. Disperzia
 $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Spočítajme si postupne obe
