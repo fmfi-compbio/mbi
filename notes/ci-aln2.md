@@ -10,31 +10,33 @@ title: "Cvičenia pre informatikov: Heuristické zarovnávanie sekvencií"
   - Uvažujme pravdepodobnostný model zarovnania, v ktorom má každá
     pozícia pravdepodobnosť p, že bude zhoda a (1-p), ze bude nezhoda
     alebo medzera, zarovnanie ma dlzku L
-  - Nahodna premenna X\_i = 1 ak na pozicii i je zhoda, 0 inak
-  - Nahodna premenna Y\_i = 1 ak na pozicii i zacina jadro, t.j. ak
+  - Nahodna premenna $X_i = 1$ ak na pozicii i je zhoda, 0 inak
+  - Nahodna premenna $Y_i = 1$ ak na pozicii i zacina jadro, t.j. ak
     $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
-  - $P(Y_i = 1) = p^k$, nakolko X\_i su navzajom nezavisle
+  - $P(Y_i = 1) = p^k$, nakolko $X_i$ su navzajom nezavisle
   - Nech $Y = \sum_{i=1}^{L-k-1} Y_i$
   - Z linearity strednej hodnoty vieme lahko odhadnut
     $E(Y) = (L-k+1)p^k$
   - Nas ale zaujima P(Y\>0) = 1-P(Y=0)
   - $P(Y=0) = P(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
   - Preco neplati, $P(Y=0) = P(Y_i = 0)^{L-k+1}$?
-      - Jednotlive Y\_i nie su nezavisle, napr. $P(Y_{i+1}=1|Y_i=1)=p$
-      - V postupnosti Y\_i sa jednotky maju tendenciu zhlukovat spolu
-  - Pravdepodobnost nepritomnosti jadra P(Y=0) ale vieme spocitat
+      - Jednotlive $Y_i$ nie su nezavisle, napr. $P(Y_{i+1}=1\|Y_i=1)=p$
+      - V postupnosti $Y_i$ sa jednotky maju tendenciu zhlukovat spolu
+  - Pravdepodobnost nepritomnosti jadra $P(Y=0)$ ale vieme spocitat
     dynamickym programovanim
-  - Nech A\[n\] je pravdepodobnost nepritomnosti jadra v prvých *n*
-    stlcoch zarovnania (0\<=n\<=L)
-  - Budeme rozlisovat pripady podla toho, kolko je na konci X\_1..X\_n
+  - Nech $A\[n\]$ je pravdepodobnost nepritomnosti jadra v prvých $n$
+    stlcoch zarovnania ($0\le n\le L$)
+  - Budeme rozlisovat pripady podla toho, kolko je na konci $X_1,\dots,X_n$
     jednotiek
-      - Tento pocet moze byt 0..k-1 (ak by bol \>=k, mali by sme vyskyt
+      - Tento pocet moze byt 0..k-1 (ak by bol $\ge k$, mali by sme vyskyt
         jadra)
-  - 
+  
 
 $A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\
 \\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k\\\\
-\\end{array}\\right.</math> V druhom riadku $p^i(1-p)$ zodpoveda
+\\end{array}\\right.$
+
+V druhom riadku $p^i(1-p)$ zodpoveda
 $P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$ a A\[n-i-1\] je
 $P(X_1...X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
 $P(X_1...X_n\mbox{ neobsahuje jadro }| X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
@@ -150,13 +152,12 @@ AGTGG,0              CGAGG
         prekryvy v nanoporovych citaniach k=15, s=5, porovnanie genomov
         s identitou nad 80% k=19, s=10
 
+Literatúra
   - Li, Heng. [Minimap and miniasm: fast mapping and de novo assembly
-    for noisy long sequences.](https://academic.oup.com/bioinformatics/article-abstract/32/14/2103/1742895) Bioinformatics 32.14 (2016): 2103-2110.
-   
+    for noisy long sequences.](https://academic.oup.com/bioinformatics/article-abstract/32/14/2103/1742895) Bioinformatics 32.14 (2016): 2103-2110.   
   - Roberts M, Hayes W, Hunt BR, Mount SM, Yorke JA. [Reducing storage
     requirements for biological sequence comparison.](https://academic.oup.com/bioinformatics/article/20/18/3363/202143) Bioinformatics.
     2004 Dec 12;20(18):3363-9.
-
   - Marçais, G., Pellow, D., Bork, D., Orenstein, Y., Shamir, R., &
     Kingsford, C. (2017). [Improving the performance of minimizers and
     winnowing schemes.](https://doi.org/10.1093/bioinformatics/btx235) Bioinformatics, 33(14), i110-i117.
@@ -179,7 +180,7 @@ Nech $U$ je univerzum slov a nech $A, B \subseteq U$ sú jeho
 podmnožinami (t.j. množiny slov dvoch textov). Potom Jaccardova miera
 podobnosti $J(A, B)$ je definovaná nasledovne:
 
-$J(A, B) := \dfrac{|A \cap B|}{|A \cup B|}$
+$J(A, B) := \frac{|A \cap B|}{|A \cup B|}$
 
 Táto miera nadobúda hodnotu 0 iba v prípade, ak množiny sú disjunktné, a
 hodnotu 1 iba v prípade, že množiny sú totožné. Inak sa jej hodnota
@@ -203,30 +204,16 @@ pokúsiť sa jej hodnotu vypočítať iba približne (t.j. aproximovať).
     (rovnomerne, nezavisle), a pre kazdy prvok $u_i$ by sme vedeli rychlo
     zistit, ci patri do prieniku, mohli by sme odhadnut $J(A, B)$ pomocou
     nahodnej premennej $X$
-
-$X = \frac{1}{n}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku
+  - $X = \frac{1}{n}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku
 a $X_i=0$ inak
-
   - Toto sa podoba na zistovanie oblubenosti politika prieskumom
     verejnej mienky, $u_1, u_2, \dots, u_s$ su "respondenti"
-
-Pre kazde X\_i
-
-$E(X_i) = 0 \cdot Pr[X_i = 0] + 1 \cdot Pr[X_i = 1] = Pr[X_i = 1] = J(A, B)$.
-Z linearity strednej hodnoty
-
-$E(X) = E(\frac{1}{n}\sum_{i=1}^n X_i) = \frac{1}{n}\sum_{i=1}^n E[X_i] = J(A, B)$.
-
-Z toho vyplýva, že náhodná premenná $X$ je nevychýleným odhadom
-Jaccardovej miery.
-
-V štatistike základnou mierou kvality nevychýleného odhadu je jeho
-disperzia, odvodenie pozri nižšie
-
-$Var(X) = \dfrac{J(A, B) - J^2(A, B)}{s} \le \dfrac{1}{4s}$
-Pri zvyšujúcej veľkosti vzorky *s* teda klesá disperzia. Podobná
-situácia ako pri prieskumoch verejnej mierky, kde pri väčšom súbore
-respondentov dostaneme dôveryhodnejšie výsledky.
+  -  Pre kazde $X_i$ mame $E(X_i) = 0 \cdot Pr[X_i = 0] + 1 \cdot Pr[X_i = 1] = Pr[X_i = 1] = J(A, B)$.
+  - Z linearity strednej hodnoty $E(X) = E(\frac{1}{n}\sum_{i=1}^n X_i) = \frac{1}{n}\sum_{i=1}^n E[X_i] = J(A, B)$.
+  - Z toho vyplýva, že náhodná premenná $X$ je nevychýleným odhadom Jaccardovej miery.
+  - V štatistike základnou mierou kvality nevychýleného odhadu je jeho disperzia, odvodenie pozri nižšie
+  - $Var(X) = \frac{J(A, B) - J^2(A, B)}{s} \le \frac{1}{4s}$
+  - Pri zvyšujúcej veľkosti vzorky *s* teda klesá disperzia. Podobná situácia ako pri prieskumoch verejnej mierky, kde pri väčšom súbore respondentov dostaneme dôveryhodnejšie výsledky.
 
 **Problémy:**
 
@@ -281,6 +268,7 @@ pomocou $|S_A\cap S_B|/s$ kde $S_A$ je mnozina hodnot v sketchi
 mnoziny $A$. To usetri cas pri vypocte sketchu, lebo nemusime hashovat
 vsetky prvky *s* krat.
 
+Literatúra
   - Broder AZ. [On the resemblance and containment of documents.
     Compression and Complexity of SEQUENCES](https://www.cs.princeton.edu/courses/archive/spring13/cos598C/broder97resemblance.pdf) 1997 (pp. 21-29). IEEE.
     
@@ -315,14 +303,14 @@ $f(x) = x - x^2$ na intervale $[0, 1]$?". Pre určenie extrémov
 hladkých funkcií treba nájsť korene jej prvej derivácie. Derivácia
 tejto funkcie je $f'(x) = 1 - 2x$, jej koreň je hodnota $0.5$.
 Hodnota funkcie v tomto bode je rovná $0.25$. Čiže
-$\Var(X_i) \leq 0.25$.
+$Var(X_i) \leq 0.25$.
 
 $X =\frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i$ su nezavisle premenne a
 každá z nich má strednú hodnotu $E(X_i) = E(X) = p$ a rovnakú
 disperziu $Var(X_i) = Var(X) = p - p^2$. Premenná $X$ je ich priemer.
 
 Pozrieme sa na jej disperziu:
-$Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \dfrac{1}{k^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \dfrac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \dfrac{1}{k^2} s \cdot Var(X_i) = \dfrac{Var(X_i)}{s} \leq \dfrac{1}{4s}$
+$Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \frac{1}{k^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \frac{1}{k^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
 
 *(\*) tento prechod je možný len kvôli tomu, že premenné $X_i$ sú
 nezávislé.*
