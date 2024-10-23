@@ -2,7 +2,8 @@
 title: Introduction
 ---
 
-**1-BIN-301, 2-AIN-501 Methods in Bioinformatics**
+**1-BIN-301, 2-AIN-501 Methods in Bioinformatics** at the [Faculty of Mathematics, Physics and Informatics](https://fmph.uniba.sk), [Comenus University in Bratislava]{https://uniba.sk}, Slovakia<br>
+Students from the Faculty of Natural Sciences are welcome, as are guests from other institutions.
 
 ### Schedule
 

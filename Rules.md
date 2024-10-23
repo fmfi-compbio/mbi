@@ -2,6 +2,9 @@
 title: Rules
 ---
 
+* TOC
+{:toc}
+
 
 ## Courses
 

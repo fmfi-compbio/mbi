@@ -87,8 +87,9 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <tr>
     <td colspan="3">
-      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133956">Moodle for announcing date</a> (1x per group, 24 hours before),
-      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133951">Moodle for submitting short meeting summary</a> (1x per group, after the meeting),
+      <a href="./Journal_club.html#group-meeting">Instructions</a>,
+      <a href="https://moodle.uniba.sk/mod/forum/view.php?id=133956">Moodle for announcing the date</a> (1x per group, 24 hours before),
+      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133951">Moodle for submitting a short meeting summary</a> (1x per group, after the meeting)
     </td>
   </tr>
   <tr>
@@ -105,7 +106,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Nov. 6, 2024 22:00</td>    
   </tr>
   <tr>
-    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#initial-proposal"></a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#initial-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, extended proposal</b></td>

@@ -2,6 +2,10 @@
 title: Project for Biologists
 ---
 
+* TOC
+{:toc}
+
+
 According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. Computer science students have an exam instead.
 
 An ideal project uses several tools or databases to explore a single topic and explores these tools in some depth, e.g. by trying several options and comparing them. Try to understand how these tools work and what might be their limitations. These tools can be alternatives for the same task, subsequent steps in a longer analysis or separate analyses looking at different aspects of the same data. 
