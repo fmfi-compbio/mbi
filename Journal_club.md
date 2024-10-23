@@ -91,12 +91,12 @@ mechanisms. Science. 2020 Dec 4;370(6521).
     terms that are not explained in the article.
   - You do not have to cover the entire content of the article in the
     report and, conversely, you can use other resources.
-  - You should however include a detailed explanation of at least one
-    part of a computational method and at least one biological result or
-    evaluation of the method on data.
-  - Explain how the paper relates to the course material.
-  - Also try to look at examples of other papers citing your paper
-    and using or improving its results.
+  - You should include the following (not necessarily in this order):
+    - a brief overall description of the contents of the paper,
+    - a detailed explanation of at least one part of a computational method,
+    - a detailed explanation of at least one biological result or evaluation of the method on data,
+    - an explanation how the paper relates to the course material,
+    - examples of other papers citing your paper and using or improving its results.
   - The recommended length is about 1-2 pages per person. However, the
     report should form one coherent text, so agree well on the outline
     and division of work and spend some time at the end on combining and

@@ -78,7 +78,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 23, 2024 22:00</td>
   </tr>
   <tr>
-    <td colspan="3">Please submit the form as instructed in <a href="./Journal_club.html">Journal club description</a>.</td>
+    <td colspan="3"><a href="./Journal_club.html">Instructions, list of papers and form</a></td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Journal club group meeting</b></td>
@@ -98,7 +98,9 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Dec. 20, 2024 22:00</td>
   </tr>
   <tr>
-    <td colspan="3"><a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
+    <td colspan="3">
+      <a href="./Journal_club.html#journal-club-report">Instructions</a>,
+      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, initial proposal</b></td>
