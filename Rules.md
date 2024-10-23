@@ -56,6 +56,7 @@ scientific paper and rewrites it in their own words.
     course (both computer scientists and biologists). You should also describe
     how the article relates to the topics covered during the lectures
     and how it was used or extended in later work.
+  - More details on a [separate page](./Journal_club.html)
 
 
 ## Exam

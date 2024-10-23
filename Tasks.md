@@ -81,22 +81,31 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td colspan="3">Please submit the form as instructed in <a href="./Journal_club.html">Journal club description</a>.</td>
   </tr>
   <tr>
+    <td style="background:#f0f0f0"><b>Journal club group meeting</b></td>
+    <td></td>
+    <td>Nov. 22, 2024</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133956">Moodle for announcing date</a> (1x per group, 24 hours before),
+      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133951">Moodle for submitting short meeting summary</a> (1x per group, after the meeting),
+    </td>
+  </tr>
+  <tr>
     <td style="background:#f0f0f0"><b>Journal club report</b></td>
     <td></td>
     <td>Dec. 20, 2024 22:00</td>
   </tr>
-  <!--
   <tr>
-    <td colspan="3">Submit in <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
+    <td colspan="3"><a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)</td>
   </tr>
-  -->
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, initial proposal</b></td>
     <td></td>
     <td>Nov. 6, 2024 22:00</td>    
   </tr>
   <tr>
-    <td colspan="3"><a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#initial-proposal"></a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, extended proposal</b></td>

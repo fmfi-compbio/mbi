@@ -2,7 +2,12 @@
 title: Journal Club
 ---
 
+* TOC
+{:toc}
+
 A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club).
+
+## Submitting preferences
 
 Please submit your preferences regarding these papers using [this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 23, 2024, 22:00. In the form, include numbers of three papers from this list in the order of preference.
 
@@ -10,7 +15,10 @@ Please submit your preferences regarding these papers using [this form](https://
 * Preferences submitted earlier will be considered with higher priority.
 * Also please indicate if you are willing to work in a group with English-speaking students (this means group discussions and final report in English)
 
-## List of papers: 
+## List of papers
+{% if false %}
+## Groups
+{% endif %}
 
 * All links to papers should work in our University network (e.g.
     Eduroam or [proxy](https://uniba.sk/index.php?id=6828))
@@ -55,43 +63,40 @@ host-coronavirus protein interaction networks reveal pan-viral disease
 mechanisms. Science. 2020 Dec 4;370(6521).
 <https://doi.org/10.1126/science.abe9403>
 
-
-{% if false %}
-**Groups:**
-
-**Unused papers:**
-
-Details for the journal club group meeting
+## Group meeting 
 
   - Remember that everyone should read the article before the first
     meeting
   - The first meeting should take place no later than November 22. The
-    meeting can be online (e,g, in MS Teams) or in person. Try to choose
+    meeting can be online (e.g. in MS Teams) or in person. Try to choose
     a time suitable for all members of the group.
   - At least 24 hours before the first group meeting, post its date,
-    time and location to the Journal club discussion forum in Moodle
+    time and location to the [discussion forum in Moodle](https://moodle.uniba.sk/mod/forum/view.php?id=133956)
   - After the first meeting, one representative of the group will post a
-    short summary to the Journal club discussion forum in Moodle stating
+    short summary to [Moodle]() stating
     who attended the meeting, who apologized and who did not respond to
     the group and what was the outcome of the meeting - whether the
     group had problems with some parts of the article, whether it plans
-    to meet again, whether they need a consultation with the
-    instructors, etc. You do not need to report subsequent meetings,
-    unless you need help.
+    to meet again, etc. You do not need to report subsequent meetings.
+  - If you need help from instructors, please contact us by email.
   - Failure to hold the first meeting according to these rules may
     affect the grade of the final report.
 
-Advice and instructions for the written report from the journal club
+## Journal club report
 
   - In the report, describe the main methods and results of the article
-    in your own words
+    in your own words.
   - The report should be understandable for students of this course
     (both computer scientists and biologists), so explain the necessary
-    terms that are not explained in the article
+    terms that are not explained in the article.
   - You do not have to cover the entire content of the article in the
-    report and, conversely, you can use other resources
-  - Try to express your own view of the topic, do not strictly follow
-    the text of the article
+    report and, conversely, you can use other resources.
+  - You should however include a detailed explanation of at least one
+    part of a computational method and at least one biological result or
+    evaluation of the method on data.
+  - Explain how the paper relates to the course material.
+  - Also try to look at examples of other papers citing your paper
+    and using or improving its results.
   - The recommended length is about 1-2 pages per person. However, the
     report should form one coherent text, so agree well on the outline
     and division of work and spend some time at the end on combining and
@@ -99,4 +104,8 @@ Advice and instructions for the written report from the journal club
   - The report should list the members of the group who have actively
     participated in its work. Students who are not on this list will
     receive zero points for the report.
+
+
+{% if false %}
+## Unused papers
 {% endif %}
