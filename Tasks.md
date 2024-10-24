@@ -74,9 +74,11 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 17, 2024</td>
     <td>Oct. 23, 2024 22:00</td>
   </tr>
+  <!--
   <tr>
     <td colspan="3"><a href="./Journal_club.html">Instructions, list of papers and form</a></td>
   </tr>
+  -->
   <tr>
     <td style="background:#f0f0f0"><b>Journal club group meeting</b></td>
     <td></td>
