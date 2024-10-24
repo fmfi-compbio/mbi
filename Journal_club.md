@@ -5,7 +5,7 @@ title: Journal Club
 * TOC
 {:toc}
 
-A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club).
+A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club), more details are below.
 
 {% if false %}
 ## Submitting preferences
@@ -57,13 +57,13 @@ cancer. Nature communications, 12(1), p.2313.
 
 ## Group meeting 
 
-  - Remember that everyone should read the article before the first
-    meeting
+  - Everyone should read the article before the first
+    meeting.
   - The first meeting should take place no later than November 22. The
     meeting can be online (e.g. in MS Teams) or in person. Try to choose
     a time suitable for all members of the group.
   - At least 24 hours before the first group meeting, post its date,
-    time and location to the [discussion forum in Moodle](https://moodle.uniba.sk/mod/forum/view.php?id=133956)
+    time and location to the [discussion forum in Moodle](https://moodle.uniba.sk/mod/forum/view.php?id=133956).
   - After the first meeting, one representative of the group will post a
     short summary to [Moodle]() stating
     who attended the meeting, who apologized and who did not respond to
@@ -82,7 +82,7 @@ cancer. Nature communications, 12(1), p.2313.
     (both computer scientists and biologists), so explain the necessary
     terms that are not explained in the article.
   - You do not have to cover the entire content of the article in the
-    report and, conversely, you can use other resources.
+    report and, conversely, you can use other resources. Cite all sources you have used.
   - You should include the following (not necessarily in this order):
     - a brief overall description of the contents of the paper,
     - a detailed explanation of at least one part of a computational method,
