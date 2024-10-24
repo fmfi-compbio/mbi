@@ -26,14 +26,11 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td colspan="3">
       Sequencing, alignment<br />
-      <!--
-      Biologists: questions <a href="/vyuka/mbi/index.php?title=%C5%A0peci%C3%A1lne:NahranieS%C3%BAboru&amp;wpDestFile=A1b.pdf" class="new" title="A1b.pdf">pdf</a>, 
-      <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/du1/du1-b.xls">Excel table</a>, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40956">Moodle</a><br />
-      Computer science: questions <a href="/vyuka/mbi/index.php?title=%C5%A0peci%C3%A1lne:NahranieS%C3%BAboru&amp;wpDestFile=Hw1.pdf" class="new" title="Hw1.pdf">pdf</a>, 
-      <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/du1/hw1-template.ipynb">notebook template</a>, 
+      Biologists: questions <a href="./pdf/a1b.pdf">pdf</a>, 
+      <a href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/du1/du1-b.xls">Excel table</a>, 
+      <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40956">Moodle</a><br />
+      Computer science: questions {% include notebook.html file="a1i" name="colab" show=1 dot=0 %}, 
       <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40955">Moodle</a>
-      -->
     </td>
   </tr>
   <tr>
