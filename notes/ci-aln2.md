@@ -153,7 +153,8 @@ AGTGG,0              CGAGG
 
 Literatúra
   - Li, Heng. [Minimap and miniasm: fast mapping and de novo assembly
-    for noisy long sequences.](https://academic.oup.com/bioinformatics/article-abstract/32/14/2103/1742895) Bioinformatics 32.14 (2016): 2103-2110.   
+    for noisy long sequences.](https://academic.oup.com/bioinformatics/article-abstract/32/14/2103/1742895) Bioinformatics 32.14 (2016): 2103-2110.
+  - Li, Heng. [Minimap2: pairwise alignment for nucleotide sequences.](https://academic.oup.com/bioinformatics/article-abstract/34/18/3094/4994778) Bioinformatics 34.18 (2018): 3094-3100. 
   - Roberts M, Hayes W, Hunt BR, Mount SM, Yorke JA. [Reducing storage
     requirements for biological sequence comparison.](https://academic.oup.com/bioinformatics/article/20/18/3363/202143) Bioinformatics.
     2004 Dec 12;20(18):3363-9.
@@ -200,11 +201,11 @@ pokúsiť sa jej hodnotu vypočítať iba približne (t.j. aproximovať).
   - Ak by sme vedeli vzorkovať z $A \cup B$ prvky $u_1, u_2, \dots, u_s$
     (rovnomerne, nezavisle), a pre kazdy prvok $u_i$ by sme vedeli rychlo
     zistit, ci patri do prieniku, mohli by sme odhadnut $J(A, B)$ pomocou
-    nahodnej premennej $X = \frac{1}{n}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku a $X_i=0$ inak
+    nahodnej premennej $X = \frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku a $X_i=0$ inak
   - Toto sa podoba na zistovanie oblubenosti politika prieskumom
     verejnej mienky, $u_1, u_2, \dots, u_s$ su "respondenti"
   -  Pre kazde $X_i$ mame $E(X_i) = 0 \cdot Pr[X_i = 0] + 1 \cdot Pr[X_i = 1] = Pr[X_i = 1] = J(A, B)$.
-  - Z linearity strednej hodnoty $E(X) = E(\frac{1}{n}\sum_{i=1}^n X_i) = \frac{1}{n}\sum_{i=1}^n E[X_i] = J(A, B)$.
+  - Z linearity strednej hodnoty $E(X) = E(\frac{1}{s}\sum_{i=1}^s X_i) = \frac{1}{s}\sum_{i=1}^s E[X_i] = J(A, B)$.
   - Z toho vyplýva, že náhodná premenná $X$ je nevychýleným odhadom Jaccardovej miery.
   - V štatistike základnou mierou kvality nevychýleného odhadu je jeho disperzia, pričom $Var(X) \le \frac{1}{4s}$ (odvodenie pozri nižšie)
   - Pri zvyšujúcej veľkosti vzorky *s* teda klesá disperzia. Podobná situácia ako pri prieskumoch verejnej mierky, kde pri väčšom súbore respondentov dostaneme dôveryhodnejšie výsledky.
@@ -256,6 +257,15 @@ Algoritmus:
     dokumentov, ktore sa niekde dostali do toho isteho zoznamu (t.j ich
     odhad $J(A,B)$ bude nenulovy)
 
+Odhad casu a pamate:
+ - Majme N dokumentov, kazdy s M slovami dlzky w
+ - Vypocet vsetkych sketchov potrebuje cas O(NMsw)
+ - Sketche zaberaju pamat O(Ns), dokumenty uz nemusime dalej drzat v pamate (pri vopcte sketchov nam staci vzdy mat v pamati jeden dokument)
+ - Porovnanie kazdej dvojice dokumentov trva $O(N^2s)$
+
+Pre porovnanie, trivialny vypocet presnej Jaccardovej miery pomocou hasovania by trval $O(N^2Mw)$ a vsetky dokumenty zaberaju pamat $O(NMw)$. Ak je teda $N$ velke a $s$ od dost mensie ako $M$, usetrime cas aj pamat.
+
+
 Alternativa: namiesto *s* roznych funkcii pouzijeme iba jednu a vezmeme
 nielen minimum, ale *s* najmensich prvkov. Potom $J(A,B)$ odhadneme
 pomocou $|S_A\cap S_B|/s$ kde $S_A$ je mnozina hodnot v sketchi
@@ -306,7 +316,7 @@ každá z nich má strednú hodnotu $E(X_i) = E(X) = p$ a rovnakú
 disperziu $Var(X_i) = Var(X) = p - p^2$. Premenná $X$ je ich priemer.
 
 Pozrieme sa na jej disperziu:
-$Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \frac{1}{k^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \frac{1}{k^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
+$Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
 
 *(\*) tento prechod je možný len kvôli tomu, že premenné $X_i$ sú
 nezávislé.*
