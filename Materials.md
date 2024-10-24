@@ -130,7 +130,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7
 
 #### TI:  Fast similarity search, BLAST, MinHash
-pdf
+
+{% include notes.html file="ci-aln2" name="notes" show=1 dot=1
+%} {% include pdf.html file="ci-seeds" name="pdf" show=1 dot=0
+%}
 
 #### TB:  Hidden Markov models, E-value
 pdf, notes

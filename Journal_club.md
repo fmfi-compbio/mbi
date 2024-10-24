@@ -80,12 +80,12 @@ cancer. Nature communications, 12(1), p.2313.
     in your own words.
   - The report should be understandable for students of this course
     (both computer scientists and biologists), so explain the necessary
-    terms that are not explained in the article.
+    terms that are not explained in the article and were not explained in class (do not repeat material from lectures).
   - You do not have to cover the entire content of the article in the
     report and, conversely, you can use other resources. Cite all sources you have used.
   - You should include the following (not necessarily in this order):
     - a brief overall description of the contents of the paper,
-    - a detailed explanation of at least one part of a computational method,
+    - a detailed explanation of at least one computational method,
     - a detailed explanation of at least one biological result or evaluation of the method on data,
     - an explanation how the paper relates to the course material,
     - examples of other papers citing your paper and using or improving its results.
