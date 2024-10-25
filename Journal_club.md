@@ -34,7 +34,7 @@ data. Nature biotechnology, 37(2), pp.152-159.
 <br>**Buchalová, Horváth, Ončák, Podhradský, Pulkin, Zrubák**
 
 **Paper 4** Hauser, M., Steinegger, M. and Söding, J., 2016. MMseqs software suite for fast and deep clustering and searching of large protein sequence sets. Bioinformatics, 32(9), pp.1323-1330. <https://doi.org/10.1093/bioinformatics/btw006>
-<br>**Hayik, Ishchenko, Komoráš, Saez de Cortazar, Škorňák, Strieška (English speaking)**
+<br>**Antony, Hayik, Ishchenko, Komoráš, Saez de Cortazar, Škorňák, Strieška (English speaking)**
 
 **Paper 5** Wapinski, I., Pfeffer, A., Friedman, N. and Regev, A., 2007. Automatic genome-wide reconstruction of phylogenetic gene trees. Bioinformatics, 23(13), pp.i549-i558. <https://doi.org/10.1093/bioinformatics/btm193>
 <br>**Balan, Bukovinská, Chabadová, Gavura, Guziová, Pilátová, Tibenská**
