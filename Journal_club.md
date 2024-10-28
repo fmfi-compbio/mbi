@@ -65,7 +65,7 @@ cancer. Nature communications, 12(1), p.2313.
   - At least 24 hours before the first group meeting, post its date,
     time and location to the [discussion forum in Moodle](https://moodle.uniba.sk/mod/forum/view.php?id=133956).
   - After the first meeting, one representative of the group will post a
-    short summary to [Moodle]() stating
+    short summary to [Moodle](https://moodle.uniba.sk/mod/assign/view.php?id=133951) stating
     who attended the meeting, who apologized and who did not respond to
     the group and what was the outcome of the meeting - whether the
     group had problems with some parts of the article, whether it plans

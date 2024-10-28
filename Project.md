@@ -20,8 +20,8 @@ You will submit the final report as well as other documents/presentations as lis
 In the first three parts you submit a presentation in **pdf format**. Some general guidelines:
 * Always include your name and a title of your project.
 * This is a work-in-progress presentation, more similar to an informal team meeting than a formal presentation at a defense or conference.
-* However help your audience by having all necessary information well-organized.
-* Do not try to add unnecessary formating / graphics / effects etc. Figures showing important information are welcome, unnecessary clipart is not.
+* However, help your audience by having all necessary information well-organized.
+* Do not try to add unnecessary formatting / graphics / effects etc. Figures showing important information are welcome, unnecessary clipart is not.
 * Use sufficient font size and color contrasts so that the presentation is visible on a projector.
 
 ## Initial proposal
@@ -34,7 +34,7 @@ Choose a topic, submit **1 page presentation** briefly explaing the **background
 
 8% of the final grade
 
-Submit a pdf presentation with more details on your project plans. It should have **2 pages** and it may contain optional supplementary pages with further details if relevant, but it is not guaranteed that you will have space to use these in the presentation. In addition to the background and goals, you should add a brief description of your **data** (what it is, how will you obtain it) and what bioinformatics **methods** you plan to try. Providing links to tools and databases is recommended. During the next tutorial for biologists, present this in **2 minutes** and obtain feedback. After this point you need an explicit permission from the instructors to change your topic.
+Submit a pdf presentation with more details on your project plans. It should have **2 pages** and it may contain optional supplementary pages with further details if relevant, but it is not guaranteed that you will have space to use these in the presentation. In addition to the background and goals, you should add a brief description of your **data** (what it is, how you will obtain it) and what bioinformatics **methods** you plan to try. Providing links to tools and databases is recommended. During the next tutorial for biologists, present this in **2 minutes** and obtain feedback. After this point you need explicit permission from the instructors to change your topic.
 
 ## Preliminary report
 
@@ -55,7 +55,7 @@ Please submit a pdf with your project report. Below we list what should be inclu
 
 ### Introduction
 
-Give a background for your projects (what are your goals and motivation for choosing this topic, necessary biological background for understanding the project). However it is not necessary to include a lengthy literature review.
+Give a background for your projects (what are your goals and motivation for choosing this topic, necessary biological background for understanding the project). However, it is not necessary to include a lengthy literature review.
 
 ### Description of your data
 
@@ -63,7 +63,7 @@ Describe what data you used and how or where it was obtained. List its basic cha
 
 ### Description of bioinformatics methods
 
-For each method or website, include the link to the server or link to the software download/description. If the method was not covered in the course, try to understand what it does and briefly describe it in your report. Describe what exactly you done (what data you used, what options you selected or were preselected) so that your analysis is reproducible by another person. Expain why you made these decisions or if you tried also other options. It is not necessary to document your work with step-by-step screenshots, but you can include a few screenshots if you think they are very important.
+For each method or website, include the link to the server or link to the software download/description. If the method was not covered in the course, try to understand what it does and briefly describe it in your report. Describe what exactly you did (what data you used, what options you selected or were preselected) so that your analysis is reproducible by another person. Explain why you made these decisions or if you also tried other options. It is not necessary to document your work with step-by-step screenshots, but you can include a few screenshots if you think they are very important.
 
 ### Results and discussion
 
