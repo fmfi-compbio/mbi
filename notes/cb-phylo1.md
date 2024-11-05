@@ -74,7 +74,7 @@ pôvodného zarovnania s povolením opakovania stĺpca.
 
 ### Príklad
 
-<a href="../images/bootstrap.png">
+<a href="../images/cb-phylo-bootstrap.png">
   <img src="../images/cb-phylo-bootstrap.png" width="600" alt="Bootstrap">
 </a>
 
@@ -138,10 +138,10 @@ Aké sme doteraz videli modely
 
 $\left(
 \begin{array}{cccc}
--\mu_A & \beta\pi_C & \alpha\pi_G & \beta\pi_T\\
-\beta\pi_A & -\mu_C & \beta\pi_G & \alpha\pi_T\\
-\alpha\pi_A & \beta\pi_C & -\mu_G & \beta\pi_T\\
-\beta\pi_A & \alpha\pi_C & \beta\pi_G & -\mu_T\\
+-\mu_A & \beta\pi_C & \alpha\pi_G & \beta\pi_T\\\\
+\beta\pi_A & -\mu_C & \beta\pi_G & \alpha\pi_T\\\\
+\alpha\pi_A & \beta\pi_C & -\mu_G & \beta\pi_T\\\\
+\beta\pi_A & \alpha\pi_C & \beta\pi_G & -\mu_T\\\\
 \end{array}
 \right)$
 
@@ -172,7 +172,10 @@ $\left(
 
 Nerobili sme, uvedene pre zaujimavost
 
-![fitch.png](fitch.png "fitch.png")
+<a href="../images/cb-phylo-fitch.png">
+  <img src="../images/cb-phylo-fitch.png" width="600" alt="Fitchov algoritmus">
+</a>
+
 
   - **Parsimony/uspornost**
       - Vstup: fylogeneticky strom, 1 stlpec zarovnania (jedna baza v
