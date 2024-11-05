@@ -138,10 +138,10 @@ Aké sme doteraz videli modely
 
 $\left(
 \begin{array}{cccc}
--\mu_A & \beta\pi_C & \alpha\pi_G & \beta\pi_T\\\\
-\beta\pi_A & -\mu_C & \beta\pi_G & \alpha\pi_T\\\\
-\alpha\pi_A & \beta\pi_C & -\mu_G & \beta\pi_T\\\\
-\beta\pi_A & \alpha\pi_C & \beta\pi_G & -\mu_T\\\\
+-\mu_A & \beta\pi_C & \alpha\pi_G & \beta\pi_T\\\\\\\\
+\beta\pi_A & -\mu_C & \beta\pi_G & \alpha\pi_T\\\\\\\\
+\alpha\pi_A & \beta\pi_C & -\mu_G & \beta\pi_T\\\\\\\\
+\beta\pi_A & \alpha\pi_C & \beta\pi_G & -\mu_T\\\\\\\\
 \end{array}
 \right)$
 
