@@ -1,5 +1,5 @@
 ---
-title: "Cvičenia pre biológov: D8ata k programom water a needle"
+title: "Cvičenia pre biológov: Dáta k programom water a needle"
 ---
 
 Sekvencie a zarovnania k cvičeniu pre biológov: programy water a needle
