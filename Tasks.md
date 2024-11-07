@@ -115,6 +115,9 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Nov. 20, 2024 22:00</td>
   </tr>
   <tr>
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#extended-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=135722">Moodle</a></td>
+  </tr>
+  <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, preliminary report</b></td>
     <td></td>
     <td>to be determined, last 2 weeks of semester or early January</td>

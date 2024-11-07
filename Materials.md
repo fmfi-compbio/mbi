@@ -63,7 +63,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="YvZlTL1qyUg" name="video" show=1 dot=0
 %}
 
-#### TI: Introduction to probability, genome coverage by sequencing reads,
+#### TI: Introduction to probability, genome coverage by sequencing reads
 
 {% include notes.html file="ci-prob" name="notes" show=1 dot=1
 %} {% include notebook.html file="ci-prob" name="colab" show=1 dot=0
@@ -159,7 +159,6 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %}
 
 #### TB:  Substitution models, bootstrap, tree rooting
-pdf, notes
 
 {% include notes.html file="cb-phylo1" name="notes" show=1 dot=0
 %} {% include pdf.html file="cb-phylo" name="pdf" show=0 dot=0
@@ -168,7 +167,6 @@ pdf, notes
 <a name="W8"></a>
 ### Nov. 14
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
-pdf, video, 
 
 {% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
 %} {% include youtube.html id="1WM4QI2qx8A" name="video" show=0 dot=1
@@ -212,7 +210,7 @@ notes
 
 {% include pdf.html file="p-rna" name="pdf" show=0 dot=1
 %} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
-%} DEKM chapter 10, ZB chapter 11.9, SK video
+%} DEKM chapter 10, ZB chapter 11.9
 
 #### TI:  Motif finding by EM and Gibbs sampling
 pdf 
