@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · **[Week 5](#W5)** · [Week 6](#W6) · [Week 7](#W7)
+[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · **[Week 6](#W6)** · [Week 7](#W7)
 · [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
@@ -147,33 +147,60 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 <a name="W7"></a>
 ### Nov. 7
 #### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
-pdf , BV chapter 3, DEKM chapter 7,8; ZB chapter 7, 8.1-8.2, video
+
+{% include pdf.html file="p-phylo" name="pdf" show=1 dot=1
+%} {% include youtube.html id="RzfNHvZH4l8" name="video" show=1 dot=1
+%} BV chapter 3, DEKM chapter 7,8; ZB chapter 7, 8.1-8.2, video
+
 #### TI:  Algorithms for HMM
-pdf notes
+
+{% include notes.html file="ci-hmm" name="notes" show=1 dot=0
+%} {% include pdf.html file="ci-hmm" name="pdf" show=0 dot=0
+%}
+
 #### TB:  Substitution models, bootstrap, tree rooting
 pdf, notes
+
+{% include notes.html file="cb-phylo1" name="notes" show=1 dot=0
+%} {% include pdf.html file="cb-phylo" name="pdf" show=0 dot=0
+%}
 
 <a name="W8"></a>
 ### Nov. 14
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
-pdf, video, BV chapter 5, ZB chapter 9.8, 10.8, 
+pdf, video, 
+
+{% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
+%} {% include youtube.html id="1WM4QI2qx8A" name="video" show=0 dot=1
+%} BV chapter 5, ZB chapter 9.8, 10.8,
+
 #### TI:  Substitution models
 pdf, notes
+
 #### TB:  Practical phylogenetic trees
 notes
 
 <a name="W9"></a>
 ### Nov. 21
 #### L: Protein structure and function
-pdf, video, DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
-#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM  
+
+{% include pdf.html file="p-prot" name="pdf" show=0 dot=1
+%} {% include youtube.html id="ugMM81jZRpc" name="video" show=0 dot=1
+%} DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
+
+#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM
+
 #### TB:  Pfam, PSI-blast, Example of command-line tools  
 notes1, notes2
 
 <a name="W10"></a>
 ### Nov. 28
 #### L: Gene expression, clustering, classification, regulatory networks, transcription factors, sequence motifs
-pdf, video, DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
+
+{% include pdf.html file="p-expr" name="pdf" show=0 dot=1
+%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
+%} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
+
 #### TI:  Examples of biological databases, introduction to context-free grammars
 notes
 #### TB:  Introduction to context-free grammars
@@ -182,7 +209,11 @@ notes
 <a name="W11"></a>
 ### Dec. 5
 #### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
-pdf, DEKM chapter 10, ZB chapter 11.9, SK video
+
+{% include pdf.html file="p-rna" name="pdf" show=0 dot=1
+%} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
+%} DEKM chapter 10, ZB chapter 11.9, SK video
+
 #### TI:  Motif finding by EM and Gibbs sampling
 pdf 
 #### TB:  K-means clustering, enrichment, multiple testing correction
@@ -191,7 +222,11 @@ pdf pdf notes
 <a name="W12"></a>
 ### Dec. 12
 #### L: Population genetics
-pdf, video
+
+{% include pdf.html file="p-popgen" name="pdf" show=0 dot=1
+%} {% include youtube.html id="7vPt1vQX21M" name="video" show=0 dot=1
+%}
+
 #### TI:  RNA structure 
 #### TB:  Course summary, graphs, microarray data, RNA structure, MEME, transcription factors in SGD, population genetics
 pdf, pdf  notes
