@@ -18,7 +18,7 @@ $S(t) = \left(\begin{array}{cccc}
 P(A|A,t) & P(C|A,t) & P(G|A,t) & P(T|A,t) \\\\\\\\
 P(A|C,t) & P(C|C,t) & P(G|C,t) & P(T|C,t) \\\\\\\\
 P(A|G,t) & P(C|G,t) & P(G|G,t) & P(T|G,t) \\\\\\\\
-P(A|T,t) & P(C|T,t) & P(G|T,t) & P(T|T,t) \\\\\\\\
+P(A|T,t) & P(C|T,t) & P(G|T,t) & P(T|T,t) 
 \end{array}\right)$
 
   - Riadky zodpovedaju povodnej baze $a$, stlpce novej baze $b$
@@ -37,7 +37,7 @@ P(A|T,t) & P(C|T,t) & P(G|T,t) & P(T|T,t) \\\\\\\\
 \\pi\_A & \\pi\_C & \\pi\_G & \\pi\_T \\\\\\\\
 \\pi\_A & \\pi\_C & \\pi\_G & \\pi\_T \\\\\\\\
 \\pi\_A & \\pi\_C & \\pi\_G & \\pi\_T \\\\\\\\
-\\pi\_A & \\pi\_C & \\pi\_G & \\pi\_T \\\\\\\\
+\\pi\_A & \\pi\_C & \\pi\_G & \\pi\_T 
 \\end{array}\\right)$
 
   - Rozdelenie pravdepodobnosti $\pi$ nazyvame limitne (equilibrium)
@@ -65,7 +65,7 @@ $S(t) =
 1-3s(t) & s(t) & s(t) & s(t) \\\\\\\\
 s(t) & 1-3s(t) & s(t) & s(t) \\\\\\\\
 s(t) & s(t) & 1-3s(t) & s(t) \\\\\\\\
-s(t) & s(t) & s(t) & 1-3s(t) \\\\\\\\
+s(t) & s(t) & s(t) & 1-3s(t) 
 \end{array}\right)$
 
 ### Matica rýchlostí pre J-C model
@@ -97,9 +97,6 @@ $S(c\epsilon) \approx
   - Tento vztah dava zmysel: pre velmi male t mozeme zanedbat moznost,
     ze baza zmutovala viackrat a pravdepodobnost jednej mutacie linearne
     rastie s dlzkou casu.
-
-<!-- end list -->
-
   - Ak oznacime $t=c\epsilon$ a $\alpha = s(\epsilon) / \epsilon$
     dostaneme pre velmi male t
 
@@ -117,7 +114,7 @@ $R=
 -3\alpha & \alpha & \alpha & \alpha \\\\\\\\
 \alpha & -3\alpha & \alpha & \alpha \\\\\\\\
 \alpha & \alpha & -3\alpha & \alpha \\\\\\\\
-\alpha & \alpha & \alpha & -3\alpha \\\\\\\\
+\alpha & \alpha & \alpha & -3\alpha
 \end{array}\right)$
 
   - Dostavame, ze pre velmi male casy plati $S(t)\approx I+Rt$
@@ -218,7 +215,7 @@ všeobecnejšiu maticu rýchlostí R
   . & \\mu\_{AC} & \\mu\_{AG} & \\mu\_{AT}\\\\\\\\
   \\mu\_{CA} & . & \\mu\_{CG} & \\mu\_{CT}\\\\\\\\
   \\mu\_{GA} & \\mu\_{GC} & . & \\mu\_{GT}\\\\\\\\
-  \\mu\_{TA} & \\mu\_{TC} & \\mu\_{TG} & . \\\\\\\\
+  \\mu\_{TA} & \\mu\_{TC} & \\mu\_{TG} & . 
   \\end{array} \\right)$
   - Hodnoty na diagonále matice sa dopočítavajú aby súčet každého riadku bol 0.
 
@@ -236,7 +233,7 @@ $R=\left(\begin{array}{cccc}
 -2\beta-\alpha & \beta & \alpha & \beta \\\\\\\\
 \beta & -2\beta-\alpha & \beta & \alpha \\\\\\\\
 \alpha & \beta & -2\beta-\alpha & \beta \\\\\\\\
-\beta & \alpha & \beta & -2\beta-\alpha \\\\\\\\
+\beta & \alpha & \beta & -2\beta-\alpha 
 \end{array}\right)$
 
   - HKY model (Hasegawa, Kishino & Yano) tiež umožnuje rôzne
@@ -265,4 +262,4 @@ $R=\left(\begin{array}{cccc}
         symetrické R) $R = U D U^{-1}$, kde D je diagonálna matica (na
         jej diagonále budu vlastné hodnoty R), tak
         $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
-        uplatníme iba na prvky na uhlopriečke matice D.
+        uplatníme iba na prvky na uhlopriečke matice *D*.
