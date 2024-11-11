@@ -2,9 +2,68 @@
 title: "Cvičenia pre informatikov: Substitučné modely"
 ---
 
-## Markove modely
+* TOC
+{:toc}
 
 
+## Markovove reťazce (Markov chains)
+
+- Markovov reťazec je o niečo jednoduchší model ako skrytý Markovov
+  model (HMM), nakoľko obsahuje iba stavy a pravdepodobnosti prechodu
+  medzi nimi, ale neuvažujeme žiadne emisie
+- Formálne, **Markovov reťazec** je postupnosť náhodných premenných
+  $X_0, X_1, \dots,$ taká, že $\Pr(X_t}|X_0,\dots,X_{t-1}) =
+  \Pr(X_t|X_{t-1})$, t.j. stav v čase $t$ závisí len od stavu v čase
+  $t-1$ a nie ďalších predchádzajúcich stavov (stavmi nazývame možné hodnoty
+  $X_{t}$).
+- Nás budú zaujímať **homogénne** Markovove reťazce, v ktorých
+  $\Pr(X^t|X%{t-1})$ nezávisí od $t$.
+- Tiez nas zaujimaju len retazce v ktorych nahodne premenne $X_t$
+  nadobudaju hodnoty z konecnej mnoziny
+- Priklad 1: model pocasia, stavy prsi / svieti slnko, $X_t$ je počasie v deň $t$.
+- Príklad 2: stavy A,C,G,T, dá sa použiť na generovanie náhodnej DNA alebo na sledovanie mutácií na jendje konkrétnej pozícii v chromozóme. V druhom prípade je $X_t$ báza na tejto pozícii v čase $t$ (analogicky s počasím).
+
+### Matica pravdepodobnosti prechodu
+
+- Pravdepodobnosti prechodu medzi stavmi za jeden krok mozeme vyjadrit
+  maticou $P$, ktorej prvok $p_{x,y}$ oznacuje
+  pravdepodobnost prechodu zo stavu x do stavu y
+  $p_{x,y}=\Pr(X_t=y|X_{t-1}=x)$
+- Pre maticu musí platiť, že súčet kazdeho riadku je 1, všetky prvky
+  matice sú nezaporne
+- Nezávislé hody mincou sú tiež špeciálny prípad Markovovho reťazca. Ako vyzerá jeho matica?
+
+
+- Pre reťazec s maticou $P$ spočítajme $\Pr(X_2=y|X_0=x)$
+  $\sum_z \Pr(X_1=z|X_0=x)\Pr(X_2=y|X_1=z) = \sum_z p_{x,z}p_{z,y}$
+- Ide o súčin matice $P$ samej so sebou, t.j. $P^2$
+- Podobne $\Pr(X_t=y|X_0=x)$ získame z matice $P^t$
+- Koľko trvá výpočet $P^t$  závislosti od $t$ a po4tu stavov $n$?
+
+### Stacionarne rozdelenie
+
+  - Rozdelenie $\pi$ na mnozine stavov sa nazyva **stacionarne** pre
+    Markovov retazec $P$, ak pre kazde $y$ plati
+    $\sum_{x}\pi(x)p_{x,y} = \pi(y)\,$ (alebo v maticovej notacii
+    $\pi P = \pi$)
+  - Ak matica P splna urcite podmienky (je ergodicka), existuje pre nu
+    prave jedno stacionarne rozdelenie $\pi$. Navyse pre kazde x a y
+    plati $\lim_{t\to\infty} p_{x,y}^{t} = \pi(y)\,$
+  - To znamená, že ak umocňujeme maticu $P$ na veľmi veľké čísla,  
+    všetky riadky matice sa bížia k stacionárnemu rozdeleniu
+  - Po veľa krokoch už teda príliš nezáleží, v ktorom stave sme začali
+
+**Ergodické Markovove reťazce**
+
+  - Vravime ze matica je **ergodicka**, ak $P^t$ pre nejake $t>0$ ma
+    vsetky polozky nenulove
+  - Priklady neergodickych a ergodických matic
+
+```
+    1 0          0.5 0.5          0 1             0.5 0.5
+    0 1          0   1            1 0             1   0
+    nesuvisla    slabo suvisla    periodicka      ergodicka
+```
 
 
 ## Substitučné modely - odvodenie
