@@ -29,7 +29,7 @@ title: "Cvičenia pre informatikov: Substitučné modely"
   maticou $M$, ktorej prvok $M[x,y]$ označuje
   pravdepodobnosť prechodu zo stavu $x$ do stavu $y$, teda
   $M[x,y]=\Pr(X_t=y|X_{t-1}=x)$.
-- Pre maticu musí platiť, že súčet kazdeho riadku je 1, všetky prvky
+- Pre maticu musí platiť, že súčet každého riadku je 1, všetky prvky
   matice sú nezáporné.
 - Nezávislé hody mincou sú tiež špeciálny prípad Markovovho reťazca. Ako vyzerá jeho matica?
 
@@ -54,7 +54,7 @@ počasia          počasi
 - Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $y$ v čase 1 (zajtra). 
 - Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$
 - Ide o súčin matice $M$ samej so sebou, t.j. $M^2$.
-- Podobne $\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (po4asie o $t$ dní neskôr vzhľadom na počasie dnes).
+- Podobne $\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
 - Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
 
 ```
@@ -91,7 +91,7 @@ t=0           t=1           t=2           t=3               t=10
 
 ## Substitučné modely
 
-- Nech $P(b|a,t)$ je pravdepodobnosť, že ak začneme s bázou *a*, tak
+- Nech $\Pr(a\stackrel{t}{\rightarrow} b)$ je pravdepodobnosť, že ak začneme s bázou *a*, tak
   po čase *t* budeme mať bázu *b*.
 - Pre dané *t* môžeme také pravdepodobnosti usporiadať do matice $S(t)$ 4x4 (ak
   študujeme DNA):
@@ -103,8 +103,8 @@ P(A|G,t) & P(C|G,t) & P(G|G,t) & P(T|G,t) \\\\\\\\
 P(A|T,t) & P(C|T,t) & P(G|T,t) & P(T|T,t) 
 \end{array}\right)$
 
-- Riadky zodpovedajú pôvodnej báze $a$, stĺpce novej báze $b$
-- Súčet každého riadku je 1
+- Riadky zodpovedajú pôvodnej báze $a$, stĺpce novej báze $b$.
+- Súčet každého riadku je 1.
 
 ### Diskrétny čas
 
@@ -135,8 +135,8 @@ S(3)                     S(10)                    S(30)
 
 ### Spojitý čas
 
-- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo, čo má viaceré výhody (vieme napr9klad pravdedpodobnosť určitej zmeny derivovať podľa $t$).
-- Využijeme Markovov reťazec so spojitým časom (continuous-time Markov chain)
+- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo, čo má viaceré výhody (vieme napríklad pravdedpodobnosť určitej zmeny derivovať podľa $t$).
+- Využijeme Markovov reťazec so spojitým časom (continuous-time Markov chain).
 - Pre ľubovoľné $t$ chceme spočítať $S(t)$.
 - Stále by malo platiť, že $S(t_1+t_2) = S(t_1)\cdot S(t_2)$.
 
@@ -154,7 +154,7 @@ s(t) & s(t) & s(t) & 1-3s(t)
 
 
 - Chceme odvodiť vzorec pre $s(t)$, ktorý sme videli na prednáške. Spočítajme deriváciu tejto funkcie.
-- Z definície derivácie $s'(t) = \lim_{\epsilon\to 0} \frac{s(t+\epsilon)-s(t)}{\epsilon}$  
+- Z definície derivácie $s'(t) = \lim_{\epsilon\to 0} \frac{s(t+\epsilon)-s(t)}{\epsilon}$.
 - $s(t+\epsilon)$ spočítame zo súčinu matíc $S(t+\epsilon) = S(t)S(\epsilon)$. 
 - $\left(\begin{array}{cccc}
 1-3s(t) & s(t) & s(t) & s(t) \\\\\\\\
@@ -169,10 +169,10 @@ s(\epsilon) & s(\epsilon) & 1-3s(\epsilon) & s(\epsilon) \\\\\\\\
 s(\epsilon) & s(\epsilon) & s(\epsilon) & 1-3s(\epsilon) 
 \end{array}\right)$
 - Dostaneme
-  $s(t+\epsilon) = (1-3s(t))s(\epsilon) + s(t)(1-3s(\epsilon))+s(t)s(\epsilon)+s(t)s(\epsilon)$
+  $s(t+\epsilon) = (1-3s(t))s(\epsilon) + s(t)(1-3s(\epsilon))+s(t)s(\epsilon)+s(t)s(\epsilon)$.
 - Po úprave
-  $s(t+\epsilon) = s(\epsilon) +s(t) - 4s(t)s(\epsilon) = s(t)+s(\epsilon)(1-4s(t))$
-- $s'(t) = \lim_{\epsilon\to 0} \frac{s(\epsilon) (1-4s(t))}{\epsilon} = (1-4s(t))\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}= (1-4s(t))s'(0)$
+  $s(t+\epsilon) = s(\epsilon) +s(t) - 4s(t)s(\epsilon) = s(t)+s(\epsilon)(1-4s(t))$.
+- $s'(t) = \lim_{\epsilon\to 0} \frac{s(\epsilon) (1-4s(t))}{\epsilon} = (1-4s(t))\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}= (1-4s(t))s'(0)$.
 - Označme $\alpha = s'(0)$ ($\alpha$ je konštanta, nezávisí od $\epsilon$ ani $t$).
 - Dostaneme $s'(t) = \alpha (1-4s(t))$. Toto je diferenciálna rovnica, hľadáme funkciu $s(t)$, ktorá ju spĺňa.
 - Riešenie je $s(t) = 1/4+c e^{-4\alpha t}$ pre každú konštantu $c$.
@@ -187,8 +187,10 @@ s(\epsilon) & s(\epsilon) & s(\epsilon) & 1-3s(\epsilon)
 - Takže máme maticu:
 $S(t)=
 \left(\begin{array}{cccc}
-(1+3e^{-4\alpha t})/4 & (1-e^{-4\alpha t})/4 & (1-e^{-4\alpha t})/4 & (1-e^{-4\alpha t})/4 \\\\\\\\
-\dots
+(1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4
 \end{array}\right)$
 
 - Keď $t\rightarrow \infty$, dostávame všetky prvky matice rovné 1/4, t.j. $\lim_{t\to \infty}s(t)=\lim_{t\to \infty}1-3s(t)=1/4$.
@@ -200,8 +202,8 @@ $S(t)=
 
 - Model substitúcií väčšinou vyjadríme maticou rýchlostí (intenzít) (transition rate matrix, substitution rate matrix).
 - Je to matica $R$ 4x4, kde $R[x,y]$ pre $x\ne y$ je rýchlosť, ako sa deje zmena z $x$ na $y$.
-- Presnejšie $R[x,y] = \lim_{t\rightarrow 0}\frac{\Pr(y\,|\,x,t)}{t}$.
-- Diagonálne prvky $R[x,x]$ sa dopočítajú tak, aby súčet riadku bol vždy 0, je to teda rýchlosť, akou sa $x$ mutáciami ubúda.
+- Presnejšie $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(y\|x,t)}{t}$.
+- Diagonálne prvky $R[x,x]$ sa dopočítajú tak, aby súčet riadku bol vždy 0, je to teda rýchlosť, akou báza $x$ mutáciami ubúda.
 - Pre J-C model máme maticu rýchlostí
 $R=
 \left(\begin{array}{cccc}
@@ -231,7 +233,7 @@ $R=
 - Pre veľmi malý čas t je S(t) zhruba I-Rt
 - Rýchlost $\alpha$ je teda pravdepodobnosť zmeny za jednotku casu, ak
   uvažujeme veľmi krátke časy, resp. derivácia *s(t)* vzhľadom na *t*
-  v bode 0
+  v bode 0.
 - Riešením diferenciálnych rovníc pre Jukes-Cantorov model dostávame
   $s(t) = (1-e^{-4\alpha t})/4$
 - Matica rýchlostí sa zvykne normalizovať tak, aby na jednotku času
@@ -270,8 +272,8 @@ $R=
 
 Model **K80** (Kimura 1980) napr. zachytáva, ze puríny sa častejšie menia na iné
 puríny (A a G) a pyrimidíny na ine pyrimidíny (C a T).
-- tranzícia je zmena v rámci skupiny (C<->T, A<->G), transverzia je zmena medyi skupinami {C, T } <-> {A, G}
-- model má dva parametre: rýchlosť tranzícií $\alfa$, transverzií $\beta$
+- Tranzícia je zmena v rámci skupiny (C<->T, A<->G), transverzia je zmena medzi skupinami {C, T } <-> {A, G}.
+- Model má dva parametre: rýchlosť tranzícií $\alfa$, transverzií $\beta$.
 $R=\left(\begin{array}{cccc}
 -2\beta-\alpha & \beta & \alpha & \beta \\\\\\\\
 \beta & -2\beta-\alpha & \beta & \alpha \\\\\\\\
@@ -279,11 +281,11 @@ $R=\left(\begin{array}{cccc}
 \beta & \alpha & \beta & -2\beta-\alpha 
 \end{array}\right)$
 
-Model HKY85 (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepodobnosti A, C, G a T v ekvilibriu.
+Model **HKY85** (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepodobnosti A, C, G a T v ekvilibriu.
 - Ak nastavíme čas v evolučnom modeli na nekonečno, nezáleží na tom, z ktorej bázy sme začali, frekvencia výskytu jednotlivých báz sa ustáli v stacionárnom rozdelení (ekvilibriu).
-- V Jukes-Cantorovom modeli aj K80 modeli je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4.
+- V modeli J-C aj K80 je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4.
 - V HKY85 si zvolíme aj frekvencie jednotlivých nukleotidov v ekvilibriu $\pi_A,\pi_C, \pi_G, \pi_T$ so súčtom 1.
-- Parameter $kappa$: pomer tranzícií a transverzií ($alfa/beta$)
+- Parameter $\kappa$: pomer tranzícií a transverzií ($\alfa/\beta$)
 - Matica rýchlostí:
   - $\mu_{x,y} =  \kappa \pi_y$ ak mutácia x-\>y je tranzícia,
   - $\pi_y$ ak mutácia x-\>y je transverzia
@@ -292,10 +294,10 @@ Model HKY85 (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepodobn
 
 - Pre zložité modely nevieme odvodiť explicitný vzorec na výpočet $S(t)$, ako sme mali pri Jukesovom-Cantorovom modeli
 - Ale vo všeobecnosti pre maticu rýchlostí $R$ dostávame $S(t)=e^{Rt}$.
-  - Exponenciálna funkcia matice A sa definuje ako
+  - Exponenciálna funkcia matice $A$ sa definuje ako
     $e^A = \sum_{k=0}^\infty{1 \over k!}A^k.$
-  - Ak maticu rychlosti R diagonalizujeme (určite sa dá pre
-    symetrické R) $R = U D U^{-1}$, kde D je diagonálna matica (na
-    jej diagonále budu vlastné hodnoty R), tak
+  - Ak maticu rýchlostí R diagonalizujeme (určite sa dá pre
+    symetrické R) $R = U D U^{-1}$, kde $D$ je diagonálna matica (na
+    jej diagonále budú vlastné hodnoty $R$), tak
     $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
-    uplatníme iba na prvky na uhlopriečke matice *D*.
+    uplatníme iba na prvky na uhlopriečke matice $D$.
