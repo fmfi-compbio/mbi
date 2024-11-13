@@ -97,10 +97,10 @@ t=0           t=1           t=2           t=3               t=10
   študujeme DNA):
 
 $S(t) = \left(\begin{array}{cccc} 
-P(A|A,t) & P(C|A,t) & P(G|A,t) & P(T|A,t) \\\\\\\\
-P(A|C,t) & P(C|C,t) & P(G|C,t) & P(T|C,t) \\\\\\\\
-P(A|G,t) & P(C|G,t) & P(G|G,t) & P(T|G,t) \\\\\\\\
-P(A|T,t) & P(C|T,t) & P(G|T,t) & P(T|T,t) 
+\Pr(A\stackrel{t}{\rightarrow} A) & \Pr(A\stackrel{t}{\rightarrow} C) & \Pr(A\stackrel{t}{\rightarrow} G) & \Pr(A\stackrel{t}{\rightarrow} T) \\\\\\\\
+\Pr(C\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(C\stackrel{t}{\rightarrow} T) \\\\\\\\
+\Pr(G\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(G\stackrel{t}{\rightarrow} T) \\\\\\\\
+\Pr(T\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(T\stackrel{t}{\rightarrow} T) 
 \end{array}\right)$
 
 - Riadky zodpovedajú pôvodnej báze $a$, stĺpce novej báze $b$.
@@ -202,7 +202,7 @@ $S(t)=
 
 - Model substitúcií väčšinou vyjadríme maticou rýchlostí (intenzít) (transition rate matrix, substitution rate matrix).
 - Je to matica $R$ 4x4, kde $R[x,y]$ pre $x\ne y$ je rýchlosť, ako sa deje zmena z $x$ na $y$.
-- Presnejšie $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(y\|x,t)}{t}$.
+- Presnejšie $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(x\\stackrel{t}{\rightarrow} y)}{t}$.
 - Diagonálne prvky $R[x,x]$ sa dopočítajú tak, aby súčet riadku bol vždy 0, je to teda rýchlosť, akou báza $x$ mutáciami ubúda.
 - Pre J-C model máme maticu rýchlostí
 $R=
@@ -221,7 +221,7 @@ $R=
 
 ## Substitučné modely, zhrnutie
 
-- S(t): matica 4x4, kde políčko $S(t)_{a,b}=P(b|a,t)$ je
+- S(t): matica 4x4, kde políčko $S(t)_{a,b}=\Pr(a\stackrel{t}{\rightarrow} b)$ je
   pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
   bázu b.
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
@@ -252,7 +252,7 @@ $R=
   $t=-\frac{3}{4} \log\left(1-\frac{4}{3}d\right)$
 - Ak $d\rightarrow 0.75$, dostávame $t\rightarrow \infty$
 - Prečo sme ten vzorec odvodili takto? V skutočnosti chceme nájsť
-  najvierohodnejšiu hodnotu $t$, t.j. takú, pre ktorú hodnota $P(data|t)$
+  najvierohodnejšiu hodnotu $t$, t.j. takú, pre ktorú hodnota $\Pr(data|t)$
   bude najväčšia. Zhodou okolností vyjde takto.
 
 ## Zložitejšie substitučné modely
@@ -273,7 +273,7 @@ $R=
 Model **K80** (Kimura 1980) napr. zachytáva, ze puríny sa častejšie menia na iné
 puríny (A a G) a pyrimidíny na ine pyrimidíny (C a T).
 - Tranzícia je zmena v rámci skupiny (C<->T, A<->G), transverzia je zmena medzi skupinami {C, T } <-> {A, G}.
-- Model má dva parametre: rýchlosť tranzícií $\alfa$, transverzií $\beta$.
+- Model má dva parametre: rýchlosť tranzícií $\alpha$, transverzií $\beta$.
 $R=\left(\begin{array}{cccc}
 -2\beta-\alpha & \beta & \alpha & \beta \\\\\\\\
 \beta & -2\beta-\alpha & \beta & \alpha \\\\\\\\
