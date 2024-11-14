@@ -44,7 +44,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 
   - Otvorte si [zarovnanie](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-aln.fa), ktoré vzniklo postupom vyššie s ručne upravenými menami sekvencií 
   - Skúsme zostaviť strom na stránke
-    <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny>
+    <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny> (na cvičení nefungovala)
       - Distance correction: ako na prednáške, z počtu pozorovaných
         mutácií na evolučný čas
       - Exclude gaps: vynechať všetky stĺpce s pomlčkami
@@ -95,7 +95,9 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
   - Nájdené pomocou BLAST v Uniprote ako homológy [proteínu YCF1](https://www.uniprot.org/uniprotkb/P39109/entry) z S. cerevisiae
   - Zarovnáme na Galaxy pomocou muscle, strom spravíme cez rapidnj alebo
     IQ-tree
-  - Zobrazíme kliknutím na ikonku visualize alebo cez [phylotree](https://phylotree.hyphy.org/).
+  - Dáta nahráme ikonou Upload úplne vľavo hore, v dolnom rade tlačidiel treba dať `Paste/Fetch data`
+  - Strom zobrazíme cez `Visualize` v hornom menu (vyžaduje prihlásenie) alebo cez [phylotree](https://phylotree.hyphy.org/).
+  - [Predpočítané výsledky](https://usegalaxy.eu/u/brejova/h/cb-phylo2-musclerapidnj)
 
 ## Gény, evolúcia a komparatívna genomika v UCSC genome browseri (cvičenie pri počítači)
 
