@@ -98,9 +98,9 @@ t=0           t=1           t=2           t=3               t=10
 
 $S(t) = \left(\begin{array}{cccc} 
 \Pr(A\stackrel{t}{\rightarrow} A) & \Pr(A\stackrel{t}{\rightarrow} C) & \Pr(A\stackrel{t}{\rightarrow} G) & \Pr(A\stackrel{t}{\rightarrow} T) \\\\\\\\
-\Pr(C\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(C\stackrel{t}{\rightarrow} T) \\\\\\\\
-\Pr(G\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(G\stackrel{t}{\rightarrow} T) \\\\\\\\
-\Pr(T\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(T\stackrel{t}{\rightarrow} T) 
+\Pr(C\stackrel{t}{\rightarrow} A) & \Pr(C\stackrel{t}{\rightarrow} C) & \Pr(C\stackrel{t}{\rightarrow} G) & \Pr(C\stackrel{t}{\rightarrow} T) \\\\\\\\
+\Pr(G\stackrel{t}{\rightarrow} A) & \Pr(G\stackrel{t}{\rightarrow} C) & \Pr(G\stackrel{t}{\rightarrow} G) & \Pr(G\stackrel{t}{\rightarrow} T) \\\\\\\\
+\Pr(T\stackrel{t}{\rightarrow} A) & \Pr(T\stackrel{t}{\rightarrow} C) & \Pr(T\stackrel{t}{\rightarrow} G) & \Pr(T\stackrel{t}{\rightarrow} T) 
 \end{array}\right)$
 
 - Riadky zodpovedajú pôvodnej báze $a$, stĺpce novej báze $b$.
@@ -285,7 +285,7 @@ Model **HKY85** (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepo
 - Ak nastavíme čas v evolučnom modeli na nekonečno, nezáleží na tom, z ktorej bázy sme začali, frekvencia výskytu jednotlivých báz sa ustáli v stacionárnom rozdelení (ekvilibriu).
 - V modeli J-C aj K80 je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4.
 - V HKY85 si zvolíme aj frekvencie jednotlivých nukleotidov v ekvilibriu $\pi_A,\pi_C, \pi_G, \pi_T$ so súčtom 1.
-- Parameter $\kappa$: pomer tranzícií a transverzií ($\alfa/\beta$)
+- Parameter $\kappa$: pomer tranzícií a transverzií ($\alpha/\beta$)
 - Matica rýchlostí:
   - $\mu_{x,y} =  \kappa \pi_y$ ak mutácia x-\>y je tranzícia,
   - $\pi_y$ ak mutácia x-\>y je transverzia
