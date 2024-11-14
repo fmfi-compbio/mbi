@@ -26,6 +26,8 @@ title: "Cvičenia pre informatikov: Substitučné modely"
 
 
 
+
+
 ```
 ## Markovove reťazce (Markov chains), formálne
 
@@ -35,13 +37,15 @@ title: "Cvičenia pre informatikov: Substitučné modely"
   t.j. stav v čase $t$ závisí len od stavu v čase
   $t-1$ a nie ďalších predchádzajúcich stavov 
   
-  Stavy: možné hodnoty $X_{t}$).
+  Stavy: možné hodnoty $X_{t}$.
 
 - Nás budú zaujímať **homogénne** Markovove reťazce, v ktorých
   $\Pr(X_t|X_{t-1})$ nezávisí od $t$.
 - Tiež nás zaujímajú len reťazce, v ktorých náhodné premenné $X_t$
   nadobúdajú hodnoty z konečnej množiny.
+
 ```
+
 
 
 
@@ -78,7 +82,10 @@ pravdepodobnosť prechodu zo stavu $x$ do stavu $y$
 
 
 
+
+
 ```
+
 ## Príklad
 
 ```
@@ -103,8 +110,12 @@ pravdepodobnosť prechodu zo stavu $x$ do stavu $y$
 
 
 
+
+
 ```
+
 ## Príklad
+
 ```
 0.767 0.233      0.067 0.933     0.30 0.70
 0.100 0.900      0.400 0.600     0.30 0.70
@@ -120,16 +131,71 @@ počasia          počasi
 * Priemerná dĺžka súvislého úseku núl: 4.3, 1.1, 1.4.
 * Priemerné dĺžky súvislých úsekov jednotiek: 10, 2.5, 3.3. 
 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 ## Výpočet matice pre viac krokov naraz
 
 Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$<br/> 
 (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes).
 
 
+```
 
 
-- Podobne $\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
-- Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Výpočet matice pre viac krokov naraz
+
+$\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$
+
+Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Príklad
 
 ```
 1.000 0.000   0.767 0.233   0.611 0.389   0.507 0.493  ...  0.312 0.688
@@ -137,24 +203,85 @@ Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$<br/>
 t=0           t=1           t=2           t=3               t=10
 ```
 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
 ### Stacionárne rozdelenie
 
-- Rozdelenie $\pi$ na množine stavov sa nazýva **stacionárne** pre
-  Markovov reťazec $M$, ak pre každé $y$ platí
-  $\sum_{x}\pi(x)M[x,y] = \pi(y)$ (alebo v maticovej notácii
-  $\pi M = \pi$)
+Rozdelenie $\pi$ na množine stavov sa nazýva **stacionárne** pre 
+Markovov reťazec $M$, ak pre každé $y$ platí<br>
+$\sum_{x}\pi(x)M[x,y] = \pi(y)$<br> 
+alebo v maticovej notácii $\pi M = \pi$
+
 - Ak matica $M$ spĺňa určité podmienky (je ergodická), existuje pre ňu
   práve jedno stacionárne rozdelenie $\pi$. Navyše pre každé $x$ a $y$
-  platí $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
-- To znamená, že ak umocňujeme maticu $M$ na veľmi veľké čísla,  
+  platí<br> $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
+- Ak umocňujeme maticu $M$ na veľmi veľké čísla,  
   všetky riadky matice sa blížia k stacionárnemu rozdeleniu.
-- Po veľa krokoch už teda príliš nezáleží, v ktorom stave sme začali (počasie o rok nie je príliš ovplyvnené tým, či dnes prší).
 - Stacionárne rozdelenie sa nazýva aj ekvilibrium Markovovho reťazca.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Príklad
+
+```
+1.000 0.000   0.767 0.233   0.611 0.389   0.507 0.493  ...  0.312 0.688
+0.000 1.000   0.100 0.900   0.167 0.833   0.211 0.789  ...  0.295 0.705
+t=0           t=1           t=2           t=3               t=10
+```
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 ### Ergodické Markovove reťazce
 
-- Vravíme, že matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulové.
-- Príklady neergodických a ergodických matíc:
+Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulové
 
 ```
     1 0          0.5 0.5          0 1             0.5 0.5
@@ -162,6 +289,23 @@ t=0           t=1           t=2           t=3               t=10
     nesúvislá    slabo súvislá    periodická      ergodická
 ```
 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 ## Substitučné modely
 
