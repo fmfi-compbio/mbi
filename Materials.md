@@ -173,34 +173,39 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} BV chapter 5, ZB chapter 9.8, 10.8,
 
 #### TI:  Substitution models
-pdf, notes
+
+{% include notes.html file="ci-chains" name="notes" show=1 dot=1
+%} {% include pdf.html file="ci-chains" name="pdf" show=0 dot=1
+%} {% include notebook.html file="ci-chains" name="colab" show=1 dot=0
+%}
 
 #### TB:  Practical phylogenetic trees
 notes
 
 <a name="W9"></a>
 ### Nov. 21
+#### L: Gene expression, clustering, classification, transcription factors, sequence motifs
+
+{% include pdf.html file="p-expr" name="pdf" show=0 dot=1
+%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
+%} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
+
+#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM
+
+#### TB:  K-means clustering, enrichment, multiple testing correction
+pdf pdf notes
+
+<a name="W10"></a>
+### Nov. 28
 #### L: Protein structure and function
 
 {% include pdf.html file="p-prot" name="pdf" show=0 dot=1
 %} {% include youtube.html id="ugMM81jZRpc" name="video" show=0 dot=1
 %} DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
 
-#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM
+#### TI:  Motif finding by EM and Gibbs sampling
+pdf 
 
-#### TB:  Pfam, PSI-blast, Example of command-line tools  
-notes1, notes2
-
-<a name="W10"></a>
-### Nov. 28
-#### L: Gene expression, clustering, classification, regulatory networks, transcription factors, sequence motifs
-
-{% include pdf.html file="p-expr" name="pdf" show=0 dot=1
-%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
-%} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
-
-#### TI:  Examples of biological databases, introduction to context-free grammars
-notes
 #### TB:  Introduction to context-free grammars
 notes
 
@@ -212,10 +217,12 @@ notes
 %} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
 %} DEKM chapter 10, ZB chapter 11.9
 
-#### TI:  Motif finding by EM and Gibbs sampling
-pdf 
-#### TB:  K-means clustering, enrichment, multiple testing correction
-pdf pdf notes
+#### TI: Examples of biological databases, introduction to context-free grammars
+notes
+
+#### TB:  Pfam, PSI-blast, Example of command-line tools  
+notes1, notes2
+
 
 <a name="W12"></a>
 ### Dec. 12

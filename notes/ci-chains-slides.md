@@ -738,13 +738,13 @@ Pre veľmi malé časy: $S(t)\approx I+Rt$
 
 ## Substitučné modely, zhrnutie
 
-- Matice $S(t)$ kde $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
-  pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
-  bázu b
+- Matica $S(t)$, kde $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
+  pravdepodobnosť, že ak začneme s bázou $a$, tak po čase $t$ budeme mať
+  bázu $b$
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
   pre každé dve bázy $a\ne b$
-- Pre daný čas t máme teda všade mimo diagonály s(t) a na diagonále
-  1-3s(t)
+- Všade mimo diagonály $s(t)$ a na diagonále
+  $1-3s(t)$
 - Matica rýchlostí R: pre Jukes-Cantorov model všade mimo diagonály
   $\alpha$, na diagonále $-3\alpha$
 - Pre veľmi malý čas t je S(t) zhruba I-Rt
@@ -858,6 +858,23 @@ $R=\left(\begin{array}{cccc}
 \beta & \alpha & \beta & -2\beta-\alpha 
 \end{array}\right)$
 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 ##  Model **HKY85** (Hasegawa, Kishino & Yano, 1985) 
 
 Umožňuje aj rôzne pravdepodobnosti A, C, G a T v ekvilibriu (pre $t\to\infty$).
@@ -868,7 +885,6 @@ Umožňuje aj rôzne pravdepodobnosti A, C, G a T v ekvilibriu (pre $t\to\infty$
 - Matica rýchlostí:
   - $\mu_{x,y} =  \kappa \pi_y$ ak mutácia x-\>y je tranzícia,
   - $\pi_y$ ak mutácia x-\>y je transverzia
-
 
 ```
 

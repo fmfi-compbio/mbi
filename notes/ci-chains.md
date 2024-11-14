@@ -222,12 +222,12 @@ $R=
 ### Substitučné modely, zhrnutie
 
 - $S(t)$ matica 4x4, kde políčko $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
-  pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
-  bázu b.
+  pravdepodobnosť, že ak začneme s bázou $a$, tak po čase $t$ budeme mať
+  bázu $b$.
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
   pre každé dve bázy $a\ne b$
-- Pre daný čas t máme teda všade mimo diagonály s(t) a na diagonále
-  1-3s(t)
+- Pre daný čas $t$ máme teda všade mimo diagonály $s(t)$ a na diagonále
+  $1-3s(t)$
 - Matica rýchlostí R: pre Jukes-Cantorov model všade mimo diagonály
   $\alpha$, na diagonále $-3\alpha$
 - Pre veľmi malý čas t je S(t) zhruba I-Rt
