@@ -227,7 +227,7 @@ t=0           t=1           t=2           t=3               t=10
 ```
 
 
-### Stacionárne rozdelenie
+## Stacionárne rozdelenie
 
 Rozdelenie $\pi$ na množine stavov sa nazýva **stacionárne** pre 
 Markovov reťazec $M$, ak pre každé $y$ platí<br>
@@ -235,11 +235,12 @@ $\sum_{x}\pi(x)M[x,y] = \pi(y)$<br>
 alebo v maticovej notácii $\pi M = \pi$
 
 - Ak matica $M$ spĺňa určité podmienky (je ergodická), existuje pre ňu
-  práve jedno stacionárne rozdelenie $\pi$. Navyše pre každé $x$ a $y$
-  platí<br> $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
-- Ak umocňujeme maticu $M$ na veľmi veľké čísla,  
-  všetky riadky matice sa blížia k stacionárnemu rozdeleniu.
-- Stacionárne rozdelenie sa nazýva aj ekvilibrium Markovovho reťazca.
+  práve jedno stacionárne rozdelenie $\pi$<br/> 
+  Navyše pre každé $x$ a $y$
+  platí<br> $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$
+- Ak umocňujeme maticu $M$ na veľké $t$,  
+  všetky riadky sa blížia k stacionárnemu rozdeleniu
+- Stacionárne rozdelenie sa nazýva aj ekvilibrium Markovovho reťazca
 
 ```
 
@@ -284,7 +285,7 @@ t=0           t=1           t=2           t=3               t=10
 
 ```
 
-### Ergodické Markovove reťazce
+## Ergodické Markovove reťazce
 
 Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulové
 
@@ -317,7 +318,7 @@ Ak matica $M$ spĺňa je ergodická, existuje pre ňu práve jedno stacionárne 
 
 Pravdepodobnosť, že ak začneme s bázou *a*, tak po čase *t* budeme mať bázu *b*<br>
 $\Pr(X_{t_0+t}=b \| X_{t_0}=a)$<br>
-označíme $\Pr(a\stackrel{t}{\rightarrow} b)$
+Označíme $\Pr(a\stackrel{t}{\rightarrow} b)$
 
 Matica $S(t)$:
 
@@ -448,7 +449,7 @@ S(3)                     S(10)                    S(30)
 ## Spojitý čas
 
 - Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo
-- Vieme potom napríklad pravdedpodobnosť určitej zmeny derivovať podľa $t$
+- Vieme potom napríklad pravdepodobnosť určitej zmeny derivovať podľa $t$
 - Využijeme **Markovov reťazec so spojitým časom (continuous-time Markov chain)**
 - Pre ľubovoľné $t$ chceme spočítať $S(t)$
 - Stále by malo platiť, že $S(t_1+t_2) = S(t_1)\cdot S(t_2)$
@@ -472,7 +473,7 @@ S(3)                     S(10)                    S(30)
 ```
 
 
-### Jukesov-Cantorov substitučný model
+## Jukesov-Cantorov substitučný model
 
 Tento model predpokladá, že všetky substitúcie sú rovnako pravdepodobné.
 
@@ -504,12 +505,41 @@ s(t) & s(t) & s(t) & 1-3s(t)
 
 ```
 
+## Jukesov-Cantorov substitučný model
+
+$S(t) = 
+\left(\begin{array}{cccc}
+1-3s(t) & s(t) & s(t) & s(t) \\\\\\\\
+s(t) & 1-3s(t) & s(t) & s(t) \\\\\\\\
+s(t) & s(t) & 1-3s(t) & s(t) \\\\\\\\
+s(t) & s(t) & s(t) & 1-3s(t) 
+\end{array}\right)$
+
+- Chceme odvodiť vzorec pre $s(t)$ z prednášky
+- Spočítajme deriváciu tejto funkcie
+- $s'(t) = \lim_{\epsilon\to 0} \frac{s(t+\epsilon)-s(t)}{\epsilon}$
 
 
-- Chceme odvodiť vzorec pre $s(t)$, ktorý sme videli na prednáške. Spočítajme deriváciu tejto funkcie.
-- Z definície derivácie $s'(t) = \lim_{\epsilon\to 0} \frac{s(t+\epsilon)-s(t)}{\epsilon}$.
-- $s(t+\epsilon)$ spočítame zo súčinu matíc $S(t+\epsilon) = S(t)S(\epsilon)$. 
-- $\left(\begin{array}{cccc}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+$S(t+\epsilon) = S(t)S(\epsilon)$
+
+$\left(\begin{array}{cccc}
 1-3s(t) & s(t) & s(t) & s(t) \\\\\\\\
 s(t) & 1-3s(t) & s(t) & s(t) \\\\\\\\
 s(t) & s(t) & 1-3s(t) & s(t) \\\\\\\\
@@ -521,23 +551,83 @@ s(\epsilon) & 1-3s(\epsilon) & s(\epsilon) & s(\epsilon) \\\\\\\\
 s(\epsilon) & s(\epsilon) & 1-3s(\epsilon) & s(\epsilon) \\\\\\\\
 s(\epsilon) & s(\epsilon) & s(\epsilon) & 1-3s(\epsilon) 
 \end{array}\right)$
-- Dostaneme
-  $s(t+\epsilon) = (1-3s(t))s(\epsilon) + s(t)(1-3s(\epsilon))+s(t)s(\epsilon)+s(t)s(\epsilon)$.
-- Po úprave
-  $s(t+\epsilon) = s(\epsilon) +s(t) - 4s(t)s(\epsilon) = s(t)+s(\epsilon)(1-4s(t))$.
-- $s'(t) = \lim_{\epsilon\to 0} \frac{s(\epsilon) (1-4s(t))}{\epsilon} = (1-4s(t))\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}= (1-4s(t))s'(0)$.
-- Označme $\alpha = s'(0)$ ($\alpha$ je konštanta, nezávisí od $\epsilon$ ani $t$).
-- Dostaneme $s'(t) = \alpha (1-4s(t))$. Toto je diferenciálna rovnica, hľadáme funkciu $s(t)$, ktorá ju spĺňa.
-- Riešenie je $s(t) = 1/4+c e^{-4\alpha t}$ pre každú konštantu $c$.
-- Môžeme overiť dosadením do rovnice, pričom
-  $s'(t) = -4 c \alpha e^{-4\alpha t}$.
-- Hodnotou $c=-1/4$ dopočítame z počiatočnej podmienky $s(0)=0$.
-- Overíme tiež, že $s'(0)=\alpha$.
 
 
-### Vlastnosti riešenia
+```
 
-- Takže máme maticu:
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+$s'(t) = \lim_{\epsilon\to 0} \frac{s(t+\epsilon)-s(t)}{\epsilon} = (1-4s(t))s'(0)$
+
+Označme $\alpha = s'(0)$
+
+Dostaneme $s'(t) = \alpha (1-4s(t))$
+
+Diferenciálna rovnica, hľadáme funkciu $s(t)$, ktorá ju spĺňa.
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+Diferenciálna rovnica $s'(t) = \alpha (1-4s(t))$<br/>
+kde $\alpha = s'(0)$
+
+Riešenie rovnice je $s(t) = 1/4+c e^{-4\alpha t}$ pre každú konštantu $c$
+
+Overíme
+- $s'(t) = -4 c \alpha e^{-4\alpha t}$
+- Dostadíme do rovnice
+- Hodnotou $c=-1/4$ dopočítame z počiatočnej podmienky $s(0)=0$
+- Overíme, že $s'(0)=\alpha$
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+## Vlastnosti riešenia
+
 $S(t)=
 \left(\begin{array}{cccc}
 (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
@@ -546,18 +636,53 @@ $S(t)=
 (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4
 \end{array}\right)$
 
-- Keď $t\rightarrow \infty$, dostávame všetky prvky matice rovné 1/4, t.j. $\lim_{t\to \infty}s(t)=\lim_{t\to \infty}1-3s(t)=1/4$.
-- $\alpha=s'(0)$ vyjadruje rýchlosť ako sa hromadia mutácie. Je to pravdepodobnosť konkrétnej zmeny za jednotku času, ak uvažujeme veľmi krátke časy.
-- Modely zvykneme normalizovať tak, aby priemerný počet substitúcii za jednotku času bol 1. V prípade Jukes-Cantorovho modelu je to keď $\alpha=1/3$.
+Čo sa deje pre $t\rightarrow \infty$? (Stacionárne rozdelenie)
 
 
-### Matica rýchlostí  
+```
 
-- Model substitúcií väčšinou vyjadríme maticou rýchlostí (intenzít) (transition rate matrix, substitution rate matrix).
-- Je to matica $R$ 4x4, kde $R[x,y]$ pre $x\ne y$ je rýchlosť, ako sa deje zmena z $x$ na $y$.
-- Presnejšie $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(x\\stackrel{t}{\rightarrow} y)}{t}$.
-- Diagonálne prvky $R[x,x]$ sa dopočítajú tak, aby súčet riadku bol vždy 0, je to teda rýchlosť, akou báza $x$ mutáciami ubúda.
-- Pre J-C model máme maticu rýchlostí
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Vlastnosti riešenia
+
+$S(t)=
+\left(\begin{array}{cccc}
+(1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
+(1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1+3e^{-4\alpha t})/4
+\end{array}\right)$
+
+
+$\alpha=s'(0) = \lim{\epsilon\to 0} s(\epsilon) / \epsilon$<br>
+Rýchlosť ako sa hromadia mutácie<br> 
+Pravdepodobnosť konkrétnej zmeny za jednotku času, ak uvažujeme veľmi krátke časy
+
+Modely zvykneme normalizovať tak, aby priemerný počet substitúcii za jednotku času bol 1<br/> 
+Pre J-C model $\alpha=1/3$
+
+
+## Matica rýchlostí  (intenzít) (transition rate matrix, substitution rate matrix)
+
+- $R[x,y]$ pre $x\ne y$ je rýchlosť, ako sa deje zmena z $x$ na $y$
+- $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(x\\stackrel{t}{\rightarrow} y)}{t}$
+- $R[x,x]$ dopočítame tak, aby súčet riadku bol vždy 0<br> 
+Je to teda rýchlosť, akou báza $x$ mutáciami ubúda
+- Pre J-C model:
+
 $R=
 \left(\begin{array}{cccc}
 -3\alpha & \alpha & \alpha & \alpha \\\\\\\\
@@ -565,6 +690,26 @@ $R=
 \alpha & \alpha & -3\alpha & \alpha \\\\\\\\
 \alpha & \alpha & \alpha & -3\alpha
 \end{array}\right)$
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
 
 - Pre veľmi malé časy platí $S(t)\approx I+Rt$.
 - $S(t+\epsilon) = S(t)S(\epsilon) \approx S(t)(I+R\epsilon)$ a teda $(S(t+\epsilon)-S(t))/\epsilon \approx S(t)R$

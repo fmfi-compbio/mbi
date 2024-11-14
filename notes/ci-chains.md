@@ -135,7 +135,7 @@ S(3)                     S(10)                    S(30)
 
 ### Spojitý čas
 
-- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo, čo má viaceré výhody (vieme napríklad pravdedpodobnosť určitej zmeny derivovať podľa $t$).
+- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo, čo má viaceré výhody (vieme napríklad pravdepodobnosť určitej zmeny derivovať podľa $t$).
 - Využijeme Markovov reťazec so spojitým časom (continuous-time Markov chain).
 - Pre ľubovoľné $t$ chceme spočítať $S(t)$.
 - Stále by malo platiť, že $S(t_1+t_2) = S(t_1)\cdot S(t_2)$.
@@ -196,7 +196,7 @@ $S(t)=
 - Keď $t\rightarrow \infty$, dostávame všetky prvky matice rovné 1/4, t.j. $\lim_{t\to \infty}s(t)=\lim_{t\to \infty}1-3s(t)=1/4$.
 - $\alpha=s'(0)$ vyjadruje rýchlosť ako sa hromadia mutácie. Je to pravdepodobnosť konkrétnej zmeny za jednotku času, ak uvažujeme veľmi krátke časy.
 - Modely zvykneme normalizovať tak, aby priemerný počet substitúcii za jednotku času bol 1. V prípade Jukes-Cantorovho modelu je to keď $\alpha=1/3$.
-
+- Po takej normalizácii je našou "jendotkou času" čas, za ktorý sa na jednej pozícii stane v priemere jedna mutácia. 
 
 ### Matica rýchlostí  
 
