@@ -44,7 +44,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 ### Strom metódou spájania susedov
 
   - Skúsme zostaviť strom na stránke
-    <https://www.ebi.ac.uk/Tools/phylogeny/clustalw2_phylogeny/>
+    <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny>
       - Distance correction: ako na prednáške, z počtu pozorovaných
         mutácií na evolučný čas
       - Exclude gaps: vynechať všetky stĺpce s pomlčkami
