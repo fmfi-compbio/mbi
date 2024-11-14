@@ -168,19 +168,21 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 14
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
 
-{% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
-%} {% include youtube.html id="1WM4QI2qx8A" name="video" show=0 dot=1
+{% include pdf.html file="p-compgen" name="pdf" show=1 dot=1
+%} {% include youtube.html id="1WM4QI2qx8A" name="video" show=1 dot=1
 %} BV chapter 5, ZB chapter 9.8, 10.8,
 
 #### TI:  Substitution models
 
 {% include notes.html file="ci-chains" name="notes" show=1 dot=1
-%} {% include pdf.html file="ci-chains" name="pdf" show=0 dot=1
 %} {% include notebook.html file="ci-chains" name="colab" show=1 dot=0
+%} {% include pdf.html file="ci-chains" name="pdf" show=0 dot=0
 %}
 
 #### TB:  Practical phylogenetic trees
-notes
+
+{% include notes.html file="cb-phylo2" name="notes" show=1 dot=0
+%}
 
 <a name="W9"></a>
 ### Nov. 21
