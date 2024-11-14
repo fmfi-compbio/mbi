@@ -2,6 +2,10 @@
 title: "Cvičenia pre biológov: Fylogenetické stromy"
 ---
 
+* TOC
+{:toc}
+
+
 ## Uniprot pre projekty
 
   - Prehľadný pohľad na proteíny, veľa linkov na iné databázy, časť
@@ -18,11 +22,10 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
   - V UCSC browseri môžeme získavať viacnásobné zarovnania jednotlivých
     génov (nukleotidy alebo proteíny). Nasledujúci postup nemusíte
     robiť, súbor si stiahnite tu:
-    <http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-aln.fa>
+    <https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-aln.fa>
       - V UCSC browseri si pozrieme úsek ľudského genómu (verzia hg38)
-        chr6:135,851,998-136,191,840 s génom PDE7B (phosphodiesterase
+        [chr6:135,851,998-136,191,840](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr6%3A135851998-136191840) s génom PDE7B (phosphodiesterase
         7B)
-        [1](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr6%3A135851998-136191840)
       - Na modrej lište zvolíme Tools, Table browser. V nastaveniach
         tabuliek Group: Genes and Gene Predictions, Track: GENCODE v
         32., zaklikneme Region: position, a Output format: CDS FASTA
@@ -41,7 +44,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 ### Strom metódou spájania susedov
 
   - Skúsme zostaviť strom na stránke
-    <http://www.ebi.ac.uk/Tools/phylogeny/clustalw2_phylogeny/>
+    <https://www.ebi.ac.uk/Tools/phylogeny/clustalw2_phylogeny/>
       - Distance correction: ako na prednáške, z počtu pozorovaných
         mutácií na evolučný čas
       - Exclude gaps: vynechať všetky stĺpce s pomlčkami
@@ -51,39 +54,45 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
       - Vo výslednom strome by sme mali zmeniť zakorenenie, aby sme mali
         sliepku (chicken) ako outgroup
 
-  - Výsledky z programu <http://www.phylogeny.fr/alacarte.cgi> , ktorý
+  - Výsledky z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
     podporuje aj bootstrap:
-      - [Výsledok s pôvodným zakorenením](./Media:Cb06-aln.pdf.md)
+      - [Výsledok s pôvodným zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/4/41/Cb06-aln.pdf)
       - [Výsledok so správnym
-        zakorenením](./Media:Cb06-aln-root.pdf.md) (chicken =
+        zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/2/24/Cb06-aln-root.pdf) (chicken =
         outgroup)
 
-  - "Správny strom"
-    [2](http://genome-euro.ucsc.edu/images/phylo/hg38_100way.png) v
+  - ["Správny strom"](https://genome-euro.ucsc.edu/images/phylo/hg38_100way.png) v
     nastaveniach Conservation track-u v UCSC browseri (podľa článku
-    Murphy WJ et al Resolution of the early placental mammal radiation
-    using Bayesian phylogenetics. Science 2001
-    [3](http://www.sciencemag.org/cgi/pmidlookup?view=long&pmid=11743200))
+    Murphy WJ et al [Resolution of the early placental mammal radiation
+    using Bayesian phylogenetics.](https://www.sciencemag.org/cgi/pmidlookup?view=long&pmid=11743200) Science 2001
   - Náš strom má dosť zlých hrán: zlé postavenie hlodavcov, ale aj slona
     a psa. Zlé postavenie hlodavcov môže byť spôsobené [long branch
     attraction](https://en.wikipedia.org/wiki/Long_branch_attraction).
-  - Ak chcete skúsiť zostaviť aj zarovnania, treba začať z nezarovnaných
-    sekvencií:
-    [4](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-seq.fa)
+  - Ak chcete skúsiť zostaviť aj zarovnania, treba začať z [nezarovnaných
+    sekvencií](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-seq.fa)
 
 ### Stromy na Galaxy
 
 Webstránka s veľa nástrojmi <https://usegalaxy.eu/>
 
-  - na tvorbu stromov sa dá použiť IQ-TREE
+  - Obsahuje veľa bioinformatických nástrojov, ktoré môžete spúšťať
+  - Ale na výsledky treba niekedy dlho čakať
+  - V ľavom stĺpci hľadanie nástroja alebo nahrávanie dát
+  - V pravom stĺpci zoznam nahratých dát, bežiacich programov a hotových
+    výsledkov (výsledky si pozriete ikonou oka alebo stiahnete ikonou
+    diskety)
+  - V strede nastavenia nástroja alebo prezeranie výsledkov
+  - Pri serióznom používaní odporúčam vytvoriť si konto a prihlásiť sa
+
+- Na tvorbu stromov sa dá použiť IQ-TREE
       - modely vid tu:
         <https://github.com/Cibiv/IQ-TREE/wiki/Substitution-Models>
-      - výsledok [CB:phylo](./CB:phylo.md)
-  - viewer napr. <http://phylotree.hyphy.org/>
+      - výsledok [CB:phylo](https://compbio.fmph.uniba.sk/vyuka/mbi/index.php/CB:phylo)
+  - viewer napr. <https://phylotree.hyphy.org/>
 
 Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
 
-  - [Sekvencie](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-prot.fa)
+  - [Sekvencie](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-prot.fa)
   - Nájdené pomocou BLAST v Uniprote ako homology proteínu YCF1 z S.
     cerevisiae [uniprot](https://www.uniprot.org/uniprotkb/P39109/entry)
   - Zarovnáme na Galaxy pomocou muscle, strom spravíme cez rapidnj alebo
@@ -93,7 +102,7 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
 ## Gény, evolúcia a komparatívna genomika v UCSC genome browseri (cvičenie pri počítači)
 
   - Zobrazme si gén CLCA4
-    [5](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A86538658-86589173)
+    [5](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A86538658-86589173)
   - Zapnite si štandardnú sadu track-ov (Tlačidlo Configure pod
     obrázkom, potom tlačidlo Default v druhej sekcii stránky)
   - Po kliknutí na gén si môžete prečítať o jeho funkcii, po kliknutí na
@@ -150,14 +159,14 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
         týchto elementov a každý si môžeme jedným klikom pozrieť v
         browseri, napr. takéto
           - [lod=24051 at
-            chr1:50201403-50203312](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1:50201403-50203312)
+            chr1:50201403-50203312](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1:50201403-50203312)
           - [lod=1899 at
-            chr1:55663689-55667047](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1:55663689-55667047)
+            chr1:55663689-55667047](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1:55663689-55667047)
             atď
 
 
   - Pozrime si teraz ten istý gén CLCA4 v staršej verzii genómu hg18
-    [6](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg18&position=chr1%3A86776929-86827444)
+    [6](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg18&position=chr1%3A86776929-86827444)
       - V časti Genes and Gene Prediction Tracks zapnite track Pos Sel
         Genes, ktorý obsahuje gény s **pozitívnym výberom** (červenou,
         prípadne slabšie fialovou a modrou)
@@ -165,31 +174,31 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
         ktorých častiach fylogenetického stromu bol detegovaný pozitívny
         výber
       - Po priblížení do jedného z exónov
-        [7](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg18&position=chr1%3A86805823-86805917)
+        [7](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg18&position=chr1%3A86805823-86805917)
         vidíte dôsledky nesynonymných mutácií
 
 Poznámka: Existujú aj webservery na predikciu pozitívneho výberu,
 napríklad tieto dva (v súčasnosti asi nefungujú):
 
-  - [Selecton](http://selecton.tau.ac.il/),
-    [článok](http://www.tau.ac.il/~talp/publications/selecton2007.pdf)
-  - [Data monkey](http://www.datamonkey.org/)
-    [článok](http://mbe.oxfordjournals.org/cgi/content/abstract/22/5/1208)
+  - [Selecton](https://selecton.tau.ac.il/),
+    [článok](https://www.tau.ac.il/~talp/publications/selecton2007.pdf)
+  - [Data monkey](https://www.datamonkey.org/)
+    [článok](https://mbe.oxfordjournals.org/cgi/content/abstract/22/5/1208)
   - Skúsili sme na Selecton poslať CLCA4 zo 7 cicavcov, súbor tu:
-    [8](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4.mfa)
+    [8](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4.mfa)
       - výsledky
-        [9](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4-selecton.html)
+        [9](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4-selecton.html)
         a
-        [10](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4-omega.txt)
+        [10](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb07/clca4-omega.txt)
         (metóda ale odporúča aspoň 10 homologov)
   - Nástroj HyPhy
       - výber metódy
-        [11](http://hyphy.org/getting-started/#characterizing-selective-pressures)
+        [11](https://hyphy.org/getting-started/#characterizing-selective-pressures)
       - niektoré HyPhy nástroje sa nachádzajú v Galaxy
 
 ## Objavenie génu HAR1 pomocou komparatívnej genomiky
 
-  - [pdf](http://ribonode.ucsc.edu/Pubs/Pollard_etal06.pdf)
+  - [pdf](https://ribonode.ucsc.edu/Pubs/Pollard_etal06.pdf)
 
   - Zobrali všetky regióny dĺžky aspoň 100bp s \> 96% podobnosťou medzi
     šimpanzom a myšou/potkanom (35,000)
@@ -218,7 +227,7 @@ napríklad tieto dva (v súčasnosti asi nefungujú):
 
   - Môžete si pozrieť tento región v browseri:
     [**chr20:63102114-63102274**
-    (hg38)](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr20%3A63102114-63102274),
+    (hg38)](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr20%3A63102114-63102274),
     pričom ak sa ešte priblížite, uvidíte zarovnanie aj s bázami a
     môžete vidieť, že veľa zmien je špecifických pre človeka
 

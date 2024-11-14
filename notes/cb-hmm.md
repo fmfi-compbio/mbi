@@ -67,19 +67,3 @@ $E = Kmn e^{-\lambda S}$
         schemy a frekvencii vyskytu baz
 
 
-## Použitie stránky Galaxy (budeme robiť nabudúce)
-
-  - <https://usegalaxy.eu/>
-  - Obsahuje veľa bioinformatických nástrojov, ktoré môžete spúšťať
-  - Ale na výsledky treba niekedy dlho čakať
-  - V ľavom stĺpci hľadanie nástroja alebo nahrávanie dát
-  - V pravom stĺpci zoznam nahratých dát, bežiacich programov a hotových
-    výsledkov (výsledky si pozriete ikonou oka alebo stiahnete ikonou
-    diskety)
-  - V strede nastavenia nástroja alebo prezeranie výsledkov
-  - Pri serióznom používaní odporúčam vytvoriť si konto a prihlásiť sa
-
-  - Programy napr. Alphafold 2, SignalP, TMHMM, WoLF
-      - Môžeme skúsiť na proteíne YCF1 z S. cerevisiae
-        [uniprot](https://www.uniprot.org/uniprotkb/P39109/entry),
-        [sekvencia](https://rest.uniprot.org/uniprotkb/P39109.fasta)
