@@ -628,6 +628,9 @@ Overíme
 
 ## Vlastnosti riešenia
 
+$s(t) = 1/4-1/4 e^{-4\alpha t}$<br>
+$1-3s(t) = $?
+
 $S(t)=
 \left(\begin{array}{cccc}
 (1+3e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 & (1- e^{-4\alpha t})/4 \\\\\\\\
@@ -667,7 +670,7 @@ $S(t)=
 \end{array}\right)$
 
 
-$\alpha=s'(0) = \lim{\epsilon\to 0} s(\epsilon) / \epsilon$<br>
+$\alpha=s'(0) = \lim_{\epsilon\to 0} s(\epsilon) / \epsilon$<br>
 Rýchlosť ako sa hromadia mutácie<br> 
 Pravdepodobnosť konkrétnej zmeny za jednotku času, ak uvažujeme veľmi krátke časy
 
@@ -680,7 +683,7 @@ Pre J-C model $\alpha=1/3$
 - $R[x,y]$ pre $x\ne y$ je rýchlosť, ako sa deje zmena z $x$ na $y$
 - $R[x,y] = \\lim_{t\\rightarrow 0}\\frac{\Pr(x\\stackrel{t}{\rightarrow} y)}{t}$
 - $R[x,x]$ dopočítame tak, aby súčet riadku bol vždy 0<br> 
-Je to teda rýchlosť, akou báza $x$ mutáciami ubúda
+Rýchlosť, akou báza $x$ mutáciami ubúda
 - Pre J-C model:
 
 $R=
@@ -691,6 +694,7 @@ $R=
 \alpha & \alpha & \alpha & -3\alpha
 \end{array}\right)$
 
+Pre veľmi malé časy: $S(t)\approx I+Rt$
 
 ```
 
@@ -710,18 +714,33 @@ $R=
 ```
 
 
+- Pre veľmi malé časy: $S(t)\approx I+Rt$
+- Diferenciálna rovnica $S'(t) = S(t)R$
+- Počiatočný stav $S(0)=I$
 
-- Pre veľmi malé časy platí $S(t)\approx I+Rt$.
-- $S(t+\epsilon) = S(t)S(\epsilon) \approx S(t)(I+R\epsilon)$ a teda $(S(t+\epsilon)-S(t))/\epsilon \approx S(t)R$
-- V limite dostaneme $S(t)R = \lim_{\epsilon\rightarrow 0} (S(t+\epsilon)-S(t))/\epsilon = S'(t)$
-- Dostali sme diferenciálnu rovnicu $S(t)R = S'(t)$, počiatočný stav $S(0)=I$.
-- Ak by sme dosadili $R$ pre J-C model, dostali by sme rovnakú diferenciálnu rovnicu ako predtým.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 
 ## Substitučné modely, zhrnutie
 
-- S(t): matica 4x4, kde políčko $S(t)_{a,b}=\Pr(a\stackrel{t}{\rightarrow} b)$ je
+- Matice $S(t)$ kde $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
   pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
-  bázu b.
+  bázu b
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
   pre každé dve bázy $a\ne b$
 - Pre daný čas t máme teda všade mimo diagonály s(t) a na diagonále
@@ -731,21 +750,38 @@ $R=
 - Pre veľmi malý čas t je S(t) zhruba I-Rt
 - Rýchlost $\alpha$ je teda pravdepodobnosť zmeny za jednotku casu, ak
   uvažujeme veľmi krátke časy, resp. derivácia *s(t)* vzhľadom na *t*
-  v bode 0.
+  v bode 0
 - Riešením diferenciálnych rovníc pre Jukes-Cantorov model dostávame
   $s(t) = (1-e^{-4\alpha t})/4$
 - Matica rýchlostí sa zvykne normalizovať tak, aby na jednotku času
   pripadla v priemere jedna substitúcia, čo dosiahneme ak
-  $\alpha=1/3$.
+  $\alpha=1/3$
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 ## Použitie na odhad evolučnej vzdialenosti
 
 - V čase $t$ je pravdepodobnosť, že uvidíme zmenenú bázu
-  $D(t) = \frac{3}{4}(1-e^{-4\alpha t})$
+  $D(t) = 3s(t) = \frac{3}{4}(1-e^{-4\alpha t})$
 - V reálnom použití (výpočet matice vzdialenosti pre metódu spájania
   susedov) máme dve zarovnané sekvencie, medzi ktorými vidíme $d\%$
   zmenených báz, chceme odhadnúť $t$
-    - Spätne teda zrátame $t$, ktoré by hodnote $D(t)=d$ prináležalo.
+- Spätne teda zrátame $t$, ktoré by hodnote $D(t)=d$ prináležalo.
 - Dostávame teda vzorec pre vzdialenosť, ktorý sme videli na prednáške
   $t=-\frac{3}{4} \log\left(1-\frac{4}{3}d\right)$
 - Ak $d\rightarrow 0.75$, dostávame $t\rightarrow \infty$
@@ -753,25 +789,68 @@ $R=
   najvierohodnejšiu hodnotu $t$, t.j. takú, pre ktorú hodnota $\Pr(data|t)$
   bude najväčšia. Zhodou okolností vyjde takto.
 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 ## Zložitejšie substitučné modely
 
-- Vo všeobecnejších modeloch sa rôzne typy mutácií dejú rôzne rýchlo, teda za čas $t$ môžeme napríklad dostať inú pravdepodobnosť A->C než A->T. 
-- Máme teda všeobecnejšiu maticu rýchlostí R
-- $R = \\left( \\begin{array}{cccc}
+Rôzne typy mutácií môžu diať rôzne rýchlo
+
+Všeobecnejšia maticu rýchlostí R
+
+$R = \\left( \\begin{array}{cccc}
   -\\mu_A & \\mu\_{AC} & \\mu\_{AG} & \\mu\_{AT}\\\\\\\\
   \\mu\_{CA} & -\\mu_C & \\mu\_{CG} & \\mu\_{CT}\\\\\\\\
   \\mu\_{GA} & \\mu\_{GC} & -\\mu_G & \\mu\_{GT}\\\\\\\\
   \\mu\_{TA} & \\mu\_{TC} & \\mu\_{TG} & -\\mu_T
   \\end{array} \\right)$
-- Hodnota $\mu_{xy}$ teda označuje rýchlosť, akou sa
-    určitá báza x mení na inú bázu y.
-- Ako sme videli, diagonála sa dopočíta tak, aby súčet každého riadku bol 0, t.j. $\mu_x = \sum_{y\ne x}\mu_{xy}$
-- Často sa používajú modely, ktoré všetky potrebné rýchlosti spočítajú z menšieho počtu parametrov.
 
-Model **K80** (Kimura 1980) napr. zachytáva, ze puríny sa častejšie menia na iné
-puríny (A a G) a pyrimidíny na ine pyrimidíny (C a T).
-- Tranzícia je zmena v rámci skupiny (C<->T, A<->G), transverzia je zmena medzi skupinami {C, T } <-> {A, G}.
-- Model má dva parametre: rýchlosť tranzícií $\alpha$, transverzií $\beta$.
+$\mu_{xy}$: rýchlosť zmeny bázy x na inú bázu y
+
+$\mu_x = \sum_{y\ne x}\mu_{xy}$
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+## Model K80 (Kimura 1980) 
+
+Zachytáva, ze puríny sa častejšie menia na iné
+puríny (A a G) a pyrimidíny na ine pyrimidíny (C a T)
+- Tranzícia je zmena v rámci skupiny (C<->T, A<->G) 
+- Transverzia je zmena medzi skupinami {C, T } <-> {A, G}.
+
+Model má dva parametre: rýchlosť tranzícií $\alpha$, transverzií $\beta$
+
 $R=\left(\begin{array}{cccc}
 -2\beta-\alpha & \beta & \alpha & \beta \\\\\\\\
 \beta & -2\beta-\alpha & \beta & \alpha \\\\\\\\
@@ -779,23 +858,60 @@ $R=\left(\begin{array}{cccc}
 \beta & \alpha & \beta & -2\beta-\alpha 
 \end{array}\right)$
 
-Model **HKY85** (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepodobnosti A, C, G a T v ekvilibriu.
-- Ak nastavíme čas v evolučnom modeli na nekonečno, nezáleží na tom, z ktorej bázy sme začali, frekvencia výskytu jednotlivých báz sa ustáli v stacionárnom rozdelení (ekvilibriu).
-- V modeli J-C aj K80 je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4.
-- V HKY85 si zvolíme aj frekvencie jednotlivých nukleotidov v ekvilibriu $\pi_A,\pi_C, \pi_G, \pi_T$ so súčtom 1.
+##  Model **HKY85** (Hasegawa, Kishino & Yano, 1985) 
+
+Umožňuje aj rôzne pravdepodobnosti A, C, G a T v ekvilibriu (pre $t\to\infty$).
+
+- V modeli J-C aj K80 je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4
+- V HKY85 si zvolíme aj frekvencie v ekvilibriu $\pi_A,\pi_C, \pi_G, \pi_T$ so súčtom 1.
 - Parameter $\kappa$: pomer tranzícií a transverzií ($\alpha/\beta$)
 - Matica rýchlostí:
   - $\mu_{x,y} =  \kappa \pi_y$ ak mutácia x-\>y je tranzícia,
   - $\pi_y$ ak mutácia x-\>y je transverzia
 
-### Výpočet pravdepodobností z matice rýchlostí
 
-- Pre zložité modely nevieme odvodiť explicitný vzorec na výpočet $S(t)$, ako sme mali pri Jukesovom-Cantorovom modeli
-- Ale vo všeobecnosti pre maticu rýchlostí $R$ dostávame $S(t)=e^{Rt}$.
-  - Exponenciálna funkcia matice $A$ sa definuje ako
-    $e^A = \sum_{k=0}^\infty{1 \over k!}A^k.$
-  - Ak maticu rýchlostí R diagonalizujeme (určite sa dá pre
-    symetrické R) $R = U D U^{-1}$, kde $D$ je diagonálna matica (na
-    jej diagonále budú vlastné hodnoty $R$), tak
-    $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
-    uplatníme iba na prvky na uhlopriečke matice $D$.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Výpočet pravdepodobností z matice rýchlostí
+
+- Pre zložité modely nevieme odvodiť explicitný vzorec na výpočet $S(t)$ ako v J-C modeli
+- Ale vo všeobecnosti platí<br> $S(t)=e^{Rt}$
+- Exponenciálna funkcia matice $A$ sa definuje ako<br> $e^A = \sum_{k=0}^\infty{1 \over k!}A^k$
+- Ak R diagonalizujeme (určite sa dá pre
+  symetrické R) $R = U D U^{-1}$, kde $D$ je diagonálna matica (na
+  jej diagonále budú vlastné hodnoty $R$), tak
+  $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
+  uplatníme iba na prvky na uhlopriečke matice $D$.
+- Všimnime si prvé dva členy rozvoja $S(t) = e^{Rt} = \sum_{k=0}^\infty{1 \over k!}(Rt)^k$
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```

@@ -196,7 +196,7 @@ $S(t)=
 - Keď $t\rightarrow \infty$, dostávame všetky prvky matice rovné 1/4, t.j. $\lim_{t\to \infty}s(t)=\lim_{t\to \infty}1-3s(t)=1/4$.
 - $\alpha=s'(0)$ vyjadruje rýchlosť ako sa hromadia mutácie. Je to pravdepodobnosť konkrétnej zmeny za jednotku času, ak uvažujeme veľmi krátke časy.
 - Modely zvykneme normalizovať tak, aby priemerný počet substitúcii za jednotku času bol 1. V prípade Jukes-Cantorovho modelu je to keď $\alpha=1/3$.
-- Po takej normalizácii je našou "jendotkou času" čas, za ktorý sa na jednej pozícii stane v priemere jedna mutácia. 
+- Po takej normalizácii je našou "jednotkou času" čas, za ktorý sa na jednej pozícii stane v priemere jedna mutácia. 
 
 ### Matica rýchlostí  
 
@@ -216,12 +216,12 @@ $R=
 - Pre veľmi malé časy platí $S(t)\approx I+Rt$.
 - $S(t+\epsilon) = S(t)S(\epsilon) \approx S(t)(I+R\epsilon)$ a teda $(S(t+\epsilon)-S(t))/\epsilon \approx S(t)R$
 - V limite dostaneme $S(t)R = \lim_{\epsilon\rightarrow 0} (S(t+\epsilon)-S(t))/\epsilon = S'(t)$
-- Dostali sme diferenciálnu rovnicu $S(t)R = S'(t)$, počiatočný stav $S(0)=I$.
+- Dostali sme diferenciálnu rovnicu $S'(t) = S(t)R$, počiatočný stav $S(0)=I$.
 - Ak by sme dosadili $R$ pre J-C model, dostali by sme rovnakú diferenciálnu rovnicu ako predtým.
 
 ### Substitučné modely, zhrnutie
 
-- S(t): matica 4x4, kde políčko $S(t)_{a,b}=\Pr(a\stackrel{t}{\rightarrow} b)$ je
+- $S(t)$ matica 4x4, kde políčko $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
   pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
   bázu b.
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
@@ -240,14 +240,15 @@ $R=
   pripadla v priemere jedna substitúcia, čo dosiahneme ak
   $\alpha=1/3$.
 
+
 ### Použitie na odhad evolučnej vzdialenosti
 
 - V čase $t$ je pravdepodobnosť, že uvidíme zmenenú bázu
-  $D(t) = \frac{3}{4}(1-e^{-4\alpha t})$
+  $D(t) = 3s(t) = \frac{3}{4}(1-e^{-4\alpha t})$
 - V reálnom použití (výpočet matice vzdialenosti pre metódu spájania
   susedov) máme dve zarovnané sekvencie, medzi ktorými vidíme $d\%$
   zmenených báz, chceme odhadnúť $t$
-    - Spätne teda zrátame $t$, ktoré by hodnote $D(t)=d$ prináležalo.
+- Spätne teda zrátame $t$, ktoré by hodnote $D(t)=d$ prináležalo.
 - Dostávame teda vzorec pre vzdialenosť, ktorý sme videli na prednáške
   $t=-\frac{3}{4} \log\left(1-\frac{4}{3}d\right)$
 - Ak $d\rightarrow 0.75$, dostávame $t\rightarrow \infty$
@@ -281,7 +282,7 @@ $R=\left(\begin{array}{cccc}
 \beta & \alpha & \beta & -2\beta-\alpha 
 \end{array}\right)$
 
-Model **HKY85** (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepodobnosti A, C, G a T v ekvilibriu.
+Model **HKY85** (Hasegawa, Kishino & Yano, 1985) umožňuje aj rôzne pravdepodobnosti A, C, G a T v ekvilibriu.
 - Ak nastavíme čas v evolučnom modeli na nekonečno, nezáleží na tom, z ktorej bázy sme začali, frekvencia výskytu jednotlivých báz sa ustáli v stacionárnom rozdelení (ekvilibriu).
 - V modeli J-C aj K80 je pravdepodobnosť ľubovoľnej bázy v ekvilibriu 1/4.
 - V HKY85 si zvolíme aj frekvencie jednotlivých nukleotidov v ekvilibriu $\pi_A,\pi_C, \pi_G, \pi_T$ so súčtom 1.
@@ -301,3 +302,4 @@ Model **HKY85** (Hasegawa, Kishino & Yano, 1985) tiež umožnuje rôzne pravdepo
     jej diagonále budú vlastné hodnoty $R$), tak
     $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
     uplatníme iba na prvky na uhlopriečke matice $D$.
+- Všimnime si prvé dva členy rozvoja $S(t) = e^{Rt} = \sum_{k=0}^\infty{1 \over k!}(Rt)^k$. Dostaneme $I + Rt$, čo je naša aproximácia $S(t)$ pre malé $t$.  Väčším počtom členov dostaneme lepšiu aproximáciu.
