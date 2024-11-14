@@ -54,7 +54,7 @@ počasia          počasi
 - Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $y$ v čase 1 (zajtra). 
 - Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$
 - Ide o súčin matice $M$ samej so sebou, t.j. $M^2$.
-- Podobne $\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
+- Podobne $\Pr(X_{t_0+t}=y \| X_{t_0}=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
 - Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
 
 ```
@@ -92,7 +92,7 @@ t=0           t=1           t=2           t=3               t=10
 ## Substitučné modely
 
 - Nech $\Pr(a\stackrel{t}{\rightarrow} b)$ je pravdepodobnosť, že ak začneme s bázou *a*, tak
-  po čase *t* budeme mať bázu *b*.
+  po čase *t* budeme mať bázu *b*, t.j. $\Pr(X_{t_0+t}=b \| X_{t_0}=a)$.
 - Pre dané *t* môžeme také pravdepodobnosti usporiadať do matice $S(t)$ 4x4 (ak
   študujeme DNA):
 
@@ -111,7 +111,7 @@ $S(t) = \left(\begin{array}{cccc}
 - Ak uvažujeme iba celočíselné hodnoty času $t$, môžeme substitučný model vyjadriť pomocou Markovovho reťazca s nejakou maticou $M$, ktorá bude predstavovať $S(1)$.
 - Maticu $S(t)$ dostaneme umocnením $M$, teda $S(t) = M^t$.
 
-Príklad: za čas t=1 má každá zmena, napr. z A na C pravdepodobnosť 1% a žiadna zmena teda 97%. 
+Príklad: za čas t=1 má každá zmen (napr. z A na C) pravdepodobnosť 1% a žiadna zmena teda 97%. 
 
 ```
 1 0 0 0   0.97 0.01 0.01 0.01  0.9412 0.0196 0.0196 0.0196
@@ -129,7 +129,7 @@ S(3)                     S(10)                    S(30)
 
 * Pre malé hodnoty $t$ je pravdepodobnosť zmeny zhruba $t$ krát vyššia ako pre čas 1.
 * Napr. za jednotku času sa 1% Ačok zmení na Cčka. Za ďalšiu jednotku času sa ďalších 1% zmení, ale z tých predchádzajúcich Cčok sa malá časť zmení na niečo iné, takže celkovo vidíme trochu menej ako 2% zmien z A na C.
-* Ako sa $t$ zväčšuje, vzďalujeme sa od tohto lineárneho trendu kvôli tomu, že sa zvyšuje šanca, že nastalo aj viac mutácií a vidíme len jednu.
+* Ako sa $t$ zväčšuje, vzďaľujeme sa od tohto lineárneho trendu kvôli tomu, že sa zvyšuje šanca, že nastalo aj viac mutácií a vidíme len jednu.
 * Aké bude stacionárne rozdelenie pre túto maticu?
 
 

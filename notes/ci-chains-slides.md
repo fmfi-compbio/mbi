@@ -5,6 +5,11 @@ title: "Cvičenia pre informatikov: Substitučné modely"
 * TOC
 {:toc}
 
+```
+
+
+
+```
 
 ## Markovove reťazce (Markov chains)
 
@@ -173,7 +178,7 @@ Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$<br/>
 
 ## Výpočet matice pre viac krokov naraz
 
-$\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$
+$\Pr(X_{t_0+t}=y \| X_{t_0}=x)$: políčko $M^t[x,y]$ z matice $M^t$
 
 Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
 
@@ -289,6 +294,7 @@ Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulo
     nesúvislá    slabo súvislá    periodická      ergodická
 ```
 
+Ak matica $M$ spĺňa je ergodická, existuje pre ňu práve jedno stacionárne rozdelenie $\pi$. Navyše pre každé $x$ a $y$ platí $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
 
 ```
 
@@ -309,10 +315,11 @@ Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulo
 
 ## Substitučné modely
 
-- Nech $\Pr(a\stackrel{t}{\rightarrow} b)$ je pravdepodobnosť, že ak začneme s bázou *a*, tak
-  po čase *t* budeme mať bázu *b*.
-- Pre dané *t* môžeme také pravdepodobnosti usporiadať do matice $S(t)$ 4x4 (ak
-  študujeme DNA):
+Pravdepodobnosť, že ak začneme s bázou *a*, tak po čase *t* budeme mať bázu *b*<br>
+$\Pr(X_{t_0+t}=b \| X_{t_0}=a)$<br>
+označíme $\Pr(a\stackrel{t}{\rightarrow} b)$
+
+Matica $S(t)$:
 
 $S(t) = \left(\begin{array}{cccc} 
 \Pr(A\stackrel{t}{\rightarrow} A) & \Pr(A\stackrel{t}{\rightarrow} C) & \Pr(A\stackrel{t}{\rightarrow} G) & \Pr(A\stackrel{t}{\rightarrow} T) \\\\\\\\
@@ -321,15 +328,53 @@ $S(t) = \left(\begin{array}{cccc}
 \Pr(T\stackrel{t}{\rightarrow} A) & \Pr(T\stackrel{t}{\rightarrow} C) & \Pr(T\stackrel{t}{\rightarrow} G) & \Pr(T\stackrel{t}{\rightarrow} T) 
 \end{array}\right)$
 
-- Riadky zodpovedajú pôvodnej báze $a$, stĺpce novej báze $b$.
-- Súčet každého riadku je 1.
 
-### Diskrétny čas
+```
 
-- Ak uvažujeme iba celočíselné hodnoty času $t$, môžeme substitučný model vyjadriť pomocou Markovovho reťazca s nejakou maticou $M$, ktorá bude predstavovať $S(1)$.
-- Maticu $S(t)$ dostaneme umocnením $M$, teda $S(t) = M^t$.
 
-Príklad: za čas t=1 má každá zmena, napr. z A na C pravdepodobnosť 1% a žiadna zmena teda 97%. 
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+## Diskrétny čas
+
+Uvažujme teraz iba celočíselné hodnoty času $t$
+
+Substitučný model môžeme vyjadriť ako Markovov reťazec s nejakou maticou $M=S(1)$.
+
+$S(t) = $?
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Príklad
+
+Za čas t=1 má každá zmena pravdepodobnosť 1% a žiadna zmena 97% 
 
 ```
 1 0 0 0   0.97 0.01 0.01 0.01  0.9412 0.0196 0.0196 0.0196
@@ -345,22 +390,93 @@ S(0)      S(1)                 S(2)
 S(3)                     S(10)                    S(30)
 ```
 
-* Pre malé hodnoty $t$ je pravdepodobnosť zmeny zhruba $t$ krát vyššia ako pre čas 1.
-* Napr. za jednotku času sa 1% Ačok zmení na Cčka. Za ďalšiu jednotku času sa ďalších 1% zmení, ale z tých predchádzajúcich Cčok sa malá časť zmení na niečo iné, takže celkovo vidíme trochu menej ako 2% zmien z A na C.
-* Ako sa $t$ zväčšuje, vzďalujeme sa od tohto lineárneho trendu kvôli tomu, že sa zvyšuje šanca, že nastalo aj viac mutácií a vidíme len jednu.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Príklad
+
+```
+1 0 0 0   0.97 0.01 0.01 0.01  0.9412 0.0196 0.0196 0.0196
+0 1 0 0   0.01 0.97 0.01 0.01  0.0196 0.9412 0.0196 0.0196
+0 0 1 0   0.01 0.01 0.97 0.01  0.0196 0.0196 0.9412 0.0196
+0 0 0 1   0.01 0.01 0.01 0.97  0.0196 0.0196 0.0196 0.9412
+S(0)      S(1)                 S(2)
+
+0.914 0.029 0.029 0.029  0.749 0.084 0.084 0.084  0.470 0.177 0.177 0.177
+0.029 0.914 0.029 0.029  0.084 0.749 0.084 0.084  0.177 0.470 0.177 0.177
+0.029 0.029 0.914 0.029  0.084 0.084 0.749 0.084  0.177 0.177 0.470 0.177
+0.029 0.029 0.029 0.914  0.084 0.084 0.084 0.749  0.177 0.177 0.177 0.470
+S(3)                     S(10)                    S(30)
+```
+
+* Ako sa mení napr. $S(t)[A,C]$ s $t$? 
 * Aké bude stacionárne rozdelenie pre túto maticu?
 
 
-### Spojitý čas
+```
 
-- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo, čo má viaceré výhody (vieme napríklad pravdedpodobnosť určitej zmeny derivovať podľa $t$).
-- Využijeme Markovov reťazec so spojitým časom (continuous-time Markov chain).
-- Pre ľubovoľné $t$ chceme spočítať $S(t)$.
-- Stále by malo platiť, že $S(t_1+t_2) = S(t_1)\cdot S(t_2)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+## Spojitý čas
+
+- Pri štúdiu evolúcie sa zvyčajne uvažuje čas $t$ ako reálne číslo
+- Vieme potom napríklad pravdedpodobnosť určitej zmeny derivovať podľa $t$
+- Využijeme **Markovov reťazec so spojitým časom (continuous-time Markov chain)**
+- Pre ľubovoľné $t$ chceme spočítať $S(t)$
+- Stále by malo platiť, že $S(t_1+t_2) = S(t_1)\cdot S(t_2)$
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 
 ### Jukesov-Cantorov substitučný model
 
-- Tento model predpokladá, že všetky substitúcie sú rovnako pravdepodobné, matica teda musí vyzerať nejako takto:
+Tento model predpokladá, že všetky substitúcie sú rovnako pravdepodobné.
+
+Matica teda musí vyzerať nejako takto:
 
 $S(t) = 
 \left(\begin{array}{cccc}
@@ -369,6 +485,25 @@ s(t) & 1-3s(t) & s(t) & s(t) \\\\\\\\
 s(t) & s(t) & 1-3s(t) & s(t) \\\\\\\\
 s(t) & s(t) & s(t) & 1-3s(t) 
 \end{array}\right)$
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 
 
 - Chceme odvodiť vzorec pre $s(t)$, ktorý sme videli na prednáške. Spočítajme deriváciu tejto funkcie.
