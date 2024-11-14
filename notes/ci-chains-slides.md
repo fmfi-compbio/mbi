@@ -287,7 +287,7 @@ t=0           t=1           t=2           t=3               t=10
 
 ## Ergodické Markovove reťazce
 
-Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulové
+Matica $M$ je **ergodická**, ak $M^t$ pre nejaké $t>0$ má všetky položky nenulové
 
 ```
     1 0          0.5 0.5          0 1             0.5 0.5
@@ -295,7 +295,7 @@ Matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulo
     nesúvislá    slabo súvislá    periodická      ergodická
 ```
 
-Ak matica $M$ spĺňa je ergodická, existuje pre ňu práve jedno stacionárne rozdelenie $\pi$. Navyše pre každé $x$ a $y$ platí $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
+Ak matica $M$ je ergodická, existuje pre ňu práve jedno stacionárne rozdelenie $\pi$. Navyše pre každé $x$ a $y$ platí $\lim_{t\to\infty} M^{t}[x,y] = \pi(y)$.
 
 ```
 

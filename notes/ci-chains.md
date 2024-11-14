@@ -79,7 +79,7 @@ t=0           t=1           t=2           t=3               t=10
 
 ### Ergodické Markovove reťazce
 
-- Vravíme, že matica je **ergodická**, ak $P^t$ pre nejaké $t>0$ má všetky položky nenulové.
+- Vravíme, že matica $M$ je **ergodická**, ak $M^t$ pre nejaké $t>0$ má všetky položky nenulové.
 - Príklady neergodických a ergodických matíc:
 
 ```

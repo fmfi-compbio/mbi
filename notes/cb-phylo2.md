@@ -36,8 +36,8 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         ďalších organizmov opposum, platypus, chicken, stlačíme `Get
         output`.
       - Výstup uložíme do súboru, necháme si iba prvú formu génu
-        (`ENST00000308191.11\_hg38`), z mien sekvencií zmažeme spoločný
-        začiatok (`ENST00000308191.11\_hg38`), prípadne celkovo prepíšeme
+        (`ENST00000308191.11_hg38`), z mien sekvencií zmažeme spoločný
+        začiatok (`ENST00000308191.11_hg38`), prípadne celkovo prepíšeme
         mená na anglické názvy.
 
 ### Strom metódou spájania susedov
@@ -74,7 +74,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 Zostavili sme strom aj IQ-TREE pomocou metódy maximálnej vierohodnosti na Galaxy, viď nižšie
 - [modely](https://github.com/Cibiv/IQ-TREE/wiki/Substitution-Models) v IQ-TREE
 - [výsledok](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-iqtree.txt)
-- na strom v newickovom formáte (zátvorky) použijeme vizualizáciu stromov, napr. <https://phylotree.hyphy.org/> abz sme si ho vedeli správne zakoreniť
+- na strom v newickovom formáte (zátvorky) použijeme vizualizáciu stromov, napr. <https://phylotree.hyphy.org/> aby sme ho mohli správne zakoreniť
 
 ### Stromy na Galaxy
 
@@ -95,7 +95,7 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
   - Nájdené pomocou BLAST v Uniprote ako homológy [proteínu YCF1](https://www.uniprot.org/uniprotkb/P39109/entry) z S. cerevisiae
   - Zarovnáme na Galaxy pomocou muscle, strom spravíme cez rapidnj alebo
     IQ-tree
-  - Zobrazíme kliknutím na ikonku visualize alebo cez phylotree viewer
+  - Zobrazíme kliknutím na ikonku visualize alebo cez [phylotree](https://phylotree.hyphy.org/).
 
 ## Gény, evolúcia a komparatívna genomika v UCSC genome browseri (cvičenie pri počítači)
 
