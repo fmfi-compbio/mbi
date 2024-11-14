@@ -8,32 +8,103 @@ title: "Cvičenia pre informatikov: Substitučné modely"
 
 ## Markovove reťazce (Markov chains)
 
-- Markovov reťazec je o niečo jednoduchší model ako skrytý Markovov
-  model (HMM), nakoľko obsahuje iba stavy a pravdepodobnosti prechodu
-  medzi nimi, ale neuvažujeme žiadne emisie.
-- Formálne, **Markovov reťazec** je postupnosť náhodných premenných
-  $X_0, X_1, \dots,$ taká, že $\Pr(X_t|X_0,\dots,X_{t-1}) =
-  \Pr(X_t|X_{t-1})$, t.j. stav v čase $t$ závisí len od stavu v čase
-  $t-1$ a nie ďalších predchádzajúcich stavov (stavmi nazývame možné hodnoty
-  $X_{t}$).
+- Markovov reťazec sa podobá na skrytý Markovov
+  model (HMM), ale obsahuje iba stavy a pravdepodobnosti prechodu
+  medzi nimi, neuvažujeme žiadne emisie
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+## Markovove reťazce (Markov chains), formálne
+
+**Markovov reťazec** je postupnosť náhodných premenných
+  $X_0, X_1, \dots,$ taká, že<br/> 
+  $\Pr(X_t|X_0,\dots,X_{t-1}) = \Pr(X_t|X_{t-1})$,<br/> 
+  t.j. stav v čase $t$ závisí len od stavu v čase
+  $t-1$ a nie ďalších predchádzajúcich stavov 
+  
+  Stavy: možné hodnoty $X_{t}$).
+
 - Nás budú zaujímať **homogénne** Markovove reťazce, v ktorých
   $\Pr(X_t|X_{t-1})$ nezávisí od $t$.
 - Tiež nás zaujímajú len reťazce, v ktorých náhodné premenné $X_t$
   nadobúdajú hodnoty z konečnej množiny.
-- Príklad 1: model počasia, stavy prší / svieti slnko, $X_t$ je počasie v deň $t$.
-- Príklad 2: stavy A,C,G,T, dá sa použiť na generovanie náhodnej DNA alebo na sledovanie mutácií na jednej konkrétnej pozícii v chromozóme. V druhom prípade je $X_t$ báza na tejto pozícii v čase $t$ (analogicky s počasím).
+```
 
-### Matica pravdepodobností prechodu
 
-- Pravdepodobnosti prechodu medzi stavmi môžeme vyjadriť
-  maticou $M$, ktorej prvok $M[x,y]$ označuje
-  pravdepodobnosť prechodu zo stavu $x$ do stavu $y$, teda
-  $M[x,y]=\Pr(X_t=y|X_{t-1}=x)$.
-- Pre maticu musí platiť, že súčet každého riadku je 1, všetky prvky
-  matice sú nezáporné.
-- Nezávislé hody mincou sú tiež špeciálny prípad Markovovho reťazca. Ako vyzerá jeho matica?
 
-Príklad:
+
+
+
+
+
+
+
+
+
+
+```
+  
+## Matica pravdepodobností prechodu
+
+$M[x,y]=\Pr(X_t=y|X_{t-1}=x)$<br/>
+pravdepodobnosť prechodu zo stavu $x$ do stavu $y$
+
+Čo by mala matica $M$ spĺňať?
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+## Príklad
+
+```
+0.767 0.233      0.067 0.933
+0.100 0.900      0.400 0.600
+```
+
+1. Ako sa budú líšiť postupnosti generované týmito dvomi maticami?
+2. Nezávislé hody mincou sú tiež špeciálny prípad Markovovho reťazca. Ako vyzerá jeho matica?
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+## Príklad
 ```
 0.767 0.233      0.067 0.933     0.30 0.70
 0.100 0.900      0.400 0.600     0.30 0.70
@@ -49,11 +120,14 @@ počasia          počasi
 * Priemerná dĺžka súvislého úseku núl: 4.3, 1.1, 1.4.
 * Priemerné dĺžky súvislých úsekov jednotiek: 10, 2.5, 3.3. 
 
-### Výpočet matice pre viac krokov naraz
+## Výpočet matice pre viac krokov naraz
 
-- Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $y$ v čase 1 (zajtra). 
-- Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$
-- Ide o súčin matice $M$ samej so sebou, t.j. $M^2$.
+Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$<br/> 
+(aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes).
+
+
+
+
 - Podobne $\Pr(X_t=y \| X_0=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
 - Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
 
@@ -219,7 +293,7 @@ $R=
 - Dostali sme diferenciálnu rovnicu $S(t)R = S'(t)$, počiatočný stav $S(0)=I$.
 - Ak by sme dosadili $R$ pre J-C model, dostali by sme rovnakú diferenciálnu rovnicu ako predtým.
 
-### Substitučné modely, zhrnutie
+## Substitučné modely, zhrnutie
 
 - S(t): matica 4x4, kde políčko $S(t)_{a,b}=\Pr(a\stackrel{t}{\rightarrow} b)$ je
   pravdepodobnosť, že ak začneme s bázou a, tak po čase t budeme mať
@@ -240,7 +314,7 @@ $R=
   pripadla v priemere jedna substitúcia, čo dosiahneme ak
   $\alpha=1/3$.
 
-### Použitie na odhad evolučnej vzdialenosti
+## Použitie na odhad evolučnej vzdialenosti
 
 - V čase $t$ je pravdepodobnosť, že uvidíme zmenenú bázu
   $D(t) = \frac{3}{4}(1-e^{-4\alpha t})$
@@ -255,7 +329,7 @@ $R=
   najvierohodnejšiu hodnotu $t$, t.j. takú, pre ktorú hodnota $\Pr(data|t)$
   bude najväčšia. Zhodou okolností vyjde takto.
 
-### Zložitejšie substitučné modely
+## Zložitejšie substitučné modely
 
 - Vo všeobecnejších modeloch sa rôzne typy mutácií dejú rôzne rýchlo, teda za čas $t$ môžeme napríklad dostať inú pravdepodobnosť A->C než A->T. 
 - Máme teda všeobecnejšiu maticu rýchlostí R
