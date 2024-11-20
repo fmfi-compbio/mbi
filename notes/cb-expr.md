@@ -52,59 +52,55 @@ zhlukovania a postupne ho zlepšuje.
 
 ## Nadreprezentacia, obohatenie (enrichment)
 
-  - Mnohe celogenomove analyzy nam daju zoznam genov, ktore sa v nejakom
-    ukazovateli vyrazne lisia od priemeru.
-  - Napriklad geny s pozitivnym vyberom v komparativnej genomike, geny
-    vyrazne nadexprimovane alebo podexprimovane v microrarray
-    experimentoch, geny regulovane urcitym transkripcnym faktorom a pod.
-  - Niektore z nich budu preskumanejsie (znama funkcia a pod.), niektore
-    mozu mat nejake udaje o funkcii prenesene z homologov a dalsie mozu
-    byt uplne nezname
-  - Co s takym zoznamom "zaujimavych genov"?
-  - moznost 1: vybrat si z neho niekolko malo zaujimavych kandidatov a
-    preskumat ich podrobnejsie (experimentalne alebo informaticky)
-  - moznost 2: zistit, ci tato cela skupina je obohatena o geny urcitych
-    skupin
-      - napr. v pripade pozitivneho vyberu nam casto vychadzaju geny
-        suvisiace s imunitou, lebo su pod velkym evolucnym tlakom od
-        patogenov
-      - takato analyza nam teda da informaciu o suvislostiach medzi
-        roznymi procesmi
-  - Priklad (Kosiol et al)
-      - 16529 genov celkovo, 70 genov v GO kategorii innate immune
-        response (0.4% zo vsetkych genov)
-      - 400 genov s pozivnym vyberom, mame 8 genov s innate immune
-        response (2% zo vsetky genov s poz. vyb.)
-  - Celkovy pocet genov n, imunitnych ni, pozitivny vyber np, imunitnych
-    s poz. vyb. nip.
+- Mnohé celogenómové analýzy nám dajú zoznam génov, ktoré sa v nejakom
+  ukazovateli výrazne líšia od priemeru.
+- Napríklad gény s pozitívnym výberom v komparatívnej genomike, gény
+  výrazne nadexprimované alebo podexprimované v microarray
+  experimentoch, gény regulované určitým transkripčným faktorom a pod.
+- Niektoré z nich budú preskúmanejšie (známa funkcia a pod.), niektoré
+  môžu mať nejaké údaje o funkcii prenesené z homologov a ďalšie môžu
+  byť úplne neznáme
+- Čo s takým zoznamom "zaujímavých génov"?
+  - možnosť 1: vybrať si z neho niekoľko málo zaujímavých kandidátov a
+    preskúmať ich podrobnejšie (experimentálne alebo bioinformaticky)
+  - možnosť 2: zistiť, či táto celá skupina je obohatená o gény určitých
+    skupín
+    - napr. v pripade pozitivneho vyberu nam casto vychadzaju geny
+      suvisiace s imunitou, lebo su pod velkym evolucnym tlakom od patogenov
+    - takato analyza nam teda da informaciu o suvislostiach medzi
+      roznymi procesmi
+- Priklad (Kosiol et al)
+  - 16529 genov celkovo, 70 genov v GO kategorii innate immune response (0.4% zo vsetkych genov)
+  - 400 genov s pozitivnym vyberom, mame 8 genov s innate immune response (2% zo vsetky genov s poz. vyb.)
+  - Celkovy pocet genov $n$, imunitnych $n_i$, pozitivny vyber $n_p$, imunitnych
+    s poz. vyb. $n_{ip}$.
   - Kontingencna tabulka
 
-|          | Pozitivny vyber | Bez poz. vyberu | Sucet     |
-| -------- | --------------- | --------------- | --------- |
-| Imunitne | 8 (nip)         | 62              | 70 (ni)   |
-| Ostatne  | 392             | 16067           | 16459     |
-| Sucet    | 400 (np)        | 16129           | 16529 (n) |
+|          | Pozitivny vyber | Bez poz. vyberu | Sucet      |
+| -------- | --------------- | --------------- | ---------- |
+| Imunitne | 8 ($n_{ip}$)    | 62              | 70 ($n_i$) |
+| Ostatne  | 392             | 16067           | 16459      |
+| Sucet    | 400 ($n_p$)     | 16129           | 16529 ($n$)|
 
   - Nulova hypoteza: geny v nasom zozname boli nahodne vybrane z celeho
-    genomu, t.j. ak v celom genome je frekvencia imunitnych genov ni/n
-    (cca 0.4%), vo vzorke velkosti np (geny s pozitivnym vyberom)
-    ocakavame cca np \* (ni / n) imunitnych genov.
-      - aj v nulovej hypoteze vsak vzorka velkosti ni cisto nahodou moze
+    genomu, t.j. ak v celom genome je frekvencia imunitnych genov $n_i/n$
+    (cca 0.4%), vo vzorke velkosti $n_p$ (geny s pozitivnym vyberom)
+    ocakavame cca $np \cdot (n_i / n)$ imunitnych genov.
+      - Aj v nulovej hypoteze vsak vzorka velkosti $n_p$ cisto nahodou moze
         obsahovat viac alebo menej takych genov.
-      - presnejsie mame urnu so ni (70) bielymi a n-ni (16459) ciernymi
-        gulickami, vytiahneme nahodne np (400) guliciek, kolko bude
-        medzi nimi bielych, nazvime tuto nahodnu premennu Xip
+      - Presnejsie mame urnu s $n_i$ (70) bielymi a $n-n_i$ (16459) ciernymi
+        gulickami, vytiahneme nahodne $n_p$ (400) guliciek, kolko bude
+        medzi nimi bielych, nazvime tuto nahodnu premennu $X_{ip}$
       - v nasom priklade by sme ocakavali 1.7 genu s innate immune
         response, ale mame 8 (4.7xviac)
-  - Rozdelenie pravdepodobnosti Xip je hypergeometricke, t.j.
-    \(\Pr(X_{ip}=n_{ip}) = {n_i \choose n_{ip}}{n-n_i\choose n_p-n_{ip}}/{n\choose n_p}\)
-  - Aka je pravdepodobnost, ze v nulovej hypoteze bude Xip tolko, kolko
+  - Rozdelenie pravdepodobnosti $X_{ip}$ je hypergeometricke, t.j.
+    $\Pr(X_{ip}=n_{ip}) = {n_i \choose n_{ip}}{n-n_i\choose n_p-n_{ip}}/{n\choose n_p}$
+  - Aka je pravdepodobnost, ze v nulovej hypoteze bude $X_ip$ tolko, kolko
     sme namerali alebo viac? (Chvost rozdelenia). V nasom pripade
     p-value 2.8e-4.
   - Hypergeometric or Fisher's exact test, pripadne ich aproximacie pre
     velke hodnoty v tabulke (chi^2 test) zisti, ci sa nasa tabulka velmi
     lisi od toho, co by sme ocakavali v nulovej hypoteze
-
 
   - Suvisiace clanky
       - Reimand, Jüri, et al. "Pathway enrichment analysis and
@@ -112,20 +108,17 @@ zhlukovania a postupne ho zlepšuje.
         and EnrichmentMap." Nature protocols 14.2 (2019): 482.
         [1](https://www.nature.com/articles/s41596-018-0103-9)
 
-<!-- end list -->
-
   - Existuju web servery, napr. GOrilla pre ludske geny:
-    <http://cbl-gorilla.cs.technion.ac.il/>, DAVID
-    (http://david.niaid.nih.gov), g:Profiler
-    <http://biit.cs.ut.ee/gprofiler/>
+    <https://cbl-gorilla.cs.technion.ac.il/>, DAVID
+    <https://davidbioinformatics.nih.gov/>, g:Profiler
+    <https://biit.cs.ut.ee/gprofiler/>
   - Treba dat pozor, ci pocitaju to co chceme
 
 
   - Kod v statistickom systeme R na pocitanie hypergeometrickeho
     rozdelenia
 
-<!-- end list -->
-
+```
     > dhyper(0:70, 70, 16529-70, 400);
      [1]  1.793421e-01  3.126761e-01  2.679872e-01  1.505169e-01  6.231088e-02
      [6]  2.027586e-02  5.400796e-03  1.210955e-03  2.332580e-04  3.920215e-05
@@ -152,15 +145,16 @@ zhlukovania a postupne ho zlepšuje.
     # test pre danu tabulku
     a=matrix(c(8,62,392,16067),nrow=2, ncol=2)
     fisher.test(a,alternative = "greater")
+```
 
 ## Multiple testing correction
 
   - V mnohych situaciach robime vela testov toho isteho typu, kazdy ma
     urcitu p-value
   - Napr. testujeme 1000 genov v genome na pozitivny vyber, zvolime tie,
-    kde p-value \<= 0.05
+    kde p-value je menšia ako 0.05
   - Alebo testujeme obohatenie 1000 funkcnych kategorii v nejakej vzorke
-    genov, zvolime tie, kde p-value \<= 0.05
+    genov, zvolime tie, kde p-value je menšia ako 0.05
   - Problem: ak kazda z 1000 kategorii ma 5% sancu tam byt len nahodou,
     ocakavali by sme 50 cisto nahodnych pozitivnych vysledkov. Ak sme
     napr. nasli 100 pozitivnych vysledkov (obohatenych kategorii), cca
@@ -176,18 +170,18 @@ zhlukovania a postupne ho zlepšuje.
 Data o expresii ludskych genov v roznych tkanivach a podobne v **UCSC
 genome browseri**
 
-  - Chodte na genome browser <http://genome-euro.ucsc.edu/>
+  - Chodte na genome browser <https://genome-euro.ucsc.edu/>
   - Zvolte *Tools-\>Gene Sorter*, 'assembly'' na *hg38*, *sort by* na
     *Expression (GTEx)*, a do okienka *search* zadajme identifikator
     genu *PTPRZ1*
       - Dostane tabulku genov s podobnym profilom expresie ako PTPRZ1
         (červená je vysoká expresia, zelená nízka)
       - Zoznam tychto genov v textovom formate najdete
-        [tu](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt)
-  - <http://biit.cs.ut.ee/gprofiler/> mena genov skopirujme do policka
+        [tu](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt)
+  - <https://biit.cs.ut.ee/gprofiler/> mena genov skopirujme do policka
     *Query*, stlacte g:Profile\!
       - Ak by výpočet dlho trval, nájdete ho aj
-        [tu](http://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/g_Profiler.html)
+        [tu](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/g_Profiler.html)
       - Vo výslednej tabuľke je každý riadok jedna funkcna kategoria, v
         ktorej su geny s tymto profilom expresie nadreprezentovane,
         kazdy stlpec jeden gen.
@@ -196,10 +190,9 @@ genome browseri**
   - Co by sme na zaklade nadreprezentovanych kategorii usudzovali o gene
     PTPRZ1?
 
-  - Najdite tento gen v Uniprote (http://www.uniprot.org/), potvrdzuje
+  - Najdite tento gen v [Uniprote](https://www.uniprot.org/), potvrdzuje
     nase domnienky?
-  - Vratme sa do genome browsera, najdime si PTPRZ1 gen v genome
-    [2](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr7%3A121873089-122062036)
+  - Vratme sa do genome browsera, najdime si [PTPRZ1 gen v genome](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr7%3A121873089-122062036)
   - V browseri su rozne tracky tykajuce sa expresie, napr. GTEx.
     Precitajte si, co je v tomto tracku zobrazene, zapnite si ho a
     pozrite si expresiu okolitych genov okolo PTPRZ1
