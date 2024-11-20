@@ -26,55 +26,29 @@ Na prednáške sme videli hierarchické zhlukovanie, ktoré z dát vytvorilo
 strom. Teraz si ukážeme zhlukovanie, ktoré sa snaží dáta rozdeliť na $k$
 skupín, kde $k$ je vopred daný parameter.
 
-### K-Means
+### Zhlukovanie k-means, definícia problému
 
 - Pozri tiež prezentáciu 
 
-<!-- end list -->
+- **Vstup:** n-rozmerné vektory $x_1, x_2, \dots, x_t$ a počet zhlukov $k$
+- **Výstup:** 
+  - Rozdelenie vektorov do $k$ zhlukov zapísané ako $c_1, c_2, \dots, c_t$, kde  $c_i\in \{1,2,\dots k\}$ je priradenie vektoru $x_i$ k zhluku
+  - n-rozmerné vektory $\mu_1, \mu_2, \dots, \mu_k$ - centrá každého zhlukov
+- **Úloha**: minimalizovať súčet štvorcov vzdialeností od každého vektoru k centru jeho zhluku:
+$J(\mu, c) = \sum_{i = 1}^t \big\| x_i - \mu_{c_i} \big\|_2^2$
+  - $\big\| x_i - \mu_{c_i} \big\|_2^2$ je druhá mocnina vzdialenosti vektora $x_i$ od centra jeho zhluku
 
-  -   
-    **Vstup:** n-rozmerné vektory \(x_1, x_2, ..., x_t\) a počet zhlukov
-    *k*
-
-<!-- end list -->
-
-  -   
-    **Výstup:** Rozdelenie vektorov do *k* zhlukov takéto:
-    \[c_1, c_2, ..., c_t \; (1 \leq c_i \leq k)\] - priradenie vektoru k
-    zhluku
-      -   
-        n-rozmerné vektory \(\mu_1, \mu_2, ..., \mu_k\) - centrá každého
-        zhluku
-
-<!-- end list -->
-
-  -   
-    **Úloha**: minimalizovať súčet štvorcov vzdialeností od každého
-    vektoru k centru jeho zhluku:
-
-\(J(\mu, c) = \sum_{i = 1}^t \big\| x_i - \mu_{c_i} \big\|_2^2\)
-
-  - 
-    
-      -   
-        \(\big\| x_i - \mu_{c_i} \big\|_2^2\) je druhá mocnina
-        vzdialenosti vektora xi od centra jeho zhluku
-
-#### Algoritmus
+### Algoritmus k-means
 
 Heuristika, ktorá nenájde vždy najlepšie zhlukovanie. Začne z nejakého
-zhlukovania a postupne ho zlepšuje. [Pozri aj clanok na
-Wikipedii](http://en.wikipedia.org/wiki/K-means_clustering#Standard_algorithm)
+zhlukovania a postupne ho zlepšuje.
 
-1.  inicializácia: náhodne vyber k centier
-    \(\ \mu_1, \mu_2, ..., \mu_k\)
-2.  opakuj kým sa niečo mení:
-      -   
-        priraď každý bod najbližšiemu centru:
-        \(c_i = \arg\min_j \big\| x_i - \mu_j \big\|_2\)
-        vypočítaj nové centroidy:
-        \(\mu_j = \operatorname{avg_{i : c_i = j}} x_i\) (spriemerujeme
-        všetky body v jednom zhluku)
+1. inicializácia: náhodne vyber $k$ centier $\mu_1, \mu_2, \dots, \mu_k$, napr. z našich vstupných vektorov
+2. opakuj kým sa niečo mení:
+  - priraď každý bod k najbližšiemu centru:
+    $c_i = \arg\min_j \big\| x_i - \mu_j \big\|_2$
+  - vypočítaj nové centroidy:
+      $\mu_j = \operatorname{avg_{i : c_i = j}} x_i$ (spriemerujeme všetky vektory v každom zhluku)
 
 ## Nadreprezentacia, obohatenie (enrichment)
 
@@ -131,11 +105,8 @@ Wikipedii](http://en.wikipedia.org/wiki/K-means_clustering#Standard_algorithm)
     velke hodnoty v tabulke (chi^2 test) zisti, ci sa nasa tabulka velmi
     lisi od toho, co by sme ocakavali v nulovej hypoteze
 
-<!-- end list -->
 
   - Suvisiace clanky
-      - 
-      - 
       - Reimand, Jüri, et al. "Pathway enrichment analysis and
         visualization of omics data using g: Profiler, GSEA, Cytoscape
         and EnrichmentMap." Nature protocols 14.2 (2019): 482.
@@ -149,7 +120,6 @@ Wikipedii](http://en.wikipedia.org/wiki/K-means_clustering#Standard_algorithm)
     <http://biit.cs.ut.ee/gprofiler/>
   - Treba dat pozor, ci pocitaju to co chceme
 
-<!-- end list -->
 
   - Kod v statistickom systeme R na pocitanie hypergeometrickeho
     rozdelenia
@@ -225,8 +195,6 @@ genome browseri**
         transkripcnym faktorom, ktore by mohli prislusne geny regulovat
   - Co by sme na zaklade nadreprezentovanych kategorii usudzovali o gene
     PTPRZ1?
-
-<!-- end list -->
 
   - Najdite tento gen v Uniprote (http://www.uniprot.org/), potvrdzuje
     nase domnienky?
