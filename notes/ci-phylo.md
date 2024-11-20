@@ -36,10 +36,8 @@ $N[v,a] = [a\ne b]$
             $\Pr(A\stackrel{t}{\rightarrow} C) = (1-e^{-\frac{4}{3} t})/4$
     - Nech $q_a$ je pravdepodobnosť bázy $a$ v koreni (ekvilibrium matice $R$)
       - Napr. v Jukes-Cantorovom modeli $q_a = 1/4$
-
 - Ak by sme poznali bázy vo všetkých vrcholoch, máme
   $\Pr(X_1=x_1 \dots X_{2n-1}=x_{2n-1}|T,R)=q_{x_{2n-1}} \prod_{v=1}^{2n-2}P(x_v|x_{p_v}, t_v)$
-
 - Chceme pravdepodobnosť
   $P(X_1=x_1, X_2=x_2,\dots X_n=x_n|T,R)=\sum_{x_{n+1}\dots x_{2n-1}\in \\{A,C,G,T\\}^{n-1}} P(X_1=x_1 \dots X_{2n-1}=x_{2n-1}|T,R)$
 - Počítať súčet cez exponenciálne veľa dosadení hodnôt za vnútorné vrcholy je neefektívne, spočítame rýchlejšie dynamickým programovaním.
@@ -48,7 +46,7 @@ $N[v,a] = [a\ne b]$
 - V liste $A[v,a] = [a=x_v]$
 - Vo vnút. vrchole $v$ s deťmi $y$ a $z$ máme
   $A[v,a] = \sum_{b,c} A[y,b]A[z,c]\Pr(a\stackrel{t_y}{\rightarrow} b)\Pr(a\stackrel{t_z}{\rightarrow} c)$
-- Celková pravdepodobnosť je $P(X_1=x_1, X_2=x_2,\dots X_n=x_n|T,R)=\sum_a A[r,a] q_a$ pre koreň $r$.
+- Celková pravdepodobnosť je $\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n\|T,R)=\sum_a A[r,a] q_a$ pre koreň $r$.
 
 ### Zložitosť, zlepšenie
 
@@ -67,13 +65,11 @@ $N[v,a] = [a\ne b]$
 
 Nerobili sme, uvedené pre zaujímavosť.
 
-- Čo ak chceme spočítať pravdepodobnosť $\Pr(X_v=a|X_1=x_1,
-  X_2=x_2,\dots X_n=x_n,T,R)? Zaujímajú nás teda sekvencie genómov predkov.
-- Potrebujeme $B[v,a]$: pravdepodobnosť dát ak podstrom $v$ nahradím listom s bázou $a$.
+- Čo ak chceme spočítať pravdepodobnosť $\Pr(X_v=a\|X_1=x_1, X_2=x_2,\dots X_n=x_n,T,R)? Zaujímajú nás teda sekvencie genómov predkov.
+- Potrebujeme $B[v,a]$: pravdepodobnosť dát, ak podstrom $v$ nahradíme listom s bázou $a$.
 - $B[v,a]$ počítame od koreňa k listom
 - V koreni $B[v,a] = q_a$
 - Vo vrchole $v$ s rodičom $u$ a súrodencom $x$ máme
     $B[v,a]=\sum_{b,c} B[u,b]A[x,c]\Pr(b\stackrel{t_v}{\rightarrow} a) \Pr(b\stackrel{t_v}{\rightarrow} c)$
-  - Žiadaná pravdepodobnosť je
-    $B[v,a]A[v,a]/\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n|T,R)$
+- Žiadaná pravdepodobnosť je $B[v,a]A[v,a]/\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n|T,R)$
 
