@@ -173,13 +173,16 @@ s(\epsilon) & s(\epsilon) & s(\epsilon) & 1-3s(\epsilon)
 - Po úprave
   $s(t+\epsilon) = s(\epsilon) +s(t) - 4s(t)s(\epsilon) = s(t)+s(\epsilon)(1-4s(t))$.
 - $s'(t) = \lim_{\epsilon\to 0} \frac{s(\epsilon) (1-4s(t))}{\epsilon} = (1-4s(t))\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}= (1-4s(t))s'(0)$.
-- Označme $\alpha = s'(0)$ ($\alpha$ je konštanta, nezávisí od $\epsilon$ ani $t$).
+- Označme $\alpha = \lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}$ ($\alpha$ je konštanta, nezávisí od $\epsilon$ ani $t$).
 - Dostaneme $s'(t) = \alpha (1-4s(t))$. Toto je diferenciálna rovnica, hľadáme funkciu $s(t)$, ktorá ju spĺňa.
 - Riešenie je $s(t) = 1/4+c e^{-4\alpha t}$ pre každú konštantu $c$.
 - Môžeme overiť dosadením do rovnice, pričom
   $s'(t) = -4 c \alpha e^{-4\alpha t}$.
 - Hodnotou $c=-1/4$ dopočítame z počiatočnej podmienky $s(0)=0$.
-- Overíme tiež, že $s'(0)=\alpha$.
+- Overíme tiež, že $\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}=\alpha$. (Môže sa hodiť L’Hospitalovo pravidlo.)
+- Nakoľko $s(0)=0$, máme  $\alpha = \lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon} =  \lim_{\epsilon\to 0} \frac{s(0+\epsilon)-s(0)}{\epsilon} = s'(0)$. 
+
+
 
 
 ### Vlastnosti riešenia
@@ -219,7 +222,7 @@ $R=
 - Dostali sme diferenciálnu rovnicu $S'(t) = S(t)R$, počiatočný stav $S(0)=I$.
 - Ak by sme dosadili $R$ pre J-C model, dostali by sme rovnakú diferenciálnu rovnicu ako predtým.
 
-### Substitučné modely, zhrnutie
+### Jukesov-Cantorov model, zhrnutie
 
 - $S(t)$ matica 4x4, kde políčko $S(t)[a,b]=\Pr(a\stackrel{t}{\rightarrow} b)$ je
   pravdepodobnosť, že ak začneme s bázou $a$, tak po čase $t$ budeme mať
@@ -228,9 +231,9 @@ $R=
   pre každé dve bázy $a\ne b$
 - Pre daný čas $t$ máme teda všade mimo diagonály $s(t)$ a na diagonále
   $1-3s(t)$
-- Matica rýchlostí R: pre Jukes-Cantorov model všade mimo diagonály
+- Matica rýchlostí $R$: pre Jukes-Cantorov model všade mimo diagonály
   $\alpha$, na diagonále $-3\alpha$
-- Pre veľmi malý čas t je S(t) zhruba I-Rt
+- Pre veľmi malý čas $t$ je $S(t)$ zhruba $I-Rt$
 - Rýchlost $\alpha$ je teda pravdepodobnosť zmeny za jednotku casu, ak
   uvažujeme veľmi krátke časy, resp. derivácia *s(t)* vzhľadom na *t*
   v bode 0.
