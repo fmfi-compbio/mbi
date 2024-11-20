@@ -1,3 +1,9 @@
+---
+title: "Cvičenia pre biológov: Zhlukovanie, nadreprezentácia, viacnásobné testovanie"
+---
+
+* TOC
+{:toc}
 
 
 Na týchto cvičeniach sa budeme venovať trom štatistickým témam
@@ -7,31 +13,22 @@ techniky sa však využívajú aj v iných oblastiach a môžete sa s nimi
 
 ## Zhlukovanie
 
-  - Máme vstupné dáta, väčšinou ako vektory dĺžky n
-  - Snažíme sa ich rozdeliť do skupín tak, aby dáta v rámci skupiny boli
-    podobné a medzi skupinami rôzne
+- Máme vstupné dáta, väčšinou ako vektory (postupnosti čísel) dĺžky $n$
+- Snažíme sa ich rozdeliť do skupín tak, aby dáta v rámci skupiny boli podobné a medzi skupinami rôzne
 
 Využitie:
-
-  - hľadanie génov s podobným profilom expresie
-  - hľadanie skupín pacientov s podobným profilom expresie génov
-    (objavovanie podtypov nejakej choroby)
-  - hľadanie rodín podobných proteínov
-  - automatická segmentácia obrázkov (napríklad rozlíšiť jednotlivé
-    políčka microarray alebo gelu od pozadia)
+- hľadanie génov s podobným profilom expresie
+- hľadanie skupín pacientov s podobným profilom expresie génov (objavovanie podtypov nejakej choroby)
+- hľadanie rodín podobných proteínov
+- automatická segmentácia obrázkov (napríklad rozlíšiť jednotlivé políčka microarray alebo gélu od pozadia)
 
 Na prednáške sme videli hierarchické zhlukovanie, ktoré z dát vytvorilo
-strom. Teraz si ukážeme zhlukovanie, ktoré sa snaží dáta rozdeliť na k
-skupín, kde k je vopred daný parameter.
+strom. Teraz si ukážeme zhlukovanie, ktoré sa snaží dáta rozdeliť na $k$
+skupín, kde $k$ je vopred daný parameter.
 
 ### K-Means
 
-![Príklad vstupu pre zhlukovanie](Cb08-kmeans-vstup.png
-"Príklad vstupu pre zhlukovanie") ![Príklad 3 zhlukov a ich centier
-nájdených k-means algoritmom](Cb08-kmeans-4-5-11-15.png
-"Príklad 3 zhlukov a ich centier nájdených k-means algoritmom")
-
-  - pozri tiež prezentáciu 
+- Pozri tiež prezentáciu 
 
 <!-- end list -->
 

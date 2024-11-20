@@ -50,26 +50,26 @@ $N[v,a] = [a\ne b]$
 
 ### Zložitosť, zlepšenie
 
-- Zložitosť $O(n|\Sigma|^3)$
-- Pre nebinárne stromy exponenciálne
+- Zložitosť $O(n\|\\Sigma\|^3)$.
+- Pre nebinárne stromy exponenciálne.
 - Zlepšenie
   $A[v,a] = (\sum_{b} A[y,b]\Pr(a\stackrel{t_z}{\rightarrow} c))\cdot (\sum_c A[z,c]\Pr(a\stackrel{t_z}{\rightarrow} c))$
-- Zložitosť $O(n|\Sigma|^2)$ aj pre nebinárne stromy
+- Zložitosť $O(n\|\\Sigma\|^2)$ aj pre nebinárne stromy.
 
 ### Chýbajúce dáta
 
-- Ak v niektorom liste máme neznámu bázu N, nastavíme $A[v,a]=1$ pre všetky $a$
-- Podobne sa spracovávajú medzery v zarovnaní, aj keď mohli by sme mať aj model explicitne ich modelujúci
+- Ak v niektorom liste máme neznámu bázu N, nastavíme $A[v,a]=1$ pre všetky $a$.
+- Podobne sa spracovávajú medzery v zarovnaní, aj keď mohli by sme mať aj model explicitne ich modelujúci.
 
 ## Aposteriórna pravdepodobnosť 
 
 Nerobili sme, uvedené pre zaujímavosť.
 
-- Čo ak chceme spočítať pravdepodobnosť $\Pr(X_v=a\|X_1=x_1, X_2=x_2,\dots X_n=x_n,T,R)? Zaujímajú nás teda sekvencie genómov predkov.
+- Čo ak chceme spočítať pravdepodobnosť $\\Pr(X_v=a \| X_1=x_1, X_2=x_2,\dots X_n=x_n,T,R)$? Zaujímajú nás teda sekvencie genómov predkov.
 - Potrebujeme $B[v,a]$: pravdepodobnosť dát, ak podstrom $v$ nahradíme listom s bázou $a$.
-- $B[v,a]$ počítame od koreňa k listom
-- V koreni $B[v,a] = q_a$
+- $B[v,a]$ počítame od koreňa k listom.
+- V koreni máme $B[v,a] = q_a$.
 - Vo vrchole $v$ s rodičom $u$ a súrodencom $x$ máme
-    $B[v,a]=\sum_{b,c} B[u,b]A[x,c]\Pr(b\stackrel{t_v}{\rightarrow} a) \Pr(b\stackrel{t_v}{\rightarrow} c)$
-- Žiadaná pravdepodobnosť je $B[v,a]A[v,a]/\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n|T,R)$
+    $B[v,a]=\sum_{b,c} B[u,b]A[x,c]\Pr(b\stackrel{t_v}{\rightarrow} a) \Pr(b\stackrel{t_x}{\rightarrow} c)$.
+- Žiadaná pravdepodobnosť je $B[v,a]A[v,a] / \\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n\|T,R)$.
 
