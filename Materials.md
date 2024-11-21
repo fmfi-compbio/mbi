@@ -199,8 +199,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB:  K-means clustering, enrichment, multiple testing correction
 
-{% include notes.html file="cb-expr" name="notes" show=1 dot=0
-%} {% include pdf.html file="cb-kmenas" name="notes" show=1 dot=0
+{% include notes.html file="cb-expr" name="notes" show=1 dot=1
+%} {% include pdf.html file="cb-kmeans" name="pdf" show=1 dot=0
 %}
 
 <a name="W10"></a>
