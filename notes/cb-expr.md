@@ -13,14 +13,14 @@ techniky sa však využívajú aj v iných oblastiach a môžete sa s nimi
 
 ## Zhlukovanie
 
-- Máme vstupné dáta, väčšinou ako vektory (postupnosti čísel) dĺžky $n$
-- Snažíme sa ich rozdeliť do skupín tak, aby dáta v rámci skupiny boli podobné a medzi skupinami rôzne
+- Máme vstupné dáta, väčšinou ako vektory (postupnosti čísel) dĺžky $n$.
+- Snažíme sa ich rozdeliť do skupín tak, aby dáta v rámci skupiny boli podobné a medzi skupinami rôzne.
 
 Využitie:
-- hľadanie génov s podobným profilom expresie
-- hľadanie skupín pacientov s podobným profilom expresie génov (objavovanie podtypov nejakej choroby)
-- hľadanie rodín podobných proteínov
-- automatická segmentácia obrázkov (napríklad rozlíšiť jednotlivé políčka microarray alebo gélu od pozadia)
+- hľadanie génov s podobným profilom expresie,
+- hľadanie skupín pacientov s podobným profilom expresie génov (objavovanie podtypov nejakej choroby),
+- hľadanie rodín podobných proteínov,
+- automatická segmentácia obrázkov (napríklad rozlíšiť jednotlivé políčka microarray alebo gélu od pozadia).
 
 Na prednáške sme videli hierarchické zhlukovanie, ktoré z dát vytvorilo
 strom. Teraz si ukážeme zhlukovanie, ktoré sa snaží dáta rozdeliť na $k$
@@ -28,7 +28,7 @@ skupín, kde $k$ je vopred daný parameter.
 
 ### Zhlukovanie k-means, definícia problému
 
-- Pozri tiež prezentáciu 
+Pozri tiež prezentáciu 
 
 - **Vstup:** n-rozmerné vektory $x_1, x_2, \dots, x_t$ a počet zhlukov $k$
 - **Výstup:** 
@@ -37,6 +37,10 @@ skupín, kde $k$ je vopred daný parameter.
 - **Úloha**: minimalizovať súčet štvorcov vzdialeností od každého vektoru k centru jeho zhluku:
 $J(\mu, c) = \sum_{i = 1}^t \big\| x_i - \mu_{c_i} \big\|_2^2$
   - $\big\| x_i - \mu_{c_i} \big\|_2^2$ je druhá mocnina vzdialenosti vektora $x_i$ od centra jeho zhluku
+
+Pre vektory $a=(a_1,\dots, a_n)$ a $b=(b_1,\dots b_n)$ je druhá
+mocnina vzdialenosti $\big\|a-b\|_2^2 = \sum_{i=1}^n (a_i-b_i)^2$.
+
 
 ### Algoritmus k-means
 
@@ -47,7 +51,7 @@ zhlukovania a postupne ho zlepšuje.
 2. opakuj kým sa niečo mení:
   - priraď každý bod k najbližšiemu centru:
     $c_i = \arg\min_j \big\| x_i - \mu_j \big\|_2$
-  - vypočítaj nové centroidy:
+  - vypočítaj nové centrá:
       $\mu_j = \operatorname{avg_{i : c_i = j}} x_i$ (spriemerujeme všetky vektory v každom zhluku)
 
 ## Nadreprezentacia, obohatenie (enrichment)
@@ -170,14 +174,13 @@ zhlukovania a postupne ho zlepšuje.
 Data o expresii ludskych genov v roznych tkanivach a podobne v **UCSC
 genome browseri**
 
-  - Chodte na genome browser <https://genome-euro.ucsc.edu/>
-  - Zvolte *Tools-\>Gene Sorter*, 'assembly'' na *hg38*, *sort by* na
+  - Chodte na [genome browser](https://genome-euro.ucsc.edu)
+  - Zvolte *Tools-\>Other tools-\>Gene Sorter*, 'assembly'' na *hg38*, *sort by* na
     *Expression (GTEx)*, a do okienka *search* zadajme identifikator
     genu *PTPRZ1*
       - Dostane tabulku genov s podobnym profilom expresie ako PTPRZ1
         (červená je vysoká expresia, zelená nízka)
-      - Zoznam tychto genov v textovom formate najdete
-        [tu](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt)
+      - Pouzijeme predspracovany [zoznam tychto genov](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt) v textovom formate
   - <https://biit.cs.ut.ee/gprofiler/> mena genov skopirujme do policka
     *Query*, stlacte g:Profile\!
       - Ak by výpočet dlho trval, nájdete ho aj
@@ -192,7 +195,7 @@ genome browseri**
 
   - Najdite tento gen v [Uniprote](https://www.uniprot.org/), potvrdzuje
     nase domnienky?
-  - Vratme sa do genome browsera, najdime si [PTPRZ1 gen v genome](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr7%3A121873089-122062036)
+  - Vratme sa do genome browsera, pozrime si [PTPRZ1 gen v genome](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr7%3A121873089-122062036)
   - V browseri su rozne tracky tykajuce sa expresie, napr. GTEx.
     Precitajte si, co je v tomto tracku zobrazene, zapnite si ho a
     pozrite si expresiu okolitych genov okolo PTPRZ1

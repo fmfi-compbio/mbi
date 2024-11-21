@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· **[Week 8](#W8)** · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · **[Week 9](#W9)** · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -188,14 +188,20 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 21
 #### L: Gene expression, clustering, classification, transcription factors, sequence motifs
 
-{% include pdf.html file="p-expr" name="pdf" show=0 dot=1
-%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
+{% include pdf.html file="p-expr" name="pdf" show=1 dot=1
+%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=1 dot=1
 %} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
 
 #### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM
 
+{% include notes.html file="ci-phylo" name="notes" show=1 dot=0
+%}
+
 #### TB:  K-means clustering, enrichment, multiple testing correction
-pdf pdf notes
+
+{% include notes.html file="cb-expr" name="notes" show=1 dot=0
+%} {% include pdf.html file="cb-kmenas" name="notes" show=1 dot=0
+%}
 
 <a name="W10"></a>
 ### Nov. 28
