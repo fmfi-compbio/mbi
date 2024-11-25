@@ -31,7 +31,7 @@ Please submit your preferences regarding these papers using [this form](https://
 Z., 2019. Ultrafast search of all deposited bacterial and viral genomic
 data. Nature biotechnology, 37(2), pp.152-159.
 <https://doi.org/10.1038/s41587-018-0010-1> 
-<br>**Buchalová, Horváth, Ončák, Podhradský, Pulkin, Zrubák**
+<br>**Buchalová, Gombárová, Horváth, Ončák, Podhradský, Pulkin, Zrubák**
 
 **Paper 4** Hauser, M., Steinegger, M. and Söding, J., 2016. MMseqs software suite for fast and deep clustering and searching of large protein sequence sets. Bioinformatics, 32(9), pp.1323-1330. <https://doi.org/10.1093/bioinformatics/btw006>
 <br>**Antony, Hayik, Ishchenko, Komoráš, Saez de Cortazar, Škorňák, Strieška (English speaking)**
