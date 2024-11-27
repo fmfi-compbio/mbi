@@ -78,11 +78,11 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
 
 ## Vzorkovanie z pravdepodobnostného modelu vo všeobecnosti
 
-  - Majme pravdepodobnostny model, kde D su nejake pozorovane data a X
-    nezname nahodne premenne (napr pre nas D su sekvencie S a X su
-    vyskyty O, pripadne aj matica W)
-  - mozeme hladat X pre ktore je vierohodnost $\Pr(D\|X)$ najvyssia
-  - alebo mozeme nahodne vzorkovat rozne X z $\Pr(X|D)$
+  - Majme pravdepodobnostny model, kde $D$ su nejake pozorovane data a $X$
+    nezname nahodne premenne (napr pre nas $D$ su sekvencie $S$ a $X$ su
+    vyskyty $O$, pripadne aj matica $W$)
+  - mozeme hladat $X$ pre ktore je vierohodnost $\Pr(D\|X)$ najvyssia
+  - alebo mozeme nahodne vzorkovat rozne $X$ z $\Pr(X\|D)$
 
 Pouzitie vzoriek
 
@@ -101,6 +101,8 @@ Pouzitie vzoriek
   - Gibbsovo vzorkovanie je specialnym pripadom MCMC
 
 ### Markovove reťazce
+
+  - Viď [skoršie cvičenia](./ci-chains.html) 
 
   - **Markovov reťazec** je postupnosť náhodných premenných
     $X^{(0)}, X^{(1)}, \dots,$ taká, že
