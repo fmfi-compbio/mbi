@@ -51,7 +51,7 @@ počasia          počasi
 
 ### Výpočet matice pre viac krokov naraz
 
-- Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $y$ v čase 1 (zajtra). 
+- Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $z$ v čase 1 (zajtra). 
 - Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$
 - Ide o súčin matice $M$ samej so sebou, t.j. $M^2$.
 - Podobne $\Pr(X_{t_0+t}=y \| X_{t_0}=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
