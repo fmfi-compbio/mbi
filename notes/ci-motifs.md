@@ -8,7 +8,7 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
 
 ## Hľadanie motívov zadefinovaných pravdepodobnostnou maticou
 
-  - Mame danych n sekvencii $S=(S_1\dots S_n)$, kazda dlzky *m*, dlzku
+  - Máme daných $n$ sekvencii $S=(S_1\dots S_n)$, kazda dlzky *m*, dlzku
     motivu *L*, nulova hypoteza *q* (frekvencie nukleotidov v genome)
   - Hladame motiv vo forme pravdepodobnostneho profilu dlzky *L* a jeho
     vyskyt v kazdej sekvencii
@@ -16,11 +16,11 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
     baza *a*, *W* cela matica
   - $o_i$ je pozicia vyskytu v sekvencii $S_i$,
     $O=(o_1 \dots o_n)$ su vsetky vyskyty
-  - $\Pr(S|W,O)$ je jednoduchý súčin, kde pre pozície v oknách
+  - $\Pr(S\|W,O)$ je jednoduchý súčin, kde pre pozície v oknách
     použijeme pravdepodobnosti z *W*, pre pozície mimo okna použijeme
     *q*
-      - $\Pr(S_i|W,o_i) =  \prod_{j=1}^{L} W[S_i[j+o_i-1],j] \prod_{j=1}^{o_i-1} q[S_i[j]] \prod_{j=o_i+L}^m q[S_i[j]]$
-      - $\Pr(S|W,O) = \prod_{i=1}^n \Pr(S_i|W,o_i)$
+      - $\Pr(S_i\|W,o_i) =  \prod_{j=1}^{L} W[S_i[j+o_i-1],j] \prod_{j=1}^{o_i-1} q[S_i[j]] \prod_{j=o_i+L}^m q[S_i[j]]$
+      - $\Pr(S\|W,O) = \prod_{i=1}^n \Pr(S_i\|W,o_i)$
   - Hľadáme *W* a *O*, ktoré maximalizujú tuto vierohodnosť Pr(S|W,O)
       - Nepozname efektivny algoritmus, ktory by vedel vzdy najst
         maximum
@@ -28,7 +28,7 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
         *W* frekvencie z dat
       - Naopak ak pozname *W*, vieme najst najlepsie *O*
           - v kazdej sekvencii *i* skusame vsetky pozicie $o_i$ a
-            zvolime tu, ktora ma najvyssiu hodnotu $Pr(S_i|W,o_i)$
+            zvolime tu, ktora ma najvyssiu hodnotu $\Pr(S_i\|W,o_i)$
 
 ### EM algoritmus
 
@@ -44,7 +44,7 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
         váhovaných podľa $p_{i,j}$
       - Prepočítaj všetky skóre $p_{i,j}$ tak, aby zodpovedali pomerom
         pravdepodobností výskytu *W* na pozícii *j* v $S_i$, t.j.
-        $p_{i,j}$ je umerne $Pr(S_i|W,o_i=j)$, pricom hodnoty
+        $p_{i,j}$ je umerne $\Pr(S_i\|W,o_i=j)$, pricom hodnoty
         normalizujeme tak, aby sucet v riadku bol 1
 
 ### Gibbsovo vzorkovanie (Gibbs sampling)
@@ -62,7 +62,7 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
   - Za sebou iduce vzorky sa podobaju (lisia sa len v jednej zlozke
     $o_i$) nie su teda nezavisle
   - Pre kazdu vzorku $O^{(t)}$ najdeme najlepsie $W^{(t)}$ a
-    spocitame vierohodnost $\Pr(S|W^{(t)},O^{(t)})$. Nakoniec
+    spocitame vierohodnost $\Pr(S\|W^{(t)},O^{(t)})$. Nakoniec
     vyberieme *O* a *W*, kde bola vierohodnost najvyssia.
   - Tento algoritmus (s malymi obmenami) bol pouzity v clanku Lawrence,
     Charles E., et al. (1993) "Detecting subtle sequence signals: a
@@ -81,25 +81,23 @@ title: "Cvičenia pre informatikov: Hľadanie motívov"
   - Majme pravdepodobnostny model, kde D su nejake pozorovane data a X
     nezname nahodne premenne (napr pre nas D su sekvencie S a X su
     vyskyty O, pripadne aj matica W)
-  - mozeme hladat X pre ktore je vierohodnost Pr(D|X) najvyssia
-  - alebo mozeme nahodne vzorkovat rozne X z Pr(X|D)
+  - mozeme hladat X pre ktore je vierohodnost $\Pr(D\|X)$ najvyssia
+  - alebo mozeme nahodne vzorkovat rozne X z $\Pr(X|D)$
 
 Pouzitie vzoriek
 
   - spomedzi ziskanych vzoriek zvolime tu, pre ktoru je vierohodnost
-    Pr(D|X) najvacsia (iny pristup k maximalizovaniu vierohodnosti)
+    $\Pr(D\|X)$ najvacsia (iny pristup k maximalizovaniu vierohodnosti)
   - ale vzorky nam daju aj informaciu o tom, aka je velka neurcitost v
     odhade X
       - mozeme odhadovat stredne hodnoty a odchylky roznych velicin
       - napr. pri hladani motivov mozeme sledovat ako casto je ktora
         pozicia vyskytom motivu
 
-<!-- end list -->
-
-  - generovat nezavisle vzorky z Pr(X|D) moze byt tazke
+  - generovat nezavisle vzorky z $\Pr(X\|D)$ moze byt tazke
   - metoda Markov chain Monte Carlo (MCMC) generuje postupnost zavislych
     vzoriek $X^{(0)}, X^{(1)},\dots$, konverguje v limite k cielovej
-    distribucii Pr(X|D)
+    distribucii $\Pr(X\|D)$
   - Gibbsovo vzorkovanie je specialnym pripadom MCMC
 
 ### Markovove reťazce
@@ -156,7 +154,6 @@ Pouzitie vzoriek
     vsetky polozky nenulove
   - Priklady neergodickych matic
 
-<!-- end list -->
 
     1 0          0.5 0.5          0 1             0.5 0.5
     0 1          0   1            1 0             1   0
@@ -207,7 +204,7 @@ Pouzitie vzoriek
       - Dokaz: uvazujme dva za sebou iduce vektory hodnot x a y, ktore
         sa lisia v i-tej suradnici. Nech $x_{-i}$ su hodnoty vsetkych
         ostatnych premennych okrem $x_i$
-      - $\pi(x)p_{x,y} = \pi(x)\Pr(y_i|x_{-i}) = \Pr(x_{-i})\Pr(x_i|x_{-i}) \Pr(y_i|x_{-i}) = \pi(y)\Pr(x_i|x_{-i}) = \pi(y)\Pr(x_i|y_{-i}) = \pi(y)p_{y,x}$
+      - $\pi(x)p_{x,y} = \pi(x)\Pr(y_i\|x_{-i}) = \Pr(x_{-i})\Pr(x_i\|x_{-i}) \Pr(y_i\|x_{-i}) = \pi(y)\Pr(x_i\|x_{-i}) = \pi(y)\Pr(x_i\|y_{-i}) = \pi(y)p_{y,x}$
 
 ## Poriadnejšie Gibbsovo vzorkovanie pre motívy
 
@@ -247,34 +244,34 @@ Uvedene pre zaujimavost - podla clanku
     *L* a nahodne zvacsuj/zmensuj *L*, dovol vynechat motiv v niektorych
     sekvenciach, hladaj viac motivov naraz,...
 
-**Ako spocitat $\Pr(o_i|O_{-i},S)$?**
+**Ako spocitat $\Pr(o_i\|O_{-i},S)$?**
 
   - nezaujimaju nas normalizacne konstanty, lahko znormalizujeme
     scitanim cez vsetky $o'_i$
-  - $\Pr(o_i|O_{-i},S) = \Pr(O|S) / \Pr(O_{-i}|S)$, ale menovatel
+  - $\Pr(o_i\|O_{-i},S) = \Pr(O\|S) / \Pr(O_{-i}\|S)$, ale menovatel
     konstanta
-  - $\Pr(O|S) = \Pr(S|O)\Pr(O)/\Pr(S)$, kde
-    $\Pr(S)=\sum_{O'} \Pr(S|O')\Pr(O')$
+  - $\Pr(O\|S) = \Pr(S\|O)\Pr(O)/\Pr(S)$, kde
+    $\Pr(S)=\sum_{O'} \Pr(S\|O')\Pr(O')$
   - Menovatel nas nezaujima (normalizacna konstanta)
   - $\Pr(O)$ je tiez konstanta (rovnomerne rozdelenie pozicii okien)
-  - Teda mame $\Pr(o_i|O_{-i},S)$ je umerne $\Pr(S|O)$
-  - Lahko vieme spocitat $\Pr(S|W,O)$, potrebujeme "zrusit" W, da sa
+  - Teda mame $\Pr(o_i\|O_{-i},S)$ je umerne $\Pr(S|O)$
+  - Lahko vieme spocitat $\Pr(S\|W,O)$, potrebujeme "zrusit" W, da sa
     spocitat vzorec...
   - Skusame vsetky mozne hodnoty $o'_i$, pocitame pravdepodobnost
-    $\Pr(S|O)$, vzorkujeme umerne k tomu
+    $\Pr(S\|O)$, vzorkujeme umerne k tomu
 
-Dalsie detaily vypoctu $\Pr(S|O)$:
+Dalsie detaily vypoctu $\Pr(S\|O)$:
 
   - Nech $S_o$ su len sekvencie v oknach a $S_{-o}$ mimo okien. Mame
-    $\Pr(S|O) = \Pr(S_o|O)\Pr(S_{-o}|O)$
-  - $\Pr(S_{-o}|O)$ lahko spocitame (nezavisi od W)
-  - $\Pr(S_o|O) = \int \Pr(S_o|O,W)\Pr(W)dW$ kde integral ide cez
+    $\Pr(S\|O) = \Pr(S_o\|O)\Pr(S_{-o}\|O)$
+  - $\Pr(S_{-o}\|O)$ lahko spocitame (nezavisi od W)
+  - $\Pr(S_o\|O) = \int \Pr(S_o\|O,W)\Pr(W)dW$ kde integral ide cez
     hodnoty, kde $w_{a,i}\ge 0$ a $\sum_a w_{a,i} = 1\,$
   - $\Pr(W)$ je konstanta (rovnomerne rozdelenie; nejde o
     pravdepodobnost ale hustotu),
-    $\Pr(S_o|O,W) = \prod_{i=1}^L \prod_a (w_{a,i})^{n_{a,i}}$, kde
-    $n_{a,i}$ je pocet vyskytov bazy a na pozicii i v oknach
+    $\Pr(S_o\|O,W) = \prod_{i=1}^L \prod_a (w_{a,i})^{n_{a,i}}$, kde
+    $n_{a,i}$ je pocet vyskytov bazy $a$ na pozicii $i$ v oknach
     $o_1\dots o_n$
-  - $\Pr(S_o|O) = \prod_{i=1}^L 3!/(n+3)! \prod_a n_{a,i}!$ (bez
+  - $\Pr(S_o\|O) = \prod_{i=1}^L 3!/(n+3)! \prod_a n_{a,i}!$ (bez
     dokazu)
 
