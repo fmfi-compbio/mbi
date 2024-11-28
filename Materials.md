@@ -207,15 +207,20 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 28
 #### L: Protein structure and function
 
-{% include pdf.html file="p-prot" name="pdf" show=0 dot=1
+{% include pdf.html file="p-prot" name="pdf" show=1 dot=1
 %} {% include youtube.html id="ugMM81jZRpc" name="video" show=0 dot=1
 %} DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
 
 #### TI:  Motif finding by EM and Gibbs sampling
-pdf 
 
-#### TB:  Introduction to context-free grammars
-notes
+{% include notes.html file="ci-motifs" name="notes" show=1 dot=0
+%}
+
+#### TB:  Introduction to context-free grammars, proteins, Pfam, PSI-blast
+
+{% include notes.html file="cb-grammars" name="notes1" show=1 dot=0
+%} {% include notes.html file="cb-prot" name="notes2" show=1 dot=0
+%}
 
 <a name="W11"></a>
 ### Dec. 5

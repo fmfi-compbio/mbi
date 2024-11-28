@@ -52,7 +52,7 @@ počasia          počasi
 ### Výpočet matice pre viac krokov naraz
 
 - Pre reťazec s maticou $M$ spočítajme $\Pr(X_2=y \| X_0=x)$ (aké je rozdelenie počasia o dva dni vzhľadom na počasie dnes). Skúšame všetky hodnoty $z$ v čase 1 (zajtra). 
-- Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$
+- Dostaneme $\sum_z \Pr(X_1=z \| X_0=x)\cdot\Pr(X_2=y \| X_1=z) = \sum_z M[x,z]\cdot M[z,y]$.
 - Ide o súčin matice $M$ samej so sebou, t.j. $M^2$.
 - Podobne $\Pr(X_{t_0+t}=y \| X_{t_0}=x)$ získame ako políčko $M^t[x,y]$ z matice $M^t$ (počasie o $t$ dní neskôr vzhľadom na počasie dnes).
 - Koľko trvá výpočet $M^t$ v závislosti od $t$ a počtu stavov $n$?
@@ -111,7 +111,7 @@ $S(t) = \left(\begin{array}{cccc}
 - Ak uvažujeme iba celočíselné hodnoty času $t$, môžeme substitučný model vyjadriť pomocou Markovovho reťazca s nejakou maticou $M$, ktorá bude predstavovať $S(1)$.
 - Maticu $S(t)$ dostaneme umocnením $M$, teda $S(t) = M^t$.
 
-Príklad: za čas t=1 má každá zmen (napr. z A na C) pravdepodobnosť 1% a žiadna zmena teda 97%. 
+Príklad: za čas t=1 má každá zmena (napr. z A na C) pravdepodobnosť 1% a žiadna zmena teda 97%. 
 
 ```
 1 0 0 0   0.97 0.01 0.01 0.01  0.9412 0.0196 0.0196 0.0196
@@ -218,7 +218,7 @@ $R=
 
 - Pre veľmi malé časy platí $S(t)\approx I+Rt$.
 - $S(t+\epsilon) = S(t)S(\epsilon) \approx S(t)(I+R\epsilon)$ a teda $(S(t+\epsilon)-S(t))/\epsilon \approx S(t)R$
-- V limite dostaneme $S(t)R = \lim_{\epsilon\rightarrow 0} (S(t+\epsilon)-S(t))/\epsilon = S'(t)$
+- V limite dostaneme $S(t)R = \lim_{\epsilon\rightarrow 0} (S(t+\epsilon)-S(t))/\epsilon = S'(t)$.
 - Dostali sme diferenciálnu rovnicu $S'(t) = S(t)R$, počiatočný stav $S(0)=I$.
 - Ak by sme dosadili $R$ pre J-C model, dostali by sme rovnakú diferenciálnu rovnicu ako predtým.
 
@@ -228,17 +228,17 @@ $R=
   pravdepodobnosť, že ak začneme s bázou $a$, tak po čase $t$ budeme mať
   bázu $b$.
 - Jukes-Cantorov model predpokladá, že táto pravdepodobnosť je rovnaká
-  pre každé dve bázy $a\ne b$
+  pre každé dve bázy $a\ne b$.
 - Pre daný čas $t$ máme teda všade mimo diagonály $s(t)$ a na diagonále
-  $1-3s(t)$
+  $1-3s(t)$.
 - Matica rýchlostí $R$: pre Jukes-Cantorov model všade mimo diagonály
-  $\alpha$, na diagonále $-3\alpha$
-- Pre veľmi malý čas $t$ je $S(t)$ zhruba $I-Rt$
+  $\alpha$, na diagonále $-3\alpha$.
+- Pre veľmi malý čas $t$ je $S(t)$ zhruba $I-Rt$.
 - Rýchlost $\alpha$ je teda pravdepodobnosť zmeny za jednotku casu, ak
   uvažujeme veľmi krátke časy, resp. derivácia *s(t)* vzhľadom na *t*
   v bode 0.
 - Riešením diferenciálnych rovníc pre Jukes-Cantorov model dostávame
-  $s(t) = (1-e^{-4\alpha t})/4$
+  $s(t) = (1-e^{-4\alpha t})/4$.
 - Matica rýchlostí sa zvykne normalizovať tak, aby na jednotku času
   pripadla v priemere jedna substitúcia, čo dosiahneme ak
   $\alpha=1/3$.
