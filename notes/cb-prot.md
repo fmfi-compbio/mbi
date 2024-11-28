@@ -1,16 +1,10 @@
 ---
-title: "Cvičenia pre biológov: Nadreprezentácia, proteíny"
+title: "Cvičenia pre biológov: Proteíny, nadreprezentácia"
 ---
 
 * TOC
 {:toc}
 
-
-## Nadreprezentácia
-
-Dokončíme z [minulého cvičenia](./cb-expr.html#nadreprezentácia-cvičenie-pri-počítači)
-
-Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P23471/entry), ktoré techniky z prednášok vidíme na jeho stránke?
 
 ## PSI BLAST a Pfam
 
@@ -56,13 +50,18 @@ Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P2347
 
 * Pre zadaný proteín hľadá podobné 3D štruktúry
 * Choďte na stránku <https://search.foldseek.com/>
-* Zvoľte Load structure, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
+* Zvoľte `Load accession`, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
 * Vo výsledkoch zvoľte záložku Swissprot
 * Vidíte vo výsledkoch naše dva proteiny?
   * HNT1 (pod názvom Hit family protein 1) z Saccharomyces cerevisiae
   * Galactose-1-phosphate uridylyltransferase z  Haemophilus influenzae
 * V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
 
+## Nadreprezentácia
+
+Dokončíme z [minulého cvičenia](./cb-expr.html#nadreprezentácia-cvičenie-pri-počítači)
+
+Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P23471/entry), ktoré techniky z prednášok vidíme na jeho stránke?
 
 ## Sekvenčné motívy, program MEME
 
