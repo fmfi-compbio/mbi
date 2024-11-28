@@ -10,7 +10,7 @@ title: "Cvičenia pre biológov: Nadreprezentácia, proteíny"
 
 Dokončíme z [minulého cvičenia](./cb-expr.html#nadreprezentácia-cvičenie-pri-počítači)
 
-Proteín PTPRZ1 si pozrieme v Uniprote, ktoré techniky z prednášok vidíme na jeho stránke?
+Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P23471/entry), ktoré techniky z prednášok vidíme na jeho stránke?
 
 ## PSI BLAST a Pfam
 
@@ -31,9 +31,8 @@ Proteín PTPRZ1 si pozrieme v Uniprote, ktoré techniky z prednášok vidíme na
         Tieto domény patria v databáze Pfam do toho istého
         [klanu](https://www.ebi.ac.uk/interpro/set/pfam/CL0265/) ako
         HIT.
-  - Pozrime si doménu HIT na stránke databázy Interpro
-    [1](https://www.ebi.ac.uk/interpro/entry/pfam/PF01230/), hlavne časť
-    Signature
+  - Pozrime si doménu HIT na stránke databázy [Interpro](https://www.ebi.ac.uk/interpro/entry/pfam/PF01230/), hlavne časť
+    Profile HMM
 
 
   - Skúsme nájsť podobnosť medzi týmito proteínmi v BLASTe:
@@ -49,9 +48,20 @@ Proteín PTPRZ1 si pozrieme v Uniprote, ktoré techniky z prednášok vidíme na
 
   - Ak by výpočet dlho trval, výsledky sú tu:
       - [1.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=NBT1XHKA016)
+        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=MGF6WZTN016)
       - [2.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=NBT71PSK013)
+        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=MGFDET28013)
+
+## FoldSeek
+
+* Pre zadaný proteín hľadá podobné 3D štruktúry
+* Choďte na stránku <https://search.foldseek.com/>
+* Zvoľte Load structure, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
+* Vo výsledkoch zvoľte záložku Swissprot
+* Vidíte vo výsledkoch naše dva proteiny?
+  * HNT1 (pod názvom Hit family protein 1) z Saccharomyces cerevisiae
+  * Galactose-1-phosphate uridylyltransferase z  Haemophilus influenzae
+* V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
 
 
 ## Sekvenčné motívy, program MEME

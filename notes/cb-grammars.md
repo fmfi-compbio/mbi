@@ -6,7 +6,7 @@ title: "Cvičenia pre biológov: Bezkontextové gramatiky"
 {:toc}
 
 
-## Bezkontextové gramatiky
+## Úvod
 
   - Na modelovanie štruktúry RNA sa používajú stochastické bezkontextové
     gramatiky (bude na ďalšej prednáške)
@@ -16,7 +16,7 @@ title: "Cvičenia pre biológov: Bezkontextové gramatiky"
   - Zaviedol Noam Chomsky v lingvistike 50-te roky 20. storočia, tiež
     dôležité v informatike
 
-**Gramatika**
+## Čo je to gramatika
 
   - Príklad: S-\>aSb, S-\>epsilon (píšeme aj skrátene S-\>aSb|epsilon)
   - Dva typy symbolov: terminály (malé písmená), neterminály (veľké
@@ -36,7 +36,7 @@ title: "Cvičenia pre biológov: Bezkontextové gramatiky"
       - V tvare aa...abb...b s rovnakým počtom á-čok a b-čiek
         (informatici píšu \(a^kb^k\))
 
-**Cvičenia**
+## Cvičenia
 
   - Zostavte gramatiku na slová typu aa..abb..b kde á-čok je rovnako
     alebo viac ako b-čok, \(a^ib^j\) pre \(i\ge j\)
@@ -51,14 +51,15 @@ title: "Cvičenia pre biológov: Bezkontextové gramatiky"
       - príklad odvodenia v tejto gramatike:
         S-\>\[S\]-\>\[SS\]-\>\[SSS\]-\>\[(S)SS\]-\>\[()SS\]-\>\[()(S)S\]-\>\[()()S\]-\>\[()()(S)\]-\>\[()()(\[S\])\]-\>\[()()(\[\])\]
 
-**Parsovanie reťazca** pomocou gramatiky: určiť, ako mohol byt reťazec
-vygenerovaný pomocou pravidiel
+## Parsovanie reťazca pomocou gramatiky
+
+Úloha je určiť, ako mohol byť reťazec vygenerovaný pomocou pravidiel
 
   - Gramatika pre dobre uzátvorkované výrazy nám pomôže určiť, ktorá
     zátvorka patrí ku ktorej: tie, ktoré boli vygenerované v jednom
     kroku
 
-**Ďalšie cvičenia**
+## Ďalšie cvičenia
 
   - Zostavte gramatiku na DNA palindromy, t.j. sekvencie, ktore zozadu
     po skomplementovani baz daju to iste, ako napr. GATC
