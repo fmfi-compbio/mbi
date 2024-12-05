@@ -226,22 +226,22 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Dec. 5
 #### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
 
-{% include pdf.html file="p-rna" name="pdf" show=0 dot=1
-%} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
+{% include pdf.html file="p-rna" name="pdf" show=1 dot=1
+%} {% include youtube.html id="_Hh03Khsr9k" name="video" show=1 dot=1
 %} DEKM chapter 10, ZB chapter 11.9
 
 #### TI: Examples of biological databases, introduction to context-free grammars, HMM topology
 
 {% include notes.html file="ci-tools" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-grammars" name="notes2" show=1 dot=1
+%} {% include notes.html file="cb-grammars" name="notes2" show=1 dot=0
 %}
 
 #### TB:  Proteins, RNA structure, example of command-line tools
 
 {% include notes.html file="cb-prot" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-rna" name="notes2" show=1 dot=1
 %} {% include notes.html file="cb-linux" name="notes3" show=1 dot=0
-%}
+%} {% include notes.html file="cb-rna" name="notes2" show=1 dot=1
+%} 
 
 <a name="W12"></a>
 ### Dec. 12

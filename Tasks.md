@@ -30,7 +30,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
       <a href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/du1/du1-b.xls">Excel table</a>, 
       <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40956">Moodle</a><br />
       Computer science: questions {% include notebook.html file="a1i" name="colab" show=1 dot=0 %}, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40955">Moodle</a>
+      <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40955">Moodle</a>
     </td>
   </tr>
   <tr>
@@ -42,10 +42,10 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td colspan="3">
       Evolution, comparative genomics<br />
       Biologists: questions <a href="./pdf/a2b.pdf">pdf</a>, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40958">Moodle</a><br />
+      <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40958">Moodle</a><br />
       Computer science: questions <a href="./pdf/a2i-en.pdf">pdf</a>, 
-      data <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a2-i.zip">zip</a>, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=40957">Moodle</a>
+      data <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a2-i.zip">zip</a>, 
+      <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40957">Moodle</a>
     </td>
   </tr>
   <tr>
@@ -56,15 +56,13 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td colspan="3">
       Proteins, RNA<br />
-      <!--
-      Biologists: questions <a href="/vyuka/mbi/index.php?title=%C5%A0peci%C3%A1lne:NahranieS%C3%BAboru&amp;wpDestFile=A3b-en.pdf" class="new" title="A3b-en.pdf">pdf</a>, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=116962">Moodle</a><br />
-      Computer science: questions <a href="/vyuka/mbi/index.php?title=%C5%A0peci%C3%A1lne:NahranieS%C3%BAboru&amp;wpDestFile=A3i-en.pdf" class="new" title="A3i-en.pdf">pdf</a>, 
-      <a rel="nofollow" class="external text" href="https://moodle.uniba.sk/mod/assign/view.php?id=116961">Moodle</a><br />
-      Both: <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3.fasta">sequence</a>, 
-      AlphaFold2 results for <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf1.png">orf1</a>, 
-      <a rel="nofollow" class="external text" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf3.png">orf3</a>
-      -->
+      Biologists: questions <a href="./pdf/a3b-en.pdf">pdf</a>, 
+      <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=116962">Moodle</a><br />
+      Computer science: questions <a href="./pdf/a3i-en.pdf">pdf</a>, 
+      <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=116961">Moodle</a><br />
+      Both: <a rel="nofollow"href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3.fasta">sequence</a>, 
+      AlphaFold2 results for <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf1.png">orf1</a>, 
+      <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf3.png">orf3</a>
     </td>
   </tr>
   <tr>

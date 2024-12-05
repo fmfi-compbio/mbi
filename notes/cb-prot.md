@@ -44,9 +44,9 @@ Na úvod dokončíme [ukážku databázy motívov z minulého cvičenia](./cb-ex
 
   - Ak by výpočet dlho trval, výsledky sú tu:
       - [1.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=MGF6WZTN016)
+        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UHJWVB013)
       - [2.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=MGFDET28013)
+        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UMV18C016)
 
 ## FoldSeek
 
