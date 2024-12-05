@@ -1,39 +1,12 @@
 ---
-title: "Cvičenia pre biológov: Proteíny, nadreprezentácia"
+title: "Cvičenia pre biológov: Proteíny"
 ---
 
 * TOC
 {:toc}
 
 
-## Nadreprezentácia
-
-Dokončíme z [minulého cvičenia](./cb-expr.html#nadreprezentácia-cvičenie-pri-počítači)
-
-<!--
-Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P23471/entry), ktoré techniky z prednášok vidíme na jeho stránke?
--->
-
-## Sekvenčné motívy, program MEME
-
-  - Vazobne miesta transkripcnych faktorov sa casto reprezentuju ako
-    sekvencne motivy
-  - Ak mame skupinu sekvencii, mozeme hladat motiv, ktory maju spolocny
-  - Znamy program na tento problem je MEME
-  - Chodte na stranku <https://meme-suite.org/>
-  - Zvolte nastroj MEME a v casti *Input the primary sequences* zvolte
-    *Type in sequences* a zadajte [tieto
-    sekvencie](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb11/seq.fa)
-  - Pozrite si ostatne nastavenia. Co asi robia?
-  - Ak server pocita dlho, mozete si pozriet [vysledky](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb11/MEME.html)
-
-## Kvasinkové transkripčné faktory v SGD
-
-  - Yeast genome database SGD obsahuje pomerne podrobne stranky pre
-    jednotlive transkripcne faktory
-  - Pozrime si stranku pre transkripcny faktor [GAL4](https://www.yeastgenome.org/locus/S000006169/regulation)
-  - A tiez podstranku pre [vazobny motif](http://yetfasco.ccbr.utoronto.ca/MotViewLong.php?PME_sys_qf2=1510)
-  - Mozeme si najst gen G4 aj v databaze [JASPAR](https://jaspar2020.genereg.net/)
+Na úvod dokončíme [ukážku databázy motívov z minulého cvičenia](./cb-expr2.html#kvasinkové-transkripčné-faktory-v-sgd).
 
 ## PSI BLAST a Pfam
 
@@ -82,7 +55,14 @@ Proteín PTPRZ1 si pozrieme v [Uniprote](https://www.uniprot.org/uniprotkb/P2347
 * Zvoľte `Load accession`, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
 * Vo výsledkoch zvoľte záložku Swissprot
 * Vidíte vo výsledkoch naše dva proteiny?
-  * HNT1 (pod názvom Hit family protein 1) z Saccharomyces cerevisiae
-  * Galactose-1-phosphate uridylyltransferase z  Haemophilus influenzae
+  * HNT1 (pod názvom Hit family protein 1) z *Saccharomyces cerevisiae*
+  * Galactose-1-phosphate uridylyltransferase z *Haemophilus influenzae*
 * V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
+
+
+## Uniprot
+
+- Pozrime si podrobnejšie stránku ľudského FHIT v databáze [Uniprot](https://www.uniprot.org/uniprot/P49789)
+- Ktoré časti boli predpovedané bioinformatickými metódami z prednášky?
+
 

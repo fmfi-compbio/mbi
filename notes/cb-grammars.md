@@ -1,5 +1,5 @@
 ---
-title: "Cvičenia pre biológov: Bezkontextové gramatiky"
+title: "Cvičenia pre biológov aj informatikov: Bezkontextové gramatiky"
 ---
 
 * TOC

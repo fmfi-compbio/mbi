@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · [Week 9](#W9) · **[Week 10](#W10)** · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · **[Week 11](#W11)** · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -216,10 +216,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-motifs" name="notes" show=1 dot=0
 %}
 
-#### TB:  Introduction to context-free grammars, proteins, Pfam, PSI-blast
+#### TB:  Introduction to context-free grammars, enrichment, motifs
 
 {% include notes.html file="cb-grammars" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-prot" name="notes2" show=1 dot=0
+%} {% include notes.html file="cb-expr2" name="notes2" show=1 dot=0
 %}
 
 <a name="W11"></a>
@@ -230,12 +230,19 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
 %} DEKM chapter 10, ZB chapter 11.9
 
-#### TI: Examples of biological databases, introduction to context-free grammars
+#### TI: Examples of biological databases, introduction to context-free grammars, HMM topology
 notes
 
-#### TB:  Pfam, PSI-blast, Example of command-line tools  
-notes1, notes2
+{% include notes.html file="ci-tools" name="notes1" show=1 dot=1
+%} {% include notes.html file="cb-grammars" name="notes2" show=0 dot=1
+%}
 
+
+#### TB:  Proteins, RNA structure
+
+{% include notes.html file="cb-prot" name="notes1" show=1 dot=1
+%} {% include notes.html file="cb-expr2" name="notes2" show=0 dot=0
+%}
 
 <a name="W12"></a>
 ### Dec. 12
@@ -246,7 +253,7 @@ notes1, notes2
 %}
 
 #### TI:  RNA structure 
-#### TB:  Course summary, graphs, microarray data, RNA structure, MEME, transcription factors in SGD, population genetics
+#### TB:  Course summary, graphs, population genetics, microarray data, example of command-line tools  
 pdf, pdf  notes
 
 <a name="W13"></a>

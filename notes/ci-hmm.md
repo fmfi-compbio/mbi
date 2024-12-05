@@ -123,6 +123,8 @@ deliteľný 3).
 
 ## Zovšeobecnené HMM
 
+Nebrali sme, uvedene pre zaujimavost
+
   - Predstavme si HMM s dvoma stavmi, napr. gén / negén, pričom každý
     stav má prechod do seba aj do druhého stavu
   - Úloha: Nech p je pravdepodobnosť, že zostaneme v tom istom stave,
@@ -132,8 +134,8 @@ deliteľný 3).
       - Toto rozdelenie sa nazýva geometrické a pravdepodbnosť
         exponenciálne rýchlo klesá s rastúcim k
   - Keď sa pozrieme na histogram reálny dĺžkov génov / exónov a iných
-    oblastí, väčšinou sa enpodobá na geometrické rozdelnie, môže
-    priponínať napr. normálne rozdelenie s určitou priemenrou dĺžkou a
+    oblastí, väčšinou sa nepodobá na geometrické rozdelnie, môže
+    pripomínať napr. normálne rozdelenie s určitou priemernou dĺžkou a
     rozptylom okolo
       - Jednoduché HMM teda dobre nemodeluje tento fenomén
   - Zovšeobecnené HMM (semi-Markov) pracuje tak, že v stave má ľubovoľné
