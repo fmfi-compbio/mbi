@@ -231,17 +231,16 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} DEKM chapter 10, ZB chapter 11.9
 
 #### TI: Examples of biological databases, introduction to context-free grammars, HMM topology
-notes
 
 {% include notes.html file="ci-tools" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-grammars" name="notes2" show=0 dot=1
+%} {% include notes.html file="cb-grammars" name="notes2" show=1 dot=1
 %}
 
-
-#### TB:  Proteins, RNA structure
+#### TB:  Proteins, RNA structure, example of command-line tools
 
 {% include notes.html file="cb-prot" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-expr2" name="notes2" show=0 dot=0
+%} {% include notes.html file="cb-rna" name="notes2" show=1 dot=1
+%} {% include notes.html file="cb-linux" name="notes3" show=1 dot=0
 %}
 
 <a name="W12"></a>
@@ -253,7 +252,7 @@ notes
 %}
 
 #### TI:  RNA structure 
-#### TB:  Course summary, graphs, population genetics, microarray data, example of command-line tools  
+#### TB:  Course summary, graphs, population genetics, microarray data
 pdf, pdf  notes
 
 <a name="W13"></a>

@@ -2,7 +2,7 @@
 title: "Cvičenia pre biológov: RNA štruktúra"
 ---
 
-  - Znama databaza rodin RNA genov je Rfam: <http://rfam.xfam.org/>
+  - Znama databaza rodin RNA genov je Rfam: <https://rfam.xfam.org/>
   - Najdite si v nej rodinu RF00015 (U4 spliceosomal RNA)
   - V casti Secondary structure si mozete pozriet obrazky farebne
     kodovane podla roznych kriterii

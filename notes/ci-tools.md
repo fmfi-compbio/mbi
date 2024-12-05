@@ -6,7 +6,7 @@ title: "Cvičenia pre informatikov: Úvod do bioinformatických databáz a on-li
 {:toc}
 
 
-## NCBI, Genbank, Pubmed, blast
+## NCBI, blast
 
   - National Center for Biotechnology Information
     <http://www.ncbi.nlm.nih.gov/>
@@ -35,7 +35,7 @@ GGTCAGTTTCCCCACCTCGGGGAGGGAGAACCCCGGAGCTGGTTGTGAGACAAATTGAGTTTCTGGACCC
 CCGAAAAGCCCCCACAAAAAGCCG
 ```
 
-### Uniprot
+## Uniprot
 
   - Prehladnejsi pohlad na proteiny, vela linkov na ine databazy, cast
     vytvarana rucne
@@ -46,7 +46,7 @@ CCGAAAAGCCCCCACAAAAAGCCG
         bioinformatickými metódami z prednášky?
       - Všimnime si niektorú Pfam doménu a pozrime si jej stránku
 
-### UCSC genome browser
+## UCSC genome browser
 
   - <https://genome-euro.ucsc.edu/>
   - On-line grafický nástroj na prezeranie genómov
@@ -58,7 +58,6 @@ CCGAAAAGCCCCCACAAAAAGCCG
 
 **Základy**
 
-  - Adresa <https://genome-euro.ucsc.edu/>
   - Hore v modrom menu zvoľte Genomes, potom zvoľte ľudský genóm. Do
     okienka `search term` zadajte HOXA2. Vo výsledkoch hľadania (UCSC
     genes) zvoľte gén homeobox A2 na chromozóme 7.
