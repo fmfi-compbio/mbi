@@ -239,8 +239,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TB:  Proteins, RNA structure, example of command-line tools
 
 {% include notes.html file="cb-prot" name="notes1" show=1 dot=1
-%} {% include notes.html file="cb-linux" name="notes3" show=1 dot=0
-%} {% include notes.html file="cb-rna" name="notes2" show=1 dot=1
+%} {% include notes.html file="cb-linux" name="notes2" show=1 dot=1
+%} {% include notes.html file="cb-rna" name="notes3" show=1 dot=0
 %} 
 
 <a name="W12"></a>
