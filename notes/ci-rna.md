@@ -17,7 +17,7 @@ Z cvičných príkladov na skúšku
     A-U, C-G) a nakreslite sekundárnu štruktúru, ktorú algoritmus
     našiel.
 
-### Rozsirenia Nussinovovej algoritmu
+## Rozsirenia Nussinovovej algoritmu
 
   - lahke: kazdy par i,j musi mat vzdialenost |i-j|\>=3 (RNA sa na
     kratsom useku nevie ohnut o 180 stupnov)
@@ -34,11 +34,11 @@ Z cvičných príkladov na skúšku
         komplementárne).
       - zjednodusenu verziu mate na domacej ulohe
 
-### Stochasticke bezkontextove gramatiky
+## Stochasticke bezkontextove gramatiky
 
   - Ako asi funguje algoritmus, ktory hlada najpravdepodobnejsie
     odvodenie?
-      - Najskor pre jednoduchu gramatiku z prednasky s jednym neterminalom S-\>aSu|uSa|cSg|gSc|aS|cS|gS|uS|Sa|Sc|Sg|Su|SS|epsilon
+      - Najskor pre jednoduchu gramatiku z prednasky s jednym neterminalom S-\>aSu\|uSa\|cSg\|gSc\|aS\|cS\|gS\|uS\|Sa\|Sc\|Sg\|Su\|SS\|epsilon
       - Ako by sa upravilo pre zlozitejsie gramatiky s viac neterminalmi, napr. tie pre kovariancne modely?
       - rozsirme Nussinovovej algoritmus o dalsi rozmer - neterminal, z
         ktoreho je podretazec X\[i...j\] vygenerovany
@@ -46,7 +46,7 @@ Z cvičných príkladov na skúšku
   - Je najpravdepodobnejsie odvodenie to iste ako najpravdepodobnejsia
     sekundarna struktura pri gramatike z prednasky?
       - jednu strukturu vieme vyjadrit pomocou viacerych odvodeni, napr.
-        v jednoduchej strukture nizsie vieme slucku ccu generovat zlava
+        v jednoduchej strukture nizsie vieme slucku `ccu` generovat zlava
         aj sprava (cS vs Su), tiez hocikde vieme spravit S-\>SS a potom
         jedno S znicit
 ```
@@ -55,7 +55,7 @@ Z cvičných príkladov na skúšku
 ```
   - Viete zmenit gramatiku tak, aby najlavejsie odvodenia zodpovedali 1
     k 1 sekundarnym strukturam?
-      - napr. S-\>aS|cS|gS|tS|aSuS|uSaS|cSgS|gScS|epsilon
+      - napr. S-\>aS\|cS\|gS\|tS\|aSuS\|uSaS\|cSgS\|gScS\|epsilon
       - vid clanok Dowell RD, Eddy SR. [Evaluation of several lightweight
         stochastic context-free grammars for RNA secondary structure
         prediction.](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-5-71) BMC bioinformatics. 2004 Jun 4;5(1):71.
