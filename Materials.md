@@ -247,20 +247,21 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### L: Population genetics
 
 {% include pdf.html file="p-popgen" name="pdf" show=1 dot=1
-%} {% include youtube.html id="7vPt1vQX21M" name="video" show=1 dot=1
+%} {% include youtube.html id="7vPt1vQX21M" name="video" show=1 dot=0
 %}
 
 #### TI:  RNA structure 
 
-{% include notes.html file="ci-rna" name="notes1" show=1 dot=0
+{% include notes.html file="ci-rna" name="notes" show=1 dot=0
 %}
 
 #### TB:  Course summary, graphs, population genetics, RNA structure, expression data
 
 {% include pdf.html file="cb-summary" name="pdf1" show=1 dot=1
 %} {% include pdf.html file="cb-graphs" name="pdf2" show=1 dot=1
-%} {% include notes.html file="cb-rna" name="notes" show=1 dot=1
-%} {% include notes.html file="cb-popgen" name="notes" show=1 dot=0
+%} {% include notes.html file="cb-popgen" name="notes1" show=1 dot=1
+%} {% include notes.html file="cb-rna" name="notes2" show=1 dot=1
+%} {% include notebook.html file="cb-expr" name="notebook" show=1 dot=0
 %} 
 
 <a name="W13"></a>

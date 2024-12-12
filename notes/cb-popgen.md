@@ -4,7 +4,7 @@ title: "Cvičenia pre biológov: Populačná genomika"
 
 ## Populacna genomika v UCSC genome browseri
 
-### Zopar zaujimavych polymorfizmov v ludskom genome
+Zopar zaujimavych polymorfizmov v ludskom genome
 
   - SNP rs1815739 CC:
     [SNPedia](http://www.snpedia.com/index.php/Rs1815739), [genome
@@ -18,12 +18,11 @@ title: "Cvičenia pre biológov: Populačná genomika"
   - Ďalšie zaujímavé SNPy: rs10427255 CC, rs671 GG, rs713598 GG,
     rs17822931 CT, rs4988235 CC, rs1042725 CC, rs7495174 AA, rs1426654
     AA, rs4481887 AG
-  - V browseri si vsimnite tracky (specificke pre verziu genomu hg19):
-      - HGDP Allele Freq s mapou sveta s distribuciou alel
-      - Genome Variants obsahuje genomy niekolkych ludi, napr Jima
-        Watsona
-      - Takisto sa da pozriet genom ludi z jaskyne Denisova a
-        Neandertalcov
+
+V browseri si vsimnite tracky (specificke pre verziu genomu hg19):
+- HGDP Allele Freq s mapou sveta s distribuciou alel
+- Genome Variants obsahuje genomy niekolkych ludi, napr Jima Watsona
+- Takisto sa da pozriet genom ludi z jaskyne Denisova a Neandertalcov
 
 UCSC genome browser ma aj dalsie tracky tykajuce sa populacnej genomiky
 a polymorfizmov
