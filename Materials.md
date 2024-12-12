@@ -255,10 +255,12 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-rna" name="notes1" show=1 dot=0
 %}
 
-#### TB:  Course summary, graphs, population genetics, RNA structure, microarray data
-pdf, pdf  notes
+#### TB:  Course summary, graphs, population genetics, RNA structure, expression data
 
-{% include notes.html file="cb-rna" name="notes3" show=1 dot=0
+{% include pdf.html file="cb-summary" name="pdf1" show=1 dot=1
+%} {% include pdf.html file="cb-graphs" name="pdf2" show=1 dot=1
+%} {% include notes.html file="cb-rna" name="notes" show=1 dot=1
+%} {% include notes.html file="cb-popgen" name="notes" show=1 dot=0
 %} 
 
 <a name="W13"></a>

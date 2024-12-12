@@ -53,6 +53,7 @@ ATATAGTCGGCATTGGCAATTTTTGACAGTCTCTACGGAGA
       - mozeme is pozriet aj hierarchicke zhlukovanie
 
    - Tie iste data ako [Series GSE5926](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5926)
+      - Series znamena povodne data poslane do databazy autormi, DataSet (vyssie) su spracovane od NCBI
       - [Analyze with GEO2R](https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE5926
 )
       - R je system a programovaci jazyk na statisticke vypocty, pracuje sa v nom na prikazovom riadku, hoci existuju aj nejake polo-graficke rozhrania
@@ -62,8 +63,3 @@ ATATAGTCGGCATTGGCAATTTTTGACAGTCTCTACGGAGA
         - zaklikame si s CTRL 3 experimenty pre `reference` (su zlte), potom napiseme meno skupiny, napr. ref a stlacime vytvorenu skupinu (ozelenie)
 	- to iste opakujeme pre druhu skupinu, nazveme ju napr. `ac`
       - Potom stlacime Analyze, dostaneme grafy a tabulku
-
-Runtime-\>Change runtime type -\>Runtime type zvolime R
-runtime->Run all zbehne vsetky bunky
-
-
