@@ -55,7 +55,7 @@ Z cvičných príkladov na skúšku
 ```
   - Viete zmenit gramatiku tak, aby najlavejsie odvodenia zodpovedali 1
     k 1 sekundarnym strukturam?
-      - napr. S-\>aS\|cS\|gS\|tS\|aSuS\|uSaS\|cSgS\|gScS\|epsilon
+      - napr. S-\>aS\|cS\|gS\|uS\|aSuS\|uSaS\|cSgS\|gScS\|epsilon
       - vid clanok Dowell RD, Eddy SR. [Evaluation of several lightweight
         stochastic context-free grammars for RNA secondary structure
         prediction.](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-5-71) BMC bioinformatics. 2004 Jun 4;5(1):71.

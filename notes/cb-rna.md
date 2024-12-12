@@ -24,7 +24,7 @@ ATATAGTCGGCATTGGCAATTTTTGACAGTCTCTACGGAGA
     RNASeq kratkych RNA z roznych casti buniek, zapnite si v jeho
     nastaveniach aj zobrazenie RNA z jadra (nucleus)
   - Zadajte sekvenciu na [RNAfold serveri](http://rna.tbi.univie.ac.at/cgi-bin/RNAWebSuite/RNAfold.cgi)
-  - Ak vypocet dlho trva, pozrite si [vysledok](http://rna.tbi.univie.ac.at//cgi-bin/RNAWebSuite/RNAfold.cgi?PAGE=3&ID=fdr_TwjicB)
+  - Ak vypocet dlho trva, pozrite si [vysledok](http://rna.tbi.univie.ac.at//cgi-bin/RNAWebSuite/RNAfold.cgi?PAGE=3&ID=Y1IkN39dt7)
   - Podoba sa na strukturu zobrazenu v Rfame? v com sa lisi?
 
 
@@ -33,7 +33,7 @@ ATATAGTCGGCATTGGCAATTTTTGACAGTCTCTACGGAGA
 
 ## Expresia génov
 
-**NCBI Gene Expression Omnibus** <http://www.ncbi.nlm.nih.gov/geo/>
+**NCBI Gene Expression Omnibus (GEO)** <http://www.ncbi.nlm.nih.gov/geo/>
 
   - Databaza gene expression dat na NCBI
   - Do Search okienka zadajme *GDS2925*
@@ -51,4 +51,19 @@ ATATAGTCGGCATTGGCAATTTTTGACAGTCTCTACGGAGA
         [K=5](http://www.ncbi.nlm.nih.gov/geo/gds/analyze/kmeans2.cgi?&ID=GDS2925&dist=1&method=0&PC=1&NC=5&k=5)
         pre Pearsonovu korelaciu
       - mozeme is pozriet aj hierarchicke zhlukovanie
+
+   - Tie iste data ako [Series GSE5926](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5926)
+      - [Analyze with GEO2R](https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE5926
+)
+      - R je system a programovaci jazyk na statisticke vypocty, pracuje sa v nom na prikazovom riadku, hoci existuju aj nejake polo-graficke rozhrania
+      - Vela programov na pracu s expesiou genov je v R
+      - Tato stranka za vas vytvori kod v R, spusti, ukaze vam grafy ale kod si mozete aj stiahnut, spustit a modifikovat
+      - V polozke `Define groups` si musime vytvorit 2 skupiny experimentov, ktore budeme porovnavat, napr. reference vs acetate
+        - zaklikame si s CTRL 3 experimenty pre `reference` (su zlte), potom napiseme meno skupiny, napr. ref a stlacime vytvorenu skupinu (ozelenie)
+	- to iste opakujeme pre druhu skupinu, nazveme ju napr. `ac`
+      - Potom stlacime Analyze, dostaneme grafy a tabulku
+
+Runtime-\>Change runtime type -\>Runtime type zvolime R
+runtime->Run all zbehne vsetky bunky
+
 

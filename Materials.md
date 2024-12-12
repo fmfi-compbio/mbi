@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · **[Week 11](#W11)** · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · **[Week 12](#W12)** · [Week 13](#W13)
 
 
 ## Literature
@@ -236,27 +236,33 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-grammars" name="notes2" show=1 dot=0
 %}
 
-#### TB:  Proteins, RNA structure, example of command-line tools
+#### TB:  Proteins, example of command-line tools
 
 {% include notes.html file="cb-prot" name="notes1" show=1 dot=1
 %} {% include notes.html file="cb-linux" name="notes2" show=1 dot=1
-%} {% include notes.html file="cb-rna" name="notes3" show=1 dot=0
 %} 
 
 <a name="W12"></a>
 ### Dec. 12
 #### L: Population genetics
 
-{% include pdf.html file="p-popgen" name="pdf" show=0 dot=1
-%} {% include youtube.html id="7vPt1vQX21M" name="video" show=0 dot=1
+{% include pdf.html file="p-popgen" name="pdf" show=1 dot=1
+%} {% include youtube.html id="7vPt1vQX21M" name="video" show=1 dot=1
 %}
 
 #### TI:  RNA structure 
-#### TB:  Course summary, graphs, population genetics, microarray data
+
+{% include notes.html file="ci-rna" name="notes1" show=1 dot=0
+%}
+
+#### TB:  Course summary, graphs, population genetics, RNA structure, microarray data
 pdf, pdf  notes
+
+{% include notes.html file="cb-rna" name="notes3" show=1 dot=0
+%} 
 
 <a name="W13"></a>
 ### Dec. 17
 #### L: Optional journal club presentations
-#### TI:  Protein threading via integer linear programming, course summary  
+#### TI:  Integer linear programming, course summary  
 #### TB:  Project consultations 
