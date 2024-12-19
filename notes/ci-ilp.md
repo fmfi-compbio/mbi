@@ -22,14 +22,14 @@ title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
     [GLPK](https://www.gnu.org/software/glpk/)    
   - [Minisat](http://minisat.se/) open source SAT solver, tiež
     Lingeling, glucose, CryptoMiniSat, painless
-  - [Concorde][6](http://www.tsp.gatech.edu/concorde.html) - TSP solver 
+  - [Concorde](http://www.tsp.gatech.edu/concorde.html) - TSP solver 
     riesi problem obchodneho cestujuceho so symetrickymi vzdialenostami,
     zadarmo na akademicke ucely
       - Pre zaujimavost: [TSP art](http://www.oberlin.edu/math/faculty/bosch/tspart-page.html)
 
 ### ILP
 
-**Lineárny program:**
+**Lineárny program**
 
   - Mame reálne premenné $x_1\dots x_n$, minimalizujeme (alebo maximalizujeme) nejaku ich linearnu
     kombinaciu $\sum_i a_i x_i$ kde $a_i$ su dane vahy.
@@ -45,7 +45,7 @@ title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
     hodnoty, alebo dokonca povolime iba hodnoty 0 a 1.
   - NP uplny problem
 
-### Ako zapisat (NP-tazke) problemy ako ILP
+### Ako zapísať (NP-ťazké) problémy ako ILP
 
 Knapsack
 
@@ -94,6 +94,25 @@ Touto formulaciou mozeme riesit niekolko problemov
 - zarovnat RNA sekvenciu k inej RNA sekvencii so znamou strukturou
 
 
+Príklad: ak je zhoda 1, nezhoda a medzera -1, pár >10/3, vyhráva prvé
+zarovnanie, ak pár <10/3, vyhráva druhé (z týchto dvoch)
+```
+ [ [[    ] ]]
+-GCGGAUAACCCC
+ |   |      |  3 zhody, 5 nezhôd, 4 medzery, 3 páry
+GG-AUA-CCA-UC
+ [ [[    ] ]]
+
+( ((    ) ) )
+GCGGAUAACCC-C
+  ||||| ||  |  8 zhôd, 1 nezhoda, 3 medzery, 0 párov
+--GGAUA-CCAUC
+   (((    )))
+```
+X=GCGGAUAACCC, Y=GGAUACCAUC,
+$P_X$={(1,12),(3,11),(4,9)}, $P_Y$={(2,10),(3,9),(4,8)}
+
+
 Konštanty
 - $a_{i,j}$ cena zarovnania báz $X_i$ a $Y_j$ (zhoda alebo nezhoda)
 - $g$ cena medzery v zarovnaní
@@ -118,13 +137,17 @@ Podmienky
 Aka je velkost programu vzhladom na m a n (pocet premennych, nerovnosti, vsetkych nenulovych clenov)? Ktore casti sa zmensia ak $P_X$ a $P_Y$ su relativne male?
 
 
-
 Zdroj:
-<https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-271>
 
-<https://www.erudit.org/en/journals/aor/2008-v3-n2-aor3_2/aor3_2art03.pdf>
+Bauer, Markus, Gunnar W. Klau, and Knut Reinert. [Accurate multiple sequence-structure alignment of RNA sequences using combinatorial optimization.](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-271) BMC Bioinformatics 8 (2007): 1-18.
+
+Bauer, Markus, Gunnar W. Klau, and Knut Reinert. [An exact mathematical programming approach to multiple RNA sequence-structure alignment.](https://www.erudit.org/en/journals/aor/2008-v3-n2-aor3_2/aor3_2art03.pdf) Algorithmic Operations Research 3.2 (2008): 130-146.
+
+
 
 ### Protein threading
+
+Podobný problém, uvedené pre zaujímavosť, nerobili sme 
 
   - Ciel: protein A ma znamu sekvenciu aj strukturu, protein B iba
     sekvenciu. Chceme zarovnat proteiny A a B, pricom budeme brat do
