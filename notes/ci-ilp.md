@@ -1,4 +1,10 @@
-## Protein threading
+---
+title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
+---
+
+* TOC
+{:toc}
+
 
 ### Praktické programy na NP ťažké problémy
 
@@ -11,22 +17,21 @@
   - [CPLEX](http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/)
     a [Gurobi](http://www.gurobi.com/html/academic.html) komercne
     baliky na ILP, akademicka licencia zadarmo
-  - nekomerncne programy, napriklad [SCIP](http://scip.zib.de/), 
-  - [SYMPHONY](https://projects.coin-or.org/SYMPHONY) v projekte COIN-OR,
+  - nekomerncne programy, napriklad [SCIP](http://scip.zib.de/),
+    [SYMPHONY](https://projects.coin-or.org/SYMPHONY) v projekte COIN-OR,
     [GLPK](https://www.gnu.org/software/glpk/)    
-  - Minisat [5](http://minisat.se/) open source SAT solver, tiež
+  - [Minisat](http://minisat.se/) open source SAT solver, tiež
     Lingeling, glucose, CryptoMiniSat, painless
-  - Concorde TSP solver [6](http://www.tsp.gatech.edu/concorde.html) -
+  - [Concorde][6](http://www.tsp.gatech.edu/concorde.html) - TSP solver 
     riesi problem obchodneho cestujuceho so symetrickymi vzdialenostami,
     zadarmo na akademicke ucely
-      - Pre zaujimavost: TSP art
-        [7](http://www.oberlin.edu/math/faculty/bosch/tspart-page.html)
+      - Pre zaujimavost: [TSP art](http://www.oberlin.edu/math/faculty/bosch/tspart-page.html)
 
 ### ILP
 
 **Lineárny program:**
 
-  - Mame reálne premenné $x_1\dots x_n$, minimalizujeme nejaku ich linearnu
+  - Mame reálne premenné $x_1\dots x_n$, minimalizujeme (alebo maximalizujeme) nejaku ich linearnu
     kombinaciu $\sum_i a_i x_i$ kde $a_i$ su dane vahy.
   - Mame tiez niekolko podmienok v tvare linearnych rovnosti alebo
     nerovnosti, napr. $\sum_i b_i x_i \le c$
@@ -57,10 +62,10 @@ Set cover:
   - Mame n mnozin $S_1\dots S_n$ nad mnozinou $\\{1\dots m\\}$. Chceme vybrat co
     najmensi pocet zo vstupnych mnozin tak, aby ich zjednotenie bola
     cela mnozina {1..m}
-  - Binarne premenne x\_i=1 ak vyberieme i-tu mnozinu
+  - Binarne premenne $x_i=1$ ak vyberieme i-tu mnozinu
   - Chceme minimalizovat $\sum_{i=1}^n x_i$
   - za podmienky, ze pre kazde j z {1..m} plati
-    $\sum_{i:j\in S_i} x_j \ge 1$
+    $\sum_{i:j\in S_i} x_i \ge 1$
 
 ### Zarovnanie sekvencií RNA so štruktúrou
 
@@ -84,9 +89,9 @@ zarovnaných párov tak, aby každá báza bola v najviac jednom páre a
 každému takému páru priradíme nejaké kladné skóre.
 
 Touto formulaciou mozeme riesit niekolko problemov
-- zarovnat 2 RNA so znamymi strukturami (mozu obsahovat pseudouzly), pricom davame bonus ak sa obidva konce paru zarovnaju s parom v druhej sekvencii (bez pseudozulov sa da v polynomialnom case)
+- zarovnat dve RNA so znamymi strukturami (mozu obsahovat pseudouzly), pricom davame bonus ak sa obidva konce paru zarovnaju s parom v druhej sekvencii (bez pseudozulov sa da v polynomialnom case)
 - najst spolocnu strukturu pre dve RNA sekvencie, ktorych RNA struktura nie je znama
-- zarovnat RNA sekvenciu k inej RNA sekvencii so znamou strokturou
+- zarovnat RNA sekvenciu k inej RNA sekvencii so znamou strukturou
 
 
 Konštanty
@@ -98,27 +103,26 @@ Premenné (všetky sú binárne):
 - $x_{i,j}$ ci su $X_i$ a $Y_j$ zarovnane
 - $z_{1,i}$ ci $X_i$ zostala nezarovnana
 - $z_{2,j}$ ci $Y_j$ zostala nezarovnana
-- $y_{i,j,k,l}$ ci su i a j zarovnane, k a l zarovnane a i a k zvolene ako par, j a l zvolene ako par (iba pre hodnoty kde $(i,k)\in P_X$ a $(j,l)\in P_Y$ a i<l, j<l)
+- $y_{i,j,k,l}$ ci su i a j zarovnane, k a l zarovnane a i a k zvolene ako par, j a l zvolene ako par (iba pre hodnoty kde $(i,k)\in P_X$ a $(j,l)\in P_Y$ a $i<k$, $j<l$)
 
 Maximalizujeme
-- $\sum_{i,j} a_{i,j} x_{i,j} + g\cdot(\sum_i z_{1,i} + \sum_j z_{2,j} + p\cdot \sum_{i,j,k,l} y_{i,j,k,l}$
+- $\sum_{i,j} a_{i,j} x_{i,j} + g\cdot(\sum_i z_{1,i} + \sum_j z_{2,j}) + p\cdot \sum_{i,j,k,l} y_{i,j,k,l}$
 
 Podmienky
-- $z_{1,i} + \sum j x_{i,j}=1$ pre kazde $i$ (kazda baza s X je zarovnana prave raz alebo nezarovnana)
-- $x_{i,j}+x_{k,l}\le 1$ pre kazde i,j,k,l take ze i<k ale j>l (kriziace sa pary)
-- $z_{2,j} + \sum i x_{i,j}=1$ pre kazde $j$ (to iste pre Y)
-- $y_{i,j,k,l}\le x_{i,j}$ (bonus za par moze byt len ak su zarovnane)
-- $y_{i,j,k,l}\le x_{k,l}$ (podobne aj tu)
-- $\sum_{j,k,l} y_{i,j,k,l}\le 1$ pre kazde i, podobne pre kazde j,k,l (kazda baza i moze byt v najviac jednom vybranom pare) - chyba v clanku
+- $z_{1,i} + \sum_j x_{i,j}=1$ pre kazde $i$ (kazda baza z X je zarovnana prave raz alebo nezarovnana)
+- $x_{i,j}+x_{k,l}\le 1$ pre kazde i,j,k,l take ze $i<k$ ale $j>l$ (kriziace sa pary)
+- $z_{2,j} + \sum_i x_{i,j}=1$ pre kazde $j$ (to iste pre Y)
+- $\sum_{k,l} y_{i,j,k,l}\le x_{i,j}$ pre kazde i,j (ak i,j nie je zarovnane, nebudu sa pocitat ziadne dvojice pary obsahujuce i a j a ak je zarovnane, tak najviac jeden taky par)
+- $\sum_{i,j} y_{i,j,k,l}\le x_{i,j}$ pre kazde k,l (podbne pre druhu stranu)
 
 Aka je velkost programu vzhladom na m a n (pocet premennych, nerovnosti, vsetkych nenulovych clenov)? Ktore casti sa zmensia ak $P_X$ a $P_Y$ su relativne male?
 
 
 
-Detaily:
+Zdroj:
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-271>
 
-
+<https://www.erudit.org/en/journals/aor/2008-v3-n2-aor3_2/aor3_2art03.pdf>
 
 ### Protein threading
 
@@ -171,8 +175,3 @@ Zdroj:
     protein threading by linear programming." Journal of bioinformatics
     and computational biology 1, no. 01 (2003): 95-117.
     [8](http://ttic.uchicago.edu/~jinbo/SelectedPubs/RAPTOR.pdf)
-
-
-`     `<sha1>`s8z8y9puzg5aun8r9r37gu49g7o8kdr`</sha1>  
-`     `<model>`wikitext`</model>  
-`     `<format>`text/x-wiki`</format>
