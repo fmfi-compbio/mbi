@@ -45,7 +45,7 @@ title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
     hodnoty, alebo dokonca povolime iba hodnoty 0 a 1.
   - NP uplny problem
 
-### Ako zapísať (NP-ťazké) problémy ako ILP
+### Ako zapísať (NP-ťažké) problémy ako ILP
 
 Knapsack
 
@@ -169,19 +169,19 @@ Podobný problém, uvedené pre zaujímavosť, nerobili sme
     tabulky, co je modelovaci, nie algoritmicky problem (mozeme skusit
     napr. nejake pravdepodobnostne modely)
 
-### Protein threading ako ILP
+#### Protein threading ako ILP
 
   - Premenne v programe:
       - x\_ij=1 ak je zaciatok i-teho jadra zarovnane s b\_j
       - y\_ijkl=1 ak je zaciatok i-teho jadra na b\_j a zaciatok k-teho
         na b\_l (i\<k, j\<l)
-  - Chceme maximalizovat \(\sum E_{ij} x_{ij} + \sum E_{ijkl} y_{ijkl}\)
+  - Chceme maximalizovat $\sum E_{ij} x_{ij} + \sum E_{ijkl} y_{ijkl}$
   - Podmienky:
-      - \(\sum_j x_{ij}=1\,\) pre kazde i
-      - \(x_{il}+x_{i+1,k}\le 1\) pre vsetky i,k,l, kde k\<l+c\_i
-      - \(y_{ijkl}\le x_{ij}\) pre vsetky i,j,k,l, kde i\<k, j\<l
-      - \(y_{ijkl}\le x_{kl}\) pre vsetky i,j,k,l, kde i\<k, j\<l
-      - \(y_{ijkl}\ge x_{ij}+x_{kl}-1\) pre vsetky i,j,k,l, kde i\<k,
+      - $\sum_j x_{ij}=1\,$ pre kazde i
+      - $x_{il}+x_{i+1,k}\le 1$ pre vsetky i,k,l, kde k\<l+c\_i
+      - $y_{ijkl}\le x_{ij}$ pre vsetky i,j,k,l, kde i\<k, j\<l
+      - $y_{ijkl}\le x_{kl}$ pre vsetky i,j,k,l, kde i\<k, j\<l
+      - $y_{ijkl}\ge x_{ij}+x_{kl}-1$ pre vsetky i,j,k,l, kde i\<k,
         j\<l
 
 Na zamyslenie:
@@ -194,7 +194,6 @@ Na zamyslenie:
 
 Zdroj:
 
-  - Jinbo Xu, Ming Li, Dongsup Kim, and Ying Xu. "RAPTOR: optimal
-    protein threading by linear programming." Journal of bioinformatics
+  - Jinbo Xu, Ming Li, Dongsup Kim, and Ying Xu. [RAPTOR: optimal
+    protein threading by linear programming.](http://ttic.uchicago.edu/~jinbo/SelectedPubs/RAPTOR.pdf) Journal of bioinformatics
     and computational biology 1, no. 01 (2003): 95-117.
-    [8](http://ttic.uchicago.edu/~jinbo/SelectedPubs/RAPTOR.pdf)
