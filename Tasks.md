@@ -127,6 +127,6 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>January 27, 2025 22:00</td>
   </tr>
   <tr>
-    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a></td>
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
   </tr>
 </table>
