@@ -85,12 +85,14 @@ celogenómové a viacnásobné zarovnania
     necessary to find the optimal alignment; you can use any method to
     arrive at the answer.)
 
+```
     Alignment:                             Matrix:
     ATAGTTTAA                                 A   C   G   T
     A-GGG--AA                             A   2  -2  -1  -2
                                           C  -2   1  -2  -1    
                                           G  -1  -2   1  -2
                                           T  -2  -1  -2   2
+```
 
   - Consider BLASTn algorithm starting from seeds of size w=3. How many
     seeds it finds while comparing sequences GATTACGGAT and CAGGATT?
