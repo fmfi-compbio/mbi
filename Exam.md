@@ -326,18 +326,21 @@ bezkontextové gramatiky, kovariančné modely rodín RNA.
     List which pairs of positions are paired in the secondary
     structure found by the algorithm.
 
-``` 
- 0 0 0 1 1 2 2 3 3 ? ?
-   0 0 0 1 1 2 2 3 3 ?
-     0 0 1 1 2 2 2 3 3
-       0 0 1 1 1 1 2 3
-         0 1 1 ? 1 2 3
-           0 1 1 1 2 2
-             0 0 0 1 2
-               0 0 1 1
-                 0 0 1
-                   0 0
-                     0
+```
+                    1 1
+  1 2 3 4 5 6 7 8 9 0 1
+  G A A C U A U C U G A
+G 0 0 0 1 1 2 2 3 3 ? ?
+A   0 0 0 1 1 2 2 3 3 ?
+A     0 0 1 1 2 2 2 3 3
+C       0 0 1 1 1 1 2 3
+U         0 1 1 ? 1 2 3
+A           0 1 1 1 2 2
+U             0 0 0 1 2
+C               0 0 1 1
+U                 0 0 1
+G                   0 0
+A                     0
 ```
 
   - Consider RNA sequence of length 27, which has secondary structure
