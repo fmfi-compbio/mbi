@@ -9,7 +9,7 @@ title: Materials
 ## Literature
 
 - **BV**: Brejová, Vinař: Metódy v bioinformatike. (preliminary
-  version of lecture notes in Slovak, only several lectures)
+  version of lecture notes in Slovak, only several lectures) [pdf](./pdf/Skripta-2015-10-01.pdf) 
 - **DEKM**: Durbin, Eddy, Krogh, Mitchison: Biological sequence
   analysis: Probabilistic Models of Proteins and Nucleic Acids.
   Cambridge University Press 1998. Can be studied in the FMFI library
