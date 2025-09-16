@@ -5,9 +5,10 @@ title: Project for Biologists
 * TOC
 {:toc}
 
-A brief description of the project is included in the [course rules](./Rules.html#project), more details will be added later.
-
 {% if false %}
+A brief description of the project is included in the [course rules](./Rules.html#project), more details will be added later.
+{% endif %}
+
 ## Introduction
 
 According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. Computer science students have an exam instead.
@@ -53,7 +54,7 @@ It is not necessary to proceed strictly according to the plans presented at this
 
 35% of the final grade
 
-Please submit a pdf with your project report. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
+Please submit a pdf with your project report. At this stage we require a written report, not a presentation. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
 
 
 ### Introduction
@@ -79,4 +80,4 @@ In conclusion, summarize the main results and remaining challenges as well as wh
 ## Final meeting
 
 Several days after submitting the project, you will have a final meeting with an instructor to obtain final feedback and answer any questions. This meeting may influence the grade you get from your final report.
-{% endif %}
+
