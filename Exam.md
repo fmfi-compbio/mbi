@@ -5,7 +5,10 @@ title: Exam
 * TOC
 {:toc}
 
+A brief description of the exam is included in the [course rules](./Rules.html#exam), more details will be added later.
 
+
+{% if false %}
 ## Exam rules
 
 Exam is for 1-BIN-301 (mainly AIN, BIN, DAV, INF students).
@@ -392,3 +395,5 @@ p  300 200          p 30  20         p  3  2
   - Advanced dynamic programming algorithms (protein MS/MS, variants of
     sequence alignment, variants of Nussinov algorithm)
   - Integer linear programming
+
+{% endif %}

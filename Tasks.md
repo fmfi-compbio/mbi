@@ -4,6 +4,7 @@ title: Tasks and Dates
 
 All assignments should be submitted to Moodle as a pdf (or as directed in the assignment) before the specified deadline.
 
+{% if false %}
 <table border="1" style="border-collapse:collapse">
   <tr>
     <td></td>
@@ -130,3 +131,4 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
   </tr>
 </table>
+{% endif %}

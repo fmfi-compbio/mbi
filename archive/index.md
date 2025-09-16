@@ -1,6 +1,6 @@
 ---
 title: Archive
---
+---
 
 
 ## 2024/25
@@ -9,7 +9,7 @@ title: Archive
 * [All tutorials for biology in one pdf](./cb-2024.pdf)
 * [All tutorials for computer science in one pdf](./ci-2024.pdf)
 
-# 2023/24
+## 2023/24
 
 * [All lectures in one pdf](./prednasky-2023.pdf)
 * [All tutorials for biology in one pdf](./cb-2023.pdf)

@@ -5,6 +5,9 @@ title: Project for Biologists
 * TOC
 {:toc}
 
+A brief description of the project is included in the [course rules](./Rules.html#journal-club), more details will be added later.
+
+{% if false %}
 ## Introduction
 
 According to [course rules](./Rules.html), biology students have 50% of the grade based on a project. Computer science students have an exam instead.
@@ -32,13 +35,13 @@ Choose a topic, submit **1 page presentation** briefly explaing the **background
 
 ## Extended proposal
 
-8% of the final grade
+5% of the final grade
 
 Submit a pdf presentation with more details on your project plans. It should have **2 pages** and it may contain optional supplementary pages with further details if relevant, but it is not guaranteed that you will have space to use these in the presentation. In addition to the background and goals, you should add a brief description of your **data** (what it is, how you will obtain it) and what bioinformatics **methods** you plan to try. Providing links to tools and databases is recommended. During the next tutorial for biologists, present this in **2 minutes** and obtain feedback. After this point you need explicit permission from the instructors to change your topic.
 
 ## Preliminary report
 
-10% of the final grade
+7% of the final grade
 
 By this point you should have at least approximately **25% of your planned work finished** and you should have **clear plans** for finishing the rest. The goal is to obtain feedback on your progress and plans.
 
@@ -48,7 +51,7 @@ It is not necessary to proceed strictly according to the plans presented at this
 
 ## Final report
 
-30% of the final grade
+35% of the final grade
 
 Please submit a pdf with your project report. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
 
@@ -76,3 +79,4 @@ In conclusion, summarize the main results and remaining challenges as well as wh
 ## Final meeting
 
 Several days after submitting the project, you will have a final meeting with an instructor to obtain final feedback and answer any questions. This meeting may influence the grade you get from your final report.
+{% endif %}

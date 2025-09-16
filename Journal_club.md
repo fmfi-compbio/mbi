@@ -5,7 +5,7 @@ title: Journal Club
 * TOC
 {:toc}
 
-A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club), more details are below.
+A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club), more details will be added later.
 
 {% if false %}
 ## Submitting preferences
@@ -21,6 +21,7 @@ Please submit your preferences regarding these papers using [this form](https://
 ## List of papers
 {% endif %}
 
+{% if false %}
 ## Groups
 
 
@@ -117,3 +118,5 @@ Jureka AS, Obernier K, Guo JZ, Batra J, Kaake RM. Comparative
 host-coronavirus protein interaction networks reveal pan-viral disease
 mechanisms. Science. 2020 Dec 4;370(6521).
 <https://doi.org/10.1126/science.abe9403>
+
+{% endif %}
