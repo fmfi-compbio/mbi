@@ -2,8 +2,8 @@
 title: Materials
 ---
 
-[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · **[Week 13](#W13)**
+**[Week 1](#W1)** · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -143,9 +143,6 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 <a name="W6"></a>
 ### Oct. 30
-
-<a name="W7"></a>
-### Nov. 6
 #### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
 
 {% include pdf.html file="p-phylo" name="pdf" show=0 dot=1
@@ -164,8 +161,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="cb-phylo" name="pdf" show=0 dot=0
 %}
 
-<a name="W8"></a>
-### Nov. 13
+<a name="W7"></a>
+### Nov. 6
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
 
 {% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
@@ -184,8 +181,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="cb-phylo2" name="notes" show=0 dot=0
 %}
 
-<a name="W9"></a>
-### Nov. 20
+
+<a name="W8"></a>
+### Nov. 13
 #### L: Gene expression, clustering, classification, transcription factors, sequence motifs
 
 {% include pdf.html file="p-expr" name="pdf" show=0 dot=1
@@ -203,8 +201,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="cb-kmeans" name="pdf" show=0 dot=0
 %}
 
-<a name="W10"></a>
-### Nov. 27
+<a name="W9"></a>
+### Nov. 20
 #### L: Protein structure and function
 
 {% include pdf.html file="p-prot" name="pdf" show=0 dot=1
@@ -222,8 +220,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-expr2" name="notes2" show=0 dot=0
 %}
 
-<a name="W11"></a>
-### Dec. 4
+<a name="W10"></a>
+### Nov. 27
 #### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
 
 {% include pdf.html file="p-rna" name="pdf" show=0 dot=1
@@ -242,8 +240,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-linux" name="notes2" show=0 dot=1
 %} 
 
-<a name="W12"></a>
-### Dec. 11
+<a name="W11"></a>
+### Dec. 4
 #### L: Population genetics
 
 {% include pdf.html file="p-popgen" name="pdf" show=0 dot=1
@@ -264,8 +262,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notebook.html file="cb-expr" name="notebook" show=0 dot=0
 %} 
 
-<a name="W13"></a>
-### Dec. 16
+<a name="W12"></a>
+### Dec. 11
 #### L: Optional journal club presentations (no lecture)
 
 #### TI:  Integer linear programming, course summary
@@ -275,3 +273,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} 
 
 #### TB:  Project consultations in January
+
+<a name="W13"></a>
+### Dec. 16
+

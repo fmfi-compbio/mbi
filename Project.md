@@ -5,7 +5,7 @@ title: Project for Biologists
 * TOC
 {:toc}
 
-A brief description of the project is included in the [course rules](./Rules.html#journal-club), more details will be added later.
+A brief description of the project is included in the [course rules](./Rules.html#project), more details will be added later.
 
 {% if false %}
 ## Introduction
