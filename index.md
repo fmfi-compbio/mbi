@@ -19,6 +19,7 @@ Students from the Faculty of Natural Sciences are very welcome, as are guests fr
 
   - [doc. Mgr. Broňa Brejová, PhD.](https://compbio.fmph.uniba.sk/~bbrejova/)
   - [doc. Mgr. Tomáš Vinař, PhD.](https://compbio.fmph.uniba.sk/~tvinar/)
+  - [Dr. Luca Denti](https://sluzby.fmph.uniba.sk/ludia/denti1)
   - [Mgr. Jana Černíková](https://sluzby.fmph.uniba.sk/ludia/cernikova6)
   - Consultations can be arranged by e-mail
 {% if false %}

@@ -37,7 +37,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Homework 2</b></td>
-    <td>Nov. 14, 2025</td>
+    <td>Nov. 13, 2025</td>
     <td>Dec. 3, 2025 22:00</td>
   </tr>
   <tr>
