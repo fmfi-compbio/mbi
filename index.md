@@ -13,7 +13,7 @@ Students from the Faculty of Natural Sciences are very welcome, as are guests fr
   - Tutorial for computer science (BIN, INF, mINF, mAIN, DAV): Thursday
     14:00-15:30 F1-109
   - Tutorial for biologists (PriFUK, physics): Thursday 17:20-18:50
-    M-217
+    F2-T3
 
 ### Instructors
 
