@@ -2,7 +2,7 @@
 title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
 ---
 
-## Používanie počítačov v M 217
+## Používanie počítačov v F2-T3
 
   - V textovom menu pri štarte zvoľte Linux, v prihlasovacom menu
     zadajte užívatela bioinf, heslo dostanete
@@ -15,13 +15,15 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
 ## UCSC genome browser
 
   - On-line grafický nástroj na prezeranie genómov
-  - Konfigurovateľný, veľa možností, ale pomerne málo organizmov
+  - Konfigurovateľný, veľa možností
+    - dôraz na ľudský genóm, ale majú aj veľa ďalších
+    - možnosť obraziť vlastné dáta
   - V programe Firefox choďte na stránku UCSC genome browser
     <https://genome-euro.ucsc.edu/> (európsky mirror stránky
     <https://genome.ucsc.edu/> )
-  - Hore v modrom menu zvoľte Genomes, potom zvoľte ľudský genóm verzia
-    hg38. Do okienka `search term` zadajte HOXA2. Vo výsledkoch hľadania
-    (Gencode genes) zvoľte gén homeobox A2 na chromozóme 7.
+  - Hore v modrom menu zvoľte `Genomes`, potom zvoľte ľudský genóm verzia
+    `hg38`. Do okienka `search term` zadajte `HOXA2`. Vo výsledkoch hľadania
+    (`Gencode genes`) zvoľte gén HOXA2 (homeobox A2) na chromozóme 7.
       - Pozrime si spolu túto stránku
       - V hornej časti sú ovládacie prvky na pohyb vľavo, vpravo,
         približovanie, vzďaľovanie
@@ -47,22 +49,22 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
   - Vráťte sa na UCSC genome browser <https://genome-euro.ucsc.edu/>
   - Pozrieme si niekoľko vecí týkajúcich sa sekvenovania a skladania
     genómov
-  - Hore v modrom menu zvoľte Genomes, časť Other
-  - Na ďalšej stránke zvoľte človeka a pomocou menu Human Assembly
+  - Hore v modrom menu zvoľte `Genomes`, časť `Other`
+  - Na ďalšej stránke zvoľte človeka a pomocou menu `Human Assembly`
     **zistite, kedy boli pridané posledné tri verzie ľudského genómu
     (hg19, hg38, hs1)**
   - Na tej istej stránke dole nájdete stručný popis zvolenej verzie
     genómu. **Pre ktoré oblasti genómu máme v hg38 najviac
     alternatívnych verzií?**
   - Prejdite na región chr21:31,250,000-31,300,000 v hg19 [touto linkou](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr21%3A31250000-31300000).
-  - Zapnite si tracky Mapability a RepeatMasker na "full"
+  - Zapnite si tracky `Mapability` a `RepeatMasker` na `full`
   - Mapability: nakoľko sa daný úsek opakuje v genóme a či teda vieme
     jednoznačne jeho čítania namapovať pri použití Next generation
     sequencing
   - Ako a prečo sa pri rôznych dĺžkach čítaní líšia? (Keď kliknete na
-    linku "Mapability", môžete si prečítať bližšie detaily.)
+    linku `Mapability`, môžete si prečítať bližšie detaily.)
   - Približne v strede zobrazeného regiónu je pokles mapovateľnosti.
-    **Akému typu opakovania zodpovedá?** (pozrite track RepeatMasker)
+    **Akému typu opakovania zodpovedá?** (pozrite track `RepeatMasker`)
   - Pozrite si región
     chr2:110,000,000-110,300,000 v hg19
     [touto linkou](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg19&position=chr2%3A110000000-110300000), zapnite si tracky "Assembly" a "Gaps".
@@ -70,7 +72,7 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
     Približnú veľkosť môžete odčítať z obrázku, presnejší údaj zistíte
     kliknutím na čierny obdĺžnik zodpovedajúci tejto medzere (úplne
     presná dĺžka aj tak nebola známa, nakoľko nebola osekvenovaná).
-  - Cez menu položku View, In other genomes si pozrite, ako zobrazený
+  - Cez menu položku `View`, `In other genomes` si pozrite, ako zobrazený
     úsek vyzerá vo verzii hg38 and hs1. Ako sa zmenila dĺžka z
     pôvodných 300kb?
 
@@ -100,17 +102,18 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
 
   - Stiahnite si [kontigy](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/spades.fasta),
     uložte ako súbor
-  - V ľavom menu zvolíme Upload Data a nahráme stiahnutý súbor
-  - V časti Tools v ľavom menu zadáme do vyhľadávania Quast, zvolíme
+  - Vľavo hore zvolíme ikonu `Upload` a nahráme stiahnutý súbor
+  - V časti `Tools` v ľavom menu zadáme do vyhľadávania `Quast`, zvolíme
     Quast
-      - Ako Contigs/scaffolds file zadáme nahratý súbor, ostatné položky
-        necháme predvolené, stlačíme Execute
+      - Ako `Assembly mode` zvolíme `Individual assembly`
+      - Ako `Contigs/scaffolds file` zadáme nahratý súbor, ostatné položky
+        necháme predvolené, stlačíme `Run Tool`
   - Druhá analýza: porovnanie poskladaných kontigov so správnou
     odpoveďou (ak je známa)
       - [Skutočná E.coli
         sekvencia](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/ref.fasta),
         ktorú sme chceli dostať
-      - Dá sa zadať do nástroja Quast, ak zvolíte Yes v `Use a reference
+      - Dá sa zadať do nástroja Quast, ak zvolíte `Yes` v `Use a reference
         genome` a tento súbor nahráte ako `Reference genome`
 
 Ďalšie dáta pre záujemcov:
