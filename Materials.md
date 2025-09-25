@@ -35,23 +35,23 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Introduction, course rules, sequencing and genome assembly
 
-{% include pdf.html file="p-intro" name="pdf 1" show=0 dot=1
-%} {% include pdf.html file="p-seq" name="pdf 2" show=0 dot=1
-%} {% include youtube.html id="3HI-wKmTuSs" name="video 1" show=0 dot=1
-%} {% include youtube.html id="iHt5WPVFd7E" name="video 2" show=0 dot=1
+{% include pdf.html file="p-intro" name="pdf 1" show=1 dot=1
+%} {% include pdf.html file="p-seq" name="pdf 2" show=1 dot=1
+%} {% include youtube.html id="3HI-wKmTuSs" name="video 1" show=1 dot=1
+%} {% include youtube.html id="iHt5WPVFd7E" name="video 2" show=1 dot=1
 %} BV chapter 1
 
 #### TI: Introduction to biology
 
-{% include pdf.html file="ci-introbio" name="pdf" show=0 dot=1
-%} {% include notes.html file="ci-introbio" name="notes" show=0 dot=1
-%} {% include youtube.html id="EtPqUOHTJD4" name="video" show=0 dot=1
+{% include pdf.html file="ci-introbio" name="pdf" show=1 dot=1
+%} {% include notes.html file="ci-introbio" name="notes" show=1 dot=1
+%} {% include youtube.html id="EtPqUOHTJD4" name="video" show=1 dot=1
 %} ZB chapter 1
 
 #### TB: Introduction to computer science, UCSC genome browser
 
-{% include pdf.html file="cb-introcs" name="pdf" show=0 dot=1
-%} {% include notes.html file="cb-browser" name="notes" show=0 dot=0
+{% include pdf.html file="cb-introcs" name="pdf" show=1 dot=1
+%} {% include notes.html file="cb-browser" name="notes" show=1 dot=0
 %}
 
 <a name="W2"></a>
