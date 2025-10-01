@@ -18,7 +18,7 @@ title: "Cvičenie pre biológov: Úvod do pravdepodobnosti"
 Hodíme idealizovanou kockou, premenná *X* bude hodnota, ktorú dostaneme
 
   - Možné hodnoty 1,2,..,6, každá rovnako pravdepodobná
-  - Píšeme napr. $Pr(X=2)=1/6$
+  - Píšeme napr. $\Pr(X=2)=1/6$
 
 ## Príklad 2: Dva hody kockou
 
@@ -77,7 +77,7 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
       - Pravdepodobnosti navzájom sa vylučujúcich udalostí ($X_1=A$ a $X_1=C$)
         sa môžu sčítať, čím dostaneme pravdepodobnosť, že aspoň jedna z
         nich nastane
-  - $Pr(\mbox{v sekvencii je aspoň jedno A}) = \Pr(X_1=A\mobx{ alebo }X_2=A)$ nemôžeme
+  - $\Pr(\mbox{v sekvencii je aspoň jedno A}) = \Pr(X_1=A\mbox{ alebo }X_2=A)$ nemôžeme
     počítať ako $\Pr(X_1=A)+\Pr(X_2=A)$, lebo sa navzájom nevylučujú a
     prípad, že $X_1=A$ a $X_2=A$ by sme započítali dvakrát
   - Správne je $\Pr(X_1=A \,\mathrm{alebo}\, X_2=A)$
@@ -87,7 +87,7 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
   - $\Pr(X_1=X_2) = \Pr(X_1=X_2=A) + \Pr(X_1=X_2=C) + \Pr(X_1=X_2=G) + \Pr(X_1=X_2=T)$ $=
     0.3\cdot 0.3+0.2\cdot 0.2+0.2\cdot 0.2+0.3\cdot 0.3 = 0.26$
   - Ak u označíme pravdepodobnosť $u =
-    \Pr(X_1=A)=\Pr(X_1=T)=\Pr(X_2=A)=Pr(X_2=T)$ a
+    \Pr(X_1=A)=\Pr(X_1=T)=\Pr(X_2=A)=\Pr(X_2=T)$ a
     $v=\Pr(X_1=C)=\Pr(X_1=G)=\Pr(X_2=C)=\Pr(X_2=G)$, aký bude vzorec pre
     $\Pr(X_1=X_2)$?
 
