@@ -2,26 +2,27 @@
 title: "Cvičenie pre biológov: Úvod do pravdepodobnosti"
 ---
 
+* TOC
+{:toc}
 
-
-  - Myšlienkový experiment, v ktorom vystupuje náhoda, napr. hod
-    ideálnou kockou/korunou
-  - Výsledkom experimentu je nejaká hodnota (napr. číslo, alebo aj
-    niekoľko čísel, reťazec)
+  - Myšlienkový experiment, v ktorom vystupuje náhoda, napr. hod ideálnou kockou/korunou
+  - Výsledkom experimentu je nejaká hodnota (napr. číslo, alebo aj niekoľko čísel, reťazec)
   - Túto neznámu hodnotu budeme volať **náhodná premenná**
   - Zaujíma nás **pravdepodobnosť**, s akou náhodná premenná nadobúda
     jednotlivé možné hodnoty
   - T.j. ak experiment opakujeme veľa krát, ako často uvidíme nejaký
     výsledok
 
-Príklad 1: hodíme idealizovanou kockou, premenná X bude hodnota, ktorú
-dostaneme
+## Príklad 1: hod kockou
+
+Hodíme idealizovanou kockou, premenná *X* bude hodnota, ktorú dostaneme
 
   - Možné hodnoty 1,2,..,6, každá rovnako pravdepodobná
-  - Píšeme napr. Pr(X=2)=1/6
+  - Píšeme napr. $Pr(X=2)=1/6$
 
-Príklad 2: hodíme 2x kockou, náhodná premenná X bude súčet hodnôt, ktoré
-dostaneme
+## Príklad 2: Dva hody kockou
+
+Hodíme 2x kockou, náhodná premenná *X* bude súčet hodnôt, ktoré dostaneme
 
   - Možné hodnoty: 2,3,...,12
   - Každá dvojica hodnôt (1,1), (1,2),...,(6,6) na kocke rovnako
@@ -32,13 +33,13 @@ dostaneme
     pre každú možnú hodnotu)
 
 ```
-hodnota i:   2     3     4     5     6     7     8     9     10    11    12
-Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
+hodnota k:    2     3     4     5     6     7     8     9     10    11    12
+Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 ```
 
   - Overte, ze súčet pravdepodobností je 1
 
-**Stredná hodnota E(X):**
+## Stredná hodnota E(X)
 
   - priemer z možných hodnôt váhovaných ich pravdepodobnosťami
   - v našom príklade
@@ -54,7 +55,7 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
       - Pozor, pre súčin a iné funkcie takéto vzťahy platiť nemusia,
         napr. $E(X_1 \cdot X_2)$ nie je vždy $E(X_1) \cdot E(X_2)$
 
-### Pravdepodobnostný model náhodnej sekvencie
+## Pravdepodobnostný model náhodnej sekvencie
 
   - Napríklad chceme modelovať náhodnú DNA sekvenciu dĺžky n s obsahom
     GC 40%
@@ -66,7 +67,7 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
   - Vytiahnime z mechu 2x guľôčku. Prvé písmeno, ktoré nám vyjde,
     označme X1 a druhé X2
   - Pr(X1=A) = 0.3, Pr(X2=C)=0.2
-  - Pr(X1=A a X2=C) = Pr(X1=A)\*Pr(X2=C) = 0.3\*0.2 = 0.06
+  - $\Pr(X1=A a X2=C) = \Pr(X1=A)\cdot \Pr(X2=C) = 0.3\cdot 0.2 = 0.06$
       - T.j. šanca, že dostaneme sekvenciu AC po dvoch ťahoch je 6%
       - Ak rátame pravdepodobnosť, že sa dve nezávislé udalosti stanú
         súčasne, ich pravdepodobnosti násobíme. V tomto prípade to, či
@@ -83,19 +84,20 @@ Pr(X=i):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
     $= \Pr(X_1=A) + \Pr(X_1 \ne A \,\mathrm{a}\, X_2=A)$
     $= \Pr(X_1=A) + \Pr(X_1 \ne A) \cdot \Pr(X_2=A)$
     $= 0.3+0.7\cdot 0.3 = 0.51$
-  - Pr(X1=X2) = Pr(X1=X2=A) + Pr(X1=X2=C) + Pr(X1=X2=G) + Pr(X1=X2=T) =
-    0.3\*0.3+0.2\*0.2+0.2\*0.2+0.3\*0.3 = 0.26.
-  - Ak u označíme pravdepodobnosť u =
-    Pr(X1=A)=Pr(X1=T)=Pr(X2=A)=Pr(X2=T) a
-    v=Pr(X1=C)=Pr(X1=G)=Pr(X2=C)=Pr(X2=G), aký bude vzorec pre
-    Pr(X1=X2)?
+  - $\Pr(X_1=X_2) = \Pr(X_1=X_2=A) + \Pr(X_1=X_2=C) + \Pr(X_1=X_2=G) + \Pr(X_1=X_2=T) =
+    0.3\cdot 0.3+0.2\cdot 0.2+0.2\cdot 0.2+0.3\cdot 0.3 = 0.26$.
+  - Ak u označíme pravdepodobnosť $u =
+    \Pr(X_1=A)=\Pr(X_1=T)=\Pr(X_2=A)=Pr(X_2=T)$ a
+    $v=\Pr(X_1=C)=\Pr(X_1=G)=\Pr(X_2=C)=\Pr(X_2=G)$, aký bude vzorec pre
+    $\Pr(X_1=X_2)$?
 
-**Príklad použitia modelu:** Máme krátky primer AACAT. Koľko bude mať v
-priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
+### Príklad použitia modelu
+
+Máme krátky primer AACAT. Koľko bude mať v priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
 
   - Pravdepodobnosť, ze AACAT je v náhodnej sekvencii hneď na začiatku
-    je Pr(X1=A a X2=A a X3=C a X4=A a X5=A) = 0.3\*0.3\*0.2\*0.3\*0.3 =
-    0.00162
+    je $Pr(X_1=A\mbox{ a }X_2=A a X_3=C a X_4=A a X_5=A) = 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
+    0.00162$
   - Rovnaká pravdepodobnosť aj na pozícii 2,3,...996
   - Nech *V* je počet výskytov v celej sekvencii (náhodná premenná s
     možnými hodnotami 0,1,...,996, aj keď napr. 996 to určite nemôže
