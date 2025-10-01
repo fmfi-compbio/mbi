@@ -84,8 +84,8 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
     $= \Pr(X_1=A) + \Pr(X_1 \ne A \,\mathrm{a}\, X_2=A)$
     $= \Pr(X_1=A) + \Pr(X_1 \ne A) \cdot \Pr(X_2=A)$
     $= 0.3+0.7\cdot 0.3 = 0.51$
-  - $\Pr(X_1=X_2) = \Pr(X_1=X_2=A) + \Pr(X_1=X_2=C) + \Pr(X_1=X_2=G) + \Pr(X_1=X_2=T) =
-    0.3\cdot 0.3+0.2\cdot 0.2+0.2\cdot 0.2+0.3\cdot 0.3 = 0.26$.
+  - $\Pr(X_1=X_2) = \Pr(X_1=X_2=A) + \Pr(X_1=X_2=C) + \Pr(X_1=X_2=G) + \Pr(X_1=X_2=T)$ $=
+    0.3\cdot 0.3+0.2\cdot 0.2+0.2\cdot 0.2+0.3\cdot 0.3 = 0.26$
   - Ak u označíme pravdepodobnosť $u =
     \Pr(X_1=A)=\Pr(X_1=T)=\Pr(X_2=A)=Pr(X_2=T)$ a
     $v=\Pr(X_1=C)=\Pr(X_1=G)=\Pr(X_2=C)=\Pr(X_2=G)$, aký bude vzorec pre
@@ -96,7 +96,7 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 Máme krátky primer AACAT. Koľko bude mať v priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
 
   - Pravdepodobnosť, ze AACAT je v náhodnej sekvencii hneď na začiatku
-    je $\Pr(X_1=A\mbox{ a }X_2=A\mbox{ a }X_3=C\mbox{ a }X_4=A\mbox{ a }X_5=A) = 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
+    je $\Pr(X_1=A\mbox{ a }X_2=A\mbox{ a }X_3=C\mbox{ a }X_4=A\mbox{ a }X_5=A)$ $= 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
     0.00162$
   - Rovnaká pravdepodobnosť aj na pozícii 2,3,...996
   - Nech *V* je počet výskytov v celej sekvencii (náhodná premenná s
