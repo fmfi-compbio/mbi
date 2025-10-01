@@ -47,11 +47,11 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
   - Ak by sme experiment opakovali veľa krát a zrátali priemer hodnôt X,
     ktoré nám vyšli, dostali by sme číslo blízke E(X)
   - Iný výpočet strednej hodnoty:
-      - X=X1+X2, kde X1 je hodnota na prvej kocke a X2 je hodnota na
+      - $X=X_1+X_2$, kde $X_1$ je hodnota na prvej kocke a $X_2$ je hodnota na
         druhej kocke
       - $E(X_1) = 1\cdot \frac{1}{6} + ... + 6\cdot \frac{1}{6}  = 3.5$,
-        podobne aj E(X2) = 3.5
-      - Platí, že E(X1+X2)=E(X1) + E(X2) a teda E(X) = 3.5 + 3.5 = 7
+        podobne aj $E(X_2) = 3.5$
+      - Platí, že $E(X_1+X_2)=E(X_1) + E(X_2)$ a teda $E(X) = 3.5 + 3.5 = 7$
       - Pozor, pre súčin a iné funkcie takéto vzťahy platiť nemusia,
         napr. $E(X_1 \cdot X_2)$ nie je vždy $E(X_1) \cdot E(X_2)$
 
@@ -65,21 +65,21 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
     a opakujeme s ďalším písmenom atď, až kým nevygenerujeme n písmen
 
   - Vytiahnime z mechu 2x guľôčku. Prvé písmeno, ktoré nám vyjde,
-    označme X1 a druhé X2
-  - Pr(X1=A) = 0.3, Pr(X2=C)=0.2
-  - $\Pr(X1=A a X2=C) = \Pr(X1=A)\cdot \Pr(X2=C) = 0.3\cdot 0.2 = 0.06$
+    označme $X_1$ a druhé $X_2$
+  - $\Pr(X_1=A) = 0.3$, $\Pr(X_2=C)=0.2$
+  - $\Pr(X_1=A\mbox{ a }X_2=C) = \Pr(X_1=A)\cdot \Pr(X_2=C) = 0.3\cdot 0.2 = 0.06$
       - T.j. šanca, že dostaneme sekvenciu AC po dvoch ťahoch je 6%
       - Ak rátame pravdepodobnosť, že sa dve nezávislé udalosti stanú
         súčasne, ich pravdepodobnosti násobíme. V tomto prípade to, či
-        X1=A je nezávislé od toho, či X2=C
-  - Pr(X1 je A alebo C) = Pr(X1=A)+Pr(X1=C) = 0.3+0.2 = 0.5
+        $X_1=A$ je nezávislé od toho, či $X_2=C$
+  - $\Pr(X_1\mbox{ je A alebo C}) = \Pr(X_1=A)+\Pr(X_1=C) = 0.3+0.2 = 0.5
       - Pravdepodobnosť, že prvé písmeno bude A alebo C je 50%
-      - Pravdepodobnosti navzájom sa vylučujúcich udalostí (X1=A a X1=C)
+      - Pravdepodobnosti navzájom sa vylučujúcich udalostí ($X_1=A$ a $X_1=C$)
         sa môžu sčítať, čím dostaneme pravdepodobnosť, že aspoň jedna z
         nich nastane
-  - Pr(v sekvencii je aspoň jedno A) = Pr(X1=A alebo X2=A) nemôžeme
-    počítať ako Pr(X1=A)+Pr(X2=A), lebo sa navzájom nevylučujú a
-    prípad, že X1=A a X2=A by sme započítali dvakrát
+  - $Pr(\mbox{v sekvencii je aspoň jedno A}) = \Pr(X_1=A\mobx{ alebo }X_2=A)$ nemôžeme
+    počítať ako $\Pr(X_1=A)+\Pr(X_2=A)$, lebo sa navzájom nevylučujú a
+    prípad, že $X_1=A$ a $X_2=A$ by sme započítali dvakrát
   - Správne je $\Pr(X_1=A \,\mathrm{alebo}\, X_2=A)$
     $= \Pr(X_1=A) + \Pr(X_1 \ne A \,\mathrm{a}\, X_2=A)$
     $= \Pr(X_1=A) + \Pr(X_1 \ne A) \cdot \Pr(X_2=A)$
@@ -96,7 +96,7 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 Máme krátky primer AACAT. Koľko bude mať v priemere výskytov v sekvencii dĺžky 1000 v našom modeli?
 
   - Pravdepodobnosť, ze AACAT je v náhodnej sekvencii hneď na začiatku
-    je $Pr(X_1=A\mbox{ a }X_2=A a X_3=C a X_4=A a X_5=A) = 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
+    je $\Pr(X_1=A\mbox{ a }X_2=A\mbox{ a }X_3=C\mbox{ a }X_4=A\mbox{ a }X_5=A) = 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
     0.00162$
   - Rovnaká pravdepodobnosť aj na pozícii 2,3,...996
   - Nech *V* je počet výskytov v celej sekvencii (náhodná premenná s
