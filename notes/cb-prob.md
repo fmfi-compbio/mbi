@@ -72,7 +72,7 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
       - Ak rátame pravdepodobnosť, že sa dve nezávislé udalosti stanú
         súčasne, ich pravdepodobnosti násobíme. V tomto prípade to, či
         $X_1=A$ je nezávislé od toho, či $X_2=C$
-  - $\Pr(X_1\mbox{ je A alebo C}) = \Pr(X_1=A)+\Pr(X_1=C) = 0.3+0.2 = 0.5
+  - $\Pr(X_1\mbox{ je A alebo C}) = \Pr(X_1=A)+\Pr(X_1=C) = 0.3+0.2 = 0.5$
       - Pravdepodobnosť, že prvé písmeno bude A alebo C je 50%
       - Pravdepodobnosti navzájom sa vylučujúcich udalostí ($X_1=A$ a $X_1=C$)
         sa môžu sčítať, čím dostaneme pravdepodobnosť, že aspoň jedna z
