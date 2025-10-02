@@ -65,7 +65,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Introduction to probability, genome coverage by sequencing reads
 
-{% include notes.html file="ci-prob" name="notes" show=1 dot=1
+{% include notes.html file="ci-prob-en" name="notes" show=1 dot=1
+%} {% include notes.html file="ci-prob" name="notes (sk, older)" show=1 dot=1
 %} {% include notebook.html file="ci-prob" name="colab" show=1 dot=0
 %}
 
