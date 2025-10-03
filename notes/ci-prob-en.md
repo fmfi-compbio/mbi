@@ -82,21 +82,21 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
   with the Poisson distribution with parameter $\lambda = E(X) = N \cdot p$, which has
   $\Pr(X_j = k)=e^{-\lambda}\lambda^k / k!$
 
-#### E(X) when X~Bin(N,p)
-1. We have N trials each one with two outcomes (Success = 1 and Failure = 0). Probability of success is p (probability for failure is 1-p).
-2. Since we have N independent trials, we can write our distribution as a sum of indicator variables $T_i$, each one referring to a specific trial.
+##### E(X) when X~Bin(N,p)
+- We have N trials each one with two outcomes (Success = 1 and Failure = 0). Probability of success is p (probability for failure is 1-p).
+- Since we have N independent trials, we can write our distribution as a sum of indicator variables $T_i$, each one referring to a specific trial.
 
 $$X = T_1 + T_2 + ... + T_N$$
 
-3. Thanks to the linearity of expected value:
+- Thanks to the linearity of expected value:
 
 $$E(X) = E(T_1 + T_2 + ... + T_N) = E(T_1) + E(T_2) + ... + E(T_N)$$
 
-4. We have two outcomes for each trial (1 with probability p and 0 with probability 1-p):
+- We have two outcomes for each trial (1 with probability p and 0 with probability 1-p):
 
 $$E(T_i) = p \cdot 1 + (1-p) \cdot 0 = p$$
 
-5. Therefore:
+- Therefore:
 
 $$E(X) = N \cdot p$$
 
