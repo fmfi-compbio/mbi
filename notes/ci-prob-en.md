@@ -71,13 +71,34 @@ Pr(X=k):    1/36  2/36  3/36  4/36  5/36  6/36  5/36  4/36  3/36  2/36  1/36
 ```
 
 - $\Pr(X=3) = 1/64$, $\Pr(X=2)=9/64$, $\Pr(X=1)=27/64$, $\Pr(X=0)=27/64$.
-- This probability distribution is called binomial.
+- This probability distribution is called binomial. X follows a binomial distribution with parameters N and p (X~Bin(N,p)). Such a distribution is characterized by:
+  - N indipendent trials
+  - 2 outcomes for each trial: success/failure (e.g., head/tail)
+  - fixed probabilities p and 1-p for success and failure, respectively
 - $Pr(X = k) = {N \choose k} p^k (1-p)^{N-k}$, where
   ${N \choose k} = \frac{N!}{k!(N-k)!}$ and $n! = 1\cdot 2 \cdots  n$
 - For example, for the case with three coin tosses $\Pr(X=2) = 3!/(2!\cdot 1!) \cdot (1/4)^2 \cdot (3/4)^1 = 9/64$
 - It is hard to compute for large N, so for large N and small p, we sometimes use an approximation
-  with the Poisson distribution with parameter $\lambda = Np$, which has
+  with the Poisson distribution with parameter $\lambda = E(X) = N \cdot p$, which has
   $\Pr(X_j = k)=e^{-\lambda}\lambda^k / k!$
+
+#### E(X) when X~Bin(N,p)
+1. We have N trials each one with two outcomes (Success = 1 and Failure = 0). Probability of success is p (probability for failure is 1-p).
+2. Since we have N independent trials, we can write our distribution as a sum of indicator variables $T_i$, each one referring to a specific trial.
+
+$$X = T_1 + T_2 + ... + T_N$$
+
+3. Thanks to the linearity of expected value:
+
+$$E(X) = E(T_1 + T_2 + ... + T_N) = E(T_1) + E(T_2) + ... + E(T_N)$$
+
+4. We have two outcomes for each trial (1 with probability p and 0 with probability 1-p):
+
+$$E(T_i) = p \cdot 1 + (1-p) \cdot 0 = p$$
+
+5. Therefore:
+
+$$E(X) = N \cdot p$$
 
 
 ## Calculating Genome Coverage (Počítanie pokrytia genómov)
