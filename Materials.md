@@ -65,7 +65,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Introduction to probability, genome coverage by sequencing reads
 
-{% include notes.html file="ci-prob-en" name="notes" show=1 dot=1
+{% include notes.html file="ci-prob-en" name="notes (en, current)" show=1 dot=1
 %} {% include notes.html file="ci-prob" name="notes (sk, older)" show=1 dot=1
 %} {% include notebook.html file="ci-prob" name="colab" show=1 dot=0
 %}
@@ -87,7 +87,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="0GkhkRiqbl4" name="video" show=0 dot=1
 %} BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2
 
-#### TI: Introduction to dynamic programming, proteomics
+#### TI: Burrows-Wheeler transform
 
 {% include notes.html file="ci-msms" name="notes" show=0 dot=1
 %} {% include notebook.html file="ci-msms" name="colab" show=0 dot=1

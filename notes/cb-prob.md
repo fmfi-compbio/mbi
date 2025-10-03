@@ -98,18 +98,18 @@ Máme krátky primer AACAT. Koľko bude mať v priemere výskytov v sekvencii d�
   - Pravdepodobnosť, ze AACAT je v náhodnej sekvencii hneď na začiatku
     je $\Pr(X_1=A\mbox{ a }X_2=A\mbox{ a }X_3=C\mbox{ a }X_4=A\mbox{ a }X_5=A)$ $= 0.3\cdot 0.3\cdot 0.2\cdot 0.3\cdot 0.3 =
     0.00162$
-  - Rovnaká pravdepodobnosť aj na pozícii 2,3,...996
+  - Rovnaká pravdepodobnosť aj na pozícii 2,3,...,996
   - Nech *V* je počet výskytov v celej sekvencii (náhodná premenná s
     možnými hodnotami 0,1,...,996, aj keď napr. 996 to určite nemôže
     byť)
-  - Ideálne by sme chceli spočítať celú tabuľku pravdepodobností pre V,
-    ale uspokojíme sa aj so strednou hodnotou E(V)
-  - Nech Vi je počet výskytov na pozícii i (čo je vždy 0 alebo 1)
+  - Ideálne by sme chceli spočítať celú tabuľku pravdepodobností pre $V$,
+    ale uspokojíme sa aj so strednou hodnotou $E(V)$
+  - Nech $V_i$ je počet výskytov na pozícii *i* ($V_i$ je vždy 0 alebo 1)
   - $V = V_1+V_2+\dots+V_{996} = \sum_{i=1}^{996} V_i$
   - $E(V) = E(V_1)+E(V_2)+\dots+E(V_{996}) = 996 E(V_1)$
   - $E(V_1) = 0\cdot \Pr(V_1=0)+1\cdot \Pr(V_1=1) = \Pr(V_1=1) = 0.00162$
   - $E(V) = 996\cdot 0.00162 = 1.61352$
-  - Takže primer AACAT sa v priemere bude v náhodnej sekvencii dĺžky
+  - Takže primer AACAT sa bude v náhodnej sekvencii dĺžky
     1000 s 40% obsahom GC vyskytovať v priemere cca 1,6 krát
   - Primery bývajú dlhšie, takže šanca náhodných výskytov je oveľa
     menšia, čo je to, čo vačšinou chceme (chceme primer cieliť na
@@ -117,5 +117,5 @@ Máme krátky primer AACAT. Koľko bude mať v priemere výskytov v sekvencii d�
 
 ## Použitie pravdepodobnosti na analýzu potrebného pokrytia pri sekvenovaní
 
-Pozri [cvičenia pre informatikov](./ci-prob.html)
+Pozri [cvičenia pre informatikov](./ci-prob-en.html)
 
