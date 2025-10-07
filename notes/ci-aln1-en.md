@@ -1,5 +1,5 @@
 ---
-title: "Exercises for Computer Scientists: Advanced Sequence Alignment Algorithms"
+title: "Tutorial for Computer Scientists: Advanced Sequence Alignment Algorithms"
 ---
 
 * TOC
