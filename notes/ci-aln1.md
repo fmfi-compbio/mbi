@@ -2,11 +2,14 @@
 title: "Cvičenia pre informatikov: Pokročilé algoritmy na zarovnávanie sekvencií"
 ---
 
+* TOC
+{:toc}
+
 ## Opakovanie dynamického programovania pre globálne zarovnanie
 
 Uvažujme napríklad skórovanie zhoda +1, nezhoda -1, medzera -1 a vstupné
-sekvencie $X=x_1\dots x_m$ a $Y=y_1\dots y_n$. Nech s(x,y) je skóre
-písmen x a y, t.j. 1 ak sa zhodujú a -1 ak nie. Máme rekurenciu:
+sekvencie $X=x_1\dots x_m$ a $Y=y_1\dots y_n$. Nech $s(x,y)$ je skóre
+písmen *x* a *y*, t.j. 1 ak sa zhodujú a -1 ak nie. Máme rekurenciu:
 
 $A[i,j]=\max\left\\{A[i-1,j-1]+s(x_i,y_j), A[i-1,j]-1, A[i,j-1]-1\right\\}$
 
@@ -27,7 +30,7 @@ orientovaného grafu:
   - súčet súradníc na každej hrane rastie, graf teda nemôže obsahovať
     cyklus, je acyklický
   - každá cesta z (0,0) do (m,n) zodpovedá zarovnaniu, jej cena je cenou
-    zarovnania (každá hrana jeden stĺpec)
+    zarovnania (každá hrana jeden stĺpec zarovnania)
   - optimálne zarovnanie teda zodpovedá ceste s maximálnou cenou
 
 ## Krátka vsuvka o acyklických orientovaných grafoch
@@ -110,12 +113,12 @@ Toto je obvykla chyba pri dynamickom programovani:
 Riesenie 1:
 
   - Pridame hrany pre cele suvisle useky medzier so spravnou cenou
-  - (i,j)-\>(i,k) s cenou o+(k-j)e
-  - (i,j)-\>(k,j) s cenou o+(k-i)e
-  - Cas O(mn(m+n)), t.j. kubicky
+  - $(i,j)\rightarrow (i,k)$ s cenou $o+(k-j)e$
+  - $(i,j)\rightarrow (k,j)$ s cenou $o+(k-i)e$
+  - Cas $O(mn(m+n))$, t.j. kubicky
   - pozor, mame aj cesty, ktore nezopodvedaju ziadnemu spravnemu skore,
-    napr. (i.j)-\>(i+1,j)-\>(i+2,j) ma cenou 2o, ale ma mat o+e.
-    Nastastie hrana (i,j)-\>(i+2,j) ma vyssiu cenu o+e, takze cesta s cenou 2o
+    napr. $(i.j)\rightarrow (i+1,j)\rightarrow (i+2,j)$ ma cenou 2o, ale ma mat o+e.
+    Nastastie hrana $(i,j)\rightarrow (i+2,j)$ ma vyssiu cenu o+e, takze cesta s cenou 2o
     sa nepouzije.
 
 Riesenie 2:
@@ -186,12 +189,12 @@ Casova zlozitost:
   - Na tretej urovni mame 4 podproblemy N11, N12, N21, N22, pricom
     N11+N12 \<= N1/2 a N21+N22 \<= N2/2 a teda celkovy sucet
     podproblemov na druhej urovni je najviac N/4.
-
-Na stvrtej urovni je sucet podproblemov najviac N/8 atd. Dostavame
-geometricky rad cN+cn/2+cN/4+... ktoreho sucet je 2cN.
+  - Na stvrtej urovni je sucet podproblemov najviac N/8 atd. 
+Dostavame geometricky rad cN+cn/2+cN/4+... ktoreho sucet je 2cN.
 
 ## Vypísanie všetkých najlepších riešení
 
+  - Uvažujme napríklad "obyčajné" globálne zarovnanie
   - Namiesto jednej spatnej sipky si pamatame vsetky, ktore v danom
     A\[i,j\] viedli k maximalnej cene
   - Potom mozeme rekurzivne prehladavat a vypisovat vsetky cesty z (m,n)
