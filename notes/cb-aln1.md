@@ -61,8 +61,9 @@ Dáta:
 
 Mitochondriálne genómy 
 - Človek *Homo sapiens* https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1/
-- Ryba *Danio rerio* https://www.ncbi.nlm.nih.gov/nuccore/NC_002333.2/
+- Rybička *Danio rerio* https://www.ncbi.nlm.nih.gov/nuccore/NC_002333.2/
 - Muška *Drosophila melanogaster* https://www.ncbi.nlm.nih.gov/nuccore/NC_024511.2/
+
 
 
 ## Dynamické programovanie v Exceli
