@@ -60,13 +60,12 @@ G   0
     <https://pfam.xfam.org/protein/ESCA_DROME> window 8 threshold 24
   - Pomocou YASSu vyskusame kluster zhlukov PRAME z ludskeho genomu
 
-Dáta:
+**Dáta:**
 
 Mitochondriálne genómy 
-- Človek *Homo sapiens* https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1/
-- Rybička *Danio rerio* https://www.ncbi.nlm.nih.gov/nuccore/NC_002333.2/
-- Muška *Drosophila melanogaster* https://www.ncbi.nlm.nih.gov/nuccore/NC_024511.2/
-
+- Človek *Homo sapiens* <https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1/>
+- Rybička *Danio rerio* <https://www.ncbi.nlm.nih.gov/nuccore/NC_002333.2/>
+- Muška *Drosophila melanogaster* <https://www.ncbi.nlm.nih.gov/nuccore/NC_024511.2/>
 
 
 ## Dynamické programovanie v Exceli
@@ -175,4 +174,4 @@ A[i] 100 100 100 100  0    1    2    1    1    2    2    2    2    3
 * Notebook nižšie obsahuje naprogramované dyamické progrmaovanie na zarovnávanie sekvencií.
 * Budeme ho používať aj na domácej úlohe.
 
-{% include notebook.html file="ci-prob" name="colab" show=1 dot=0 %}
+{% include notebook.html file="cb-aln1" name="colab" show=1 dot=0 %}
