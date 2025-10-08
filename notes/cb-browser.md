@@ -2,6 +2,9 @@
 title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
 ---
 
+* TOC
+{:toc}
+
 ## Používanie počítačov v F2-T3
 
   - V textovom menu pri štarte zvoľte Linux, v prihlasovacom menu

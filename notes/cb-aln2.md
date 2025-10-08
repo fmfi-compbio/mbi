@@ -2,6 +2,8 @@
 title: "Cvičenia pre biológov: Zarovnávanie sekvencií"
 ---
 
+* TOC
+{:toc}
 
 ## Skórovacie matice
 

@@ -2,6 +2,9 @@
 title: "Cvičenie pre biológov: Úvod do dynamického programovania"
 ---
 
+* TOC
+{:toc}
+
   - Dynamické programovanie je technika, ktorú uvidíme na ďalšej prednáške na hľadanie zarovnaní
     (alignments)
   - Uvažujme problém platenia pomocou najmenšieho počtu mincí
