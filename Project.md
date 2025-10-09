@@ -25,7 +25,7 @@ In the first three parts you submit a presentation in **pdf format**. Some gener
 * Always include your name and a title of your project.
 * This is a work-in-progress presentation, more similar to an informal team meeting than a formal presentation at a defense or conference.
 * However, help your audience by having all necessary information well-organized.
-* Do not try to add unnecessary formatting / graphics / effects etc. Figures showing important information are welcome, unnecessary clipart is not.
+* Do not add unnecessary formatting / graphics / effects etc. Figures showing important information are welcome, unnecessary clipart is not.
 * Use sufficient font size and color contrasts so that the presentation is visible on a projector.
 
 ## Initial proposal
@@ -54,7 +54,7 @@ It is not necessary to proceed strictly according to the plans presented at this
 
 35% of the final grade
 
-Please submit a pdf with your project report. At this stage we require a written report, not a presentation. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
+Please submit a pdf with your project report. At this stage we require **a written report, not a presentation**. Below we list what should be included in your project, but it is not necessarily a structure of sections in the project. Specifically, you do not need to have separate sections for methods and results, but it is often easier (for both reader and writer) to **interleave** them, e.g. describe methods of one analysis and its results, then another analysis and so on. Cite sources relevant for your project.
 
 
 ### Introduction

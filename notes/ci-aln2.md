@@ -2,57 +2,18 @@
 title: "Cvičenia pre informatikov: Heuristické zarovnávanie sekvencií"
 ---
 
-
-## Vzorec na výpočet senzitivity jadra
-
-  - Uvažujme jadro dĺžky k (ako v programe BLAST pre nukleotidy, na
-    prednáške sa dĺžka jadra označovala w, teraz k)
-  - Uvažujme pravdepodobnostný model zarovnania, v ktorom má každá
-    pozícia pravdepodobnosť p, že bude zhoda a (1-p), ze bude nezhoda
-    alebo medzera, zarovnanie ma dlzku L
-  - Nahodna premenna $X_i = 1$ ak na pozicii i je zhoda, 0 inak
-  - Nahodna premenna $Y_i = 1$ ak na pozicii i zacina jadro, t.j. ak
-    $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
-  - $P(Y_i = 1) = p^k$, nakolko $X_i$ su navzajom nezavisle
-  - Nech $Y = \sum_{i=1}^{L-k-1} Y_i$
-  - Z linearity strednej hodnoty vieme lahko odhadnut
-    $E(Y) = (L-k+1)p^k$
-  - Nas ale zaujima P(Y\>0) = 1-P(Y=0)
-  - $P(Y=0) = P(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
-  - Preco neplati, $P(Y=0) = P(Y_i = 0)^{L-k+1}$?
-      - Jednotlive $Y_i$ nie su nezavisle, napr. $P(Y_{i+1}=1\|Y_i=1)=p$
-      - V postupnosti $Y_i$ sa jednotky maju tendenciu zhlukovat spolu
-  - Pravdepodobnost nepritomnosti jadra $P(Y=0)$ ale vieme spocitat
-    dynamickym programovanim
-  - Nech $A\[n\]$ je pravdepodobnost nepritomnosti jadra v prvých $n$
-    stlcoch zarovnania ($0\le n\le L$)
-  - Budeme rozlisovat pripady podla toho, kolko je na konci $X_1,\dots,X_n$
-    jednotiek
-      - Tento pocet moze byt 0..k-1 (ak by bol $\ge k$, mali by sme vyskyt
-        jadra)
-  
-
-$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\\\\\
-\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k
-\\end{array}\\right.$
-
-  - V druhom riadku $p^i(1-p)$ zodpoveda $P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
-  - A\[n-i-1\] je $P(X_1...X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
-$P(X_1...X_n\mbox{ neobsahuje jadro }\| X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
-
 ## Minimizery: ako ušetriť pamäť a čas
 
-  - k-merom nazveme k za sebou iducich pismen v nejakom retazci
-    (nukleotidov DNA)
+  - $k$-merom nazveme $k$ za sebou iducich pismen v nejakom retazci (nukleotidov DNA)
   - Zakladne pouzite jadier: pri porovnavani dvoch sekvencii (alebo
-    mnozin sekvencii) uloz vsetky k-mery jednej sekvencie do slovnika
-    (napr. hash tabulky), potom prechadzaj vsetky k-mery druhej
+    mnozin sekvencii) uloz vsetky $k$-mery jednej sekvencie do slovnika
+    (napr. hash tabulky), potom prechadzaj vsetky $k$-mery druhej
     sekvencie a hladaj ich v slovniku
 
-  - Priklad k=5,
-      - DB vľavo, k-mery a ich pozície uložené do slovníka,
-      - query vpravo, k-mery hľadané v slovníku, šípkou vyznačené
-        nájdené k-mery (jadrá)
+  - Priklad $k=5$,
+      - DB vľavo, $k$-mery a ich pozície uložené do slovníka,
+      - query vpravo, $k$-mery hľadané v slovníku, šípkou vyznačené
+        nájdené $k$-mery (jadrá zarovnania)
 
 
 ``` 
@@ -73,16 +34,16 @@ AGTGG,0              CGAGG
 ```
 
   - Trik na znizenie potrebnej pamate (napr. program BLAT): ukladaj iba
-    kazdy s-ty k-mer z prvej sekvencie, potom hladaj vsetky k-mery z
+    kazdy $s$-ty $k$-mer z prvej sekvencie, potom hladaj vsetky $k$-mery z
     druhej
   - Trochu znizi aj senzitivitu, ale kedze jadra sa zhlukuju, mame sancu
     aspon jedno jadro zo zhluku najst
-  - Zarucene najdeme jadro, ak mame aspon k+s-1 zhod za sebou
-  - Mohli by sme v query tiež hľadať iba každý s-ty k-mer?
+  - Zarucene najdeme jadro, ak mame aspon $k+s-1$ zhod za sebou
+  - Mohli by sme v query tiež hľadať iba každý $s$-ty $k$-mer?
       - Čo ak by db a query boli to isté, iba v query by chýbalo prvé
         písmeno?
 
-Priklad k=5, s=3, k-mery nalavo sa ulozia, k-mery napravo sa hladaju,
+Priklad $k=5$, $s=3$, $k$-mery nalavo sa ulozia, $k$-mery napravo sa hladaju,
 najde sa jedno jadro
 
 ``` 
@@ -102,16 +63,16 @@ AGTGG,0              CGAGG
                                  GTTGG  
 ```
 
-  - Prefikanejsia idea je **minimizer**: uvazuj vsetky skupiny *s* po
-    sebe iducich k-merov (sliding window), v kazdej skupine najdi
-    abecedne najmensi k-mer (minimizer) a uloz do slovnika
-  - Pri posune okna o jedno doprava casto najmensi k-mer zostava ten
+  - Prefikanejsia idea je **minimizer**: uvazuj vsetky skupiny $s$ po
+    sebe iducich $k$-merov (sliding window), v kazdej skupine najdi
+    abecedne najmensi $k$-mer (minimizer) a uloz do slovnika
+  - Pri posune okna o jedno doprava casto najmensi $k$-mer zostava ten
     isty a netreba ho znovu ukladat, cim sa usetri pamat (a čas)
-  - Rozdiel je pri hladani: v slovniku nehladame vsetky k-mery druhej
+  - Rozdiel je pri hladani: v slovniku nehladame vsetky $k$-mery druhej
     sekvencie, ale tiez len minimizery, co moze usetrit cas
-  - Zarucene najdeme jadro, ak mame aspon k+s-1 zhod za sebou
-  - Priklad k=5, s=3, vlavo: do slovnika sa ulozia k-mery s cislom;
-    vpravo: v slovniku sa hladaju k-mery s hviezdickou, najde sa jedna
+  - Zarucene najdeme jadro, ak mame aspon $k+s-1$ zhod za sebou
+  - Priklad $k=5$, $s=3$, vlavo: do slovnika sa ulozia k-mery s cislom;
+    vpravo: v slovniku sa hladaju $k$-mery s hviezdickou, najde sa jedna
     zhoda
 
 ``` 
@@ -137,19 +98,19 @@ AGTGG,0              CGAGG
     hodnoty su zoznamy citani. Dvojice citani zdielajuce nejaky
     minimizer (binning) sa dostanu do jedneho zoznamu a budu uvazovane
     pri vypocte vzajomneho prekryvu
-  - V praxi sa do slovnika neuklada lexikograficky najmensi k-mer, ale
-    kazdy k-mer sa prehasuje nejakou funkciou f a zoberie sa ten s
+  - V praxi sa do slovnika neuklada lexikograficky najmensi $k$-mer, ale
+    kazdy $k$-mer sa zahashuje nejakou funkciou $f$ a zoberie sa ten s
     minimalnou hodnotou
   - Dovod je, ze sa chceme vyhnut tomu, aby minimizermi boli casto sekvencie
     typu AAAAA, ktore su v biologickych sekvenciach nadreprezentovane a
     casto nie su funkcne zaujimave
   - Priemerna hustota minimizerov v sekvencii pri nahodnom hashovani je
-    cca 2/(s+1)⁠ (v BLATe bola nizsia, 1/s)
+    cca $2/(s+1)$⁠ (v BLATe bola nizsia, $1/s$)
   - Minimizery vyuziva napr. aj minimap2, velmi popularny nastroj na
     zarovnavanie citani navzajom a ku genomom
-      - na zarovnanie nanoporovych citani ku genomu pouziva k=15, s=10,
-        prekryvy v nanoporovych citaniach k=15, s=5, porovnanie genomov
-        s identitou nad 80% k=19, s=10
+      - na zarovnanie nanoporovych citani ku genomu pouziva $k=15$, $s=10$,
+        prekryvy v nanoporovych citaniach $k=15$, $s=5$, porovnanie genomov
+        s identitou nad 80% $k=19$, $s=10$
 
 Literatúra
   - Li, Heng. [Minimap and miniasm: fast mapping and de novo assembly
@@ -212,28 +173,28 @@ pokúsiť sa jej hodnotu vypočítať iba približne (t.j. aproximovať).
 
 **Problémy:**
 
-  - nie je ľahké rovnomerne vzorkovať z $A \cup B$
-  - na zisťovanie, či $u_i$ je v prieniku potrebujeme mat reprezentaciu $A$
-    a $B$ v pamati, co moze byt problem pri velkej kolekcii dokumentov
-  - idea: chceme dostat nejake ine premenne $X_i$, ktore budu nezavisle a
+  - Nie je ľahké rovnomerne vzorkovať z $A \cup B$
+  - Na zisťovanie, či $u_i$ je v prieniku potrebujeme mat reprezentaciu $A$
+    a $B$ v pamati, co moze byt problem pri velkej kolekcii dokumentov.
+  - Idea: chceme dostat nejake ine premenne $X_i$, ktore budu nezavisle a
     ich $E(X_i)=J(A,B)$ a ktore sa budu lahsie pocitat
 
 ### Aproximácia Jaccardovej miery: MinHash
 
 Budeme mať náhodné hašovacie funkcie $h_1, h_2, \dots, h_s$.
 
-O každej hašovacej funkcii predpokladáme, že ak ju použijeme na nejakú
+O každej hašovacej funkcii $h$ predpokladáme, že ak ju použijeme na nejakú
 množinu $A = \{a_1, a_2, \ldots, a_n\}$, tak
 $h(a_1), h(a_2), \ldots, h(a_n)$ bude náhodná permutácia množiny
 $A$.
 
-Pre množinu $A = \{a_1, a_2, \ldots, a_n\}$ a hašovaciu funkciu *h* je
+Pre množinu $A = \{a_1, a_2, \ldots, a_n\}$ a hašovaciu funkciu $h$ je
 $minHash_{h}(A)$ je definovaný nasledovne:
 
 $minHash_h(A) := \min\{h(a_1), h(a_2), \ldots, h(a_n)\}$
 
 Keďže $h$ je náhodná hašovacia funkcia, tak sa na hodnotu
-$minHash(A)$ môžeme pozerať ako na náhodnú premennú, ktorá
+$minHash_h(A)$ môžeme pozerať ako na náhodnú premennú, ktorá
 reprezentuje rovnomerne náhodný výber prvku z množiny $A$.
 
 Nech $X_i$ je náhodná premenná, ktorá nadobúda hodnotu 1, ak
@@ -249,25 +210,25 @@ Algoritmus:
 
   - Pre kazdy dokument hasuj kazde slovo *s* funkciami, najdi minHash
     pre kazdu funkciu a uloz vektor tychto hodnot ako "sketch"
-    dokumentu. Cas vypoctu pre dokument s *n* slovami je $O(ns)$
+    dokumentu.
   - Pre dva dokumenty porovname vektor po zlozkach a ak najdeme $x$
-    zhod, $J(A,B)$ odhadneme ako $x/s$. Cas vypoctu $O(s)$
+    zhod, $J(A,B)$ odhadneme ako $x/s$. Cas vypoctu $O(s)$.
   - Vieme si tiez pre kazdu hasovaciu funkciu spravit slovnik, ktory
     mapuje minHash do zoznamu dokumentov a budeme porovnavat iba dvojice
     dokumentov, ktore sa niekde dostali do toho isteho zoznamu (t.j ich
     odhad $J(A,B)$ bude nenulovy)
 
 Odhad casu a pamate:
- - Majme N dokumentov, kazdy s M slovami dlzky w
- - Vypocet vsetkych sketchov potrebuje cas O(NMsw)
- - Sketche zaberaju pamat O(Ns), dokumenty uz nemusime dalej drzat v pamate (pri vopcte sketchov nam staci vzdy mat v pamati jeden dokument)
- - Porovnanie kazdej dvojice dokumentov trva $O(N^2s)$
+ - Majme $N$ dokumentov, kazdy s $M$ slovami dlzky $w$
+ - Vypocet vsetkych sketchov potrebuje cas $O(NMsw)$
+ - Sketche zaberaju pamat $O(Ns)$, dokumenty uz nemusime dalej drzat v pamate (pri vypocte sketchov mozeme dokumenty citat slovo po slove a v pamati drzime iba aktualanu hodnotu sketchov)
+ - Porovnanie jednej dvojice dokumentov $O(s)$, porovnanie vsetkych dvojic trva $O(N^2s)$
 
 Pre porovnanie, trivialny vypocet presnej Jaccardovej miery pomocou hasovania by trval $O(N^2Mw)$ a vsetky dokumenty zaberaju pamat $O(NMw)$. Ak je teda $N$ velke a $s$ od dost mensie ako $M$, usetrime cas aj pamat.
 
 
-Alternativa: namiesto *s* roznych funkcii pouzijeme iba jednu a vezmeme
-nielen minimum, ale *s* najmensich prvkov. Potom $J(A,B)$ odhadneme
+Alternativa: namiesto $s$ roznych funkcii pouzijeme iba jednu a vezmeme
+nielen minimum, ale $s$ najmensich prvkov. Potom $J(A,B)$ odhadneme
 pomocou $|S_A\cap S_B|/s$ kde $S_A$ je mnozina hodnot v sketchi
 mnoziny $A$. To usetri cas pri vypocte sketchu, lebo nemusime hashovat
 vsetky prvky *s* krat.
@@ -279,10 +240,10 @@ Literatúra
 
 ### Hľadanie podobných sekvencií
 
-Ako "slová" použijeme všetky k-mery danej sekvencie. Potom na hľadanie
+Ako "slová" použijeme všetky $k$-mery danej sekvencie. Potom na hľadanie
 dvoch podobných sekvencií z množiny sekvencií môžeme použiť minhash.
 
-  - Napríklad Mash používa k=21, s=1000 (s najmenších v jednej funkcii)
+  - Napríklad Mash používa $k=21$, $s=1000$ ($s$ najmenších v jednej funkcii)
     na porovnávanie genómov, sketch má asi 8kb na genóm (genóm má
     milióny alebo miliardy nukleotidov)
 
@@ -292,17 +253,19 @@ Literatúra
     using MinHash.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x) Genome Biology. 2016 Dec;17(1):1-4.
     
 
-### Výpočet disperzie 
+### Výpočet disperzie (uvedene pre zaujimavost)
 
-Binarna premenna $X_i$, kde $P(X_i=1)=p$. Disperzia
-$Var(X_i) = E(X_i^2) - (E(X_i))^2$. Spočítajme si postupne obe
+Uvazujme premennu $X = \frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i$ su nezavisle binarne premenne, kde $P(X_i=1)=p$. Chceme odhadnut disperziu $Var(X)$.
+
+
+Disperzia $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Spočítajme si postupne obe
 hodnoty.
 
 $E(X_i^2) = 0^2 \cdot Pr[X_i = 0] + 1^2 \cdot Pr[X_i = 1] = Pr[X_i = 1] = p$
 
 $(E(X_i))^2 = p^2$
 
-Čiže $Var(X_i) = p - p^2$. Aká je maximálna možná hodnota disperzie?
+Čiže $Var(X_i) = p - p^2 = p(1-p)$. Aká je maximálna možná hodnota disperzie?
 
 Táto otázka je ekvivalentná otázke "Aké je maximum funkcie
 $f(x) = x - x^2$ na intervale $[0, 1]$?". Pre určenie extrémov
@@ -318,8 +281,7 @@ disperziu $Var(X_i) = Var(X) = p - p^2$. Premenná $X$ je ich priemer.
 Pozrieme sa na jej disperziu:
 $Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
 
-*(\*) tento prechod je možný len kvôli tomu, že premenné $X_i$ sú
-nezávislé.*
+* Prechod $(*)$ je možný len kvôli tomu, že premenné $X_i$ sú nezávislé.
 
 Vidíme teda, že disperziu (resp. kvalitu) môžeme potlačiť na ľubovoľne
 malú postupným zvýšením počtu hashov.
@@ -327,5 +289,45 @@ malú postupným zvýšením počtu hashov.
 Všimnite si, že premenná $s \cdot X$ (t.j. nie priemer, ale súčet
 jednotlivých $X_i$) je súčtom nezávislých indikátorov s rovnakým
 rozdelením, a teda má binomické rozdelenie s parametrami $s$ a
-$p$.
+$p$. Jej disperzia bude $sp(1-p)$, t.j. rastie s poctom hashov $s$.
 
+
+## Vzorec na výpočet senzitivity jadra (uvedene pre zaujimavost)
+
+  - Na prednaske sme mali graf senzitivity jadra pre BLAST, t.j. pravdepodobnosti, 
+    ze v nahodnom zarovnani urcitej dlzky a urcitej urovne podobnosti najdeme $k$ za sebou iducich zhod.
+  - Pre tuto pravdepodobnost nemame jednoduchy vzorec, ale da sa spocitat dynamickym programovanim.
+  - Uvažujme jadro dĺžky $k$ (ako v programe BLAST pre nukleotidy, na
+    prednáške sa dĺžka jadra označovala $w$, teraz $k$).
+  - Uvažujme pravdepodobnostný model zarovnania, v ktorom má každá
+    pozícia pravdepodobnosť $p$, že bude zhoda a $(1-p)$, ze bude nezhoda
+    alebo medzera, zarovnanie ma dlzku $L$.
+  - Nahodna premenna $X_i = 1$ ak na pozicii $i$ je zhoda, 0 inak
+  - Nahodna premenna $Y_i = 1$ ak na pozicii $i$ zacina jadro, t.j. ak
+    $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
+  - $P(Y_i = 1) = p^k$, nakolko $X_i$ su navzajom nezavisle
+  - Nech $Y = \sum_{i=1}^{L-k-1} Y_i$
+  - Z linearity strednej hodnoty vieme lahko odhadnut
+    $E(Y) = (L-k+1)p^k$
+  - Nas ale zaujima $P(Y>0) = 1-P(Y=0)$
+  - $P(Y=0) = P(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
+  - Preco neplati, $P(Y=0) = P(Y_i = 0)^{L-k+1}$?
+      - Jednotlive $Y_i$ nie su nezavisle, napr. $P(Y_{i+1}=1\|Y_i=1)=p$
+      - V postupnosti $Y_i$ sa jednotky maju tendenciu zhlukovat spolu
+  - Pravdepodobnost nepritomnosti jadra $P(Y=0)$ ale vieme spocitat
+    dynamickym programovanim
+  - Nech $A[n]$ je pravdepodobnost nepritomnosti jadra v prvých $n$
+    stlcoch zarovnania ($0\le n\le L$)
+  - Budeme rozlisovat pripady podla toho, kolko je na konci $X_1,\dots,X_n$
+    jednotiek
+      - Tento pocet moze byt $0,1,\dots k-1$ (ak by bol $k$ alebo viac, mali by sme vyskyt
+        jadra)
+  
+
+$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\\\\\
+\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k
+\\end{array}\\right.$
+
+  - V druhom riadku $p^i(1-p)$ zodpoveda $P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
+  - $A[n-i-1]$ je $P(X_1\dots X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
+$P(X_1 \dots X_n\mbox{ neobsahuje jadro }\| X_1 \dots X_n\mbox{ konci presne }i\mbox{ jednotkami})$
