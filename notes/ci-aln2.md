@@ -165,7 +165,7 @@ pokúsiť sa jej hodnotu vypočítať iba približne (t.j. aproximovať).
     nahodnej premennej $X = \frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i=1$ ak $u_i$ patri do prieniku a $X_i=0$ inak
   - Toto sa podoba na zistovanie oblubenosti politika prieskumom
     verejnej mienky, $u_1, u_2, \dots, u_s$ su "respondenti"
-  -  Pre kazde $X_i$ mame $E(X_i) = 0 \cdot Pr[X_i = 0] + 1 \cdot Pr[X_i = 1] = Pr[X_i = 1] = J(A, B)$.
+  -  Pre kazde $X_i$ mame $E(X_i) = 0 \cdot \Pr[X_i = 0] + 1 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = J(A, B)$.
   - Z linearity strednej hodnoty $E(X) = E(\frac{1}{s}\sum_{i=1}^s X_i) = \frac{1}{s}\sum_{i=1}^s E[X_i] = J(A, B)$.
   - Z toho vyplýva, že náhodná premenná $X$ je nevychýleným odhadom Jaccardovej miery.
   - V štatistike základnou mierou kvality nevychýleného odhadu je jeho disperzia, pričom $Var(X) \le \frac{1}{4s}$ (odvodenie pozri nižšie)
@@ -255,13 +255,13 @@ Literatúra
 
 ### Výpočet disperzie (uvedene pre zaujimavost)
 
-Uvazujme premennu $X = \frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i$ su nezavisle binarne premenne, kde $P(X_i=1)=p$. Chceme odhadnut disperziu $Var(X)$.
+Uvazujme premennu $X = \frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i$ su nezavisle binarne premenne, kde $\Pr(X_i=1)=p$. Chceme odhadnut disperziu $Var(X)$.
 
 
 Disperzia $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Spočítajme si postupne obe
 hodnoty.
 
-$E(X_i^2) = 0^2 \cdot Pr[X_i = 0] + 1^2 \cdot Pr[X_i = 1] = Pr[X_i = 1] = p$
+$E(X_i^2) = 0^2 \cdot \Pr[X_i = 0] + 1^2 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = p$
 
 $(E(X_i))^2 = p^2$
 
@@ -271,15 +271,15 @@ Táto otázka je ekvivalentná otázke "Aké je maximum funkcie
 $f(x) = x - x^2$ na intervale $[0, 1]$?". Pre určenie extrémov
 hladkých funkcií treba nájsť korene jej prvej derivácie. Derivácia
 tejto funkcie je $f'(x) = 1 - 2x$, jej koreň je hodnota $0.5$.
-Hodnota funkcie v tomto bode je rovná $0.25$. Čiže
-$Var(X_i) \leq 0.25$.
+Hodnota funkcie v tomto bode je rovná $1/4$. Čiže
+$Var(X_i) \leq 1/4$.
 
 $X =\frac{1}{s}\sum_{i=1}^s X_i$ kde $X_i$ su nezavisle premenne a
 každá z nich má strednú hodnotu $E(X_i) = E(X) = p$ a rovnakú
-disperziu $Var(X_i) = Var(X) = p - p^2$. Premenná $X$ je ich priemer.
+disperziu $Var(X_i) = Var(X) = p(1 - p)\le 1/4$. Premenná $X$ je ich priemer.
 
 Pozrieme sa na jej disperziu:
-$Var(X) = Var\left(\frac{X_1+X_2+\ldots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+X_2+\ldots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \ldots Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
+$Var(X) = Var\left(\frac{X_1+\dots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+\dots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \dots + Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
 
 * Prechod $(*)$ je možný len kvôli tomu, že premenné $X_i$ sú nezávislé.
 
@@ -305,16 +305,16 @@ $p$. Jej disperzia bude $sp(1-p)$, t.j. rastie s poctom hashov $s$.
   - Nahodna premenna $X_i = 1$ ak na pozicii $i$ je zhoda, 0 inak
   - Nahodna premenna $Y_i = 1$ ak na pozicii $i$ zacina jadro, t.j. ak
     $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
-  - $P(Y_i = 1) = p^k$, nakolko $X_i$ su navzajom nezavisle
+  - $\Pr(Y_i = 1) = p^k$, nakolko $X_i$ su navzajom nezavisle
   - Nech $Y = \sum_{i=1}^{L-k-1} Y_i$
   - Z linearity strednej hodnoty vieme lahko odhadnut
     $E(Y) = (L-k+1)p^k$
-  - Nas ale zaujima $P(Y>0) = 1-P(Y=0)$
-  - $P(Y=0) = P(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
-  - Preco neplati, $P(Y=0) = P(Y_i = 0)^{L-k+1}$?
-      - Jednotlive $Y_i$ nie su nezavisle, napr. $P(Y_{i+1}=1\|Y_i=1)=p$
+  - Nas ale zaujima $\Pr(Y>0) = 1-\Pr(Y=0)$
+  - $\Pr(Y=0) = \Pr(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
+  - Preco neplati, $\Pr(Y=0) = \Pr(Y_i = 0)^{L-k+1}$?
+      - Jednotlive $Y_i$ nie su nezavisle, napr. $\Pr(Y_{i+1}=1\|Y_i=1)=p$
       - V postupnosti $Y_i$ sa jednotky maju tendenciu zhlukovat spolu
-  - Pravdepodobnost nepritomnosti jadra $P(Y=0)$ ale vieme spocitat
+  - Pravdepodobnost nepritomnosti jadra $\Pr(Y=0)$ ale vieme spocitat
     dynamickym programovanim
   - Nech $A[n]$ je pravdepodobnost nepritomnosti jadra v prvých $n$
     stlcoch zarovnania ($0\le n\le L$)
@@ -328,6 +328,6 @@ $A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{ak } n \< k\\\\\\\\
 \\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{ak } n \\ge k
 \\end{array}\\right.$
 
-  - V druhom riadku $p^i(1-p)$ zodpoveda $P(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
-  - $A[n-i-1]$ je $P(X_1\dots X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
-$P(X_1 \dots X_n\mbox{ neobsahuje jadro }\| X_1 \dots X_n\mbox{ konci presne }i\mbox{ jednotkami})$
+  - V druhom riadku $p^i(1-p)$ zodpoveda $\Pr(X_1...X_n\mbox{ konci presne }i\mbox{ jednotkami})$
+  - $A[n-i-1]$ je $\Pr(X_1\dots X_{n-i-1}\mbox{ neobsahuje jadro})$, ale to je to iste ako
+$\Pr(X_1 \dots X_n\mbox{ neobsahuje jadro }\| X_1 \dots X_n\mbox{ konci presne }i\mbox{ jednotkami})$
