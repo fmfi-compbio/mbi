@@ -89,6 +89,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Burrows-Wheeler transform
 
+{% include pdf.html file="ti-bwt" name="pdf" show=1 dot=0
+%}
 
 #### TB: Dynamic programming for sequence alignment, dotplots
 
