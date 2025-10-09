@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-[Week 1](#W1) · **[Week 2](#W2)** · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+[Week 1](#W1) · [Week 2](#W2) · **[Week 3](#W3)** · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
 · [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
@@ -83,22 +83,18 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Sequence alignment: Smith-Waterman, Needleman-Wunsch, scoring
 
-{% include pdf.html file="p-aln1" name="pdf" show=0 dot=1
-%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=0 dot=1
+{% include pdf.html file="p-aln1" name="pdf" show=1 dot=1
+%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=1 dot=1
 %} BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2
 
 #### TI: Burrows-Wheeler transform
 
-{% include notes.html file="ci-msms" name="notes" show=0 dot=1
-%} {% include notebook.html file="ci-msms" name="colab" show=0 dot=1
-%} {% include pdf.html file="ci-msms" name="pdf" show=0 dot=0
-%}
 
 #### TB: Dynamic programming for sequence alignment, dotplots
 
-{% include notes.html file="cb-aln1" name="notes" show=0 dot=1
-%} {% include pdf.html file="cb-aln" name="pdf" show=0 dot=1
-%} {% include pdf.html file="cb-dotplots" name="pdf" show=0 dot=0
+{% include notes.html file="cb-aln1" name="notes" show=1 dot=1
+%} {% include pdf.html file="cb-aln" name="pdf" show=1 dot=1
+%} {% include pdf.html file="cb-dotplots" name="pdf" show=1 dot=0
 %} 
 
 <a name="W4"></a>
