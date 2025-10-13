@@ -76,50 +76,50 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
 
 ### Yass a dotploty
 
-  - Program Yass hlada lokalne zarovnania v DNA sekvenciach, zobrazuje
-    vo forme dot plotov
+  - Program Yass hľadá lokálne zarovnania v sekvenciách DNA, zobrazuje
+    ich vo forme dot plotov
   - V novom okne/tabe si otvorte YASS server na adrese
     <https://bioinfo.univ-lille.fr/yass/yass.php>
-  - V dalsom okne si na stranke UCSC genome browseru si zobrazte [oblast
-    chr21:9,180,027-9,180,345](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345) vo verzii hg38 ludskeho genomu
+  - V ďalšom okne si na stránke UCSC genome browseru si zobrazte [oblast
+    chr21:9,180,027-9,180,345](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345) vo verzii hg38 ľudského genómu
       - tento región obsahuje **Alu repeat**. Tieto opakovania tvoria
         cca 10% ľudského genómu, viac ako milión kópií
-      - zobrazte si DNA sekvenciu tohto useku takto: na hornej modrej
-        liste zvolte View, potom v podmenu DNA, na dalsej obrazovke
-        tlacidlo get DNA
-  - **DNA sekvenciu Alu opakovania chceme zarovnat samu k sebe programom
+      - zobrazte si sekvenciu tohto úseku DNA takto: na hornej modrej
+        lište zvoľte `View`, potom v podmenu `DNA`, na ďalšej obrazovke
+        tlačidlo `get DNA`
+  - **DNA sekvenciu Alu opakovania chceme zarovnať samu k sebe programom
     YASS**
-      - DNA sekvenciu Alu opakovania skopirujte do okienka "Paste your
-        sequences" v stranke Yass-u a dvakrat stlacte tlacidlo Select
-        vedla okienka
-      - Nizsie v casti "Selected DNA sequence(s)" by sa Vam malo v oboch
-        riadkoch objavit "Pasted file 1"
-      - Nizsie v casti "Parameters" zvolte "E-value threshold" 0.01 a
-        stlacte "Run YASS"
-      - Vo vysledkoch si pozrite Dotplot, **co z neho viete usudit o
-        podobnosti jednotlivych casti Alu opakovania?**
-      - Vo vysledkoch si pozrite Raw: blast, **ake su suradnice
-        opakujucej sa casti a kolko zarovnanie obsahuje
-        zhod/nezhod/medzier?** (Pozor, prve zarovnanie je cela sekvencia
-        sama k sebe, druhe je asi to, co chcete)
-  - V genome browseri sa presunte na [poziciu chr21:8,552,000-8,562,000](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
-    (10kb na chromozome 21, s niekolkymi vyskytmi Alu)
-  - **Chceme teraz porovnat tento usek genomu so sekvenciou Alu pomocou
+      - DNA sekvenciu Alu opakovania skopírujte do okienka "Paste your
+        sequences" v stránke Yass-u a dvakrát stlačte tlačidlo `Select`
+        vedľa okienka
+      - Nižšie v časti `Selected DNA sequence(s)` by sa vám malo v oboch
+        riadkoch objaviť `Pasted file 1`
+      - Nižšie v časti `Parameters` zvoľte `E-value threshold` 0.01 a
+        stlačte "Run YASS"
+      - Vo výsledkoch si pozrite Dotplot, **čo z neho viete usúdiť o
+        podobnosti jednotlivých častí Alu opakovania?**
+      - Vo výsledkoch si pozrite Raw: blast, **aké sú súradnice
+        opakujúcej sa časti a koľko zarovnanie obsahuje
+        zhod/nezhod/medzier?** (Pozor, prvé zarovnanie je celá sekvencia
+        sama k sebe, druhé je asi to, čo chcete)
+  - V genome browseri sa presuňte na [pozíciu chr21:8,552,000-8,562,000](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A8552000-8562000)
+    (10kb na chromozóme 21, s niekoľkými výskytmi Alu)
+  - **Chceme teraz porovnať tento úsek genómu so sekvenciou Alu pomocou
     YASSu**
-      - Ako predtym si stiahnite DNA sekvenciu tohto useku
-      - V YASSe chodte sipkou spat na formular
-      - Skopirujte DNA sekvenciu do YASSoveho formulara, do okienka
-        vpravo (vyznacit si ju mozete klavesovou kombinaciou Ctrl-A
+      - Ako predtým si stiahnite DNA sekvenciu tohto úseku
+      - V YASSe choďte šípkou späť na formulár
+      - Skopírujte DNA sekvenciu do okienka
+        vpravo (vyznačiť si ju môžete klávesovou kombináciou Ctrl-A
         alebo Select All v menu Edit),
-      - V casti formulara Selected DNA sequence(s) stlacte Remove pri
+      - V časti formulára Selected DNA sequence(s) stlačte Remove pri
         hornom riadku
-      - Pri pravom okienku, kam ste nakopirovali sekvenciu, stlacte
+      - Pri pravom okienku, kam ste nakopírovali sekvenciu, stlačte
         Select
-      - Zase stlacte Run YASS
-      - Pozrite si vysledok ako Dotplot, '''kolko opakovani Alu ste
-        nasli? Preco je jedno cervene? '''
-      - Pozrite si Raw: blast, **na kolko percent sa podoba
-        najpodobnejsia a na kolko druha najpodobnejsia kopia?**
+      - Zase stlačte Run YASS
+      - Pozrite si výsledok ako Dotplot, '''koľko opakovaní Alu ste
+        našli? Prečo je jedno červené? '''
+      - Pozrite si Raw: blast, **na koľko percent sa podobá
+        najpodobnejšia a na koľko druhá najpodobnejšia kópia?**
 
 ## Dotplot celých kvasinových genómov
 
@@ -131,7 +131,7 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
       - Candida dubliniensis
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/945/GCF_000026945.1_ASM2694v1/GCF_000026945.1_ASM2694v1_genomic.fna.gz>
   - Predpočítaný výsledok
-    <https://dgenies.toulouse.inra.fr/result/wJkYq_20241017093132>
+    <https://dgenies.toulouse.inra.fr/result/9swN9_20251013211611
   - Iná dvojica:
       - Magnusiomyces ingens
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/uid/UIDE01.fasta.gz>
@@ -139,29 +139,28 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
       - Saprochaete ingens
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/cab/CABVLU01.fasta.gz>
         [(web)](https://www.ebi.ac.uk/ena/browser/view/GCA_902498895)
+  - Predpočítaný výsledok <https://dgenies.toulouse.inra.fr/result/AMzJk_20251013212109>
 
 ## Príklady praktických programov
 
-Pozrime sa na niekolko nastrojov, vsimnime si, ake poskytuju nastavenia
-a co vypisuju na vystupe, dajme to do suvisu s prednaskami
-
-  - viacnasobne zarovnania neskor
+Pozrime sa na niekoľko nástrojov, všimnime si, aké poskytujú nastavenia
+a čo vypisujú na výstupe, dajme to do súvisu s prednáškami
 
 ### Plné dynamické programovanie
 
-  - Balicek emboss, obsahuje programy na klasicke dynamicke
-    programovanie (needle - globalne, water - lokalne), najdu sa na
-    stranke EBI <https://www.ebi.ac.uk/jdispatcher/psa>
-  - porovnanie lokalneho a globalneho zarovnania
+  - Balíček emboss, obsahuje programy na klasické dynamické
+    programovanie (needle - globálne, water - lokálne), nájdu sa na
+    stránke EBI <https://www.ebi.ac.uk/jdispatcher/psa>
+  - porovnanie lokálneho a globálneho zarovnania
       - Dva proteiny z rôznych kvasiniek zarovnáme lokálne, globálne a
         globálne s tým, že neplatíme za medzery na koncoch
-  - [sekvencie a vysledne zarovnania](./cb-aln-dp.html)
-  - vo vysledku si vsimnime, kolko ma kazde z nich %identity, %gaps, a
-    kam sa zarovna sekvencia IRESPLGG ktora je na pozicii 29 v prvom a
-    30 v druhom proteine
+  - [sekvencie a výsledné zarovnania](./cb-aln-dp.html)
+  - vo výsledku si všimnime, koľko má každé z nich %identity, %gaps, a
+    kam sa zarovna sekvencia `IRESPLGG` ktorá je na pozícii 29 v prvom a
+    30 v druhom proteíne
 
 ```
-    Lokalne zarovnanie
+    Lokálne zarovnanie
     Length: 588
     Identity:     170/588 (28.9%)
     Similarity:   270/588 (45.9%)
@@ -170,34 +169,26 @@ a co vypisuju na vystupe, dajme to do suvisu s prednaskami
     MCA_00027_1 29-568 (z 595)
     RKM3_YEAST  30-549 (z 552)
     
-    Globalne zarovnanie
+    Globálne zarovnanie
     Length: 650
     Identity:     178/650 (27.4%)
     Similarity:   282/650 (43.4%)
     Gaps:         153/650 (23.5%)
     Score: 588.5
-    
-    Globalne zarovnanie s nulovou penaltou za medzeru na koncoch
-    Length: 651
-    Identity:     177/651 (27.2%)
-    Similarity:   282/651 (43.3%)
-    Gaps:         155/651 (23.8%)
-    Score: 608.0
 ```
 
 ### NCBI Blast
 
-  - NCBI BLAST <https://blast.ncbi.nlm.nih.gov/> vela roznych nastrojov
-    (porovnavanie DNA vs proteiny, pripadne translacia DNA na protein v
-    6 ramcoch)
-      - Heuristicky algoritmus, moze niektore zarovnania vynechat
-      - rozne nastavenia, vystup E-value
+  - NCBI BLAST <https://blast.ncbi.nlm.nih.gov/> veľa rôznych nástrojov
+    (porovnavanie DNA aj proteínov, prípadne translácia DNA na proteín v
+    6 rámcoch)
+      - Heuristický algoritmus, môže niektoré zarovnania vynechať
+      - rôzne nastavenia, výstup E-value
 
-**Low complexity masking:** nepouzivat pri hladani jadier zarovnania
-regiony v ktorych sa velakrat opakuje ta ista aminokyselina
+**Low complexity masking:** nepoužívať pri hľadaní jadier zarovnania
+regiony, v ktorých sa veľakrát opakuje tá istá aminokyselina
 
-  - Priklad (z ucebnice Zvelebil and Baum):
-
+  - Príklad (z učebnice Zvelebil and Baum):
 
 ```
     >sp|P04156|PRIO_HUMAN Major prion protein OS=Homo sapiens GN=PRNP PE=1 SV=1
@@ -208,31 +199,27 @@ regiony v ktorych sa velakrat opakuje ta ista aminokyselina
     ILLISFLIFLIVG
 ```
 
-  - Hladajme v databaze `Reference sequence (Refseq)`, organizmus `human`
+  - Hľadajme v databáze `Reference proteins (refseq_protein)`, organizmus `human`, vypneme `Compositional adjustment` (len kvôli tomuto príkladu) aj Masking a Filtering.
 
-Bez maskovania vypise napr aj toto zarovnanie:
+BLAST vypíše napr. aj toto zarovnanie:
 
 ```
-    >ref|NP_065842.1| serine/threonine-protein kinase TAO1 isoform 1 [Homo sapiens]
-    Length=1001
-    
-     Score = 45.1 bits (105),  Expect = 1e-06, Method: Composition-based stats.
-     Identities = 26/61 (43%), Positives = 27/61 (44%), Gaps = 11/61 (18%)
-    
-    Query  38   YPGQGSPGGNRYPPQGGGG--WGQPHGG---GWGQPHGGG---WGQPHGGGWGQPHGGGWG  90
-                YPG     G  + P GG G  WG P GG    WG P  GG   WG P G   G P G   G
-    Sbjct  904  YPGAS---GWSHNPTGGPGPHWGHPMGGPPQAWGHPMQGGPQPWGHPSGPMQGVPRGSSMG  961
-    
-     Score = 40.0 bits (92),  Expect = 4e-05, Method: Composition-based stats.
-     Identities = 25/62 (40%), Positives = 25/62 (40%), Gaps = 10/62 (16%)
-    
-    Query  26   PKPGGW--NTGGSRYPGQGSPGGNRYPPQGGGGWGQPHGGG---WGQPHGGGWGQPHGGGWG  82
-                P   GW  N  G   P  G P G   PPQ    WG P  GG   WG P G   G P G  
-    Sbjct  905  PGASGWSHNPTGGPGPHWGHPMGG--PPQA---WGHPMQGGPQPWGHPSGPMQGVPRGSSMG  961
+keratin, type I cytoskeletal 9 [Homo sapiens]
+Sequence ID: NP_000217.2
+Range 1: 498 to 602
+Score	          Expect	Identities	Positives	  Gaps
+62.0 bits(149)	4e-10	  40/105(38%)	49/105(46%)	6/105(5%)
+Query  29   GGWNTGGSRYPGQGSPGGNRYPPQGG----GGWGQPHGGGWGQPHGGGWGQPHGGGWGQP  84
+            GG  +GG    G GS GG+     GG    GG G  +GGG G  H GG G  H GG G  
+Sbjct  498  GGGGSGGGYGGGSGSRGGSGGSYGGGSGSGGGSGGGYGGGSGGGHSGGSGGGHSGGSGGN  557
+
+Query  85   HGGGWGQGGGTHSQW--NKPSKPKTNMKHMAGAAAAGAVVGGLGG  127
+            +GGG G GGG+   +     S+  +   H  G+   G   G  GG
+Sbjct  558  YGGGSGSGGGSGGGYGGGSGSRGGSGGSHGGGSGFGGESGGSYGG  602
 ```
 
-Ak zapneme maskovanie, toto zarovnanie uz nenajde, v zarovnani sameho so
-sebou sa objavia male pismena alebo Xka:
+Ak zapneme maskovanie, toto zarovnanie už nenájde, v zarovnaní samého so
+sebou sa objavia malé písmená alebo X:
 
 ```
     >ref|NP_000302.1|major prion protein preproprotein [Homo sapiens]
@@ -262,33 +249,20 @@ sebou sa objavia male pismena alebo Xka:
     Sbjct  241  ILLISFLIFLIVG  253
 ```
 
-{% if false %}
-## Uniprot pre projekty
-
-  - Prehladny pohlad na proteiny, vela linkov na ine databazy, cast
-    vytvarana rucne
-  - Pozrieme sa na známy koronavírusový proteín Spike
-      - Nájdime ho na stránke <https://www.uniprot.org/> pod názvom
-        SPIKE\_SARS2
-      - Pozrime si podrobne jeho stránku, ktoré časti boli predpovedané
-        bioinformatickými metódami z prednášky?
-      - Všimnime si niektorú Pfam doménu a pozrime si jej stránku
-{% endif %}
-
 ## Praktické cvičenie pri počítači: BLAT vs BLAST
 
 ### BLAT, chains, nets v UCSC browseri
 
-  - Program BLAT v UCSC browseri <https://genome-euro.ucsc.edu/> rychlo
-    vyhladava sekvencie v genome, ale nevie najst slabsie podobnosti
-      - Vhodne pouzitie: zarovnanie mRNA ku genomu, presne urcenie
-        suradnic nejakej sekvencie, a pod.
-  - Net tracky v UCSC genome browseri nam umoznuju prechadzat medzi
-    homologickymi oblastami roznych genomov
+  - Program BLAT v UCSC browseri <https://genome-euro.ucsc.edu/> rýchlo
+    vyhľadáva sekvencie v genóme, ale nevie nájsť slabšie podobnosti
+      - Vhodné použitie: zarovnanie mRNA ku genómu, presné určenie
+        súradníc nejakej sekvencie, a pod.
+  - Net tracky v UCSC genome browseri (predpočítané zarovnania) nám umožňujú prechádzať medzi
+    homologickými oblasťami rôznych genómov
 
 ### BLAT/BLAST
 
-  - Sekvencia uvedena nizsie vznikla pomocou RT-PCR na ľudských cDNA
+  - Sekvencia uvedena nižšie vznikla pomocou RT-PCR na ľudských cDNA
     knižniciach
   - Choďte na UCSC genome browser <https://genome-euro.ucsc.edu/> , na
     modrej lište zvoľte BLAT, zadajte túto sekvenciu a hľadajte ju v

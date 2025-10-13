@@ -116,7 +116,7 @@ zhlukovania a postupne ho zlepšuje.
     <https://cbl-gorilla.cs.technion.ac.il/>, DAVID
     <https://davidbioinformatics.nih.gov/>, g:Profiler
     <https://biit.cs.ut.ee/gprofiler/>
-  - Treba dat pozor, ci pocitaju to co chceme
+  - Treba dat pozor, ci pocitaju to, co chceme
 
 
   - Kod v statistickom systeme R na pocitanie hypergeometrickeho
