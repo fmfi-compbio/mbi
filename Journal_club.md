@@ -5,9 +5,9 @@ title: Journal Club
 * TOC
 {:toc}
 
-{% if false %}
+
 A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club), more details will be added later.
-{% endif %}
+
 
 ## Submitting preferences
 
@@ -74,7 +74,7 @@ host-coronavirus protein interaction networks reveal pan-viral disease
 mechanisms. Science. 2020 Dec 4;370(6521).
 <https://doi.org/10.1126/science.abe9403>
 
-
+{% if false %}
 ## Group meeting 
 
   - Everyone should read the article before the first
@@ -116,7 +116,7 @@ mechanisms. Science. 2020 Dec 4;370(6521).
   - The report should list the members of the group who have actively
     participated in its work. Students who are not on this list will
     receive zero points for the report.
-
+{% endif %}
 
 {% if false %}
 ## Unused papers
