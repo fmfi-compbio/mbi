@@ -109,14 +109,14 @@ AGTGG,1             AGGCT,11     CGAGG
 
 ### Summary
 
-| Program | # $k$-mers in dict | # $k$-mers searched | # seeds guaranteed in |
+| Program | # $k$-mers in dict | # $k$-mers searched | a seed guaranteed in |
 | --------|--------------------|---------------------|-----------------------|
 | BLAST | $n$ | $m$ | $k$ adjacent matches |
 | BLAT | $n/s$ | $m$ | $k+s-1$ adjacent matches |
-| minimizers | cca $2n/(s+1)$ | cca $2m/(s+1)$ | $k+s-1$ adjacent matches |
+| minimizers | $2n/(s+1)$ &nbsp; | roughly $2m/(s+1)$ | $k+s-1$ adjacent matches |
 
   - $n$, $m$ are the lenths of sequences
-  - In counts of $k$-mers we neglected terms like $-k+1$ 
+  - in $k$-mer counts we neglected terms like $-k+1$ 
   
 
 
@@ -186,7 +186,7 @@ Proof:
 Let us have $s$ independent hash functions $h_1, h_2, \dots, h_s$. For each $i=1,2,\dots,s$ we define the variable $X_i$ as follows:
 
 $X_i := \begin{cases}
-1 & \text{if } minHash_{h_i}(A) = minHash_{h_i}(B) \\
+1 & \text{if } minHash_{h_i}(A) = minHash_{h_i}(B) \\\\
 0 & \text{otherwise}
 \end{cases}$
 Then $E(X_i) = J(A, B)$ and the variables $X_i$ are independent.
@@ -194,7 +194,7 @@ Then $E(X_i) = J(A, B)$ and the variables $X_i$ are independent.
 We thus replace the random samples discussed above with such $X_i$ values.
 
 
-### MinHash Algorithm
+### MinHash algorithm
 
 Computing sketches of documents:
 - Choose "random" hash functions $h_1,\dots, h_s$.
@@ -205,10 +205,10 @@ Computing sketches of documents:
 
 Comparing sketches of documents:
 - For each pair of documents $A$, $B$:
-  - $x = |\{ i : S_{A,i} = S_{B,i}\}|$
+  - $x = \|\\{ i : S_{A,i} = S_{B,i}\\}\|$
   - $x/s$ is an estimate of $J(A,B)$
 
-Estimate of time and memory:
+Running time and memory:
  - Let us have $N$ documents, each with $M$ words of length $w$
  - Computing all sketches takes time $O(NMsw)$
  - Sketches take up memory $O(Ns)$, we do not need to keep the documents in memory (when computing sketches, we can read documents word by word and keep only the current sketch values in memory)
@@ -216,7 +216,7 @@ Estimate of time and memory:
 
 For comparison, the trivial computation of the exact Jaccard measure using hashing would take $O(N^2Mw)$ and all documents would take up $O(NMw)$ memory. So if $N$ is large and $s$ is much smaller than $M$, we save both time and memory.
 
-Alternative: instead of using $s$ different functions, we use only one and take not just the minimum, but the $s$ smallest elements. Then we estimate $J(A,B)$ using $|S_A\cap S_B|/s$ where $S_A$ is the set of values in the sketch of set $A$. This saves time when computing the sketch, since we do not need to hash all elements $s$ times.
+Alternative: instead of using $s$ different functions, we use only hash function and take not just the minimum, but the $s$ smallest elements. Then we estimate $J(A,B)$ using $\|S_A\\cap S_B\|/s$ where $S_A$ is the set of values in the sketch of set $A$. This saves time when computing the sketch, since we do not need to hash all elements $s$ times.
 
 To avoid comparing all pairs of documents, we can use binning:
 - For each $h_i$, create a dictionary mapping hash value to a list of documents for which it was minHash (bins)
@@ -233,7 +233,7 @@ Literature
 As "words" we use all $k$-mers of a given sequence. Then, to find two similar sequences from a set of sequences, we can use minhash.
 
   - For example, a popular program called Mash for genome comparison uses $k=21$, $s=1000$
-  - It stores $s$ smallest values in one hash function
+  - It stores $s$ smallest values from one hash function
   - The sketch is about 8kb per genome (a genome has millions or billions of nucleotides)
 
 Literature
@@ -244,7 +244,7 @@ Literature
 
 ### Calculation of variance (optional)
 
-Consider the variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent binary variables with $\Pr(X_i=1)=p$. We want to estimate the variance $Var(X)$.
+Consider the variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent binary variables with $\Pr(X_i=1)=p$. We want to estimate the variance $Var(X)$ which tells us how good estimate we get by asking $s$ respondents/hash functions.
 
 Variance $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Let's compute both values step by step.
 
@@ -254,7 +254,7 @@ $(E(X_i))^2 = p^2$
 
 So $Var(X_i) = p - p^2 = p(1-p)$. What is the maximum possible value of the variance?
 
-This question is equivalent to "What is the maximum of the function $f(x) = x - x^2$ on the interval $[0, 1]$?". To find the extrema of smooth functions, we need to find the roots of its first derivative. The derivative of this function is $f'(x) = 1 - 2x$, its root is at $0.5$. The value of the function at this point is $1/4$. So $Var(X_i) \leq 1/4$.
+This question is equivalent to "What is the maximum of the function $f(x) = x - x^2$ for $x\in[0, 1]$?". To find the extrema of smooth functions, we need to find the roots of its first derivative. The derivative of this function is $f'(x) = 1 - 2x$, its root is at $0.5$. The value of the function at this point is $1/4$. So $Var(X_i) \leq 1/4$.
 
 $X =\frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent variables and each has mean $E(X_i) = E(X) = p$ and the same variance $Var(X_i) = Var(X) = p(1 - p)\le 1/4$. The variable $X$ is their average.
 
@@ -263,19 +263,19 @@ $Var(X) = Var\left(\frac{X_1+\dots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+\dots+
 
 * The step $(*)$ is possible only because the variables $X_i$ are independent.
 
-We see that the variance (i.e., the quality) can be reduced arbitrarily by increasing the number of hashes.
+We see that the variance can be reduced arbitrarily by increasing the number of respondents/hash functions.
 
-Note that the variable $s \cdot X$ (i.e., not the average, but the sum of the individual $X_i$) is the sum of independent indicators with the same distribution, and thus has a binomial distribution with parameters $s$ and $p$. Its variance will be $sp(1-p)$, i.e., it increases with the number of hashes $s$.
+Note that the variable $s \cdot X$ (i.e., the sum, not the average, of the individual $X_i$s) is the sum of independent indicators with the same distribution, and thus has a binomial distribution with parameters $s$ and $p$. Its variance will be $sp(1-p)$, i.e., it increases with $s$.
 
 
-## Formula for computing the sensitivity of a seed (optional)
+## Algorithm for computing the sensitivity of a seed (optional)
 
-  - In the lecture we saw a graph of seed sensitivity for BLAST, i.e., the probability that in a random alignment of a certain length and similarity level we find $k$ consecutive matches.
-  - For this probability we do not have a simple formula, but it can be computed by dynamic programming.
+  - In the lecture we saw a plot of seed sensitivity for BLAST, i.e., the probability that in a random alignment of a certain length and similarity level, we find $k$ consecutive matches.
+  - For this probability, we do not have a simple formula, but it can be computed by dynamic programming.
   - Consider a seed of length $k$ (as in the BLAST program for nucleotides; in the lecture, the seed length was denoted $w$, now $k$).
-  - Consider a probabilistic alignment model, where each position has probability $p$ of being a match and $(1-p)$ of being a mismatch or gap, alignment has length $L$.
+  - Consider a probabilistic alignment model, where each position has probability $p$ of being a match and $(1-p)$ of being a mismatch or gap, and the alignment has length $L$.
   - Random variable $X_i = 1$ if at position $i$ there is a match, 0 otherwise
-  - Random variable $Y_i = 1$ if at position $i$ a seed starts, i.e., if $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
+  - Random variable $Y_i = 1$ if position $i$ is the start of a seed, i.e., if $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
   - $\Pr(Y_i = 1) = p^k$, since $X_i$ are mutually independent
   - Let $Y = \sum_{i=1}^{L-k-1} Y_i$
   - By linearity of expectation we can easily estimate $E(Y) = (L-k+1)p^k$
@@ -283,10 +283,10 @@ Note that the variable $s \cdot X$ (i.e., not the average, but the sum of the in
   - $\Pr(Y=0) = \Pr(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
   - Why doesn't $\Pr(Y=0) = \Pr(Y_i = 0)^{L-k+1}$ hold?
       - The individual $Y_i$ are not independent, e.g., $\Pr(Y_{i+1}=1\|Y_i=1)=p$
-      - In the sequence $Y_i$, ones tend to cluster together
+      - In the sequence of $Y_i$s, ones tend to cluster together
   - The probability of absence of a seed $\Pr(Y=0)$ can be computed by dynamic programming
   - Let $A[n]$ be the probability of absence of a seed in the first $n$ columns of the alignment ($0\le n\le L$)
-  - We distinguish cases according to how many of $X_1,\dots,X_n$ are ones at the end
+  - We distinguish cases according to how many 1s occur at the very end of sequence  $X_1,\dots,X_n$
       - This number can be $0,1,\dots k-1$ (if it were $k$ or more, we would have a seed occurrence)
   
 
@@ -297,4 +297,3 @@ $A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{if } n \< k\\\\\\\\
   - In the second line, $p^i(1-p)$ corresponds to $\Pr(X_1...X_n\mbox{ ends with exactly }i\mbox{ ones})$
   - $A[n-i-1]$ is $\Pr(X_1\dots X_{n-i-1}\mbox{ does not contain a seed})$, which is the same as
 $\Pr(X_1 \dots X_n\mbox{ does not contain a seed }\| X_1 \dots X_n\mbox{ ends with exactly }i\mbox{ ones})$
-
