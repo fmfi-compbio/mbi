@@ -109,11 +109,11 @@ AGTGG,1             AGGCT,11     CGAGG
 
 ### Summary
 
-| Program | # $k$-mers in dict | # $k$-mers searched | a seed guaranteed in |
+| Program | # $k$-mers in dict &nbsp;&nbsp; | # $k$-mers searched | a seed guaranteed in |
 | --------|--------------------|---------------------|-----------------------|
 | BLAST | $n$ | $m$ | $k$ adjacent matches |
 | BLAT | $n/s$ | $m$ | $k+s-1$ adjacent matches |
-| minimizers | $2n/(s+1)$ &nbsp; | roughly $2m/(s+1)$ | $k+s-1$ adjacent matches |
+| minimizers &nbsp;&nbsp; | $2n/(s+1)$ | roughly $2m/(s+1)$ &nbsp;&nbsp;| $k+s-1$ adjacent matches |
 
   - $n$, $m$ are the lenths of sequences
   - in $k$-mer counts we neglected terms like $-k+1$ 
