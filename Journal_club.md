@@ -11,7 +11,7 @@ A brief description of the journal club activity is included in the [course rule
 
 ## Submitting preferences
 
-Please submit your preferences regarding these papers using [this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 22, 2025, 22:00. In the form, include numbers of three papers from this list in the order of preference.
+Please submit your preferences regarding these papers using **[this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 22, 2025, 22:00**. In the form, include numbers of three papers from this list in the order of preference.
 We will try to take your preferences into account, but we also need to balance group sizes and composition. 
 
 * Groups will typically include students with different backgrounds.
