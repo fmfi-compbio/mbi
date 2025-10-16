@@ -131,7 +131,7 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
       - Candida dubliniensis
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/945/GCF_000026945.1_ASM2694v1/GCF_000026945.1_ASM2694v1_genomic.fna.gz>
   - Predpočítaný výsledok
-    <https://dgenies.toulouse.inra.fr/result/9swN9_20251013211611
+    <https://dgenies.toulouse.inra.fr/result/9swN9_20251013211611>
   - Iná dvojica:
       - Magnusiomyces ingens
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/uid/UIDE01.fasta.gz>
