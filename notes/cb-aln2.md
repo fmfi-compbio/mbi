@@ -55,7 +55,7 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
     OpenOffice / LibreOffice
       - [ODS
         formát](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.ods)
-      - [XLSX formát for
+      - [XLSX formát pre
         Excel](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.xlsx)
       - [XLSX English
         version](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring-en.xlsx)
@@ -123,8 +123,7 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
 
 ## Dotplot celých kvasinových genómov
 
-  - Na stránke <https://dgenies.toulouse.inra.fr/run> (based on minimap2
-    program)
+  - Na stránke <https://dgenies.toulouse.inra.fr/run> (založené na obľúbenom programe minimap2)
   - Zadáme URL dvoch genómov z NCBI:
       - Candida albicans
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/182/965/GCF_000182965.3_ASM18296v3/GCF_000182965.3_ASM18296v3_genomic.fna.gz>
