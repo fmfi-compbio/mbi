@@ -127,7 +127,7 @@ Literature
   - Marçais, G., Pellow, D., Bork, D., Orenstein, Y., Shamir, R., & Kingsford, C. (2017). [Improving the performance of minimizers and winnowing schemes.](https://doi.org/10.1093/bioinformatics/btx235) Bioinformatics, 33(14), i110-i117.
     
 
-## MinHash
+## MinHash: finding similar sequences without alignments
 
 ### A short aside: Text similarity in web analysis
 
@@ -166,7 +166,7 @@ The exact computation of the Jaccard index is not always fast enough for the pur
 
 We will have random hash functions $h_1, h_2, \dots, h_s$.
 
-For each hash function $h$, we assume that if we use it on some set $A = \{a_1, a_2, \ldots, a_n\}$, then $h(a_1), h(a_2), \ldots, h(a_n)$ will be a random permutation of the set $A$ (not really true for typical hash functions).
+For each hash function $h$, we assume that if we use it on some set $A = \{a_1, a_2, \ldots, a_n\}$, then $h(a_1), h(a_2), \ldots, h(a_n)$ will be a random permutation of the set $A$ (not really true for practical hash functions).
 
 
 For a set $A = \{a_1, a_2, \ldots, a_n\}$ and a hash function $h$, $minHash_{h}(A)$ is defined as follows:
@@ -183,14 +183,9 @@ Proof:
 - If the minimum is outside of $A\cap B$, then the minHashes of $A$ and $B$ are different
 - If it is inside $A\cap B$, then the minHashes of $A$ and $B$ are the same
 
-Let us have $s$ independent hash functions $h_1, h_2, \dots, h_s$. For each $i=1,2,\dots,s$ we define the variable $X_i$ as follows:
+Let us have $s$ independent hash functions $h_1, h_2, \dots, h_s$. For each $i=1,2,\dots,s$ we define the variable $X_i$ to be 1 if $minHash_{h_i}(A) = minHash_{h_i}(B)$ and 0 otherwise.
 
-$X_i := \begin{cases}
-1 & \text{if } minHash_{h_i}(A) = minHash_{h_i}(B) \\\\
-0 & \text{otherwise}
-\end{cases}$
 Then $E(X_i) = J(A, B)$ and the variables $X_i$ are independent.
-
 We thus replace the random samples discussed above with such $X_i$ values.
 
 
@@ -230,7 +225,10 @@ Literature
 
 ### Finding similar sequences
 
-As "words" we use all $k$-mers of a given sequence. Then, to find two similar sequences from a set of sequences, we can use minhash.
+- As "words" we use all $k$-mers of a given sequence.
+- Instead of aligning them, we estimate their similarity by the Jaccard index of
+their $k$-mer sets.
+- Jaccard index is estimated by Minhash.
 
   - For example, a popular program called Mash for genome comparison uses $k=21$, $s=1000$
   - It stores $s$ smallest values from one hash function
