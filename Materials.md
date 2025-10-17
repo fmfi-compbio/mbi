@@ -110,8 +110,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Advanced algorithms for sequence alignment
 
-{% include notes.html file="ci-aln1-en" name="notes" show=0 dot=1
-%} {% include pdf.html file="ci-aln1" name="pdf" show=0 dot=0
+{% include notes.html file="ci-aln1-en" name="notes (en, current)" show=1 dot=1
+%} {% include notes.html file="ci-aln1" name="notes (sk, older)" show=1 dot=0
 %}
 
 #### TB: Programs for sequence alignment, scoring schemes, introduction to projects
