@@ -87,10 +87,10 @@ pravdepodobnosťou, dostaneme tak inú možnú anotáciu.
 
 Spustíme dopredný algoritmus a jeho symetrickú verziu, spätný
 algoritmus, ktorý počíta hodnoty
-$B[i,u]=\Pr(A_i=u \wedge S_{i+1}\dots S_n)$
+$B[i,u]=\Pr(S_{i+1}\dots S_n | A_i=u)$
 
 Aposteriórna pravdepodobnosť stavu u na pozícii i:
-$Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u].$
+$\Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u].$
 
 Posterior decoding uvažuje všetky anotácie, nielen jednu s najvyššou
 pravdepodobnosťou. Môže však vypísať anotáciu, ktorá má sama o sebe
