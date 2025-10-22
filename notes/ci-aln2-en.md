@@ -5,6 +5,42 @@ title: "Tutorial for Computer Scientists: Heuristic Sequence Alignment"
 * TOC
 {:toc}
 
+## Algorithm for computing the sensitivity of a seed
+
+  - In the lecture we saw a plot of seed sensitivity for BLAST, i.e., the probability that in a random alignment of a certain length and similarity level, we find $k$ consecutive matches.
+  - For this probability, we do not have a simple formula, but it can be computed by dynamic programming.
+  - Consider a seed of length $k$ (as in the BLAST program for nucleotides; in the lecture, the seed length was denoted $w$, now $k$).
+
+### Combinatorial algorithm
+  - Let $a_n$ be the number of binary sequences of length $n$ that do not contain $k$ adjacent 1s
+  - When $n<k$, $a_n = 2^n$
+  - When $n \geq k$, $a_n = a_{n−1} + a_{n−2} + a_{n−3} + \ldots + a_{n−k}$
+
+### Probabilistic DP algorithm
+  - Consider a probabilistic alignment model, where each position has probability $p$ of being a match and $(1-p)$ of being a mismatch or gap, and the alignment has length $L$.
+  - Random variable $X_i = 1$ if at position $i$ there is a match, 0 otherwise
+  - Random variable $Y_i = 1$ if position $i$ is the start of a seed, i.e., if $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
+  - $\Pr(Y_i = 1) = p^k$, since $X_i$ are mutually independent
+  - Let $Y = \sum_{i=1}^{L-k-1} Y_i$
+  - By linearity of expectation we can easily estimate $E(Y) = (L-k+1)p^k$
+  - But we are interested in $\Pr(Y>0) = 1-\Pr(Y=0)$
+  - $\Pr(Y=0) = \Pr(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
+  - Why doesn't $\Pr(Y=0) = \Pr(Y_i = 0)^{L-k+1}$ hold?
+      - The individual $Y_i$ are not independent, e.g., $\Pr(Y_{i+1}=1\|Y_i=1)=p$
+      - In the sequence of $Y_i$s, ones tend to cluster together
+  - The probability of absence of a seed $\Pr(Y=0)$ can be computed by dynamic programming
+  - Let $A[n]$ be the probability of absence of a seed in the first $n$ columns of the alignment ($0\le n\le L$)
+  - We distinguish cases according to how many 1s occur at the very end of sequence  $X_1,\dots,X_n$
+      - This number can be $0,1,\dots k-1$ (if it were $k$ or more, we would have a seed occurrence)
+
+$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{if } n \< k\\\\\\\\
+\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{if } n \\ge k
+\\end{array}\\right.$
+
+  - In the second line, $p^i(1-p)$ corresponds to $\Pr(X_1...X_n\mbox{ ends with exactly }i\mbox{ ones})$
+  - $A[n-i-1]$ is $\Pr(X_1\dots X_{n-i-1}\mbox{ does not contain a seed})$, which is the same as
+$\Pr(X_1 \dots X_n\mbox{ does not contain a seed }\| X_1 \dots X_n\mbox{ ends with exactly }i\mbox{ ones})$
+
 ## Minimizers: saving memory and time in heuristic sequence alignment
 
 
@@ -119,7 +155,6 @@ AGTGG,1             AGGCT,11     CGAGG
   - in $k$-mer counts we neglected terms like $-k+1$ 
   
 
-
 Literature
   - Li, Heng. [Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences.](https://academic.oup.com/bioinformatics/article-abstract/32/14/2103/1742895) Bioinformatics 32.14 (2016): 2103-2110.
   - Li, Heng. [Minimap2: pairwise alignment for nucleotide sequences.](https://academic.oup.com/bioinformatics/article-abstract/34/18/3094/4994778) Bioinformatics 34.18 (2018): 3094-3100. 
@@ -136,7 +171,7 @@ We want to find pairs of similar ones among them. How can we define the similari
 
 One way to do this is to look at the number of words shared by each pair of pages. We expect that the more words they have in common, the more similar they are. This measure of similarity is formalized by the mathematical concept of the Jaccard index.
 
-Let $U$ be the universe of words and let $A, B \subseteq U$ be its subsets (i.e., the sets of words of two texts). Then the Jaccard index is $J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|}$
+Let $U$ be the universe of words and let $A, B \subseteq U$ be its subsets (i.e., the sets of words of two texts). Then the Jaccard index is $J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|} = \frac{\|A \cap B\|}{\|A\| + \|B\| - \|A \cap B\|}$
 
 This measure takes the value 0 only if the sets are disjoint, and the value 1 only if the sets are identical. Otherwise, its value lies in the open interval $(0, 1)$, and the more words they have in common, the higher its value.
 
@@ -146,21 +181,21 @@ How quickly could we compute the Jaccard index for two sets of words, each with 
 
 The exact computation of the Jaccard index is not always fast enough for the purposes of a particular application, so a logical solution is to try to compute its value only approximately.
 
-### The first idea: approximation by sampling
+<!-- ### The first idea: approximation by sampling -->
 
-  - If we could sample elements $u_1, u_2, \dots, u_s$ from $A \cup B$ (uniformly, independently), and for each element $u_i$ we could quickly determine whether it belongs to the intersection, we could estimate $J(A, B)$ using the random variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i=1$ if $u_i$ is in the intersection and $X_i=0$ otherwise
-  - This is similar to determining a politician's popularity by a public opinion poll, $u_1, u_2, \dots, u_s$ are "respondents"
-  - For each $X_i$ we have $E(X_i) = 0 \cdot \Pr[X_i = 0] + 1 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = J(A, B)$.
-  - By linearity of expectation $E(X) = E(\frac{1}{s}\sum_{i=1}^s X_i) = \frac{1}{s}\sum_{i=1}^s E[X_i] = J(A, B)$.
-  - It follows that the random variable $X$ is an unbiased estimator of the Jaccard coefficient.
-  - In statistics, the basic measure of the quality of an unbiased estimator is its variance, where $Var(X) \le \frac{1}{4s}$ (see derivation below)
-  - As the sample size *s* increases, the variance decreases. A similar situation as in opinion polls, where a larger sample of respondents gives more reliable results.
+<!--   - If we could sample elements $u_1, u_2, \dots, u_s$ from $A \cup B$ (uniformly, independently), and for each element $u_i$ we could quickly determine whether it belongs to the intersection, we could estimate $J(A, B)$ using the random variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i=1$ if $u_i$ is in the intersection and $X_i=0$ otherwise -->
+<!--   - This is similar to determining a politician's popularity by a public opinion poll, $u_1, u_2, \dots, u_s$ are "respondents" -->
+<!--   - For each $X_i$ we have $E(X_i) = 0 \cdot \Pr[X_i = 0] + 1 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = J(A, B)$. -->
+<!--   - By linearity of expectation $E(X) = E(\frac{1}{s}\sum_{i=1}^s X_i) = \frac{1}{s}\sum_{i=1}^s E[X_i] = J(A, B)$. -->
+<!--   - It follows that the random variable $X$ is an unbiased estimator of the Jaccard coefficient. -->
+<!--   - In statistics, the basic measure of the quality of an unbiased estimator is its variance, where $Var(X) \le \frac{1}{4s}$ (see derivation below) -->
+<!--   - As the sample size *s* increases, the variance decreases. A similar situation as in opinion polls, where a larger sample of respondents gives more reliable results. -->
 
-**Problems:**
+<!-- **Problems:** -->
 
-  - It is not easy to sample uniformly from $A \cup B$
-  - To determine whether $u_i$ is in the intersection, we need to have representations of $A$ and $B$ in memory, which can be a problem for a large collection of documents.
-  - Idea: we want to get some other variables $X_i$ that will be independent, have $E(X_i)=J(A,B)$ and will be easier to compute
+<!--   - It is not easy to sample uniformly from $A \cup B$ -->
+<!--   - To determine whether $u_i$ is in the intersection, we need to have representations of $A$ and $B$ in memory, which can be a problem for a large collection of documents. -->
+<!--   - Idea: we want to get some other variables $X_i$ that will be independent, have $E(X_i)=J(A,B)$ and will be easier to compute -->
 
 ### Approximation of the Jaccard coefficient: MinHash
 
@@ -186,7 +221,7 @@ Proof:
 Let us have $s$ independent hash functions $h_1, h_2, \dots, h_s$. For each $i=1,2,\dots,s$ we define the variable $X_i$ to be 1 if $minHash_{h_i}(A) = minHash_{h_i}(B)$ and 0 otherwise.
 
 Then $E(X_i) = J(A, B)$ and the variables $X_i$ are independent.
-We thus replace the random samples discussed above with such $X_i$ values.
+<!-- We thus replace the random samples discussed above with such $X_i$ values. -->
 
 
 ### MinHash algorithm
@@ -240,58 +275,27 @@ Literature
     using MinHash.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x) Genome Biology. 2016 Dec;17(1):1-4.
     
 
-### Calculation of variance (optional)
+<!-- ### Calculation of variance (optional) -->
 
-Consider the variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent binary variables with $\Pr(X_i=1)=p$. We want to estimate the variance $Var(X)$ which tells us how good estimate we get by asking $s$ respondents/hash functions.
+<!-- Consider the variable $X = \frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent binary variables with $\Pr(X_i=1)=p$. We want to estimate the variance $Var(X)$ which tells us how good estimate we get by asking $s$ respondents/hash functions. -->
 
-Variance $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Let's compute both values step by step.
+<!-- Variance $Var(X_i) = E(X_i^2) - (E(X_i))^2$. Let's compute both values step by step. -->
 
-$E(X_i^2) = 0^2 \cdot \Pr[X_i = 0] + 1^2 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = p$
+<!-- $E(X_i^2) = 0^2 \cdot \Pr[X_i = 0] + 1^2 \cdot \Pr[X_i = 1] = \Pr[X_i = 1] = p$ -->
 
-$(E(X_i))^2 = p^2$
+<!-- $(E(X_i))^2 = p^2$ -->
 
-So $Var(X_i) = p - p^2 = p(1-p)$. What is the maximum possible value of the variance?
+<!-- So $Var(X_i) = p - p^2 = p(1-p)$. What is the maximum possible value of the variance? -->
 
-This question is equivalent to "What is the maximum of the function $f(x) = x - x^2$ for $x\in[0, 1]$?". To find the extrema of smooth functions, we need to find the roots of its first derivative. The derivative of this function is $f'(x) = 1 - 2x$, its root is at $0.5$. The value of the function at this point is $1/4$. So $Var(X_i) \leq 1/4$.
+<!-- This question is equivalent to "What is the maximum of the function $f(x) = x - x^2$ for $x\in[0, 1]$?". To find the extrema of smooth functions, we need to find the roots of its first derivative. The derivative of this function is $f'(x) = 1 - 2x$, its root is at $0.5$. The value of the function at this point is $1/4$. So $Var(X_i) \leq 1/4$. -->
 
-$X =\frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent variables and each has mean $E(X_i) = E(X) = p$ and the same variance $Var(X_i) = Var(X) = p(1 - p)\le 1/4$. The variable $X$ is their average.
+<!-- $X =\frac{1}{s}\sum_{i=1}^s X_i$ where $X_i$ are independent variables and each has mean $E(X_i) = E(X) = p$ and the same variance $Var(X_i) = Var(X) = p(1 - p)\le 1/4$. The variable $X$ is their average. -->
 
-Let us look at its variance:
-$Var(X) = Var\left(\frac{X_1+\dots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+\dots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \dots + Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$
+<!-- Let us look at its variance: -->
+<!-- $Var(X) = Var\left(\frac{X_1+\dots+X_s}{s}\right) = \frac{1}{s^2} Var(X_1+\dots+X_s) \overset{*}{=} \frac{1}{s^2} [Var(X_1) + \dots + Var(X_s)] = \frac{1}{s^2} s \cdot Var(X_i) = \frac{Var(X_i)}{s} \leq \frac{1}{4s}$ -->
 
-* The step $(*)$ is possible only because the variables $X_i$ are independent.
+<!-- * The step $(*)$ is possible only because the variables $X_i$ are independent. -->
 
-We see that the variance can be reduced arbitrarily by increasing the number of respondents/hash functions.
+<!-- We see that the variance can be reduced arbitrarily by increasing the number of respondents/hash functions. -->
 
-Note that the variable $s \cdot X$ (i.e., the sum, not the average, of the individual $X_i$s) is the sum of independent indicators with the same distribution, and thus has a binomial distribution with parameters $s$ and $p$. Its variance will be $sp(1-p)$, i.e., it increases with $s$.
-
-
-## Algorithm for computing the sensitivity of a seed (optional)
-
-  - In the lecture we saw a plot of seed sensitivity for BLAST, i.e., the probability that in a random alignment of a certain length and similarity level, we find $k$ consecutive matches.
-  - For this probability, we do not have a simple formula, but it can be computed by dynamic programming.
-  - Consider a seed of length $k$ (as in the BLAST program for nucleotides; in the lecture, the seed length was denoted $w$, now $k$).
-  - Consider a probabilistic alignment model, where each position has probability $p$ of being a match and $(1-p)$ of being a mismatch or gap, and the alignment has length $L$.
-  - Random variable $X_i = 1$ if at position $i$ there is a match, 0 otherwise
-  - Random variable $Y_i = 1$ if position $i$ is the start of a seed, i.e., if $X_i=1, X_{i+1}=1, \dots, X_{i+k-1}=1$
-  - $\Pr(Y_i = 1) = p^k$, since $X_i$ are mutually independent
-  - Let $Y = \sum_{i=1}^{L-k-1} Y_i$
-  - By linearity of expectation we can easily estimate $E(Y) = (L-k+1)p^k$
-  - But we are interested in $\Pr(Y>0) = 1-\Pr(Y=0)$
-  - $\Pr(Y=0) = \Pr(Y_1=0 \wedge \dots \wedge Y_{L-k+1}=0)$
-  - Why doesn't $\Pr(Y=0) = \Pr(Y_i = 0)^{L-k+1}$ hold?
-      - The individual $Y_i$ are not independent, e.g., $\Pr(Y_{i+1}=1\|Y_i=1)=p$
-      - In the sequence of $Y_i$s, ones tend to cluster together
-  - The probability of absence of a seed $\Pr(Y=0)$ can be computed by dynamic programming
-  - Let $A[n]$ be the probability of absence of a seed in the first $n$ columns of the alignment ($0\le n\le L$)
-  - We distinguish cases according to how many 1s occur at the very end of sequence  $X_1,\dots,X_n$
-      - This number can be $0,1,\dots k-1$ (if it were $k$ or more, we would have a seed occurrence)
-  
-
-$A\[n\] = \\left\\{\\begin{array}{ll} 1 & \\mbox{if } n \< k\\\\\\\\
-\\sum\_{i=0}^{k-1} p^i (1-p)A\[n-i-1\] & \\mbox{if } n \\ge k
-\\end{array}\\right.$
-
-  - In the second line, $p^i(1-p)$ corresponds to $\Pr(X_1...X_n\mbox{ ends with exactly }i\mbox{ ones})$
-  - $A[n-i-1]$ is $\Pr(X_1\dots X_{n-i-1}\mbox{ does not contain a seed})$, which is the same as
-$\Pr(X_1 \dots X_n\mbox{ does not contain a seed }\| X_1 \dots X_n\mbox{ ends with exactly }i\mbox{ ones})$
+<!-- Note that the variable $s \cdot X$ (i.e., the sum, not the average, of the individual $X_i$s) is the sum of independent indicators with the same distribution, and thus has a binomial distribution with parameters $s$ and $p$. Its variance will be $sp(1-p)$, i.e., it increases with $s$. -->
