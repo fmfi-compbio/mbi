@@ -136,8 +136,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB:  Hidden Markov models, E-value
 
-{% include notes.html file="cb-hmm" name="notes" show=0 dot=1
-%} {% include pdf.html file="cb-hmm-evalue" name="pdf" show=0 dot=0
+{% include notes.html file="cb-hmm" name="notes" show=1 dot=1
+%} {% include pdf.html file="cb-hmm-evalue" name="pdf" show=1 dot=0
 %}
 
 <a name="W6"></a>
