@@ -16,13 +16,13 @@ HMM Parameters:
   - Sequence $S = S_1 S_2 \dots  S_n$
   - Annotation $A = A_1 A_2 \dots A_n$
 
-$Pr(S, A) = \pi_{A_1} e_{A_1,S_1} \prod_{i=2}^n a_{A_{i-1, A_i}} e_{A_i, S_i}$
+$\Pr(S, A) = \pi_{A_1} e_{A_1,S_1} \prod_{i=2}^n a_{A_{i-1, A_i}} e_{A_i, S_i}$
 
-**Training:** The process of estimating the probabilities $a_{u,v}$ and $e_{u,x}$ in the model as accurately as possible from training data
+**Training:** The process of estimating the probabilities $a_{u,v}$ and $e_{u,x}$ in the model from training data.
 
 **Inference:** The process of applying the model on new data to compute some unkwnon quantity.
 
-For example: finding, for a sequence $S$, an annotation $A$ that emits sequence $S$ with the highest probability.
+For example, finding, for an input sequence $S$, an annotation $A$ that emits sequence $S$ with the highest probability.
 
 
 ## Inference via the most probable path, Viterbi Algorithm
@@ -46,7 +46,7 @@ To output the annotation, for each $V[i,u]$ we remember the state $w$ that led t
 
 Complexity: $O(nm^2)$
 
-Note: For long sequences, the numbers $V[i,u]$ will be very small and arithmeetic underflow may occur. In practice, we use logarithmic values, replacing multiplication with addition.
+Note: For long sequences, the numbers $V[i,u]$ will be very small and arithmetic underflow may occur. In practice, we use logarithmic values, replacing multiplication with addition.
 
 ## The Forward Algorithm
 
@@ -65,13 +65,13 @@ The resulting total probability is $\sum_u F[n,u]$
 
 ## Posterior probability of a state
 
-Posterior probability of state $u$ at position $i$: $\Pr(A_i=u|S_1\dots S_n)$
-We want to compute this for all $i$ and $u$.
-
-We run the forward algorithm and its symmetric version, the backward algorithm, which computes values $B[i,u]=\Pr(S_{i+1}\dots S_n | A_i = u)$
-
-Posterior probability of state $u$ at position $i$:
-$Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u].$
+* Posterior probability of state $u$ at position $i$: $\Pr(A_i=u|S_1\dots S_n)$.
+* This is includes probabilities of all paths that pass thriugh $u$ at position $i$ but can be arbitrary before and after.
+* We want to compute this for all $i$ and $u$.
+* We run the forward algorithm and its symmetric version, the backward algorithm, which computes values $B[i,u]=\Pr(S_{i+1}\dots S_n | A_i = u)$.
+* Posterior probability of state $u$ at position $i$: $\Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u].$
+* We can compute the posterior probablity for all pairs $u$, $i$ in $O(nm^2)$ total time. 
+* One use of such probabilities: visualize, which states in the most probbale annotation are more reliable (with higher posterior) and which are less certain.
 
 
 ## The Backward Algorithm
@@ -87,11 +87,13 @@ $B[i,u] = \sum_v B[i+1,v] a_{u,v} e_{v,S_{i+1}}$
 
 ## Posterior Decoding
 
-For each index $i$ we select the state $u$ with the highest posterior probability, resulting in a different possible annotation.
+Recall that the Viterbi algorithm seeks a single path with the highets overall probability of generating $S$.
 
-We first compute the posterior of each state at each position. 
+Instead, we can choose at each position $i$ the state $u$ with the highest posterior probability, resulting in a different possible annotation.
 
-Posterior decoding considers all annotations, not just the one with the highest probability. However, it may output an annotation that itself has zero probability (e.g., the number of coding bases in a gene is not divisible by 3).
+Advantage: this annotation takes into account all state paths not just the one most probable. Often there are may state paths with similar probbailities. 
+
+Disadvantage: The annotation obtaned in this way may occassionally have zero probability (e.g., the number of coding bases in a gene is not divisible by 3).
 
 
 ## HMM Training

@@ -4,7 +4,7 @@ title: Introduction
 
 **1-BIN-301, 2-AIN-501 Methods in Bioinformatics**<br>
 These courses are taught by members of the [computational biology research group](https://compbio.fmph.uniba.sk/)<br>
-at the [Faculty of Mathematics, Physics and Informatics](https://fmph.uniba.sk), [Comenus University in Bratislava](https://uniba.sk), Slovakia<br>
+at the [Faculty of Mathematics, Physics and Informatics](https://fmph.uniba.sk), [Comenius University in Bratislava](https://uniba.sk), Slovakia<br>
 Students from the Faculty of Natural Sciences are very welcome, as are guests from other institutions.
 
 ### Schedule
