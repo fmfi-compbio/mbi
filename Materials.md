@@ -130,7 +130,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI:  Fast similarity search, BLAST, MinHash
 
-{% include notes.html file="ci-aln2-en" name="notes" show= dot=1
+{% include notes.html file="ci-aln2-en" name="notes" show=1 dot=1
 %} {% include pdf.html file="ci-aln2-en" name="pdf" show=1 dot=0
 %}
 
