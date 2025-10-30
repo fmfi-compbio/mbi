@@ -2,7 +2,7 @@
 title: Materials
 ---
 
-[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · **[Week 5](#W5)** · [Week 6](#W6) · [Week 7](#W7)
+[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · **[Week 6](#W6)** · [Week 7](#W7)
 · [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
@@ -144,13 +144,13 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Oct. 30
 #### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
 
-{% include pdf.html file="p-phylo" name="pdf" show=0 dot=1
-%} {% include youtube.html id="RzfNHvZH4l8" name="video" show=0 dot=1
+{% include pdf.html file="p-phylo" name="pdf" show=1 dot=1
+%} {% include youtube.html id="RzfNHvZH4l8" name="video" show=1 dot=1
 %} BV chapter 3, DEKM chapter 7,8; ZB chapter 7, 8.1-8.2, video
 
 #### TI:  Algorithms for HMM
 
-{% include notes.html file="ci-hmm" name="notes" show=0 dot=0
+{% include notes.html file="ci-hmm-en" name="notes" show=0 dot=0
 %} {% include pdf.html file="ci-hmm" name="pdf" show=0 dot=0
 %}
 

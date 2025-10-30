@@ -42,12 +42,12 @@ reťazec          reťazec         hody
 s predĺženými    so skrátenými   mincou
 dobami           dobami          s Pr(X=1)=0.7
 toho istého      toho istého
-počasia          počasi
+počasia          počasia
 ```
 
 * Všetky tri matice generujú postupnosti s približne 70% jednotiek. 
 * Priemerná dĺžka súvislého úseku núl: 4.3, 1.1, 1.4.
-* Priemerné dĺžky súvislých úsekov jednotiek: 10, 2.5, 3.3. 
+* Priemerná dĺžka súvislého úseku jednotiek: 10, 2.5, 3.3. 
 
 ### Výpočet matice pre viac krokov naraz
 
@@ -89,7 +89,7 @@ t=0           t=1           t=2           t=3               t=10
 ```
 
 
-## Substitučné modely
+## Substitučné modely 
 
 - Nech $\Pr(a\stackrel{t}{\rightarrow} b)$ je pravdepodobnosť, že ak začneme s bázou *a*, tak
   po čase *t* budeme mať bázu *b*, t.j. $\Pr(X_{t_0+t}=b \| X_{t_0}=a)$.
@@ -181,8 +181,6 @@ s(\epsilon) & s(\epsilon) & s(\epsilon) & 1-3s(\epsilon)
 - Hodnotou $c=-1/4$ dopočítame z počiatočnej podmienky $s(0)=0$.
 - Overíme tiež, že $\lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon}=\alpha$. (Môže sa hodiť L’Hospitalovo pravidlo.)
 - Nakoľko $s(0)=0$, máme  $\alpha = \lim_{\epsilon\to 0} \frac{s(\epsilon)}{\epsilon} =  \lim_{\epsilon\to 0} \frac{s(0+\epsilon)-s(0)}{\epsilon} = s'(0)$. 
-
-
 
 
 ### Vlastnosti riešenia
@@ -300,8 +298,8 @@ Model **HKY85** (Hasegawa, Kishino & Yano, 1985) umožňuje aj rôzne pravdepodo
 - Ale vo všeobecnosti pre maticu rýchlostí $R$ dostávame $S(t)=e^{Rt}$.
   - Exponenciálna funkcia matice $A$ sa definuje ako
     $e^A = \sum_{k=0}^\infty{1 \over k!}A^k.$
-  - Ak maticu rýchlostí R diagonalizujeme (určite sa dá pre
-    symetrické R) $R = U D U^{-1}$, kde $D$ je diagonálna matica (na
+  - Ak maticu rýchlostí $R$ diagonalizujeme (určite sa dá pre
+    symetrické $R$) $R = U D U^{-1}$, kde $D$ je diagonálna matica (na
     jej diagonále budú vlastné hodnoty $R$), tak
     $e^{Rt} = U e^{Dt} U^{-1}$, t.j. exponenciálnu funkciu
     uplatníme iba na prvky na uhlopriečke matice $D$.
