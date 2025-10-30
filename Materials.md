@@ -156,8 +156,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB:  Substitution models, bootstrap, tree rooting
 
-{% include notes.html file="cb-phylo1" name="notes" show=0 dot=0
-%} {% include pdf.html file="cb-phylo" name="pdf" show=0 dot=0
+{% include notes.html file="cb-phylo1" name="notes" show=1 dot=1
+%} {% include pdf.html file="cb-phylo" name="pdf" show=1 dot=0
 %}
 
 <a name="W7"></a>
