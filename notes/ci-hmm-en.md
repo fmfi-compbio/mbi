@@ -79,7 +79,8 @@ $\Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u]$.
 
 ## The Backward Algorithm
 
-We want to compute the probability of the right part of the sequence $S_{i+1}\dots S_n$ given the current state $u$ at position $i$, i.e., $\Pr(S_{i+1}\dots S_n|A_i=u)$.
+We want to compute the probability of the right part of the sequence $S_{i+1}\dots S_n$ given the current state $u$ at position $i$, i.e.,
+$\Pr(S_{i+1}\dots S_n|A_i=u)$.
 
 Subproblem $B[i,u]$: probability of generating $S_{i+1}, S_{i+2}, \dots, S_n$ from state $u$.
 
