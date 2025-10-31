@@ -151,7 +151,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TI:  Algorithms for HMM
 
 {% include notes.html file="ci-hmm-en" name="notes (en)" show=1 dot=1
-%} {% include notes.html file="ci-hmm" name="notes (sk)" show=1 dot=1
+%} {% include notes.html file="ci-hmm" name="notes (sk, old)" show=1 dot=1
 %} {% include pdf.html file="ci-hmm-en" name="pdf" show=1 dot=0
 %}
 
