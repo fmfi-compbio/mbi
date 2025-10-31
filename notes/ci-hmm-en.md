@@ -67,11 +67,12 @@ The resulting total probability is $\sum_u F[n,u]$
 
 * Posterior probability of state $u$ at position $i$:
 $\Pr(A_i = u | S_1 \dots S_n)$.
-
 * This is includes probabilities of all paths that pass thriugh $u$ at position $i$ but can be arbitrary before and after.
 * We want to compute this for all $i$ and $u$.
-* We run the forward algorithm and its symmetric version, the backward algorithm, which computes values $B[i,u]=\Pr(S_{i+1}\dots S_n | A_i = u)$.
-* Posterior probability of state $u$ at position $i$: $\Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u].$
+* We run the forward algorithm and its symmetric version, the backward algorithm, which computes values
+$B[i,u]=\Pr(S_{i+1}\dots S_n | A_i = u)$.
+* Posterior probability of state $u$ at position $i$:
+$\Pr(A_i=u|S_1\dots S_n) = F[i,u] B[i,u] / \sum_u F[n,u]$.
 * We can compute the posterior probablity for all pairs $u$, $i$ in $O(nm^2)$ total time. 
 * One use of such probabilities: visualize, which states in the most probbale annotation are more reliable (with higher posterior) and which are less certain.
 
@@ -166,12 +167,6 @@ More complex HMM: three states $M$, $X$, $Y$, all fully interconnected
 $V\[i,j,u\] = \\max\_w \\left\\{ \\begin{array}{l}
 V\[i-1,j-1,w\] \\cdot a\_{w,u} \\cdot e\_{u,x\_i,y\_j} \\\\\\\\
 V\[i-1,j,w\] \\cdot a\_{w,u} \\cdot e\_{u,x\_i,-} \\\\ V\[i,j-1,w\] \\cdot a\_{w,u}\\cdot e\_{u,-,y\_j} \\\\ \\end{array}\\right.$
-
-$V[i,j,u] = \max_w \left\{ \begin{array}{l}
-V[i-1,j-1,w] \cdot a_{w,u} \cdot e_{u,x_i,y_j} \\\\
-V[i-1,j,w] \cdot a_{w,u} \cdot e_{u,x_i,-} \\\\
-V[i,j-1,w] \cdot a_{w,u}\cdot e_{u,-,y_j} \\
-\end{array}\right.$
 
   - Time complexity $O(mnk^2)$ where $m$ and $n$ are the lengths of the input sequences, $k$ is the number of states
 
