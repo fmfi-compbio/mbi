@@ -29,7 +29,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         (`ENST00000308191.11_hg38`), z mien sekvencií zmažeme spoločný
         začiatok (`ENST00000308191.11_hg38`) a celkovo prepíšeme
         skratky druhov na anglické názvy.
-      - [Výsledné zarovnanie](../data/cb-phylo2-aln1.fa)
+      - [Výsledné zarovnanie](../data/cb-phylo2-aln1.fa.txt)
       - Podobný postup sme ešte spravili s génom EFL1, transkript [ENST00000891314.1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A40931924-41019316), [výsledné zarovnanie](../data/cb-phylo2-aln2.fa.txt)
 	
 
@@ -185,7 +185,7 @@ napríklad tieto dva (v súčasnosti Selecton asi nefunguje):
 
 ## Objavenie génu HAR1 pomocou komparatívnej genomiky
 
-  - [pdf](https://ribonode.ucsc.edu/Pubs/Pollard_etal06.pdf)
+  - Pollard, K.S., Salama, S.R., Lambert, N., Lambot, M.A., Coppens, S., Pedersen, J.S., Katzman, S., King, B., Onodera, C., Siepel, A. and Kern, A.D., 2006. [An RNA gene expressed during cortical development evolved rapidly in humans](https://doi.org/10.1038/nature05113). Nature, 443(7108), pp.167-172. 
   - Zobrali všetky regióny dĺžky aspoň 100bp s \> 96% podobnosťou medzi
     šimpanzom a myšou/potkanom (35,000)
   - Porovnali s ostatnými cicavcami, zistili, ktoré majú veľa mutácií v
