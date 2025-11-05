@@ -6,14 +6,11 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 {:toc}
 
 
-## Uniprot pre projekty
+ENST00000492590.6
+chr3:59,747,277-61,251,452
 
-  - Prehľadný pohľad na proteíny, veľa linkov na iné databázy, časť
-    vytváraná ručne
-  - Pozrieme sa na známy koronavírusový proteín Spike
-      - Nájdime ho na stránke <https://www.uniprot.org/> pod názvom
-        SPIKE\_SARS2
-      - Pozrime si jeho stránku (vrátime sa k nej po prednáške o proteínoch)
+EFL1
+ENST00000891314.1 chr13:40,931,924-41,019,316
 
 ## Praktická ukážka tvorby stromov
 
@@ -27,7 +24,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         7B)
       - Na modrej lište zvolíme `Tools`, `Table browser`. V nastaveniach
         tabuliek Group: `Genes and Gene Predictions`, Track: `All GENCODE v
-        32.`, zaklikneme `Region: position`, a `Output format: CDS FASTA
+        49.`, zaklikneme `Region: position`, a `Output format: CDS FASTA
         alignment` a stlačíme `Get output`
       - Na ďalšej obrazovke zaklikneme `show nucleotides`, zvolíme `MAF
         table multiz100way` a vyberieme si, ktoré organizmy chceme. V
@@ -37,17 +34,19 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         output`.
       - Výstup uložíme do súboru, necháme si iba prvú formu génu
         (`ENST00000308191.11_hg38`), z mien sekvencií zmažeme spoločný
-        začiatok (`ENST00000308191.11_hg38`), prípadne celkovo prepíšeme
-        mená na anglické názvy.
+        začiatok (`ENST00000308191.11_hg38`)a celkovo prepíšeme
+        skratky druhov na anglické názvy.
+      - [Výsledné zarovnanie](../data/cb-phylo2-aln1.fa)
+      - Podobný postup sme ešte spravili s génom EFL1, transkript [ENST00000891314.1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A40931924-41019316), [výsledné zarovnanie](../data/cb-phylo2-aln2.fa)
+	
 
 ### Strom metódou spájania susedov
 
-  - Otvorte si [zarovnanie](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-aln.fa), ktoré vzniklo postupom vyššie s ručne upravenými menami sekvencií 
-  - Skúsme zostaviť strom na stránke
-    <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny> (na cvičení nefungovala)
+  - So zarovnaniami vyššie skúsme zostaviť strom na stránke
+    <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny>
       - Distance correction: ako na prednáške, z počtu pozorovaných
         mutácií na evolučný čas
-      - Exclude gaps: vynechať všetky stĺpce s pomlčkami
+      - Exclude gaps: vynechať všetky stĺpce s pomlčkami - radšej nie
       - Clustering method: UPGMA predpokladá molekulárne hodiny,
         spájanie susedov nie
       - P.I.M. vypíš aj maticu vzdialeností (% identity, pred korekciou)
@@ -60,6 +59,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
       - [Výsledok so správnym
         zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/2/24/Cb06-aln-root.pdf) (chicken =
         outgroup)
+
 
   - ["Správny strom"](https://genome-euro.ucsc.edu/images/phylo/hg38_100way.png) v
     nastaveniach Conservation track-u v UCSC browseri podľa článku
