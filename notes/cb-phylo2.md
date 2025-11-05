@@ -5,13 +5,6 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 * TOC
 {:toc}
 
-
-ENST00000492590.6
-chr3:59,747,277-61,251,452
-
-EFL1
-ENST00000891314.1 chr13:40,931,924-41,019,316
-
 ## Praktická ukážka tvorby stromov
 
 ### Viacnásobné zarovnania z UCSC browsera
@@ -45,15 +38,15 @@ ENST00000891314.1 chr13:40,931,924-41,019,316
   - So zarovnaniami vyššie skúsme zostaviť strom na stránke
     <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny>
       - Distance correction: ako na prednáške, z počtu pozorovaných
-        mutácií na evolučný čas
+        mutácií na evolučný čas - zapneme
       - Exclude gaps: vynechať všetky stĺpce s pomlčkami - radšej nie
       - Clustering method: UPGMA predpokladá molekulárne hodiny,
         spájanie susedov nie
       - P.I.M. vypíš aj maticu vzdialeností (% identity, pred korekciou)
       - Vo výslednom strome by sme mali zmeniť zakorenenie, aby sme mali
-        sliepku (chicken) ako outgroup
+        sliepku (chicken) ako outgroup (kliknutím na sliepku a voľbou v menu)
 
-  - Výsledky z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
+  - Výsledky pre prvé zarovnanie z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
     podporuje aj bootstrap:
       - [Výsledok s pôvodným zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/4/41/Cb06-aln.pdf)
       - [Výsledok so správnym
@@ -69,7 +62,7 @@ ENST00000891314.1 chr13:40,931,924-41,019,316
     a psa. Zlé postavenie hlodavcov môže byť spôsobené [long branch
     attraction](https://en.wikipedia.org/wiki/Long_branch_attraction).
   - Ak chcete skúsiť zostaviť aj zarovnania, treba začať z [nezarovnaných
-    sekvencií](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-seq.fa).
+    sekvencií](../data/cb-phylo2-seq1.fa)
 
 Zostavili sme strom aj IQ-TREE pomocou metódy maximálnej vierohodnosti na Galaxy, viď nižšie
 - [modely](https://github.com/Cibiv/IQ-TREE/wiki/Substitution-Models) v IQ-TREE
