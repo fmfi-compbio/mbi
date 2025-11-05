@@ -30,7 +30,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         začiatok (`ENST00000308191.11_hg38`) a celkovo prepíšeme
         skratky druhov na anglické názvy.
       - [Výsledné zarovnanie](../data/cb-phylo2-aln1.fa)
-      - Podobný postup sme ešte spravili s génom EFL1, transkript [ENST00000891314.1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A40931924-41019316), [výsledné zarovnanie](../data/cb-phylo2-aln2.fa)
+      - Podobný postup sme ešte spravili s génom EFL1, transkript [ENST00000891314.1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A40931924-41019316), [výsledné zarovnanie](../data/cb-phylo2-aln2.fa.txt)
 	
 
 ### Strom metódou spájania susedov
@@ -48,9 +48,9 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 
   - Výsledky pre prvé zarovnanie z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
     podporuje aj bootstrap:
-      - [Výsledok s pôvodným zakorenením](../cb-phylo2-aln1.pdf)
+      - [Výsledok s pôvodným zakorenením](../data/cb-phylo2-aln1.pdf)
       - [Výsledok so správnym
-        zakorenením](../cb-phylo2-aln1-root.pdf) (chicken =
+        zakorenením](../data/cb-phylo2-aln1-root.pdf) (chicken =
         outgroup)
 
 
