@@ -1,0 +1,1 @@
+(opposum,(elephant,((dog,(cow,pig)),((bushbaby,(marmoset,(rhesus,(orang,human)))),((rat,mouse),rabbit)))));
