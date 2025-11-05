@@ -27,7 +27,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
         output`.
       - Výstup uložíme do súboru, necháme si iba prvú formu génu
         (`ENST00000308191.11_hg38`), z mien sekvencií zmažeme spoločný
-        začiatok (`ENST00000308191.11_hg38`)a celkovo prepíšeme
+        začiatok (`ENST00000308191.11_hg38`) a celkovo prepíšeme
         skratky druhov na anglické názvy.
       - [Výsledné zarovnanie](../data/cb-phylo2-aln1.fa)
       - Podobný postup sme ešte spravili s génom EFL1, transkript [ENST00000891314.1](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A40931924-41019316), [výsledné zarovnanie](../data/cb-phylo2-aln2.fa)
@@ -48,9 +48,9 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 
   - Výsledky pre prvé zarovnanie z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
     podporuje aj bootstrap:
-      - [Výsledok s pôvodným zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/4/41/Cb06-aln.pdf)
+      - [Výsledok s pôvodným zakorenením](../cb-phylo2-aln1.pdf)
       - [Výsledok so správnym
-        zakorenením](https://compbio.fmph.uniba.sk/vyuka/mbi/images/2/24/Cb06-aln-root.pdf) (chicken =
+        zakorenením](../cb-phylo2-aln1-root.pdf) (chicken =
         outgroup)
 
 
@@ -89,7 +89,7 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
   - Zarovnáme na Galaxy pomocou muscle, strom spravíme cez rapidnj alebo
     IQ-tree
   - Dáta nahráme ikonou Upload úplne vľavo hore, v dolnom rade tlačidiel treba dať `Paste/Fetch data`
-  - Strom zobrazíme cez `Visualize` v hornom menu (vyžaduje prihlásenie) alebo cez [phylotree](https://phylotree.hyphy.org/).
+  - Strom zobrazíme ikonkou grafu alebo cez [phylotree](https://phylotree.hyphy.org/).
   - [Predpočítané výsledky](https://usegalaxy.eu/u/brejova/h/cb-phylo2-musclerapidnj)
 
 ## Gény, evolúcia a komparatívna genomika v UCSC genome browseri (cvičenie pri počítači)
