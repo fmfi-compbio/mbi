@@ -171,9 +171,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI:  Substitution models
 
-{% include notes.html file="ci-chains" name="notes" show=0 dot=1
-%} {% include notebook.html file="ci-chains" name="colab" show=0 dot=0
-%} {% include pdf.html file="ci-chains" name="pdf" show=0 dot=0
+{% include notes.html file="ci-chains-en" name="notes" show=0 dot=1
+%} {% include notebook.html file="ci-chains" name="colab" show=0 dot=1
+%} {% include pdf.html file="ci-chains-en" name="pdf" show=0 dot=0
 %}
 
 #### TB:  Practical phylogenetic trees

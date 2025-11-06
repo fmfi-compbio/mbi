@@ -9,22 +9,31 @@ title: "Tutorial for Computer Scientists: Substitution Models"
 ## Markov Chains (Markovove reťazce)
 
 - A Markov chain is a simpler model than a hidden Markov model (HMM), as it contains only states and transition probabilities between them, but does not consider any emissions.
-- Formally, a **Markov chain** is a sequence of random variables $X_0, X_1, \dots$ such that $\Pr(X_t|X_0,\dots,X_{t-1}) = \Pr(X_t|X_{t-1})$, i.e., the state at time $t$ depends only on the state at time $t-1$ and not on any earlier states (states are the possible values of $X_{t}$).
-- We are interested in **homogeneous** Markov chains, where $\Pr(X_t|X_{t-1})$ does not depend on $t$.
+- Formally, a **Markov chain** is a sequence of random variables
+  $X_0, X_1, \dots$
+  such that
+  $\Pr(X_t|X_0,\dots,X_{t-1}) = \Pr(X_t|X_{t-1})$,
+  i.e., the state at time $t$ depends only on the state at time $t-1$ and not on any earlier states (states are the possible values of $X_{t}$).
+- We are interested in **homogeneous** Markov chains, where
+  $\Pr(X_t|X_{t-1})$
+  does not depend on $t$.
 - We also consider only chains where the random variables $X_t$ take values from a finite set.
 - Example 1: weather model, states are rain / sunshine, $X_t$ is the weather on day $t$.
 - Example 2: states A, C, G, T, can be used to generate random DNA or to track mutations at a specific position in a chromosome. In the latter case, $X_t$ is the base at that position at time $t$ (analogous to the weather).
 
 ### Transition Probability Matrix (matica pravdepodobnosti prechodu)
 
-- Transition probabilities between states can be organized as a matrix $M$, where the element $M[x,y]$ denotes the probability of transition from state $x$ to state $y$, i.e., $M[x,y]=\Pr(X_t=y|X_{t-1}=x)$.
+- Transition probabilities between states can be organized as a matrix $M$, where the element $M[x,y]$
+  denotes the probability of transition from state $x$ to state $y$, i.e.,
+  $M[x,y]=\Pr(X_t=y|X_{t-1}=x)$.
 - The sum of each matrix row must be 1, and all elements must be non-negative.
 - Independent coin tosses are also a special case of a Markov chain. What does its matrix look like?
 
-Example:
+Example (see also notebook):
 ```
 0.767 0.233      0.067 0.933     0.30 0.70
 0.100 0.900      0.400 0.600     0.30 0.70
+--------------------------------------------------
 Markov           Markov          Independent
 chain            chain           coin tosses
 with extended    with shortened  with Pr(X=1)=0.7
