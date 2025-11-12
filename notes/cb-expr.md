@@ -62,14 +62,14 @@ zhlukovania a postupne ho zlepšuje.
   výrazne nadexprimované alebo podexprimované v microarray
   experimentoch, gény regulované určitým transkripčným faktorom a pod.
 - Niektoré z nich budú preskúmanejšie (známa funkcia a pod.), niektoré
-  môžu mať nejaké údaje o funkcii prenesené z homologov a ďalšie môžu
+  môžu mať nejaké údaje o funkcii prenesené z homológov a ďalšie môžu
   byť úplne neznáme
 - Čo s takým zoznamom "zaujímavých génov"?
-  - možnosť 1: vybrať si z neho niekoľko málo zaujímavých kandidátov a
+  - možnosť 1: vybrať si z neho niekoľko málo kandidátov a
     preskúmať ich podrobnejšie (experimentálne alebo bioinformaticky)
   - možnosť 2: zistiť, či táto celá skupina je obohatená o gény určitých
     skupín
-    - napr. v pripade pozitivneho vyberu nam casto vychadzaju geny
+    - napr. v pripade pozitívneho výberu nám často vychádzajú geny
       suvisiace s imunitou, lebo su pod velkym evolucnym tlakom od patogenov
     - takato analyza nam teda da informaciu o suvislostiach medzi
       roznymi procesmi

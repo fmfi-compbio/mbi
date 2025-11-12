@@ -155,7 +155,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="ci-hmm-en" name="pdf" show=1 dot=0
 %}
 
-#### TB:  Substitution models, bootstrap, tree rooting
+#### TB: Substitution models, bootstrap, tree rooting
 
 {% include notes.html file="cb-phylo1" name="notes" show=1 dot=1
 %} {% include pdf.html file="cb-phylo" name="pdf" show=1 dot=0
@@ -176,10 +176,12 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="ci-chains-en" name="pdf" show=1 dot=0
 %}
 
-#### TB:  Practical phylogenetic trees
+#### TB: Project proposals, practical phylogenetic trees
 
 {% include notes.html file="cb-phylo2" name="notes" show=1 dot=0
+%} {% include notes.html file="compgen" name="notes" show=0 dot=0
 %}
+<!-- compgen sa nestihlo -->
 
 
 <a name="W8"></a>
@@ -190,13 +192,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
 %} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1
 
-#### TI:  Felsenstein algorithm, algorithms for HMM and phyloHMM
+#### TI: Felsenstein algorithm, algorithms for HMM and phyloHMM
 
 {% include notes.html file="ci-phylo" name="notes" show=0 dot=0
 %}
 
-#### TB:  K-means clustering, enrichment, multiple testing correction
+#### TB: K-means clustering, enrichment, multiple testing correction, introduction do Uniprot for projects
 
+<!-- pridaj uniprot, multiple testing bude asi na prednaske, kratka ukazka enrichmentu na nejakej stranke, napr srdce z prednasky  -->
 {% include notes.html file="cb-expr" name="notes" show=0 dot=1
 %} {% include pdf.html file="cb-kmeans" name="pdf" show=0 dot=0
 %}
@@ -216,6 +219,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB:  Introduction to context-free grammars, enrichment, motifs
 
+<!-- gramatiky, expresia geo2r -->
 {% include notes.html file="cb-grammars" name="notes1" show=0 dot=1
 %} {% include notes.html file="cb-expr2" name="notes2" show=0 dot=0
 %}
@@ -234,8 +238,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-grammars" name="notes2" show=0 dot=0
 %}
 
-#### TB:  Proteins, example of command-line tools
+#### TB: Proteins, example of command-line tools
 
+<!-- proteiny, motivy, compgen, pripadne rna struktura; command-line nechaj na neskor -->
 {% include notes.html file="cb-prot" name="notes1" show=0 dot=1
 %} {% include notes.html file="cb-linux" name="notes2" show=0 dot=1
 %} 
@@ -248,13 +253,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="7vPt1vQX21M" name="video" show=0 dot=0
 %}
 
-#### TI:  RNA structure 
+#### TI: RNA structure 
 
 {% include notes.html file="ci-rna" name="notes" show=0 dot=0
 %}
 
-#### TB:  Course summary, graphs, population genetics, RNA structure, expression data
+#### TB: Course summary, graphs, population genetics, RNA structure, expression data
 
+<!-- summary, kratky popgen, command-line -->
 {% include pdf.html file="cb-summary" name="pdf1" show=0 dot=1
 %} {% include pdf.html file="cb-graphs" name="pdf2" show=0 dot=1
 %} {% include notes.html file="cb-popgen" name="notes1" show=0 dot=1
