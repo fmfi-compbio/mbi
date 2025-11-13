@@ -151,7 +151,7 @@ zhlukovania a postupne ho zlepšuje.
     fisher.test(a,alternative = "greater")
 ```
 
-## Multiple testing correction
+## Multiple testing correction (bolo na prednáške)
 
   - V mnohych situaciach robime vela testov toho isteho typu, kazdy ma
     urcitu p-value
