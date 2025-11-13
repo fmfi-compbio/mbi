@@ -199,9 +199,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB: K-means clustering, enrichment, introduction do Uniprot for projects
 
-<!-- pridaj uniprot, multiple testing bude asi na prednaske, kratka ukazka enrichmentu na nejakej stranke, napr srdce z prednasky  -->
-{% include notes.html file="cb-expr" name="notes" show=0 dot=1
-%} {% include pdf.html file="cb-kmeans" name="pdf" show=1 dot=0
+{% include notes.html file="cb-expr" name="notes enrichemnt" show=1 dot=1
+%} {% include notes.html file="cb-expr2" name="notes enrichment2" show=1 dot=1
+%} {% include pdf.html file="cb-kmeans" name="pdf" show=1 dot=1
+%} {% include notes.html file="cb-uniprot" name="notes uniprot" show=1 dot=0
 %}
 
 <a name="W9"></a>
@@ -217,11 +218,11 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-motifs" name="notes" show=0 dot=0
 %}
 
-#### TB:  Introduction to context-free grammars, enrichment, motifs
+#### TB:  Introduction to context-free grammars, motifs
 
 <!-- gramatiky, expresia geo2r -->
 {% include notes.html file="cb-grammars" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-expr2" name="notes2" show=0 dot=0
+%} {% include notes.html file="cb-expr3" name="notes2" show=0 dot=0
 %}
 
 <a name="W10"></a>
