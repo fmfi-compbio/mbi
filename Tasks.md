@@ -40,13 +40,11 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td colspan="3">
       Evolution, comparative genomics<br />
-      {% if false %}
       Biologists: questions <a href="./pdf/a2b.pdf">pdf</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40958">Moodle</a><br />
       Computer science: questions <a href="./pdf/a2i-en.pdf">pdf</a>, 
       data <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a2-i.zip">zip</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40957">Moodle</a>
-      {% endif %}
     </td>
   </tr>
   <tr>
