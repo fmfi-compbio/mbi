@@ -64,11 +64,10 @@ $N[v,a] = [a\ne b]$
 
 ## Posterior Probability
 
-We did not cover this, included for interest.
-
 - What if we want to compute the probability $\\Pr(X_v=a \| X_1=x_1, X_2=x_2,\dots X_n=x_n,T,R)$? We are interested in the sequences of ancestral genomes.
 - The algorithm is similar to forward-backward algorithm for HMMs.
 - We need $B[v,a]$: the probability of data if we replace subtree $v$ with a leaf having base $a$.
+    - i.e., probability of all data except subtree rooted at $v$
 - We compute $B[v,a]$ from root to leaves.
 - At the root we have $B[v,a] = q_a$.
 - At vertex $v$ with parent $u$ and sibling $x$ we have

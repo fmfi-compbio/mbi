@@ -194,7 +194,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Felsenstein algorithm, algorithms for HMM and phyloHMM
 
-{% include notes.html file="ci-phylo-en" name="notes" show=0 dot=0
+{% include notes.html file="ci-phylo-en" name="notes" show=1 dot=0
 %}
 
 #### TB: K-means clustering, enrichment, introduction do Uniprot for projects
