@@ -215,7 +215,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI:  Motif finding by EM and Gibbs sampling
 
-{% include notes.html file="ci-motifs" name="notes" show=0 dot=0
+{% include notes.html file="ci-motifs-en" name="notes" show=0 dot=0
 %}
 
 #### TB:  Introduction to context-free grammars, motifs
