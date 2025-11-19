@@ -73,18 +73,18 @@ Use of samples
   - **Markov chain** is a sequence of random variables $X^{(0)}, X^{(1)}, \dots,$ such that
     $\Pr(X^{(t)}|X^{(0)},\dots,X^{(t-1)}) = \Pr(X^{(t)}|X^{(t-1)})$,
     i.e. the value at time $t$ depends only on the value at time $t-1$ and not on earlier values.
-  - We are interested in **homogeneous** Markov chains, in which $\Pr(X^{(t)}|X^{(t-1)})$ does not depend on $t$.
+  - We are interested in **homogeneous** Markov chains, in which $\Pr(X^{(t)}\|X^{(t-1)})$ does not depend on $t$.
   - We are also only interested in chains where the random variables $X_t$ take values from a finite set (possible values of $X^{(t)}$ are called **states**)
       - For example, states A,C,G,T
-      - In Gibbs sampling for motifs, the state is the configuration of variables O (i.e. we have (m-L+1)^n states)
-          - The sample at step t depends on the sample at step t-1 (and differs only in the value of one $o_i$)
+      - In Gibbs sampling for motifs, the state is the configuration of variables $O$ (i.e. we have $(m-L+1)^n$ states)
+          - The sample at step $t$ depends on the sample at step $t-1$ and differs only in the value of one $o_i$
 
 **Matrix**
 
   - The probabilities of transitions between states in one step can be expressed by a probability matrix P, whose element $p_{x,y}$ denotes the probability of transition from state x to state y
-    $p_{X,Y}=\Pr(X_t=y|X_{t-1}=x)$
+    $p_{x,y}=\Pr(X_t=y\|X_{t-1}=x)$
       - The sum of each row is 1, numbers are non-negative
-  - We denote $p_{x,y}^t$ as $\Pr(X^{(t)}=y|X^{(0)}=x)$,
+  - We denote $p_{x,y}^t$ as $\Pr(X^{(t)}=y\|X^{(0)}=x)$,
     these values are obtained by raising the matrix *P* to the power *t*
 
 **Stationary Distribution**
@@ -97,7 +97,7 @@ Use of samples
 **Examples of Markov Chains in Bioinformatics**
 
   - In HMMs, the states form a Markov chain
-  - Other variants: infinite state spaces (more complex theory), continuous time (seen in evolutionary models), higher-order chains where we determine $\Pr(X_t|X_{t-r},\dots,X_{t-1})$, etc.
+  - Other variants: infinite state spaces (more complex theory), continuous time (seen in substitution models), higher-order chains where we determine $\Pr(X_t\|X_{t-r},\dots,X_{t-1})$, etc.
   - Use in bioinformatics: characterization of random sequences (null hypothesis), for DNA orders up to 5 are used, better than independent variables
 
 **Ergodic Markov Chains**
@@ -105,12 +105,12 @@ Use of samples
   - We say that a matrix is **ergodic** if $P^t$ for some t\>0 has all entries nonzero
   - Examples of non-ergodic matrices
 
-
+```
     1 0          0.5 0.5          0 1             0.5 0.5
     0 1          0   1            1 0             1   0
     disconnected weakly connected periodic      ergodic
-
-  - In HMMs, the states form a Markov chain; gene finding has an ergodic state space, profile HMMs do not
+```
+  - In HMMs, the states form a Markov chain; gene finding HMM from the lecture has an ergodic state space, profile HMMs do not
 
 ### Markov chain Monte Carlo MCMC
 
@@ -124,7 +124,7 @@ Use of samples
 ### Gibbs Sampling
 
   - The target distribution $\pi(X)$ is over vectors of length *n* $X=(x_1,...x_n)$
-  - In each step, we sample one component $x_i$ from the conditional probability $\Pr(x_i|x_1,\dots,x_{i-1},x_{i+1},\dots x_n)$
+  - In each step, we sample one component $x_i$ from the conditional probability $\Pr(x_i\|x_1,\dots,x_{i-1},x_{i+1},\dots x_n)$
   - The other values remain the same as in the previous step
   - The value $i$ is chosen randomly or cycled periodically $i=1,2,\dots,n$
 
@@ -146,8 +146,8 @@ Given for interest - according to the paper Siddharthan, R., Siggia, E.D. and Va
 
 **Probabilistic Model**
 
-  - We extend the model so that O and W are also random variables, so we have the distribution Pr(S,W,O)
-      - Then we want to sample from Pr(O|S) (marginalizing over all values of W)
+  - We extend the model so that O and W are also random variables, so we have the distribution $\Pr(S,W,O)$
+      - Then we want to sample from $\Pr(O\|S)$ (marginalizing over all values of $W$)
   - A random probability matrix W is generated (e.g. from a uniform distribution over all matrices)
   - In each sequence i, a window $o_i$ of length L is chosen (uniformly from m-L+1 possibilities)
   - In the window, the sequence is generated according to profile W, and outside the window according to the null hypothesis (as before)
@@ -156,11 +156,11 @@ Given for interest - according to the paper Siddharthan, R., Siggia, E.D. and Va
 
   - Given S, we sample O ($O^{(0)}, O^{(1)}, \dots$) (if needed, from $O^{(t)}$ we can construct the matrix $W^{(t)}$)
       - start with random windows $O^{(0)}$
-      - in step t+1, choose one sequence i and for all positions $o'_i$ compute $\Pr(o'_i|O^{(t)}_{-i},S)$ (where $O_{-i}=o_1\dots o_{i-1}o_{i+1}\dots o_n$, i.e. all occurrence positions except the i-th).
+      - in step t+1, choose one sequence i and for all positions $o'_i$ compute $\Pr(o'_i\|O^{(t)}_{-i},S)$ (where $O_{-i}=o_1\dots o_{i-1}o_{i+1}\dots o_n$, i.e. all occurrence positions except the i-th).
       - randomly choose one $o'_i$ proportional to these probabilities
       - $O^{(t+1)}$ is obtained from $O^{(t)}$ by replacing the position in sequence i with the newly chosen one
       - repeat many times
-  - Converges to the target distribution $\Pr(O|S)$, but samples are not independent
+  - Converges to the target distribution $\Pr(O\|S)$, but samples are not independent
   - Other possible steps in sampling: shift all windows by a constant left or right
   - Other possible model/algorithm extensions: add a distribution over *L* and randomly increase/decrease *L*, allow skipping the motif in some sequences, search for multiple motifs at once, ...
 
