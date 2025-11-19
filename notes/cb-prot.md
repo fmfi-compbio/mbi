@@ -6,8 +6,6 @@ title: "Cvičenia pre biológov: Proteíny"
 {:toc}
 
 
-Na úvod dokončíme [ukážku databázy motívov z minulého cvičenia](./cb-expr2.html#kvasinkové-transkripčné-faktory-v-sgd).
-
 ## PSI BLAST a Pfam
 
   - Budeme uvažovať tri vzdialene podobné enzýmy
@@ -29,6 +27,7 @@ Na úvod dokončíme [ukážku databázy motívov z minulého cvičenia](./cb-ex
         HIT.
   - Pozrime si doménu HIT na stránke databázy [Interpro](https://www.ebi.ac.uk/interpro/entry/pfam/PF01230/), hlavne časť
     Profile HMM
+  - Takisto si pozrieme, ako sú domény viditeľné v Uniprot pre FHIT
 
 
   - Skúsme nájsť podobnosť medzi týmito proteínmi v BLASTe:
@@ -58,11 +57,5 @@ Na úvod dokončíme [ukážku databázy motívov z minulého cvičenia](./cb-ex
   * HNT1 (pod názvom Hit family protein 1) z *Saccharomyces cerevisiae*
   * Galactose-1-phosphate uridylyltransferase z *Haemophilus influenzae*
 * V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
-
-
-## Uniprot
-
-- Pozrime si podrobnejšie stránku ľudského FHIT v databáze [Uniprot](https://www.uniprot.org/uniprot/P49789)
-- Ktoré časti boli predpovedané bioinformatickými metódami z prednášky?
 
 

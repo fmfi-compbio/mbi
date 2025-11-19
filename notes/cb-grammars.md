@@ -58,7 +58,7 @@ title: "Cvičenia pre biológov aj informatikov: Bezkontextové gramatiky"
   - Gramatika pre dobre uzátvorkované výrazy nám pomôže určiť, ktorá
     zátvorka patrí ku ktorej: tie, ktoré boli vygenerované v jednom
     kroku
-  - Podobne na budúcej prednáške budeme mať gramatiku pre RNA, ktorá bude v jendom kroku generovať spárené nukelotidy
+  - Podobne na budúcej prednáške budeme mať gramatiku pre RNA, ktorá bude v jednom kroku generovať spárené nukleotidy
 
 ## Ďalšie cvičenia
 
@@ -69,9 +69,9 @@ title: "Cvičenia pre biológov aj informatikov: Bezkontextové gramatiky"
     nukleotidmi v strede
       - $S\to gSc \| cSg \| aSu \| uSa \| aaa \| aac \| aag \| aau \| ... \| uuu$
 
-  - Tažší príklad: Zostavte gramatiku na slová s rovnakým počtom a-čok a
+  - Ťažší príklad: Zostavte gramatiku na slová s rovnakým počtom a-čok a
     b-čok v ľubovoľnom poradí
       - $S\to \epsilon \| aSbS \| bSaS$
       - ako bude generovať aababbba?
-      - preco vie vygenerovat vsetky take retazce?
+      - prečo vie vygenerovať všetky také reťazce?
 

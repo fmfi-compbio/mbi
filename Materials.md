@@ -218,12 +218,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-motifs-en" name="notes" show=0 dot=0
 %}
 
-#### TB:  Introduction to context-free grammars, motifs
+#### TB:  Introduction to context-free grammars, expression data
 
 <!-- gramatiky, expresia geo2r -->
-{% include notes.html file="cb-grammars" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-expr3" name="notes2" show=0 dot=0
-%}
+{% include notes.html file="cb-grammars" name="notes grammars" show=1 dot=1
+%} {% include notes.html file="cb-expr3" name="notes expression" show=1 dot=0
+%} {% include notebook.html file="cb-expr" name="notebook expression" show=1 dot=0
+%} {% include notes.html file="cb-prot" name="notes proteins" show=1 dot=1
+%} 
 
 <a name="W10"></a>
 ### Nov. 27
@@ -239,12 +241,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-grammars" name="notes2" show=0 dot=0
 %}
 
-#### TB: Proteins, example of command-line tools
+#### TB: Proteins, RNA structure, sequence motifs
 
 <!-- proteiny, motivy, compgen, pripadne rna struktura; command-line nechaj na neskor -->
 {% include notes.html file="cb-prot" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-linux" name="notes2" show=0 dot=1
-%} 
+%} {% include notes.html file="cb-rna" name="notes2" show=0 dot=1
+%} {% include notes.html file="cb-motifs" name="notes2" show=0 dot=1
+%} {% include notes.html file="compgen" name="notes" show=0 dot=0
+%}
 
 <a name="W11"></a>
 ### Dec. 4
@@ -259,14 +263,13 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-rna" name="notes" show=0 dot=0
 %}
 
-#### TB: Course summary, graphs, population genetics, RNA structure, expression data
+#### TB: Course summary, graphs, population genetics, example of command-line tools
 
 <!-- summary, kratky popgen, command-line -->
 {% include pdf.html file="cb-summary" name="pdf1" show=0 dot=1
 %} {% include pdf.html file="cb-graphs" name="pdf2" show=0 dot=1
 %} {% include notes.html file="cb-popgen" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-rna" name="notes2" show=0 dot=1
-%} {% include notebook.html file="cb-expr" name="notebook" show=0 dot=0
+%} {% include notes.html file="cb-linux" name="notes2" show=0 dot=1
 %} 
 
 <a name="W12"></a>
