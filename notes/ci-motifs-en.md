@@ -170,17 +170,17 @@ Given for interest - according to the paper Siddharthan, R., Siggia, E.D. and Va
   - $\Pr(o_i\|O_{-i},S) = \Pr(O\|S) / \Pr(O_{-i}\|S)$, but the denominator is a constant
   - $\Pr(O\|S) = \Pr(S\|O)\Pr(O)/\Pr(S)$, where
     $\Pr(S)=\sum_{O'} \Pr(S\|O')\Pr(O')$
-  - The denominator does not interest us (normalization constant)
-  - $\Pr(O)$ is also a constant (uniform distribution of window positions)
-  - Thus, $\Pr(o_i\|O_{-i},S)$ is proportional to $\Pr(S|O)$
-  - We can easily compute $\Pr(S\|W,O)$, we need to "eliminate" W, a formula can be computed...
-  - We try all possible values $o'_i$, compute the probability $\Pr(S\|O)$, sample proportional to that
+    - Again, the denominator does not interest us (normalization constant)
+    - $\Pr(O)$ is also a constant (uniform distribution of window positions)
+  - Thus, $\Pr(o_i\|O_{-i},S)$ is proportional to $\Pr(S\|O)$
+  - We can easily compute $\Pr(S\|W,O)$, but we need to "eliminate" W, see below
+  - We try all possible values $o'_i$, compute the probability $\Pr(S\|O)$, and sample proportional to that
 
 Further details of computing $\Pr(S\|O)$:
 
-  - Let $S_o$ be only the sequences in the windows and $S_{-o}$ outside the windows. We have $\Pr(S\|O) = \Pr(S_o\|O)\Pr(S_{-o}\|O)$
+  - Let $S_o$ be the sequences in the windows and $S_{-o}$ outside the windows. We have $\Pr(S\|O) = \Pr(S_o\|O)\Pr(S_{-o}\|O)$
   - $\Pr(S_{-o}\|O)$ can be easily computed (does not depend on W)
-  - $\Pr(S_o\|O) = \int \Pr(S_o\|O,W)\Pr(W)dW$ where the integral is over values where $w_{a,i}\ge 0$ and $\sum_a w_{a,i} = 1\,$
+  - $\Pr(S_o\|O) = \int \Pr(S_o\|O,W)\Pr(W)dW$ where the integral is over values of matrix $W$ where $w_{a,i}\ge 0$ and $\sum_a w_{a,i} = 1\,$
   - $\Pr(W)$ is a constant (uniform distribution; not a probability but a density),
     $\Pr(S_o\|O,W) = \prod_{i=1}^L \prod_a (w_{a,i})^{n_{a,i}}$, where $n_{a,i}$ is the number of occurrences of base $a$ at position $i$ in windows $o_1\dots o_n$
   - $\Pr(S_o\|O) = \prod_{i=1}^L 3!/(n+3)! \prod_a n_{a,i}!$ (without proof)
