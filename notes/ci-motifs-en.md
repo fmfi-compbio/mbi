@@ -144,7 +144,7 @@ Use of samples
 
 Given for interest - according to the paper Siddharthan, R., Siggia, E.D. and Van Nimwegen, E., 2005. PhyloGibbs: a Gibbs sampling motif finder that incorporates phylogeny. PLoS computational biology, 1(7), p.e67.
 
-**Probabilistic Model**
+**Probabilistic model**
 
   - We extend the model so that O and W are also random variables, so we have the distribution $\Pr(S,W,O)$
       - Then we want to sample from $\Pr(O\|S)$ (marginalizing over all values of $W$)
@@ -152,11 +152,11 @@ Given for interest - according to the paper Siddharthan, R., Siggia, E.D. and Va
   - In each sequence i, a window $o_i$ of length L is chosen (uniformly from m-L+1 possibilities)
   - In the window, the sequence is generated according to profile W, and outside the window according to the null hypothesis (as before)
 
-**Gibbs Sampling**
+**Gibbs sampling**
 
   - Given S, we sample O ($O^{(0)}, O^{(1)}, \dots$) (if needed, from $O^{(t)}$ we can construct the matrix $W^{(t)}$)
       - start with random windows $O^{(0)}$
-      - in step t+1, choose one sequence i and for all positions $o'_i$ compute $\Pr(o'_i\|O^{(t)}_{-i},S)$ (where $O_{-i}=o_1\dots o_{i-1}o_{i+1}\dots o_n$, i.e. all occurrence positions except the i-th).
+      - in step $t+1$, choose one sequence $i$ and for all positions $o'\_i$ compute $\Pr(o'\_i\|O^{(t)}\_{-i},S)$, where $O\_{-i}=(o\_1\dots o\_{i-1}o\_{i+1}\dots o\_n)$, i.e. all occurrence positions except the $i$-th.
       - randomly choose one $o'_i$ proportional to these probabilities
       - $O^{(t+1)}$ is obtained from $O^{(t)}$ by replacing the position in sequence i with the newly chosen one
       - repeat many times
