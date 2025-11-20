@@ -26,8 +26,8 @@ title: "Cvičenia pre biológov: Proteíny"
         [klanu](https://www.ebi.ac.uk/interpro/set/pfam/CL0265/) ako
         HIT.
   - Pozrime si doménu HIT na stránke databázy [Interpro](https://www.ebi.ac.uk/interpro/entry/pfam/PF01230/), hlavne časť
-    Profile HMM
-  - Takisto si pozrieme, ako sú domény viditeľné v Uniprot pre FHIT
+    Profile HMM.
+  - Takisto si pozrieme, ako sú domény viditeľné v Uniprot pre [FHIT](https://www.uniprot.org/uniprot/P49789).
 
 
   - Skúsme nájsť podobnosť medzi týmito proteínmi v BLASTe:
@@ -35,17 +35,20 @@ title: "Cvičenia pre biológov: Proteíny"
     **Swissprot**, ako Query zadajme Accession proteínu FHIT **P49789**,
     spustime program **PSI-BLAST**, E-value zvýšená na **0.1**.
   - V prvom kole PSI-BLAST spúšťa bežný BLASTP
-  - Vidíte medzi výsledkami HNT1 a GAL-1-P? S akou E-hodnotou?
+  - Vidíte medzi výsledkami naše dva proteíny? S akou E-hodnotou?
+    - HNT1 zo *Saccharomyces cerevisiae*
+    - GAL-1-P z *Haemophilus influenzae*
   - Spustíme teraz druhú iteráciu PSI-BLAST, ktorá zostaví profil z
     proteínov s nízkou E-hodnotou v prvej iterácii
   - Ako sa zmenili výsledky pre HNT1 a GAL-1-P?
 
-
+<!--
   - Ak by výpočet dlho trval, výsledky sú tu:
       - [1.
         kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UHJWVB013)
       - [2.
         kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UMV18C016)
+-->
 
 ## FoldSeek
 
@@ -54,8 +57,9 @@ title: "Cvičenia pre biológov: Proteíny"
 * Zvoľte `Load accession`, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
 * Vo výsledkoch zvoľte záložku Swissprot
 * Vidíte vo výsledkoch naše dva proteiny?
-  * HNT1 (pod názvom Hit family protein 1) z *Saccharomyces cerevisiae*
+  * HNT1 (pod názvom Adenosine 5'-monophosphoramidase) zo *Saccharomyces cerevisiae*
   * Galactose-1-phosphate uridylyltransferase z *Haemophilus influenzae*
 * V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
 
+## Alphafold
 

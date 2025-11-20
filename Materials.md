@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· **[Week 8](#W8)** · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · **[Week 9](#W9)** · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -209,8 +209,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 20
 #### L: Protein structure and function
 
-{% include pdf.html file="p-prot" name="pdf" show=0 dot=1
-%} {% include youtube.html id="ugMM81jZRpc" name="video" show=0 dot=1
+{% include pdf.html file="p-prot" name="pdf" show=1 dot=1
+%} {% include youtube.html id="ugMM81jZRpc" name="video" show=1 dot=1
 %} DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2
 
 #### TI:  Motif finding by EM and Gibbs sampling
@@ -281,8 +281,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="ci-ilp" name="notes" show=0 dot=0
 %} 
 
-#### TB:  Project consultations in January
+#### TB:  Project consultations, course summary, remaining topics
 
 <a name="W13"></a>
 ### Dec. 16
+
+
 
