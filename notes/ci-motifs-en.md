@@ -29,6 +29,14 @@ title: "Tutorial for Computer Scientists: Motif Finding"
   - Initialization: assign each position *j* in sequence $S_i$ some score $p_{i,j}$
   - Iterate:
       - Compute *W* from all possible occurrences in $S_1,\dots,S_k$ weighted by $p_{i,j}$
+```
+for i in [0..n):                  # for all strings
+  for j in [0..|s_i|-L+1):        # for all positions
+    for x in [j..j+L):            # substring starting at j
+      W[s_i[x], x-j] += p_{i,j}   # depending on nucleotide s[j], fill corresponding motif position in W
+# normalize each column so that sum is 1
+```
+
       - Recompute all scores $p_{i,j}$ so that they correspond to the ratios of probabilities of occurrence of *W* at position *j* in $S_i$. That is, $p_{i,j}$ is proportional to $\Pr(S_i\|W,o_i=j)$, and normalized so that the sum of $p_{i,j}$ in each row $i$ is 1.
 
 ### Gibbs Sampling
