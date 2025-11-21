@@ -234,10 +234,11 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
 %} DEKM chapter 10, ZB chapter 11.9
 
-#### TI: Examples of biological databases, introduction to context-free grammars, HMM topology
+#### TI: Examples of biological databases, HMM topology, introduction to context-free grammars
 
-{% include notes.html file="ci-tools" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-grammars" name="notes2" show=0 dot=0
+{% include notes.html file="ci-tools-en" name="notes databases" show=0 dot=1
+%} {% include notes.html file="ci-hmm-en" name="notes HMMs" show=0 dot=1
+%} {% include notes.html file="cb-grammars-en" name="notes grammar" show=0 dot=0
 %}
 
 #### TB: Proteins, RNA structure, sequence motifs

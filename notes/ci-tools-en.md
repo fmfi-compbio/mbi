@@ -78,7 +78,8 @@ CCGAAAAGCCCCCACAAAAAGCCG
       - GTF: coordinates
       - Hyperlinks to genome browser: clickable page
   - Instead of exporting, you can look at various statistics
-  - More complex: intersection of two tables, e.g., genes that are more than 50% covered by sequence repeats
+  - More complex use: intersection of two tables, e.g., genes that are more than 50% covered by sequence repeats
       - In the intersection, choose group: Variation and repeats, track:
-        RepeatMasker, set records that have at least 50% overlap with RepeatMasker
-      - In summary/statistics, find out how many there are in the genome, you can browse them through Hyperlinks to genome browser
+        RepeatMasker, choose records that have at least 50% overlap with RepeatMasker
+      - Using summary/statistics we can find out how many there are in the genome, we can browse them through Hyperlinks to genome browser
+        
