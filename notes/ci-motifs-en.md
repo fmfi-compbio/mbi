@@ -30,10 +30,10 @@ title: "Tutorial for Computer Scientists: Motif Finding"
   - Iterate:
       - Compute *W* from all possible occurrences in $S_1,\dots,S_k$ weighted by $p_{i,j}$
 ```
-for i in [0..n):                  # for all strings
-  for j in [0..|s_i|-L+1):        # for all positions
-    for x in [j..j+L):            # substring starting at j
-      W[s_i[x], x-j] += p_{i,j}   # depending on nucleotide s[j], fill corresponding motif position in W
+for i in [0..n):			# for all strings
+    for j in [0..|s_i|-L+1):		# for all positions
+    	for x in [j..j+L):		# substring starting at j
+	    W[s_i[x], x-j] += p_{i,j}	# depending on nucleotide s[j], fill corresponding motif position in W
 # normalize each column so that sum is 1
 ```
 
