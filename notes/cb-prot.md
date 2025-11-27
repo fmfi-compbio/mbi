@@ -63,3 +63,5 @@ title: "Cvičenia pre biológov: Proteíny"
 
 ## Alphafold
 
+* Alphafold server <https://alphafoldserver.com/> (najviac 30 predikcií za deň, nekomerčné použitie)
+* ColabFold <https://colab-db.github.io/notebooks/colabfold/>

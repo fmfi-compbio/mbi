@@ -5,10 +5,11 @@ title: Exam
 * TOC
 {:toc}
 
-A brief description of the exam is included in the [course rules](./Rules.html#exam), more details will be added later.
-
-
 {% if false %}
+A brief description of the exam is included in the [course rules](./Rules.html#exam), more details will be added later.
+{% endif %}
+
+
 ## Exam rules
 
 Exam is for 1-BIN-301 (mainly AIN, BIN, DAV, INF students).
@@ -19,16 +20,13 @@ The exam is primarily **written**:
   - Time 3 hours
   - About 50% of points for simple questions
       - examples on this page
-      - in case of interest tutorial session before exam
+      - in case of interest tutorial session before the exam
   - The rest of the questions mostly designing/modifying an algorithm or
-    model
-  - You can use pen, simple calculator and a cheat sheet up to 2 A4
+    a model
+  - You can use pen, simple calculator and a cheat sheet of up to 2 A4
     two-sided sheets
 
-In the circumstances listed below the full written exam may be replaced by a combination of a shorter written exam and an oral exam. This applies to 
-
-* students who do not pass the exam during the first, regular date, and need the second or even the third attempt,
-* ERASMUS students who do not participate in Slovak lectures and tutorials.
+For students, who do not pass the exam during the first, regular date, and need the second or even the third attempt, the full written exam may be replaced by a combination of a shorter written exam and an oral exam. You will be notified by the instructors if this applies to you.
 
 On the oral part of the exam, you should be able to explain the theory behind the questions in the written part (terminology, algorithms, what they are used for etc.).
 
@@ -65,22 +63,31 @@ kontig, problém najkratšieho spoločného nadslova, de Bruijnove grafy
 **Main concepts in English and Slovak**
 
 The problem of local and global alignment of two sequences, dynamic
-programming algorithms, scoring matrix and its probabilistic meaning,
-statistical significance (E-value, P-value), heuristic search of local
-alignments (BLAST, minimizers), whole-genome and multiple alignments
+programming algorithms, advanced dynamic programming (Hirschberg
+algorithm, algorithm for affine gaps), scoring matrix and its
+probabilistic meaning, statistical significance (E-value, P-value),
+heuristic search of local alignments (BLAST, minimizers), whole-genome
+and multiple alignments
 
-Problém lokálneho a globálneho zarovnania dvoch sekvencií, jeho riešenie
-pomocou dynamického programovania, skórovacia matica a jej
-pravdepodobnostný význam, štatistická významnosť (E-hodnota, P-hodnota),
-heuristické hľadanie lokálnych zarovnaní (BLAST, minimizéry),
-celogenómové a viacnásobné zarovnania
+Problém lokálneho a globálneho zarovnania dvoch sekvencií, jeho
+riešenie pomocou dynamického programovania, pokročilé verzie
+dynamického programovania (Hirschbergov algoritmus, algoritmus s
+afínnymi medzerami), skórovacia matica a jej pravdepodobnostný význam,
+štatistická významnosť (E-hodnota, P-hodnota), heuristické hľadanie
+lokálnych zarovnaní (BLAST, minimizéry), celogenómové a viacnásobné
+zarovnania
 
 **Simple questions for the exam**
 
   - Fill in the dynamic programing matrices for local and global
     alignment of sequences TACGT and CAGGATT, where the match has score
     +3, mismatch -1, gap -2. Reconstruct also the optimal alignments
-    found by the dynamic programming algorithm.
+    found by the dynamic programming algorithms.
+
+    For the subproblem comparing TACG with CAGG explain how the value
+    in the matrix was derived (which options were considered, what
+    they represent and what were their scores).
+
   - Compute the score of the alignment shown below using the scoring
     matrix shown below, gap opening penalty -5, gap extension penalty -2
     for each additional base. Find a global alignment with a higher
@@ -101,8 +108,6 @@ celogenómové a viacnásobné zarovnania
     seeds it finds while comparing sequences GATTACGGAT and CAGGATT?
     List all found seeds.
   - Consider minimizers with k=5 and s=3 (i.e consider a sliding window of 3 5-mers). K-mers are compared by simple lexicographical ordering, no hash vaue is computed. Which k-mers will be minimizers in sequence AGTGGCTGCCAGGCTGG ?
-    
-
 
 
 ### Gene finding
@@ -164,7 +169,7 @@ negatívneho výberu, fylogenetické HMM, test pomerom vierohodností
     nodes in the tree below given a column of alignment TTAAA (in the
     order gollum, hobbit, human, elf, orc). You can derive your answer
     using any method (but it has to be the most parsimonious
-    assignment).
+    assignment). How many mutations occurred in your history?
 
 ```
     Gollum ----|
@@ -219,17 +224,18 @@ bluebird          4       5       5       0
 
 **Main concepts in English and Slovak**
 
-Measuring gene expressing using RNA-seq, hierarchical clustering,
-classification, representation of sequence motifs (transcription
-factor binding sites) as a consensus, regular expression and PSSM,
-finding new motifs in sequences, consensus pattern problem, finding
-motifs using probability models, EM algorithm
+Measuring gene expressing using RNA-seq, genes with differential
+expression, hierarchical clustering, representation of sequence motifs
+(transcription factor binding sites) as a consensus, regular
+expression and PSSM, finding new motifs in sequences, consensus
+pattern problem, finding motifs using probability models, EM algorithm
 
-Určovanie génovej expresie sekvenovaním RNA-seq, hierarchické
-zhlukovanie, klasifikácia, reprezentácia sekvenčných motívov (väzobné
-miesta transkripčných faktorov) ako konsenzus, regulárny výraz a PSSM,
-hľadanie nových motívov v sekvenciách, consensus pattern problem,
-hľadanie motívu pomocou pravdepodobnostných modelov, algoritmus EM
+Určovanie génovej expresie sekvenovaním RNA-seq, gény so zmenou v
+expresii, hierarchické zhlukovanie, reprezentácia sekvenčných motívov
+(väzobné miesta transkripčných faktorov) ako konsenzus, regulárny
+výraz a PSSM, hľadanie nových motívov v sekvenciách, consensus pattern
+problem, hľadanie motívu pomocou pravdepodobnostných modelov,
+algoritmus EM
 
 **Simple questions for the exam**
 
@@ -252,7 +258,7 @@ gene E   0.7  0.4  0.6  0.8   0
 
   - Consider a motif represented by the PSSM shown below. Compute the
     score of string GGAG. Which sequences of length 4 will have the
-    smallest and highest score in this PSSM?
+    smallest and highest score in this PSSM? What will be their scores?
 
 ```
     A   -3    3   -2   -2
@@ -287,11 +293,11 @@ gene E   0.7  0.4  0.6  0.8   0
 
 Primary, secondary and tertiary structure of a protein, protein domains
 and families, family representation by a profile (PSSM) and a profile
-HMM, protein threading, gene ontology.
+HMM, gene ontology.
 
 Primárna, sekundárna a terciálna štruktúra proteínov, proteínové domény
 a rodiny, reprezentovanie rodiny pravdepodobnostným profilom a
-profilovým HMM, protein threading, gene ontology.
+profilovým HMM, gene ontology.
 
 **Simple questions for the exam**
 
@@ -314,11 +320,13 @@ profilovým HMM, protein threading, gene ontology.
 
 Secondary structure of RNA, pseudoknots and well-parenthesized
 structures, Nussinov algorithm, energy minimization, stochastic
-context-free grammars, covariance models of RNA families
+context-free grammars, covariance models of RNA families, integer
+linear programming technique of solving hard problems
 
 Sekundárna štruktúra RNA, pseudouzly a dobre uzátvorkovaná štruktúra,
 Nussinovovej algoritmus, minimalizácia energie, stochastické
-bezkontextové gramatiky, kovariančné modely rodín RNA.
+bezkontextové gramatiky, kovariančné modely rodín RNA, technika
+celočíselného lineárneho programovania na riešenie ťažkých problémov
 
 **Simple questions for the exam**
 
@@ -327,7 +335,9 @@ bezkontextové gramatiky, kovariančné modely rodín RNA.
     without pseudoknots with the highest number of paired bases in RNA
     sequence GAACUAUCUGA (we allow only complementary bases A-U, C-G).
     List which pairs of positions are paired in the secondary
-    structure found by the algorithm.
+    structure found by the algorithm. Explain how the value for substring
+    GAACUAUCUG was derived: what were the considered possibilities and
+    what were their scores.
 
 ```
                     1 1
@@ -356,7 +366,7 @@ A                     0
     pairs on positions (1,7), (2,6), (3,5), (8,13) a (9,12). (Positions
     are numbered started from 1.) (This RNA is shown as an example in
     the lecture on RNA structure.) Show a derivation of this sequence
-    using a grammar show below so that paired bases are always generated
+    using a grammar shown below so that paired bases are always generated
     in the same step of the derivation.
       - Grammar 1:
         S-\>aSu\|uSa\|cSg\|gSc\|aS\|cS\|gS\|uS\|Sa\|Sc\|Sg\|Su\|SS\|epsilon
@@ -380,8 +390,9 @@ asociácií, LD blok, subpopulácia.
 
   - For pairs of SNPs from the tables show below determine, if we can
     statistically reject the hypothesis that they are in linkage
-    equilibrium (LE) at the significance level p=0.05, i.e.
-    $\chi^2>3.841$. For each pair compute their $\chi^2$ value.
+    equilibrium (LE) using the $\chi^2$ test and the significance level
+    p=0.05, i.e.  $\chi^2>3.841$. For each pair compute their $\chi^2$
+    value.
 
 
 ``` 
@@ -390,10 +401,5 @@ P  100 200          P 10  20         P  1  2
 p  300 200          p 30  20         p  3  2
 ```
 
-### Additional important concepts
 
-  - Advanced dynamic programming algorithms (protein MS/MS, variants of
-    sequence alignment, variants of Nussinov algorithm)
-  - Integer linear programming
 
-{% endif %}

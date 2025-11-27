@@ -179,7 +179,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TB: Project proposals, practical phylogenetic trees
 
 {% include notes.html file="cb-phylo2" name="notes" show=1 dot=0
-%} {% include notes.html file="compgen" name="notes" show=0 dot=0
+%} {% include notes.html file="cb-compgen" name="notes" show=0 dot=0
 %}
 <!-- compgen sa nestihlo -->
 
@@ -243,12 +243,13 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB: Proteins, RNA structure, sequence motifs
 
-<!-- proteiny, motivy, compgen, pripadne rna struktura; command-line nechaj na neskor -->
-{% include notes.html file="cb-prot" name="notes1" show=0 dot=1
-%} {% include notes.html file="cb-rna" name="notes2" show=0 dot=1
-%} {% include notes.html file="cb-motifs" name="notes2" show=0 dot=1
-%} {% include notes.html file="compgen" name="notes" show=0 dot=0
-%}
+<!-- proteiny, motivy, compgen, pripadne rna struktura -->
+{% include notes.html file="cb-prot" name="notes proteins" show=1 dot=1
+%} {% include notes.html file="cb-rna" name="notes rna" show=1 dot=1
+%} {% include notes.html file="cb-motifs" name="notes motifs" show=1 dot=1
+%} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=1 dot=0
+%} {% include notes.html file="cb-popgen" name="notes pop. genomics" show=1 dot=1
+%} 
 
 <a name="W11"></a>
 ### Dec. 4
@@ -268,7 +269,6 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 <!-- summary, kratky popgen, command-line -->
 {% include pdf.html file="cb-summary" name="pdf1" show=0 dot=1
 %} {% include pdf.html file="cb-graphs" name="pdf2" show=0 dot=1
-%} {% include notes.html file="cb-popgen" name="notes1" show=0 dot=1
 %} {% include notes.html file="cb-linux" name="notes2" show=0 dot=1
 %} 
 
