@@ -11,16 +11,16 @@ In this course we have seen HMMs for gene finding and also profile HMMs for repr
 
 ## Designing the State Space of the Model
 
-A transmembrane protein homology prediction HMM 
+#### A transmembrane protein homology prediction HMM 
   - Sonnhammer, E.L., Von Heijne, G. and Krogh, A., 1998, June. [A hidden Markov model for predicting transmembrane helices in protein sequences](https://cdn.aaai.org/ISMB/1998/ISMB98-021.pdf). In ISMB (Vol. 6, pp. 175-182).
   - Classes we want to predict for each amino acid: inside the cell, outside the cell, membrane
   - First attempt: three states, one for each class. Which transitions should we allow?
   - Problem 1: If we enter the mebrane state from inside, we must exit to outside, and vice versa. How can we handle this with HMM states?
   - Problem 2: A single state cannot model length distribution of membrane segments well. A typical membrane segment is 15-25 amino acids long. How can we enforce this length range in the model?
 
-Jumping profile HMMs for recombination detection in HIV sequences
-  - To be covered after the protein lecture which introduces profile HMMs
-  - Schultz, A.K., Zhang, M., Bulla, I., Leitner, T., Korber, B. and Stanke, M., 2006. [A jumping profile HMM: improvement of subtype prediction in HIV-1](https://academic.oup.com/bioinformatics/article/22/14/1786/207556). Bioinformatics, 22(14), pp.1786-1793.
+#### Jumping profile HMMs for recombination detection in HIV sequences
+  <!-- - To be covered after the protein lecture which introduces profile HMMs -->
+  - Schultz, A.K., Zhang, M., Bulla, I., Leitner, T., Korber, B. and Stanke, M., 2006. [A jumping profile Hidden Markov Model and applications to recombination sites in HIV and HCV genomes](https://link.springer.com/article/10.1186/1471-2105-7-265). BMC Bioinformatics, 7(1).
   - We have a large multiple sequence alignment of HIV sequences from different subtypes
   - From this, we build profile HMMs for each subtype
   - Given a new HIV sequence, we want to determine its subtype

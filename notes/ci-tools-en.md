@@ -8,9 +8,11 @@ title: "Tutorial for Computer Scientists: Introduction to Bioinformatics Databas
 
 ## NCBI, blast
 
+  - <http://www.ncbi.nlm.nih.gov/>
   - National Center for Biotechnology Information
-    <http://www.ncbi.nlm.nih.gov/>
   - Collects publicly accessible data from molecular biology
+    - Genome database: whole genomes of over 1000 organisms
+    - SRA database: sequencing datasets
   - We will use the BLAST tool to search for homologs (similar sequences)
     - Let us find homologs of the following sequence in the chicken genome (choose
         nucleotide blast, database others and from the menu Refseq reference genomes,
@@ -34,6 +36,13 @@ GGTCAGTTTCCCCACCTCGGGGAGGGAGAACCCCGGAGCTGGTTGTGAGACAAATTGAGTTTCTGGACCC
 CCGAAAAGCCCCCACAAAAAGCCG
 ```
 
+## Ensembl
+
+  - <https://www.ensembl.org/index.html>
+  - Joint scientific project between the European Bioinformatics Institute and the Wellcome Trust Sanger Institute
+  - Provides access to genomes, annotations, and tools (BLAST, Variant Effect Predictor...)
+
+<!--
 ## Uniprot
 
   - A comprehensive view of proteins, with many links to other databases, some content curated manually
@@ -41,6 +50,7 @@ CCGAAAAGCCCCCACAAAAAGCCG
     - Find it on <https://www.uniprot.org/> under the name SPIKE_SARS2
     - Examine its page in detail: which features were predicted by bioinformatics methods discussed in the lecture?
     - Notice one of the Pfam domains and visit its page
+-->
 
 ## UCSC genome browser
 
@@ -82,4 +92,3 @@ CCGAAAAGCCCCCACAAAAAGCCG
       - In the intersection, choose group: Variation and repeats, track:
         RepeatMasker, choose records that have at least 50% overlap with RepeatMasker
       - Using summary/statistics we can find out how many there are in the genome, we can browse them through Hyperlinks to genome browser
-        

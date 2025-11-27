@@ -10,7 +10,7 @@ title: "Tutorial for biologists and computer scientists: Context-Free Grammars"
   - Stochastic context-free grammars are used to model RNA structure (to be covered in the next lecture)
   - We will now look at [context-free grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html), which do not have probabilities
   - Introduced by Noam Chomsky in linguistics in the 1950s, also important in computer science (for example in compilers of programming languages)
-  - Students who took the Formal Languages and Automata Theory course may be familiar with context free grammars and do not need this part of the tutorial
+  <!-- - Students who took the Formal Languages and Automata Theory course may be familiar with context free grammars and do not need this part of the tutorial -->
 
 ## What is a grammar
 
@@ -57,4 +57,3 @@ The task is to determine how a string could have been generated using the rules
       - $S\to \epsilon \| aSbS \| bSaS$
       - how does it generate aababbba?
       - why can it generate all such strings?
-

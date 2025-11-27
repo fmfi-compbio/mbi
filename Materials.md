@@ -236,9 +236,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Examples of biological databases, HMM topology, introduction to context-free grammars
 
-{% include notes.html file="ci-tools-en" name="notes databases" show=0 dot=1
-%} {% include notes.html file="ci-hmm2-en" name="notes HMMs" show=0 dot=1
-%} {% include notes.html file="cb-grammars-en" name="notes grammar" show=0 dot=0
+{% include notes.html file="ci-tools-en" name="notes databases" show=1 dot=1
+%} {% include notes.html file="cb-grammars-en" name="notes grammar" show=1 dot=1
+%} {% include notes.html file="ci-hmm2-en" name="notes HMMs" show=1 dot=0
 %}
 
 #### TB: Proteins, RNA structure, sequence motifs
