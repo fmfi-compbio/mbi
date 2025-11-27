@@ -2,9 +2,9 @@
 title: "Cvičenia pre biológov: Populačná genomika"
 ---
 
-## Populacna genomika v UCSC genome browseri
+## Populačná genomika v UCSC genome browseri
 
-Zopar zaujimavych polymorfizmov v ludskom genome
+Zopár zaujímavých polymorfizmov v ľudskom genome
 
   - SNP rs1815739 CC:
     [SNPedia](http://www.snpedia.com/index.php/Rs1815739), [genome
@@ -19,26 +19,26 @@ Zopar zaujimavych polymorfizmov v ludskom genome
     rs17822931 CT, rs4988235 CC, rs1042725 CC, rs7495174 AA, rs1426654
     AA, rs4481887 AG
 
-V browseri si vsimnite tracky (specificke pre verziu genomu hg19):
-- HGDP Allele Freq s mapou sveta s distribuciou alel
-- Genome Variants obsahuje genomy niekolkych ludi, napr Jima Watsona
-- Takisto sa da pozriet genom ludi z jaskyne Denisova a Neandertalcov
+V browseri si všimnite tracky (špecifické pre verziu genómu hg19):
+- HGDP Allele Freq s mapou sveta s distribúciou alel
+- Genome Variants obsahuje genómy niekoľkých ľudí, napr Jima Watsona
+- Takisto sa dá pozrieť genóm ľudí z jaskyne Denisova a Neandertálcov
 
-UCSC genome browser ma aj dalsie tracky tykajuce sa populacnej genomiky
+UCSC genome browser má aj ďalšie tracky týkajúce sa populačnej genomiky
 a polymorfizmov
 
-  - Pozrime si napriklad region [chr2:46,570,000-46,630,000 v
+  - Pozrime si napríklad región [chr2:46,570,000-46,630,000 v
     hg38](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr2:46,570,000-46,630,000)
-  - V casti Phenotype and Disease Associations
-      - napr. OMIM Alleles obsahuju asociacie variantov k chorobam
+  - V časti Phenotype and Disease Associations
+      - napr. OMIM Alleles obsahujú asociácie variantov k chorobám
       - GWAS Catalog sú výsledky GWAS štúdií
 
-V starsej verzii ludskeho genomu hg18 je aj trojuholnikovy graf vazbovej
-nerovnovahy
+V staršej verzii ľudského genómu hg18 je aj trojuholníkový graf väzbovej
+nerovnováhy
 
   - [region chr2:164,862-426,468 v
     hg18](http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg18&position=chr2:164,862-426,468)
-  - zapnite "HapMap LD Phased" na Full (cast Variation and Repeats)
-  - vsimnite si, ze miery LD sa medzi ludskymi podpopulaciami lisia
-    (YRI: Nigeria; CEU: Europa; JPT+CHB: Japonsko, Cina)
+  - zapnite `HapMap LD Phased` na `Full` (časť `Variation and Repeats`)
+  - všimnite si, že miery LD sa medzi ľudskými podpopuláciami líšia
+    (YRI: Nigeria; CEU: Europa; JPT+CHB: Japonsko, Čína)
 

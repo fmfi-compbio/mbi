@@ -247,8 +247,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="cb-prot" name="notes proteins" show=1 dot=1
 %} {% include notes.html file="cb-rna" name="notes rna" show=1 dot=1
 %} {% include notes.html file="cb-motifs" name="notes motifs" show=1 dot=1
-%} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=1 dot=1
-%} {% include notes.html file="cb-popgen" name="notes pop. genomics" show=1 dot=0 %} 
+%} {% include notes.html file="cb-popgen" name="notes pop. genomics" show=1 dot=1
+%} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=1 dot=0
+%}
 
 <a name="W11"></a>
 ### Dec. 4
@@ -281,7 +282,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="ci-ilp" name="notes" show=0 dot=0
 %} 
 
-#### TB:  Project consultations, course summary, remaining topics
+#### TB:  Project consultations, remaining topics
 
 <a name="W13"></a>
 ### Dec. 16
