@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · **[Week 9](#W9)** · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · [Week 9](#W9) · **[Week 10](#W10)** · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -230,14 +230,14 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 27
 #### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
 
-{% include pdf.html file="p-rna" name="pdf" show=0 dot=1
-%} {% include youtube.html id="_Hh03Khsr9k" name="video" show=0 dot=1
+{% include pdf.html file="p-rna" name="pdf" show=1 dot=1
+%} {% include youtube.html id="_Hh03Khsr9k" name="video" show=1 dot=1
 %} DEKM chapter 10, ZB chapter 11.9
 
 #### TI: Examples of biological databases, HMM topology, introduction to context-free grammars
 
 {% include notes.html file="ci-tools-en" name="notes databases" show=0 dot=1
-%} {% include notes.html file="ci-hmm-en" name="notes HMMs" show=0 dot=1
+%} {% include notes.html file="ci-hmm2-en" name="notes HMMs" show=0 dot=1
 %} {% include notes.html file="cb-grammars-en" name="notes grammar" show=0 dot=0
 %}
 
@@ -247,9 +247,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="cb-prot" name="notes proteins" show=1 dot=1
 %} {% include notes.html file="cb-rna" name="notes rna" show=1 dot=1
 %} {% include notes.html file="cb-motifs" name="notes motifs" show=1 dot=1
-%} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=1 dot=0
-%} {% include notes.html file="cb-popgen" name="notes pop. genomics" show=1 dot=1
-%} 
+%} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=1 dot=1
+%} {% include notes.html file="cb-popgen" name="notes pop. genomics" show=1 dot=0 %} 
 
 <a name="W11"></a>
 ### Dec. 4
