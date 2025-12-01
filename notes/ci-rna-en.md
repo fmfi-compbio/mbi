@@ -1,5 +1,5 @@
 ---
-title: "Exercises for Computer Scientists: RNA Structure"
+title: "Tutorial for Computer Scientists: RNA Structure"
 ---
 
 * TOC
@@ -19,7 +19,7 @@ From practice questions for the exam
 
 ## Extensions of the Nussinov Algorithm
 
-Easy extension: modify the algorithm so that it will output only pairs $i,j$ that have distance $|i-j|\>=4$. The goal is to output the best structure without pseudoknots that contains only such pairs. The reason is that in real RNA structures, hairpin loops must have at least 3 unpaired bases (RNA can bend only gradually).
+Easy extension: modify the algorithm so that it will output only pairs $i,j$ that have distance $\|i-j\|\>=4$. The goal is to output the best structure without pseudoknots that contains only such pairs. The reason is that in real RNA structures, hairpin loops must have at least 3 unpaired bases (RNA can bend only gradually).
 
 Harder extension: In real RNA structures, pairs are often stacked, i.e., if $i$ pairs with $j$, then it is likely that $i+1$ pairs with $j-1$. Stacked pairs contribute significantly to the stability of RNA structures. Modify the Nussinov algorithm so that it will output a structure that maximizes the number of stacked pairs. Each stacked pair (i.e., each pair $i,j$ such that also $i+1,j-1$ is a pair) contributes +1 to the score, other pairs contribute 0. The goal is to find a well-parenthesized structure with the maximum score for the given sequence.
 
@@ -29,7 +29,8 @@ A simplified version of this exercise is in the homework.
 
 ## Stochastic Context-Free Grammars
 
-- How does the algorithm that finds the most probable derivation work?
+How does the algorithm that finds the most probable derivation work?
+
   - First for the simple grammar from the lecture with one nonterminal $S\to aSu\|uSa\|cSg\|gSc\|aS\|cS\|gS\|uS\|Sa\|Sc\|Sg\|Su\|SS\|\epsilon$
       - Modify the Nussinov algorithm so that instead of maximizing the number of base pairs,
         it maximizes the probability of the derivation according to the grammar

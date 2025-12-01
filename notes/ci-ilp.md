@@ -17,7 +17,7 @@ title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
   - [CPLEX](http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/)
     a [Gurobi](http://www.gurobi.com/html/academic.html) komercne
     baliky na ILP, akademicka licencia zadarmo
-  - nekomerncne programy, napriklad [SCIP](http://scip.zib.de/),
+  - nekomercne programy, napriklad [SCIP](http://scip.zib.de/),
     [SYMPHONY](https://projects.coin-or.org/SYMPHONY) v projekte COIN-OR,
     [GLPK](https://www.gnu.org/software/glpk/)    
   - [Minisat](http://minisat.se/) open source SAT solver, tiež
@@ -31,7 +31,7 @@ title: "Cvičenia pre informatikov: Celočíselné lineárne programovanie"
 
 **Lineárny program**
 
-  - Mame reálne premenné $x_1\dots x_n$, minimalizujeme (alebo maximalizujeme) nejaku ich linearnu
+  - Mame reálne premenné $x_1,\dots,x_n$, minimalizujeme (alebo maximalizujeme) nejaku ich linearnu
     kombinaciu $\sum_i a_i x_i$ kde $a_i$ su dane vahy.
   - Mame tiez niekolko podmienok v tvare linearnych rovnosti alebo
     nerovnosti, napr. $\sum_i b_i x_i \le c$
@@ -134,7 +134,7 @@ Podmienky
 - $\sum_{k,l} y_{i,j,k,l}\le x_{i,j}$ pre kazde i,j (ak i,j nie je zarovnane, nebudu sa pocitat ziadne dvojice pary obsahujuce i a j a ak je zarovnane, tak najviac jeden taky par)
 - $\sum_{i,j} y_{i,j,k,l}\le x_{i,j}$ pre kazde k,l (podbne pre druhu stranu)
 
-Aka je velkost programu vzhladom na m a n (pocet premennych, nerovnosti, vsetkych nenulovych clenov)? Ktore casti sa zmensia ak $P_X$ a $P_Y$ su relativne male?
+Aka je velkost programu vzhladom na m a n (odhadnite pocet premennych, nerovnosti, vsetkych nenulovych clenov)? Ktore casti sa zmensia ak $P_X$ a $P_Y$ su relativne male?
 
 
 Zdroj:
