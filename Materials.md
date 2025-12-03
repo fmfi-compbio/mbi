@@ -285,7 +285,5 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TB:  Project consultations, remaining topics
 
 <a name="W13"></a>
-### Dec. 16
-
-
+### Dec. 18
 
