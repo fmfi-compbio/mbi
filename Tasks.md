@@ -55,7 +55,6 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td colspan="3">
       Proteins, RNA<br />
-      {% if false %}
       Biologists: questions <a href="./pdf/a3b-en.pdf">pdf</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=116962">Moodle</a><br />
       Computer science: questions <a href="./pdf/a3i-en.pdf">pdf</a>, 
@@ -63,7 +62,6 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
       Both: <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3.fasta">sequence</a>, 
       AlphaFold2 results for <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf1.png">orf1</a>, 
       <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf3.png">orf3</a>
-      {% endif %}
     </td>
   </tr>
   <tr>
