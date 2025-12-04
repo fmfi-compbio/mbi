@@ -131,7 +131,7 @@ igv -g ref.fasta
 # pozrime si región ecoli-frag:224,000-244,000
 #   Vidíte jednotlivé kontigy? Sedí tento pohľad s dotplotom? 
 # a potom bližšie ecoli-frag:227,300-227,600
-#   Všimnite si sekvenačné chyby rozdiely medzi referenciou a kontigmi
+#   Všimnite si sekvenačné chyby, t.j. rozdiely medzi referenciou a čítaniami.
 ```
 
 ## Hľadanie génov, RNA-seq
@@ -145,25 +145,33 @@ cd ../2-genes
 
 # pozrime si, aké máme súbory
 ls -lSh
-# mali by sme mať kúsok referenčného genómu huby Aspergillus nidulans 
+# mali by sme mať kúsok referenčného genómu huby Emericella (staršie Aspergillus) nidulans 
 # fastq súbor s čítaniami z RNA-seq pre tento kúsok referencie
 # gff súbor s anotáciou génov z databázy
 
 # spustíme hľadač génov Augustus 2x:
-# raz s parametrami priamo pre A.nidulans a raz s parametrami pre ľudský genóm
+# raz s parametrami priamo pre E.nidulans a raz s parametrami pre ľudský genóm
 augustus --species=anidulans ref2.fasta > augustus-anidulans.gtf
 augustus --species=human ref2.fasta > augustus-human.gtf
 
-# RNA-seq zarovnáme k sekvencii nástrojom tophat2 (podporuje intróny)
-bowtie2-build ref2.fasta ref2.fasta
-tophat2 -i 10 -I 10000 --max-multihits 1 --output-dir rnaseq ref2.fasta rnaseq.fastq
-samtools sort rnaseq/accepted_hits.bam rnaseq
+# RNA-seq zarovnáme k sekvencii nástrojom STAR(podporuje intróny)
+STAR --runMode genomeGenerate --genomeDir ref-index --genomeFastaFiles ref2.fasta  --genomeSAindexNbases 6
+STAR --genomeDir ref-index --alignIntronMax 10000 --readFilesIn rnaseq.fastq  --outFileNamePrefix rnaseq-star.
+
+samtools view -S -b rnaseq-star.Aligned.out.sam | samtools sort - -o rnaseq.bam
 samtools index rnaseq.bam
 
 # predikcie génov a RNA-seq si pozrieme v igv
 igv -g ref2.fasta
 # v igv si otvorte annot.gff, augustus-anidulans.gtf, augustus-human.gtf, rnaseq.bam
 # - ktoré parametre Augustusu dali presnejšie predpovede (za predpokladu, že anotácia je správna)
-# - pozrite si zblízka niektorý gén s vysokou expresiou (napr. druhy gen sprava), 
+# - pozrite si zblízka druhý gén sprava, ktorý má intróny i vysokú expresiu v RNA-seq 
 #   mali by ste vidieť čítania podporujúce intróny
 ```
+
+Ako by sme zistili funkciu génu, ktorý sme si pozerali?
+
+Nejaké odkazy
+* https://www.ncbi.nlm.nih.gov/nuccore/XM_659165.1?report=genbank
+* https://www.ncbi.nlm.nih.gov/gene/2870422
+* https://www.uniprot.org/uniprotkb/P28344/entry
