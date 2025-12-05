@@ -118,15 +118,16 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, preliminary report</b></td>
     <td></td>
-    <td>End of semester or January, TBA <!-- Jan. 12, 2026 noon--></td>
+    <td>Thursday December 18,2025 15:40<br> or January 7-9, 2026 (exact date to be determined)
+    <!-- End of semester or January, TBA--></td>
   </tr>
   <tr>
-    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#preliminary-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a></td>
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#preliminary-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a> (submit 30 minutes before the meeting start)</td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, final project</b></td>
     <td></td>
-    <td>January, TBA <!-- Jan. 26, 2026 22:00--></td>
+    <td>January 23, 2026 22:00 or January 30, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
