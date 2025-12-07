@@ -25,7 +25,7 @@ Harder extension: In real RNA structures, pairs are often stacked, i.e., if $i$ 
 
 Hint: we use two tables A and B, where $A\[i,j\]$ contains the maximum score for the substring $X\[i\dots j\]$ and $B\[i,j\]$ contains     the maximum score for the substring $X\[i\dots j\]$, assuming that  $X\[i\]$ and $X\[j\]$ are paired in the structure (this value is defined only for i and j where $X\[i\]$ and $X\[j\]$ are complementary).
 
-A simplified version of this exercise is in the homework.
+<!-- A simplified version of this exercise is in the homework. -->
 
 ## Stochastic Context-Free Grammars
 

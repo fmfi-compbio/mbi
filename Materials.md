@@ -261,7 +261,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: RNA structure 
 
-{% include notes.html file="ci-rna" name="notes" show=0 dot=0
+{% include notes.html file="ci-rna" name="notes" show=1 dot=0
 %}
 
 #### TB: Course summary, graphs, population genetics, example of command-line tools
