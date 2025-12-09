@@ -15,17 +15,17 @@ title: "Tutorial for Computer Scientists: Integer Linear Programming"
   - These find optimal solutions, many instances are solved in reasonable time,
     but some may run very long time
   - [CPLEX](http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/)
-    and [Gurobi](http://www.gurobi.com/html/academic.html) are commercial
+    and [Gurobi](https://www.gurobi.com/) are commercial
     ILP packages, academic licenses are free
   - Non-commercial programs, such as [SCIP](http://scip.zib.de/),
     [SYMPHONY](https://projects.coin-or.org/SYMPHONY) in the COIN-OR project,
     [GLPK](https://www.gnu.org/software/glpk/)    
   - [Minisat](http://minisat.se/) open source SAT solver, also
     Lingeling, glucose, CryptoMiniSat, painless
-  - [Concorde](http://www.tsp.gatech.edu/concorde.html) - TSP solver 
+  - [Concorde](https://www.math.uwaterloo.ca/tsp/concorde.html) - TSP solver 
     solves the traveling salesman problem with symmetric distances,
     free for academic use
-      - For interest: [TSP art](http://www.oberlin.edu/math/faculty/bosch/tspart-page.html)
+      - For interest: [TSP art](https://www.math.uwaterloo.ca/tsp/data/art/index.html)
 
 ## Definition of ILP
 
@@ -142,7 +142,7 @@ Bauer, Markus, Gunnar W. Klau, and Knut Reinert. [Accurate multiple sequence-str
 Bauer, Markus, Gunnar W. Klau, and Knut Reinert. [An exact mathematical programming approach to multiple RNA sequence-structure alignment.](https://www.erudit.org/en/journals/aor/2008-v3-n2-aor3_2/aor3_2art03.pdf) Algorithmic Operations Research 3.2 (2008): 130-146.
 
 
-
+<!--
 ### Protein Threading
 
 Similar problem, shown for interest, not covered in detail 
@@ -199,4 +199,4 @@ Source:
   - Jinbo Xu, Ming Li, Dongsup Kim, and Ying Xu. [RAPTOR: optimal
     protein threading by linear programming.](http://ttic.uchicago.edu/~jinbo/SelectedPubs/RAPTOR.pdf) Journal of bioinformatics
     and computational biology 1, no. 01 (2003): 95-117.
-
+-->
