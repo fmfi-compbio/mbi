@@ -274,16 +274,22 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 <a name="W12"></a>
 ### Dec. 11
-#### L: Optional journal club presentations (no lecture)
+#### L: (no lecture)
 
 #### TI:  Integer linear programming, course summary
 
-{% include pdf.html file="ci-summary" name="pdf" show=0 dot=1
+{% include pdf.html file="ci-summary" name="pdf" show=1 dot=1
 %} {% include notes.html file="ci-ilp-en" name="notes" show=0 dot=0
 %} 
 
-#### TB:  Project consultations, remaining topics
+#### TB: no tutorial
+
 
 <a name="W13"></a>
 ### Dec. 18
 
+#### L: Optional journal club presentations (no lecture)
+
+#### TI: Consultations for the exam in F1-109
+
+#### TB:  Project consultations, starting sooner
