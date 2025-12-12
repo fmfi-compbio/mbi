@@ -279,7 +279,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TI:  Integer linear programming, course summary
 
 {% include pdf.html file="ci-summary" name="pdf" show=1 dot=1
-%} {% include notes.html file="ci-ilp-en" name="notes" show=0 dot=0
+%} {% include notes.html file="ci-ilp-en" name="notes" show=1 dot=0
 %} 
 
 #### TB: no tutorial
