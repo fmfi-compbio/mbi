@@ -8,6 +8,8 @@ text
 
 ## Nadpis 1
 
+text2
+
 {% if false %}
 pokus
 {% endif %}
