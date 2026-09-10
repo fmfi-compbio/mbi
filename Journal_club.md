@@ -5,13 +5,62 @@ title: Journal Club
 * TOC
 {:toc}
 
-
 {% if false %}
 A brief description of the journal club activity is included in the [course rules](./Rules.html#journal-club), more details will be added later.
+{% endif %}
 
+## List of papers
+{% if false %}
+## Groups
+{% endif %}
+
+* All links to papers should work in our University network (e.g.
+    Eduroam or [proxy](https://uniba.sk/index.php?id=6828))
+
+**Paper 1** Curry, K.D., Wang, Q., Nute, M.G., Tyshaieva, A., Reeves, E.,
+Soriano, S., Wu, Q., Graeber, E., Finzer, P., Mendling, W. and Savidge,
+T., 2022. Emu: species-level microbial community profiling of
+full-length 16S rRNA Oxford Nanopore sequencing data. Nature methods,
+19(7), pp.845-853. <https://doi.org/10.1038/s41592-022-01520-4><br>
+{% if false %}
+**Group:** 
+{% endif %}
+
+**Paper 2** Edgar, R.C., Taylor, J., Lin, V., Altman, T., Barbera, P., Meleshko,
+D., Lohr, D., Novakovsky, G., Buchfink, B., Al-Shayeb, B. and Banfield,
+J.F., 2022. Petabase-scale sequence alignment catalyses viral discovery.
+Nature, 602(7895), pp.142-147.
+<https://doi.org/10.1038/s41586-021-04332-2><br>
+
+**Paper 3.** Bradley, P., Den Bakker, H.C., Rocha, E.P., McVean, G. and Iqbal,
+Z., 2019. Ultrafast search of all deposited bacterial and viral genomic
+data. Nature biotechnology, 37(2), pp.152-159.
+<https://doi.org/10.1038/s41587-018-0010-1> 
+
+**Paper 4** Hauser, M., Steinegger, M. and Söding, J., 2016. MMseqs software suite for fast and deep clustering and searching of large protein sequence sets. Bioinformatics, 32(9), pp.1323-1330. <https://doi.org/10.1093/bioinformatics/btw006><br>
+
+**Paper 5** Wapinski, I., Pfeffer, A., Friedman, N. and Regev, A., 2007. Automatic genome-wide reconstruction of phylogenetic gene trees. Bioinformatics, 23(13), pp.i549-i558. <https://doi.org/10.1093/bioinformatics/btm193><br>
+
+**Paper 6** Kress, A., Poch, O., Lecompte, O. and Thompson, J.D., 2023. Real or fake? Measuring the impact of protein annotation errors on estimates of domain gain and loss events. Frontiers in Bioinformatics, 3, p.1178926. <https://doi.org/10.3389/fbinf.2023.1178926><br>
+
+**Paper 7** Gearing, L.J., Cumming, H.E., Chapman, R., Finkel, A.M., Woodhouse, I.B., Luu, K., Gould, J.A., Forster, S.C. and Hertzog, P.J., 2019. CiiiDER: A tool for predicting and analysing transcription factor binding sites. PloS one, 14(9), p.e0215495. <https://doi.org/10.1371/journal.pone.0215495><br>
+
+**Paper 8** Huang, K.L., Scott, A.D., Zhou, D.C., Wang, L.B., Weerasinghe, A.,
+Elmas, A., Liu, R., Wu, Y., Wendl, M.C., Wyczalkowski, M.A. and Baral,
+J., 2021. Spatially interacting phosphorylation sites and mutations in
+cancer. Nature communications, 12(1), p.2313.
+<https://doi.org/10.1038/s41467-021-22481-w><br>
+
+**Paper 9** Gordon DE, Hiatt J, Bouhaddou M, Rezelj VV, Ulferts S, Braberg H,
+Jureka AS, Obernier K, Guo JZ, Batra J, Kaake RM. Comparative
+host-coronavirus protein interaction networks reveal pan-viral disease
+mechanisms. Science. 2020 Dec 4;370(6521).
+<https://doi.org/10.1126/science.abe9403>
 
 ## Submitting preferences
+TBD
 
+{% if false %}
 Please submit your preferences regarding these papers using **[this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 22, 2025, 22:00**. In the form, include numbers of three papers from this list in the order of preference.
 We will try to take your preferences into account, but we also need to balance group sizes and composition. 
 
@@ -27,49 +76,6 @@ Yes, I prefer English-speaking group
 I can be in English-speaking group if needed
 I strongly prefer Slovak-speaking group
 {% endif %}
-
-{% if false %}
-## List of papers
-{% endif %}
-
-## Groups
-
-
-* All links to papers should work in our University network (e.g.
-    Eduroam or [proxy](https://uniba.sk/index.php?id=6828))
-
-**Paper 1** Curry, K.D., Wang, Q., Nute, M.G., Tyshaieva, A., Reeves, E.,
-Soriano, S., Wu, Q., Graeber, E., Finzer, P., Mendling, W. and Savidge,
-T., 2022. Emu: species-level microbial community profiling of
-full-length 16S rRNA Oxford Nanopore sequencing data. Nature methods,
-19(7), pp.845-853. <https://doi.org/10.1038/s41592-022-01520-4><br>
-**Group:** Bothová, Ihnatovich, Lörinc, Melkovič, Pizúrová, Prutkay, Shcherban
-
-**Paper 2** Edgar, R.C., Taylor, J., Lin, V., Altman, T., Barbera, P., Meleshko,
-D., Lohr, D., Novakovsky, G., Buchfink, B., Al-Shayeb, B. and Banfield,
-J.F., 2022. Petabase-scale sequence alignment catalyses viral discovery.
-Nature, 602(7895), pp.142-147.
-<https://doi.org/10.1038/s41586-021-04332-2><br>
-**Group:** Andraščík, Forgáč, Gavenda, Lukáčik, Pištek, Skaloš, Sršeň
-
-**Paper 4** Hauser, M., Steinegger, M. and Söding, J., 2016. MMseqs software suite for fast and deep clustering and searching of large protein sequence sets. Bioinformatics, 32(9), pp.1323-1330. <https://doi.org/10.1093/bioinformatics/btw006><br>
-**Group:** Aufricht, Bukhtoiarov, Cerulíková, M.Grznárová, P.Grznárová, Hriň, Kotoč
-
-**Paper 5** Wapinski, I., Pfeffer, A., Friedman, N. and Regev, A., 2007. Automatic genome-wide reconstruction of phylogenetic gene trees. Bioinformatics, 23(13), pp.i549-i558. <https://doi.org/10.1093/bioinformatics/btm193><br>
-**Group:** Béreš, Chanová, Chromík, Drobný, Kožuch, S.Lukáč, Zubo
-
-**Paper 6** Kress, A., Poch, O., Lecompte, O. and Thompson, J.D., 2023. Real or fake? Measuring the impact of protein annotation errors on estimates of domain gain and loss events. Frontiers in Bioinformatics, 3, p.1178926. <https://doi.org/10.3389/fbinf.2023.1178926><br>
-**Group:** Gogová, Jendrušák, Maas, Miškovčík, Roch, Tischler, Tojieva
-
-**Paper 7** Gearing, L.J., Cumming, H.E., Chapman, R., Finkel, A.M., Woodhouse, I.B., Luu, K., Gould, J.A., Forster, S.C. and Hertzog, P.J., 2019. CiiiDER: A tool for predicting and analysing transcription factor binding sites. PloS one, 14(9), p.e0215495. <https://doi.org/10.1371/journal.pone.0215495><br>
-**Group:** Andrukhovskyi, Chutňáková, Kabátová, Kamas, M.Lukáč, Pitoňák, Tatarevska
-
-**Paper 8** Huang, K.L., Scott, A.D., Zhou, D.C., Wang, L.B., Weerasinghe, A.,
-Elmas, A., Liu, R., Wu, Y., Wendl, M.C., Wyczalkowski, M.A. and Baral,
-J., 2021. Spatially interacting phosphorylation sites and mutations in
-cancer. Nature communications, 12(1), p.2313.
-<https://doi.org/10.1038/s41467-021-22481-w><br>
-**Group:** Koreň, Krivý, Pásztorová, Ropjak, Šmihuľa, Tunik
 
 ## Group meeting 
 
@@ -113,18 +119,10 @@ cancer. Nature communications, 12(1), p.2313.
     participated in its work. Students who are not on this list will
     receive zero points for the report.
 
+## Journal club presentation
+TBA
 
+{% if false %}
 ## Unused papers
-
-**Paper 3.** Bradley, P., Den Bakker, H.C., Rocha, E.P., McVean, G. and Iqbal,
-Z., 2019. Ultrafast search of all deposited bacterial and viral genomic
-data. Nature biotechnology, 37(2), pp.152-159.
-<https://doi.org/10.1038/s41587-018-0010-1> 
-
-**Paper 9** Gordon DE, Hiatt J, Bouhaddou M, Rezelj VV, Ulferts S, Braberg H,
-Jureka AS, Obernier K, Guo JZ, Batra J, Kaake RM. Comparative
-host-coronavirus protein interaction networks reveal pan-viral disease
-mechanisms. Science. 2020 Dec 4;370(6521).
-<https://doi.org/10.1126/science.abe9403>
-
+{% endif %}
 

@@ -17,13 +17,13 @@ Students from the Faculty of Natural Sciences are very welcome, as are guests fr
 
 ### Instructors
 
+  - [Mgr. Askar Gafurov, PhD.](http://www.dcs.fmph.uniba.sk/~gafurov/)
   - [doc. Mgr. Broňa Brejová, PhD.](https://compbio.fmph.uniba.sk/~bbrejova/)
-  - [doc. Mgr. Tomáš Vinař, PhD.](https://compbio.fmph.uniba.sk/~tvinar/)
-  - [Dr. Luca Denti](https://sluzby.fmph.uniba.sk/ludia/denti1)
-  - [Mgr. Jana Černíková](https://sluzby.fmph.uniba.sk/ludia/cernikova6)
+  - [Luca Denti, PhD](https://ldenti.github.io)
   - Consultations can be arranged by e-mail
 {% if false %}
-  - [Mgr. Askar Gafurov, PhD.](http://www.dcs.fmph.uniba.sk/~gafurov/)
+  - [doc. Mgr. Tomáš Vinař, PhD.](https://compbio.fmph.uniba.sk/~tvinar/)
+  - [Mgr. Jana Černíková](https://sluzby.fmph.uniba.sk/ludia/cernikova6)
 {% endif %}
 
 ### Course objectives

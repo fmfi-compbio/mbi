@@ -20,40 +20,45 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Homework 1</b></td>
-    <td>Oct. 23, 2025</td>
-    <td>Nov. 12, 2025 22:00</td>
+    <td>Oct. 22, 2026</td>
+    <td>Nov. 11, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3">
+	  {% if false %}
       Sequencing, alignment<br />
       Biologists: questions <a href="./pdf/a1b.pdf">pdf</a>, 
       <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40956">Moodle</a><br />
       Computer science: questions {% include notebook.html file="a1i" name="colab" show=1 dot=0 %}, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40955">Moodle</a>
+      {% endif %}
     </td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Homework 2</b></td>
-    <td>Nov. 13, 2025</td>
-    <td>Dec. 3, 2025 22:00</td>
+    <td>Nov. 12, 2026</td>
+    <td>Dec. 2, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3">
+	  {% if false %}
       Evolution, comparative genomics<br />
       Biologists: questions <a href="./pdf/a2b.pdf">pdf</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40958">Moodle</a><br />
       Computer science: questions <a href="./pdf/a2i-en.pdf">pdf</a>, 
       data <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a2-i.zip">zip</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=40957">Moodle</a>
+	  {% endif %}
     </td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Homework 3</b></td>
-    <td>Dec 4. 2025</td>
-    <td>Dec. 17, 2025 22:00</td>
+    <td>Dec 3. 2026</td>
+    <td>Dec. 16, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3">
+	  {% if false %}
       Proteins, RNA<br />
       Biologists: questions <a href="./pdf/a3b-en.pdf">pdf</a>, 
       <a rel="nofollow" href="https://moodle.uniba.sk/mod/assign/view.php?id=116962">Moodle</a><br />
@@ -62,12 +67,13 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
       Both: <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3.fasta">sequence</a>, 
       AlphaFold2 results for <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf1.png">orf1</a>, 
       <a rel="nofollow" href="https://compbio.fmph.uniba.sk/vyuka/mbi-data/a3-orf3.png">orf3</a>
+	  {% endif %}
     </td>
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Journal club paper selection</b></td>
-    <td>Oct. 16, 2025</td>
-    <td>Oct. 22, 2025 22:00</td>
+    <td>Oct. 15, 2026</td>
+    <td>Oct. 21, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3"><a href="./Journal_club.html">Instructions, list of papers and form</a></td>
@@ -75,7 +81,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Journal club group meeting</b></td>
     <td></td>
-    <td>Nov. 21, 2025</td>
+    <td>Nov. 21, 2026</td>
   </tr>
   <tr>
     <td colspan="3">
@@ -89,7 +95,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Journal club report</b></td>
     <td></td>
-    <td>Dec. 19, 2025 22:00</td>
+    <td>Dec. 19, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3">
@@ -102,7 +108,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, initial proposal</b></td>
     <td></td>
-    <td>Nov. 5, 2025 22:00</td>    
+    <td>Nov. 4, 2026 22:00</td>    
   </tr>
   <tr>
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#initial-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
@@ -110,7 +116,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, extended proposal</b></td>
     <td></td>
-    <td>Nov. 19, 2025 22:00</td>
+    <td>Nov. 18, 2026 22:00</td>
   </tr>
   <tr>
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#extended-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=135722">Moodle</a></td>
@@ -118,7 +124,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, preliminary report</b></td>
     <td></td>
-    <td>Thursday Dec. 18,2025 15:40<br> or Jan. 7-9, 2026 (exact date to be determined)
+    <td>Thursday Dec. 17, 2026 15:40<br> or Jan. 6-8, 2026 (exact date to be determined)
     <!-- End of semester or January, TBA--></td>
   </tr>
   <tr>
@@ -127,7 +133,8 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, final project</b></td>
     <td></td>
-    <td>Jan. 23, 2026 22:00 or Jan. 30, 2026 22:00</td>
+	<td>TBA</td>
+    {% if false %}<td>Jan. 23, 2025 22:00 or Jan. 30, 2025 22:00</td> {% endif %}
   </tr>
   <tr>
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
