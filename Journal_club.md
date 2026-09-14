@@ -81,7 +81,7 @@ I strongly prefer Slovak-speaking group
 
   - Everyone should read the article before the first
     meeting.
-  - The first meeting should take place no later than November 21. The
+  - The first meeting should take place no later than November 20. The
     meeting can be online (e.g. in MS Teams) or in person. Try to choose
     a time suitable for all members of the group.
   - At least 24 hours before the first group meeting, post its date,
@@ -96,31 +96,46 @@ I strongly prefer Slovak-speaking group
   - Failure to hold the first meeting according to these rules may
     affect the grade of the final report.
 
-## Journal club report
+## Presentation
 
-  - In the report, describe the main methods and results of the article
-    in your own words.
-  - The report should be understandable for students of this course
+  - The group has to prepare slides to present the article in accessible
+    terms to students of this course (both computer scientists and biologists).
+  - The presentation should be understandable for students of this course
     (both computer scientists and biologists), so explain the necessary
-    terms that are not explained in the article and were not explained in class (do not repeat material from lectures).
+    terms that are not explained in the article and were not explained
+	in class (do not repeat material from lectures).
   - You do not have to cover the entire content of the article in the
-    report and, conversely, you can use other resources. Cite all sources you have used.
+    presentation and, conversely, you can use other resources.
+	Cite all sources you have used.
   - You should include the following (not necessarily in this order):
     - a brief overall description of the contents of the paper,
     - a detailed explanation of at least one computational method,
     - a detailed explanation of at least one biological result or evaluation of the method on data,
     - an explanation how the paper relates to the course material,
     - examples of other papers citing your paper and using or improving its results.
-  - The recommended length is about 1-2 pages per person. However, the
-    report should form one coherent text, so agree well on the outline
-    and division of work and spend some time at the end on combining and
-    editing individual contributions into a coherent report.
-  - The report should list the members of the group who have actively
-    participated in its work. Students who are not on this list will
-    receive zero points for the report.
+  - The recommended length is 1 slide per minute plus title slide and
+    the "Active partecipation" slide, which list the members of the group
+	who have actively participated (students who are not on this list
+	will receive zero points).
+  - Oral presentations will take place either during the last lecture,
+    or during the exam session (TBA).
+  - Presenter and presentation duration: TBA
 
-## Journal club presentation
-TBA
+{% if false %}
+  - A single presenter from each group will be selected at random at the beginning of the presentation. Ergo, each member of the group must know everything. Use your interdisciplinary group to learn the material. 
+  - The presentation time slot is 15 minutes (?) (to be decided based on the number of groups), then some time for questions. 
+  - (for discussion: who can answer the questions? Only the presenter? Or could the other group members join as well?) 
+{% endif %}
+
+## Grading
+  - Slides have to be submitted prior the presentation date (TBA).
+    The oral presentation is mandatory.
+  - Grades come from a) quality of the slides themselves,
+    b) quality of the oral presentation.
+  - Points are assigned equally to the members of the group who have
+    actively participated in the group activities (if present at the
+	presentation, otherwise zero points unless she has good reasons
+	for an absence).
 
 {% if false %}
 ## Unused papers

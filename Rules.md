@@ -34,31 +34,31 @@ Homeworks may have separate versions for computer science and biology students.
 
 ## Quizzes
 
-Quizes can be found in Moodle. They appear each Thursday at 7pm and are due next Wednesday 10pm.
+Quizzes can be found in Moodle. They appear each Thursday at 7pm and are due next Wednesday 10pm.
 
 ## Journal club
 
 Journal club is a group activity, where each group studies one
-scientific paper and rewrites it in their own words.
+scientific paper and present it to the class.
 
   - Each student will select from the provided list the three articles
     that are of highest interest to him/her.
   - According to these preferences, instructors will divide the students
     into groups. Each group will read a different article.
   - Each student first reads the assigned article individually.
-  - Then the whole group meets, discusses the article and tries to
-    clarify any questions or to find missing information in the
-    literature.
+  - Then the whole group meets, discusses the article and tries to clarify
+    any questions or to find missing information in the literature.
   - If needed, the group meets several times or continues to communicate
     electronically. In case of questions about the article, the whole
-    group or some of its members can also arrange consultations with the
-    instructors.
-  - The group writes a report, in which they explain in their own words
-    the main methods and results of the article and other necessary
-    concepts so that the text is understandable to students of this
-    course (both computer scientists and biologists). You should also describe
-    how the article relates to the topics covered during the lectures
-    and how it was used or extended in later work.
+    group or some of its members can also arrange consultations with
+    the instructors.
+  - Finally, the whole group prepare slides to present the paper
+    in accessible terms. In the presentation, they explain in their
+    own words the main methods and results of the article and other
+    necessary concepts so that it is understandable to students of
+    this course (both computer scientists and biologists). They should
+    also describe how the article relates to the topics covered during
+    the lectures and how it was	used or extended in later work.
   - More details on a [separate page](./Journal_club.html)
 
 
