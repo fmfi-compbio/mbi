@@ -94,7 +94,7 @@ On the oral part of the exam, you should be able to explain the theory behind th
 Cheating and plagiarism on homeworks and exams is a serious violation of
 academic integrity.
 
-On homeworks, you are **not allowed** to copy other person's work (eg
+On **homeworks**, you are **not allowed** to copy other person's work (eg
 from a classmate, from the Internet including AI chatbots, or from
 scientific literature) and submit it as your own. You are also not
 allowed to let another person to copy your solution. We allow and
@@ -104,18 +104,28 @@ own words. To avoid unnecessary problems, do not take notes during group
 discussions about homework and wait at least three hours after such a
 discussion before writing the solution to be submitted.
 
-During exams, do not use unauthorized aids and do not communicate with
+**AI tools** should be treated in the same way as classmates, i.e. you can discuss
+the homework with them in general terms, then close the discussion
+and work on your own solution. Switch off AI helpers in your editors
+while working on homework. It is allowed to use AI for minor grammar
+improvements of the final text.
+
+You may be asked by the instructors to explain your submitted homework.
+If you do not understand what you submitted, it will be regarded as cheating
+and points will be deducted, see below.
+
+During **exams** (computer science), do not use unauthorized aids and do not communicate with
 persons other than the instructors.
 
-In the report from the journal club, you must cite all used literature.
+In the **presentation from the journal club**, you must cite all used literature.
 Express the knowledge you have gained on the topic in your own words. Do
 not copy or mechanically translate entire sentences from the paper and
-other sources (except for short direct quotes indicating the source).
+other sources.
 Create your own images or specify the source of the downloaded images
-used in the report. Similarly for project reports.
+used in the presentation. Similarly for **project reports** (biology).
 
 When cheating or plagiarism is detected, we will normally assign a grade
 of 0 for the relevant part of the work, with a minimum reduction of the
 final grade by one grade. Cheating on the exam will result in the FX
 grade for the exam. Serious violations of academic
-integrity will be also referred to the dean of the faculty.
+integrity will be also referred to the disciplinary committee.
