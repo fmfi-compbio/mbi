@@ -76,7 +76,9 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 21, 2026 22:00</td>
   </tr>
   <tr>
+  	  {% if false %}
     <td colspan="3"><a href="./Journal_club.html">Instructions, list of papers and form</a></td>
+          {% endif %}
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Journal club group meeting</b></td>
@@ -93,14 +95,14 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     </td>
   </tr>
   <tr>
-    <td style="background:#f0f0f0"><b>Journal club report</b></td>
+    <td style="background:#f0f0f0"><b>Journal club presentation</b></td>
     <td></td>
-    <td>Dec. 19, 2026 22:00</td>
+    <td>TBA</td>
   </tr>
   <tr>
     <td colspan="3">
       {% if false %}
-      <a href="./Journal_club.html#journal-club-report">Instructions</a>,
+      <a href="./Journal_club.html#presentation">Instructions</a>,
       <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40960">Moodle</a> (1x per group)
       {% endif %}
     </td>
@@ -111,7 +113,9 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Nov. 4, 2026 22:00</td>    
   </tr>
   <tr>
+        {% if false %}
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#initial-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=133424">Moodle</a></td>
+        {% endif %}
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, extended proposal</b></td>
@@ -119,24 +123,30 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Nov. 18, 2026 22:00</td>
   </tr>
   <tr>
+        {% if false %}
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#extended-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=135722">Moodle</a></td>
+        {% endif %}
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, preliminary report</b></td>
     <td></td>
-    <td>Thursday Dec. 17, 2026 15:40<br> or Jan. 6-8, 2026 (exact date to be determined)
-    <!-- End of semester or January, TBA--></td>
+    <td><!-- Thursday Dec. 17, 2026 15:40<br> or Jan. 6-8, 2026 (exact date to be determined)-->
+    End of semester or January, TBA</td>
   </tr>
   <tr>
+        {% if false %}
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#preliminary-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a> (submit 30 minutes before the meeting start)</td>
+            {% endif %}
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Project for biologists, final project</b></td>
     <td></td>
-	<td>TBA</td>
+	<td>January, TBA</td>
     {% if false %}<td>Jan. 23, 2025 22:00 or Jan. 30, 2025 22:00</td> {% endif %}
   </tr>
   <tr>
+        {% if false %}
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
+        {% endif %}
   </tr>
 </table>

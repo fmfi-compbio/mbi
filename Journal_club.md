@@ -114,7 +114,7 @@ I strongly prefer Slovak-speaking group
     - an explanation how the paper relates to the course material,
     - examples of other papers citing your paper and using or improving its results.
   - The recommended length is 1 slide per minute plus title slide and
-    the "Active partecipation" slide, which list the members of the group
+    the "Active participation" slide, which list the members of the group
 	who have actively participated (students who are not on this list
 	will receive zero points).
   - Oral presentations will take place either during the last lecture,
