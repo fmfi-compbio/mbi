@@ -59,8 +59,10 @@ scientific paper and present it to the class.
     this course (both computer scientists and biologists). They should
     also describe how the article relates to the topics covered during
     the lectures and how it was	used or extended in later work.
+  - More details later.
+  {% if false %}
   - More details on a [separate page](./Journal_club.html)
-
+  {% endif %}
 
 ## Exam
 
