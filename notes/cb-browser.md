@@ -36,7 +36,7 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
         konfigurovať
       - Po kliknutí na obrázok sa často zobrazí ďalšia informácia o
         danom géne alebo inom zdroji dát
-      - V génoch exony hrubé, UTR tenšie, intróny vodorovné čiary
+      - V génoch exóny hrubé, UTR tenšie, intróny vodorovné čiary
 
 
   - **Koľko má HOXA2 exónov? Na ktorom chromozóme a pozícii je? Pozor,
@@ -79,7 +79,7 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
     úsek vyzerá vo verzii hg38 and hs1. Ako sa zmenila dĺžka z
     pôvodných 300kb?
 
-## QUAST: program na štatistiky o kvalite poskladania genómu (nerobili sme)
+## QUAST: program na štatistiky o kvalite poskladania genómu
 
   - Čítania technológie Illumina MiSeq z 500kbp oblasti genómu E.coli
   - Boli poskladané programom [SPAdes](https://github.com/ablab/spades)
@@ -91,7 +91,7 @@ title: "Cvičenie pre biológov: UCSC Genome browser, Quast, Galaxy"
         formáte](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb01/quast.pdf)
   - Teraz si tento výpočet spustíme v systéme Galaxy
 
-## Prehľad systému Galaxy (nerobili sme)
+## Prehľad systému Galaxy
 
   - <https://usegalaxy.eu/>
   - Obsahuje veľa bioinformatických nástrojov, ktoré môžete spúšťať
