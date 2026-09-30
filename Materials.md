@@ -72,9 +72,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TB: Introduction to dynamic programming, introduction to probability
 
-{% include pdf.html file="cb-dp-code" name="pdf" show=0 dot=1
-%} {% include notes.html file="cb-dp" name="notes 1" show=0 dot=1
-%} {% include notes.html file="cb-prob" name="notes 2" show=0 dot=0
+{% include pdf.html file="cb-dp-code" name="pdf" show=1 dot=1
+%} {% include notes.html file="cb-dp" name="notes 1" show=1 dot=1
+%} {% include notes.html file="cb-prob" name="notes 2" show=1 dot=0
 %} 
 
 
