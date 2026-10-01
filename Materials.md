@@ -65,9 +65,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### TI: Introduction to probability, genome coverage by sequencing reads
 
-{% include notes.html file="ci-prob-en" name="notes (en, current)" show=0 dot=1
-%} {% include notes.html file="ci-prob" name="notes (sk, older)" show=0 dot=1
-%} {% include notebook.html file="ci-prob" name="colab" show=0 dot=0
+{% include notes.html file="ci-prob-en" name="notes (en, current)" show=1 dot=1
+%} {% include notes.html file="ci-prob" name="notes (sk, older)" show=1 dot=1
+%} {% include notebook.html file="ci-prob" name="colab" show=1 dot=0
 %}
 
 #### TB: Introduction to dynamic programming, introduction to probability
