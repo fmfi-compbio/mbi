@@ -59,8 +59,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Genome assembly 2
 
-{% include pdf.html file="p-seq2" name="pdf" show=0 dot=1
-%} {% include youtube.html id="YvZlTL1qyUg" name="video" show=0 dot=0
+{% include pdf.html file="p-seq2" name="pdf" show=1 dot=1
+%} {% include youtube.html id="YvZlTL1qyUg" name="video" show=1 dot=0
 %}
 
 #### TI: Introduction to probability, genome coverage by sequencing reads
