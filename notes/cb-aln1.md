@@ -26,6 +26,17 @@ G  -10
 G  -12  
 ```
 
+{% if false %}
+        C   A   C   A   C   T
+    0  -2  -4  -6  -8 -10 -12
+T  -2  -1  -3  -5  -7  -9  -7
+A  -4  -3   2   0  -2  -4  -6
+A  -6  -5   0   1   3   1  -1
+C  -8  -3  -2   3   1   6   4
+G -10  -5  -4   1   2   4   5
+G -12  -7  -6  -1   0   2   3
+{% endif %}
+
 Lokálne zarovnanie
 
 Rekurencia: $A[i,j] = \max \{0, A[i-1,j]-2, A[i,j-1]-2, A[i-1,j-1]+s(x_i, y_j) \}, pričom $A[0,i]=0$, $A[i,0]=0$
@@ -42,23 +53,34 @@ G   0
 G   0 
 ```
 
+{% if false %}
+        C   A   C   A   C   T
+    0   0   0   0   0   0   0
+T   0   0   0   0   0   0   3
+A   0   0   3   1   3   1   1
+A   0   0   3   2   4   2   0
+C   0   3   1   6   4   7   5
+G   0   1   2   4   5   5   6
+G   0   0   0   2   3   4   4
+{% endif %}
+
 ## Dotploty
 
-  - Dotplot je graf, ktory ma na kazdej osi jednu sekvenciu a ciarky
-    zobrazuju lokalne zarovnania (cesty v matici)
+  - Dotplot je graf, ktorý má na každej osi jednu sekvenciu a čiarky
+    zobrazujú lokálne zarovnania (cesty v matici)
   - Niekoľko príkladov dotplotov: 
-  - Prvé príklady dotplotov porovnávajú rôzne mitochondriálne genomy
-  - Tieto boli vytvorene pomocou nastroja YASS
+  - Prvé príklady dotplotov porovnávajú rôzne mitochondriálne genómy
+  - Tieto boli vytvorené pomocou nástroja YASS
     <https://bioinfo.lifl.fr/yass/yass.php>
-  - Dalsi priklad je zarovnanie genu Oaz Drosophila zinc finger s
-    genomickym usekom chr2R:10,346,241-10,352,965
-  - Trochu iny dotplot, ktory funguje pre proteiny a nerobi lokalne
-    zarovnania, iba spocita skore bez medzier v kazdom okne danej vysky
-    a nakresli ciaru ak prekroci urcenu hodnotu
+  - Ďalší príklad je zarovnanie génu Oaz Drosophila zinc finger s
+    genomickým úsekom chr2R:10,346,241-10,352,965
+  - Trochu iný dotplot, ktorý funguje pre proteíny a nerobí lokálne
+    zarovnania, iba spočítava skóre bez medzier v každom okne danej dĺžky
+    a nakreslí čiaru, ak prekročí určenú hodnotu
   - <https://emboss.bioinformatics.nl/cgi-bin/emboss/dotmatcher>
-  - Vyskusame protein escargot voci sebe s hodnotami
-    <https://pfam.xfam.org/protein/ESCA_DROME> window 8 threshold 24
-  - Pomocou YASSu vyskusame kluster zhlukov PRAME z ludskeho genomu
+  - Vyskúšame proteín [escargot](https://pfam.xfam.org/protein/ESCA_DROME) voči sebe s hodnotami
+    window 8 threshold 24
+  - Pomocou YASSu vyskúšame klaster génov PRAME z ľudského genómu
 
 **Dáta:**
 
@@ -130,12 +152,12 @@ A[i] 100 100 100 100  0    1    2    1    1    2    2    2    2    3
       - do G5 napiseme vzorec `=MIN(F5+1,D5+1,C5+1)`, t.j. $A[1] =
         min(A[1-1]+1,A[1-3]+1,A[1-4]+1)$
       - tento vzorec potom nakopirujeme do riadku tabulky
-      - F5 sa bude posuvat na G5, H5,... a podobne ostatne dva cleny
+      - F5 sa bude posúvať na G5, H5,... a podobne ostatné dva členy
 
 **Cvičenie:**
 
   - Ako by sme zmenili na inu mincovu sustavu, napr. 1,2,5?
-  - Stiahnite si [subor](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb03/mince.ods) zo stranky predmetu a skuste si tuto zmenu urobit
+  - Stiahnite si [subor](../data/cb-aln1-mince.ods) zo stranky predmetu a skuste si tuto zmenu urobit
     
 
 ### Zarovnávanie sekvencií v Exceli
@@ -156,22 +178,22 @@ A[i] 100 100 100 100  0    1    2    1    1    2    2    2    2    3
 
 **Cvičenie:**
 
-  - Zmente tabulku tak, aby skore pre zhody, nezhody a medzery bolo dane
+  - Zmeňte tabuľku tak, aby skóre pre zhody, nezhody a medzery bolo dane
     bunkami B1, B2 a B3 tabulky. Staci zmenit vzorce a policka D9, C10 a
     D10 a nakopirovat do zvysku tabulky. Ake bude skore najlepsieho
     zarovnania sekvencii `AACGTA` a `ACACCTA` ak skore nezhody je -2 a
     medzery -3?
   - Ako treba zmenit vzorce, aby sme pocitali lokalne zarovnanie?
   - Subor najdete
-    [tu](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb03/dynprog.ods)
+    [tu](../data/cb-aln1-dynprog.ods)
 
 ## Jupyter notebooks, Colab
 
 * Jupyter notebook je programátorské prostredie pre prácu v jazyku Python (a iných), ktorý priamo spája program a jeho výsledky, dajú sa pridať rôzne grafy a pod.
 * Notebooky sa dajú spúšťať v online prostredí Google Colab bez toho aby ste si niečo inštalovali.
-* V Colabe je aj AI asistent, takže je to vhodný spôsob ako začať s programovaním (nebudeme robi5 na tomto predmete).
+* V Colabe je aj AI asistent, takže je to vhodný spôsob ako začať s programovaním (nebudeme robiť na tomto predmete).
 * Niektoré softvéry sú k dispozícii vo forme notebooku, vyskúšame si teda spustiť už hotový notebook.
-* Notebook nižšie obsahuje naprogramované dyamické progrmaovanie na zarovnávanie sekvencií.
+* Notebook nižšie obsahuje naprogramované dynamické programovanie na zarovnávanie sekvencií.
 * Budeme ho používať aj na domácej úlohe.
 
 {% include notebook.html file="cb-aln1" name="colab" show=1 dot=0 %}
