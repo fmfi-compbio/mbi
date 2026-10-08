@@ -82,8 +82,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Sequence alignment: Smith-Waterman, Needleman-Wunsch, scoring
 
-{% include pdf.html file="p-aln1" name="pdf" show=0 dot=1
-%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=0 dot=1
+{% include pdf.html file="p-aln1" name="pdf" show=1 dot=1
+%} {% include youtube.html id="0GkhkRiqbl4" name="video" show=1 dot=1
 %} {% if false %} BV chapter 2, DEKM chapter 2.1-2.4, 2.8, ZB chapter 4.1-4.4, 5.1-5.2 {% endif %}
 
 #### TI: Burrows-Wheeler transform
