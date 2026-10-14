@@ -11,7 +11,7 @@ Chceme určiť skórovaciu schému pre zarovnávanie dvoch DNA sekvencií (bez
 medzier). Máme dva modely, každý z nich vie vygenerovať 2 zarovnané
 sekvencie dĺžky *n*.
 
-**Model R (random)** reprezentuje nezávislé náhodne sekvencie
+**Model R (random)** reprezentuje nezávislé náhodné sekvencie
 
   - Použijeme naše vrece s guličkami označenými A,C,G,T, pričom guličiek
     označených A je 30%, C 20%, G 20% a T 30%.
@@ -80,7 +80,7 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
     ich vo forme dot plotov
   - V novom okne/tabe si otvorte YASS server na adrese
     <https://bioinfo.univ-lille.fr/yass/yass.php>
-  - V ďalšom okne si na stránke UCSC genome browseru si zobrazte [oblast
+  - V ďalšom okne si na stránke UCSC genome browseru si zobrazte [oblasť
     chr21:9,180,027-9,180,345](https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21%3A9180027-9180345) vo verzii hg38 ľudského genómu
       - tento región obsahuje **Alu repeat**. Tieto opakovania tvoria
         cca 10% ľudského genómu, viac ako milión kópií
@@ -125,20 +125,33 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
 
   - Na stránke <https://dgenies.toulouse.inra.fr/run> (založené na obľúbenom programe minimap2)
   - Zadáme URL dvoch genómov z NCBI:
-      - Candida albicans
+      - *Candida albicans*
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/182/965/GCF_000182965.3_ASM18296v3/GCF_000182965.3_ASM18296v3_genomic.fna.gz>
-      - Candida dubliniensis
+      - *Candida dubliniensis*
         <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/945/GCF_000026945.1_ASM2694v1/GCF_000026945.1_ASM2694v1_genomic.fna.gz>
   - Predpočítaný výsledok
-    <https://dgenies.toulouse.inra.fr/result/9swN9_20251013211611>
+    <https://dgenies.toulouse.inra.fr/result/lWUhR_20261014094710>
+  - Pozor, % identických báz nie je odhadnuté správne kvôli nastaveniam programu minimap2. Tu je výsledok pre prípad s lokálne počítaným zarovnaním a so správnym odhadom identity <https://dgenies.toulouse.inra.fr/result/pD1IF_20261014095244>
+  <!--
+  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/182/965/GCF_000182965.3_ASM18296v3/GCF_000182965.3_ASM18296v3_genomic.fna.gz -O canAlb.fa.gz
+  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/945/GCF_000026945.1_ASM2694v1/GCF_000026945.1_ASM2694v1_genomic.fna.gz -O canDub.fa.gz
+  minimap2 -x asm20 -c -p 0.01 -r 100,100 canAlb.fa.gz canDub.fa.gz > res.paf
+  -->
+
   - Iná dvojica:
-      - Magnusiomyces ingens
+      - *Magnusiomyces ingens*
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/uid/UIDE01.fasta.gz>
         [(web)](https://www.ebi.ac.uk/ena/browser/view/GCA_900497715?show=blobtoolkit)
-      - Saprochaete ingens
+      - *Magnusiomyces paraingens*
         <ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/cab/CABVLU01.fasta.gz>
         [(web)](https://www.ebi.ac.uk/ena/browser/view/GCA_902498895)
-  - Predpočítaný výsledok <https://dgenies.toulouse.inra.fr/result/AMzJk_20251013212109>
+  - Predpočítaný výsledok s naším zarovnaním <https://dgenies.toulouse.inra.fr/result/5eSO8_20261014100401>
+<!--
+wget ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/uid/UIDE01.fasta.gz -O magIng.fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/cab/CABVLU01.fasta.gz -O  magPar.fa.gz
+minimap2 -x asm20 -c -p 0.01 -r 100,100 magIng.fa.gz magPar.fa.gz > res.paf
+-->
+
 
 ## Príklady praktických programov
 
@@ -151,8 +164,7 @@ a čo vypisujú na výstupe, dajme to do súvisu s prednáškami
     programovanie (needle - globálne, water - lokálne), nájdu sa na
     stránke EBI <https://www.ebi.ac.uk/jdispatcher/psa>
   - porovnanie lokálneho a globálneho zarovnania
-      - Dva proteiny z rôznych kvasiniek zarovnáme lokálne, globálne a
-        globálne s tým, že neplatíme za medzery na koncoch
+      - Dva proteiny z rôznych kvasiniek zarovnáme lokálne a globálne
   - [sekvencie a výsledné zarovnania](./cb-aln-dp.html)
   - vo výsledku si všimnime, koľko má každé z nich %identity, %gaps, a
     kam sa zarovna sekvencia `IRESPLGG` ktorá je na pozícii 29 v prvom a

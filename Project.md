@@ -19,6 +19,16 @@ You can explore the use of bioinformatics tools and databases relevant for your 
 
 You will submit the final report as well as other documents/presentations as listed below to help you in the process. The deadlines and Moodle links are in the [Tasks subpage](./Tasks.html).
 
+## Academic integrity
+
+From [course rules](./Rules.html#academic-integrity):
+
+* Write the report and presentations yourself, without help of AI. DO not copy text from other sources.
+* Cite all sources, including sources of figures.
+* You may use AI for final grammar checking of your text.
+* You may also use AI while researching appropriate tools, but you should clearly state what you used and how it helped you. Also verify all information you get from AI tools in other sources.
+
+
 ## Presentation guidelines
 
 In the first three parts you submit a presentation in **pdf format**. Some general guidelines:

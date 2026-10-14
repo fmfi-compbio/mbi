@@ -39,7 +39,7 @@ G -12  -7  -6  -1   0   2   3
 
 Lokálne zarovnanie
 
-Rekurencia: $A[i,j] = \max \{0, A[i-1,j]-2, A[i,j-1]-2, A[i-1,j-1]+s(x_i, y_j) \}, pričom $A[0,i]=0$, $A[i,0]=0$
+Rekurencia: $A[i,j] = \max \{0, A[i-1,j]-2, A[i,j-1]-2, A[i-1,j-1]+s(x_i, y_j) \}$, pričom $A[0,i]=0$, $A[i,0]=0$
 
 
 ``` 
