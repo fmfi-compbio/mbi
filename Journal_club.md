@@ -60,8 +60,8 @@ mechanisms. Science. 2020 Dec 4;370(6521).
 ## Submitting preferences
 TBD
 
-{% if false %}
-Please submit your preferences regarding these papers using **[this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 22, 2025, 22:00**. In the form, include numbers of three papers from this list in the order of preference.
+{% if true %}
+Please submit your preferences regarding these papers using **[this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 21, 2026, 22:00**. In the form, include numbers of three papers from this list in the order of preference.
 We will try to take your preferences into account, but we also need to balance group sizes and composition. 
 
 * Groups will typically include students with different backgrounds.
@@ -69,7 +69,7 @@ We will try to take your preferences into account, but we also need to balance g
 {% endif %}
 
 {% if false %}
-* Also please indicate if you are willing to work in a group with English-speaking students (this means group discussions and final report in English)
+* Also please indicate if you are willing to work in a group with English-speaking students (this means group discussions and final presentation in English)
 
 Are you willing to take part in an English-speaking group?
 Yes, I prefer English-speaking group
@@ -104,6 +104,7 @@ I strongly prefer Slovak-speaking group
     (both computer scientists and biologists), so explain the necessary
     terms that are not explained in the article and were not explained
 	in class (do not repeat material from lectures).
+  - The presentation must be **in English**.
   - You do not have to cover the entire content of the article in the
     presentation and, conversely, you can use other resources.
 	Cite all sources you have used.
