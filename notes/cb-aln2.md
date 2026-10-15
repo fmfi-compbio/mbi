@@ -30,7 +30,7 @@ sekvencie dĺžky *n*.
 **Model H (homolog)** reprezentuje zarovnanie vzájomne súvisiacich
 sekvencií
 
-  - máme vrece, v ktorom je napr.
+  - Máme vrece, v ktorom je napr.
       - po 21% guličiek označených AA, TT
       - po 14% označených CC, GG
       - po 2,4% označených AC, AG, CA, CT, GA, GT, TC, TG
@@ -39,7 +39,7 @@ sekvencií
   - Spolu máme 70% guličiek označených rovnakými písmenami, 30% rôznymi
   - *n* krát z vreca vytiahneme guličku a písmená píšeme ako stĺpce
     zarovnania $A_1, A_2,\dots, A_n$.
-  - aká je pravdepodobnosť, ze dostaneme ACT zarovnané s ACC?
+  - Aká je pravdepodobnosť, ze dostaneme ACT zarovnané s ACC?
   - $\Pr(A_1=AA)\cdot \Pr(A_2=CC)\cdot \Pr(A_3=TC) = 0,21\cdot 0,14\cdot 0,024 = 0,0007056$
 
 **Skóre zarovnania** je log Pr(zarovnania v H)/Pr(zarovnania v R), t.j.
@@ -52,13 +52,14 @@ log (0,0007056 / 0,000216) = 0,514105 (pre desiatkový logaritmus)
 ### Cvičenie pri počítači
 
   - Stiahnite si súbor nižšie, uložte si ho a otvorte v Exceli /
-    OpenOffice / LibreOffice
+    OpenOffice / LibreOffice / Google Sheets
       - [ODS
         formát](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.ods)
       - [XLSX formát pre
         Excel](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring.xlsx)
       - [XLSX English
         version](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb05/scoring-en.xlsx)
+      - [Google Sheets](https://docs.google.com/spreadsheets/d/1zdexk4gridXauUPd1wpRcvMDxrkMF0yquERn0YtgzHQ/edit?usp=sharing) (modifikácia vyžaduje vytvorenie kópie, prihlásenie vlastným kontom)
   - V záložke Matica vyplňte do žltej oblasti vzorce na výpočet
     pravdepodobnosti krátkeho zarovnania, logaritmus pomeru
     pravdepodobnosti a súčet skóre, pričom vo vzorcoch použijete odkazy

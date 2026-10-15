@@ -76,7 +76,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Oct. 21, 2026 22:00</td>
   </tr>
   <tr>
-  	  {% if false %}
+  	  {% if true %}
     <td colspan="3"><a href="./Journal_club.html">Instructions, list of papers and form</a></td>
           {% endif %}
   </tr>
