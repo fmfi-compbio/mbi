@@ -104,7 +104,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 {% include pdf.html file="p-aln2" name="pdf" show=1 dot=1
 %} {% include youtube.html id="jkQGXiqKbxM" name="video" show=1 dot=1
-%} {% if false %} BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5 {% endif %}
+%} 
+{% include youtube.html id="OdBQGtbUZxI" name="Biology is messy (video by Phy the Neutrophil)" show=1 dot=1
+%} 
+{% if false %} BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5 {% endif %}
 
 #### TI: Advanced algorithms for sequence alignment
 
