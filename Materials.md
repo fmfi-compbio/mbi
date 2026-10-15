@@ -102,19 +102,19 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Sequence alignment: heuristic alignment (BLAST), statistical significance of alignments, whole genome alignments, multiple alignments
 
-{% include pdf.html file="p-aln2" name="pdf" show=0 dot=1
-%} {% include youtube.html id="jkQGXiqKbxM" name="video" show=0 dot=1
+{% include pdf.html file="p-aln2" name="pdf" show=1 dot=1
+%} {% include youtube.html id="jkQGXiqKbxM" name="video" show=1 dot=1
 %} {% if false %} BV chapter 2, DEKM chapter 2.5, 2.7, 6.1-6.3; ZB chapter 4.5-4.7, 5.3-5.5 {% endif %}
 
 #### TI: Advanced algorithms for sequence alignment
 
-{% include notes.html file="ci-aln1-en" name="notes (en, current)" show=0 dot=1
-%} {% include notes.html file="ci-aln1" name="notes (sk, older)" show=0 dot=0
+{% include notes.html file="ci-aln1-en" name="notes (en, current)" show=1 dot=1
+%} {% include notes.html file="ci-aln1" name="notes (sk, older)" show=1 dot=0
 %}
 
 #### TB: Programs for sequence alignment, scoring schemes, introduction to projects
 
-{% include notes.html file="cb-aln2" name="notes" show=0 dot=1
+{% include notes.html file="cb-aln2" name="notes" show=1 dot=1
 %} {% if false %} [Projects](./Project.html) {% endif %}
 
 
