@@ -287,7 +287,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 <a name="W13"></a>
 ### Dec. 17
 
-#### L: Optional journal club presentations (no lecture)
+#### L: Mandatory journal club presentations (no lecture)
 
 #### TI: Consultations for the exam in F1-109
 
