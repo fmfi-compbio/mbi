@@ -34,7 +34,7 @@ Nature, 602(7895), pp.142-147.
 **Paper 3.** Bradley, P., Den Bakker, H.C., Rocha, E.P., McVean, G. and Iqbal,
 Z., 2019. Ultrafast search of all deposited bacterial and viral genomic
 data. Nature biotechnology, 37(2), pp.152-159.
-<https://doi.org/10.1038/s41587-018-0010-1> 
+<https://doi.org/10.1038/s41587-018-0010-1> <br>
 **Group:** Ivantaeva, Kun, Makarová, Orlova
 
 **Paper 4** Hauser, M., Steinegger, M. and Söding, J., 2016. MMseqs software suite for fast and deep clustering and searching of large protein sequence sets. Bioinformatics, 32(9), pp.1323-1330. <https://doi.org/10.1093/bioinformatics/btw006><br>
@@ -60,7 +60,7 @@ cancer. Nature communications, 12(1), p.2313.
 Jureka AS, Obernier K, Guo JZ, Batra J, Kaake RM. Comparative
 host-coronavirus protein interaction networks reveal pan-viral disease
 mechanisms. Science. 2020 Dec 4;370(6521).
-<https://doi.org/10.1126/science.abe9403>
+<https://doi.org/10.1126/science.abe9403><br>
 **Group:** Antonova, Klimo, Kuzmenko, Liiv, Orságová
 
 ## Submitting preferences
