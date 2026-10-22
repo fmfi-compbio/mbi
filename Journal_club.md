@@ -58,8 +58,6 @@ mechanisms. Science. 2020 Dec 4;370(6521).
 <https://doi.org/10.1126/science.abe9403>
 
 ## Submitting preferences
-TBD
-
 {% if true %}
 Please submit your preferences regarding these papers using **[this form](https://forms.gle/K7BZJD5fA3wRmmXk8) until Wednesday Oct. 21, 2026, 22:00**. In the form, include numbers of three papers from this list in the order of preference.
 We will try to take your preferences into account, but we also need to balance group sizes and composition. 
