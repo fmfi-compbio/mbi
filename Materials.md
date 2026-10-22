@@ -123,9 +123,11 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Oct. 22
 #### L: Gene finding, hidden Markov models
 
-{% include pdf.html file="p-gene" name="pdf" show=0 dot=1
-%} {% include youtube.html id="s3NiBeaiHPM" name="video" show=0 dot=1
-%} {% if false %} BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7 {% endif %}
+{% include pdf.html file="p-gene" name="pdf" show=1 dot=1
+%} {% include youtube.html id="s3NiBeaiHPM" name="video" show=1 dot=1
+%} {% include youtube.html id="drgElMaw5VY" name="What is a Dark Protein (video by Phy the Neutrophil)" show=1 dot=0
+%} 
+{% if false %} BV chapter 4, DEKM chapter 3; ZB chapter 9.3, 10.4-10.7 {% endif %}
 
 #### TI:  Fast similarity search, BLAST, MinHash
 
