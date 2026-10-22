@@ -5,65 +5,73 @@ title: "Cvičenia pre biológov: Skryté Markovove modely, E-hodnota"
 
 ## Príklady stavových automatov pre HMM
 
-Uvazujme HMM so specialnym zaciatocnym stavom b a koncovym stavom e,
-ktore nic negeneruju.
+Uvažujme HMM so špeciálnym začiatočným stavom b a koncovým stavom e,
+ktoré nič negenerujú.
 
-  - Nakreslite HMM (stavovy diagram), ktory generuje sekvencie, ktore
-    zacinaju niekolkymi cervenymi pismenami a potom obsahuju niekolko
-    modrych
-  - Ako treba zmenit HMM, aby dovoloval ako "niekolko" aj nula?
-  - Ako treba zmenit HMM, aby pocet cervenych aj modrych bol vzdy parne
-    cislo?
-  - Ako zmenit HMM, aby sa striedali cervene a modre kusy parnej dlzky? Poznamka: v HMM nahladanie genov sme chceli mat kodujucu oblast delitelnu 3, co je trochu podobne
+  - Nakreslite HMM (stavový diagram), ktorý generuje sekvencie, ktoré
+    začínajú niekoľkými červenými písmenami a potom obsahujú niekoľko
+    modrých
+  - Ako treba zmeniť HMM, aby dovoloval ako "niekoľko" aj nula?
+  - Ako treba zmeniť HMM, aby počet červených aj modrých bol vždy párne
+    číslo?
+  - Ako zmeniť HMM, aby sa striedali červené a modré kusy parnej dlzky? 
+  Poznámka: v HMM na hľadanie génov sme chceli mať dĺžku kódujúcej oblasti 
+  deliteľnú 3, čo je podobná myšlienka
 
-V dalsich prikladoch uvazujeme aj to, ktore pismena su v ktorom stave
-povolene (pravdepodobnost emisie \> 0) a ktore su zakazane
+V ďalších príkladoch uvažujeme aj to, ktoré písmená sú v ktorom stave
+povolené (pravdepodobnosť emisie \> 0) a ktoré sú zakázané
 
-  - cervena sekvencia dlzky dva, ktora zacina na A
-  - cervena sekvencia dlzky dva, ktora je hocico okrem AA
-  - cervena sekvencia dlzky tri, ktora je hocica okrem stop kodonu
+  - červená sekvencia dĺžky dva, ktorá začína na A
+  - červená sekvencia dĺžky dva, ktorá je hocičo okrem AA
+  - červená sekvencia dĺžky tri, ktorá je hocičo okrem stop kodónu
     (TAA, TAG, TGA)
-  - toto sa da rozsirit na HMM, ktory reprezentuje ORF, teda nieco, co
-    zacina start kodonom, potom niekolko beznych kodonov, ktore nie su
-    stop kodonom a na koniec stop kodon
+  - toto sa dá rozšíriť na HMM, ktorý reprezentuje ORF, teda niečo, čo
+    začína štart kodónom, potom niekoľko kodónov, ktoré nie sú
+    stop kodónom a na koniec stop kodón
 
-Dalsi biologicky priklad HMM: topologia transmembranovych proteinov.
+Ďalší biologický príklad HMM: topológia transmembránových proteínov.
+
+- Máme proteín, ktorý prechádza (raz alebo viackrát) cez membránu bunky. Niektoré aminokyseliny sú
+  vnútri bunky, niektoré sú vo vonkajšom prostredí a niektoré sú v
+  membráne. Chceme ofarbiť aminokyseliny proteínu farbami: vonku,
+  v membráne, vo vnútri.
+- Nie každá sekvencia farieb je rozumná, napr. vonku - vo vnútri, alebo vonku -
+  membrána, vonku
+- Aké potrebujeme v HMM stavy, aby sme mohli generovať rozumné sekvencie farieb?
+- HMM boli použité na predikciu topológie transmembránových proteínov, napr. v programe [TMHMM](https://www.sciencedirect.com/science/article/pii/S0022283600943158), neskôr rozšírený na hlboké neurónové siete v programe [DeepTMHMM](https://www.biorxiv.org/content/10.1101/2022.04.08.487609v1)
 
 ## E-hodnota (E-value) zarovnania
 
-  - Priklady k tejto casti v prezentacii 
-  - Mame dotaz dlzky m, databazu dlzky n, skore najlepsieho lokálneho
-    zarovnania S
-  - E-hodnota je ocakavany pocet zarovnani so skore aspon S ak dotaz aj
-    databaza su nahodne
-  - Hrackarsky priklad: dotaz dlzky m=10, databaza dlzky n=300, S=6
-  - Zoberme nas nahodny model s obsahom GC 50%
-  - Mame vrece s gulockami oznacenymi A,C,G,T, z kazdej 25%
-  - Vytiahneme gulicku, zapiseme si pismeno, hodime ju naspat, zamiesame
-    a opakujeme s dalsim pismenom atd az kym nevygenerujeme m pismen pre
-    dotaz a n pismen pre databazu
-  - Pre nase vygenerovane sekvencie spocitame, kolkokrat sa dotaz
-    vyskytuje v databaze
-  - Cely experiment opakujeme vela krat a spocitame priemerny pocet
-    vyskytov, co bude odhad E-hodnoty
+  - Príklady k tejto časti v prezentácii 
+  - Máme dotaz dĺžky $m$, databázu dĺžky $n$, skóre najlepšieho lokálneho
+    zarovnania $S$
+  - E-hodnota je očakávaný počet zarovnaní so skóre aspoň $S$, ak dotaz aj
+    databáza sú náhodné
+  - Hračkársky príklad: dotaz dĺžky $m=10$, databáza dĺžky $n=300$, skóre $S=6$
+  - Zoberme náš náhodný model s obsahom GC 50%
+  - Máme vrece s guličkami označenými A,C,G,T, z každej 25%
+  - Vytiahneme guličku, zapíšeme si písmeno, hodíme ju naspať, zamiešame
+    a opakujeme s ďalším písmenom atď, až kým nevygenerujeme $m$ písmen pre
+    dotaz a $n$ písmen pre databázu
+  - Pre naše vygenerované sekvencie spočítame, koľkokrát sa dotaz
+    vyskytuje v databáze
+  - Celý experiment opakujeme veľa krát a spočítame priemerný počet
+    výskytov, čo bude odhad E-hodnoty
 
-Vypocet strednej hodnoty vzorcom namiesto simulacie (rychlejsie)
+Výpočet strednej hodnoty vzorcom namiesto simulácie (rýchlejsie)
 
-  - zlozita [matematicka teoria](https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html)
-  - E-hodnota sa priblizne da odhadnut vzorcom:
-
-$E = Kmn e^{-\lambda S}$
-
-  - n a m su dlzky porovnavanych sekvencii, S je skore, K a lambda su
-    parametre, ktore zavisia od skorovacej schemy a od frekvencii
-    vyskytu jednotlivych baz v nasom modeli nahodnej sekvencie.
-  - Napr blastn pre skorovaci system zhoda 1, nezhoda -1, medzera -2
-    používa lambda=0.800, K=0.0640
+  - zložitá [matematická teória](https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html)
+  - E-hodnota sa približne dá odhadnúť vzorcom: $E = Kmn e^{-\lambda S}$
+  - $n$ a $m$ su dĺžky porovnávaných sekvencií, $S$ je skóre, $K$ a $\lambda$ sú
+    parametre, ktoré závisia od skórovacej schémy a od frekvencií
+    výskytu jednotlivych báz v našom modeli náhodnej sekvencie.
+  - Napríklad blastn pre skórovací systém zhoda 1, nezhoda -1, medzera -2
+    používa $\lambda=0.800, K=0.0640$
   - $E = 0.0640 nm 0.45^S$.
-  - Zdvojnásobenie dĺžky databázy alebo dĺžky dotazu zdvojnásobí E-hondotu
+  - Zdvojnásobenie dĺžky databázy alebo dĺžky dotazu zdvojnásobí E-hodnotu
   - Zníženie skóre o 1 tiež zhruba zdvojnásobí E-value (delenie 0.45,
     t.j. nasobenie 2.2)
-      - Cislo, ktorym nasobime, zalezi od lambda a teda od skorovacej
-        schemy a frekvencii vyskytu baz
+      - Číslo, ktorým násobíme, závisí od $\lambda$, a teda od skórovacej
+        schémy a frekvencií výskytu báz
 
 
