@@ -25,7 +25,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <tr>
     <td colspan="3">
-	  {% if false %}
+	  {% if true %}
       Sequencing, alignment<br />
       Biologists: questions <a href="./pdf/a1b.pdf">pdf</a>, 
       <a href="https://moodle.uniba.sk/mod/assign/view.php?id=40956">Moodle</a><br />
