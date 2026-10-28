@@ -142,7 +142,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %}
 
 <a name="W6"></a>
-### Oct. 29
+### Oct. 29 no classes
+
+<a name="W7"></a>
+### Nov. 5
 #### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
 
 {% include pdf.html file="p-phylo" name="pdf" show=0 dot=1
@@ -162,8 +165,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="cb-phylo" name="pdf" show=0 dot=0
 %}
 
-<a name="W7"></a>
-### Nov. 5
+<a name="W8"></a>
+### Nov. 12
+
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
 
 {% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
@@ -184,9 +188,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %}
 <!-- compgen sa nestihlo -->
 
+<a name="W9"></a>
+### Nov. 19
 
-<a name="W8"></a>
-### Nov. 12
 #### L: Gene expression, differential expression, clustering, transcription factors, sequence motifs
 
 {% include pdf.html file="p-expr" name="pdf" show=0 dot=1
@@ -206,8 +210,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="cb-kmeans" name="pdf kmeans" show=0 dot=0
 %} 
 
-<a name="W9"></a>
-### Nov. 19
+<a name="W10"></a>
+### Nov. 26
+
 #### L: Protein structure and function
 
 {% include pdf.html file="p-prot" name="pdf" show=0 dot=1
@@ -227,8 +232,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-prot" name="notes proteins" show=0 dot=0
 %} 
 
-<a name="W10"></a>
-### Nov. 26
+<a name="W11"></a>
+### Dec. 3
+
 #### L: RNA, secondary structure, Nussinov algorithm, stochastic context-free grammars, RNA family profiles
 
 {% include pdf.html file="p-rna" name="pdf" show=0 dot=1
@@ -252,8 +258,9 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-compgen" name="notes comp. genomics" show=0 dot=0
 %}
 
-<a name="W11"></a>
-### Dec. 3
+<a name="W12"></a>
+### Dec. 10
+
 #### L: Population genetics
 
 {% include pdf.html file="p-popgen" name="pdf" show=0 dot=1
@@ -273,9 +280,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="cb-linux" name="notes linux" show=0 dot=0
 %} 
 
-<a name="W12"></a>
-### Dec. 10
-#### L: (no lecture)
+<a name="W13"></a>
+### Dec. 17
+
+#### L: Mandatory journal club presentations (no lecture)
 
 #### TI:  Integer linear programming, course summary
 
@@ -283,14 +291,4 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include notes.html file="ci-ilp-en" name="notes" show=0 dot=0
 %} 
 
-#### TB: no tutorial
-
-
-<a name="W13"></a>
-### Dec. 17
-
-#### L: Mandatory journal club presentations (no lecture)
-
-#### TI: Consultations for the exam in F1-109
-
-#### TB:  Project consultations, starting sooner
+#### TB: Project consultations
