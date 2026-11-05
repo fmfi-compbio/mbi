@@ -17,7 +17,7 @@ Terminológia:
   - koreň, root
   - podstrom, subtree, clade
 
-Viď stránku https://www.khanacademy.org/science/ap-biology/natural-selection/phylogeny/a/phylogenetic-trees
+Viď stránku <https://www.khanacademy.org/science/ap-biology/natural-selection/phylogeny/a/phylogenetic-trees>
 
 Zopár faktov o stromoch
 
@@ -34,8 +34,8 @@ Zopár faktov o stromoch
     usporiadané zhora nadol (alebo zľava doprava). Koľko rôznych poradí
     listov vieme dostať rôznym zakresľovaním toho istého stromu s n
     listami?
-      - máme n-1 vnutornych vrcholov, v kazdom mozeme vymenit lave a
-        prave dieta. Pre kazdu konfiguraciu takychto vymen dostavame ine
+      - máme n-1 vnutornych vrcholov, v kazdom mozeme vymenit ľavé a
+        pravé dieťa. Pre kazdu konfiguraciu takychto vymen dostavame ine
         poradie, celkovy pocet poradi je 2<sup>n-1</sup>
   - Čo vieme zistiť o príbuznosti organizmov z nezakoreneného stromu
     (napr. kvartet 4 organizmov)?
@@ -47,8 +47,8 @@ Zopár faktov o stromoch
 
 Iné použitie stromov v informatike:
 
-  - uvidíme hierarchické zhlukovanie, bayesovské siete, ale tiež
-    efektívne dátové štruktúry
+  - uvidíme hierarchické zhlukovanie, ale tiež sa využívajú v
+    efektívnych dátových štruktúrach
 
 ## Bootstrap
 
@@ -145,9 +145,9 @@ $\left(
 \end{array}
 \right)$
 
-  - $\kappa=\alpha/\beta$ je pomer rýchlostí, ktorými sa deju
+  - $\kappa=\alpha/\beta$ je pomer rýchlostí, ktorými sa dejú
     tranzície vs. transverzie
-  - $\pi_j$ je frekvencia bazy $j$ v sekvencii
+  - $\pi_j$ je frekvencia bázy $j$ v sekvencii
   - Rýchlosť, ako sa deje substitúcia z X do Y je súčin pravdepodobnosti
     Y a faktoru, ktorý zavisí od toho, či ide o tranzíciu alebo
     transverziu
@@ -155,8 +155,8 @@ $\left(
     $\mu_A=\beta\pi_C + \alpha\pi_G + \beta\pi_T$
   - Matica sa znormalizuje tak, aby priemerný počet substitúcii za
     jednotku času bol 1
-  - Matica ma styri parametre: $\kappa$ a tri frekvencie (stvrta musi
-    doplnit do 1) plus dlzka hrany
+  - Matica ma štyri parametre: $\kappa$ a tri frekvencie (štvrtá musí
+    doplniť do 1) plus dĺžka hrany
   - Zlozitejsi model lepsie zodpoveda skutocnym procesom, ale na odhad
     viac parametrov potrebujeme viacej dat.
   - Existuju metody, ktore pre dany cas t z matice rychlosti spocitaju
