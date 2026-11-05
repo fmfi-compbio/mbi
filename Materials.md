@@ -148,8 +148,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 ### Nov. 5
 #### L: Phylogenetic tree reconstruction (parsimony, neighbor joining, models of evolution)
 
-{% include pdf.html file="p-phylo" name="pdf" show=0 dot=1
-%} {% include youtube.html id="RzfNHvZH4l8" name="video" show=0 dot=1
+{% include pdf.html file="p-phylo" name="pdf" show=1 dot=1
+%} {% include youtube.html id="RzfNHvZH4l8" name="video" show=1 dot=1
 %} {% if false %} BV chapter 3, DEKM chapter 7,8; ZB chapter 7, 8.1-8.2, video {% endif %}
 
 #### TI:  Algorithms for HMM
