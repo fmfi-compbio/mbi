@@ -36,7 +36,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
   </tr>
   <tr>
     <td style="background:#f0f0f0"><b>Homework 2</b></td>
-    <td>Nov. 12, 2026</td>
+    <td>Nov. 19, 2026</td><!-- Nov. 12 would be better but felsenstein shifted -->
     <td>Dec. 2, 2026 22:00</td>
   </tr>
   <tr>
