@@ -37,29 +37,30 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 
   - So zarovnaniami vyššie skúsme zostaviť strom na stránke
     <https://www.ebi.ac.uk/jdispatcher/phylogeny/simple_phylogeny>
-      - Distance correction: ako na prednáške, z počtu pozorovaných
+      - `Distance correction`: ako na prednáške, z počtu pozorovaných
         mutácií na evolučný čas - zapneme
-      - Exclude gaps: vynechať všetky stĺpce s pomlčkami - radšej nie
-      - Clustering method: UPGMA predpokladá molekulárne hodiny,
+      - `Exclude gaps`: vynechať všetky stĺpce s pomlčkami - radšej nie
+      - `Clustering methods`: UPGMA predpokladá molekulárne hodiny,
         spájanie susedov nie
-      - P.I.M. vypíš aj maticu vzdialeností (% identity, pred korekciou)
+      - `Percent identity matrix`: vypíš aj maticu vzdialeností (pred korekciou)
       - Vo výslednom strome by sme mali zmeniť zakorenenie, aby sme mali
-        sliepku (chicken) ako outgroup (kliknutím na sliepku a voľbou v menu)
+        sliepku (chicken) ako outgroup (pravým kliknutím na sliepku a voľbou v menu)
 
-  - Výsledky pre prvé zarovnanie z programu <https://www.phylogeny.fr/alacarte.cgi> , ktorý
+  - Výsledky pre prvé zarovnanie z programu <https://www.phylogeny.fr/analysis/a-la-carte> , ktorý
     podporuje aj bootstrap:
+      - Nepotrebujeme zarovnávať ani nebudeme vynechávať pomlčky, metóda napr. FastTree (rýchly približný výpočet maximálnej vierohodnosti), treba zvoliť nukleoditový vstup
       - [Výsledok s pôvodným zakorenením](../data/cb-phylo2-aln1.pdf)
       - [Výsledok so správnym
         zakorenením](../data/cb-phylo2-aln1-root.pdf) (chicken =
         outgroup)
+      - Zakorenenie spravené v programe [iTOL](https://itol.embl.de/upload.cgi)  Interactive Tree Of Life zo [stromu](../data/cb-phylo2-aln1.nwk) v Newickovom formáte (zátvorky)
 
 
   - ["Správny strom"](https://genome-euro.ucsc.edu/images/phylo/hg38_100way.png) v
     nastaveniach Conservation track-u v UCSC browseri podľa článku
     Murphy WJ et al [Resolution of the early placental mammal radiation
     using Bayesian phylogenetics.](https://www.sciencemag.org/cgi/pmidlookup?view=long&pmid=11743200) Science 2001
-  - Náš strom má dosť zlých hrán: zlé postavenie hlodavcov, ale aj slona
-    a psa. Zlé postavenie hlodavcov môže byť spôsobené [long branch
+  - Náš strom má dosť zlých hrán: vymemené hlodavce a slon, zle umiestnené bushbaby (*Otolemur garnettii*). Zlé postavenie hlodavcov môže byť spôsobené [long branch
     attraction](https://en.wikipedia.org/wiki/Long_branch_attraction).
   - Ak chcete skúsiť zostaviť aj zarovnania, treba začať z [nezarovnaných
     sekvencií](../data/cb-phylo2-seq1.fa)

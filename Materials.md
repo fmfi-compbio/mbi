@@ -2,8 +2,8 @@
 title: Materials
 ---
 
-[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · **[Week 7](#W7)**
-· [Week 8](#W8) · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+[Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
+· **[Week 8](#W8)** · [Week 9](#W9) · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -159,7 +159,7 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="ci-hmm-en" name="pdf" show=1 dot=0
 %}
 
-#### TB: Substitution models, bootstrap, tree rooting
+#### TB: Substitution models, project topic presentations
 
 {% include notes.html file="cb-phylo1" name="notes" show=1 dot=1
 %} {% include pdf.html file="cb-phylo" name="pdf" show=1 dot=0
@@ -170,8 +170,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Comparative genomics, detection of positive and purification selection, comparative gene finding, phylogenetic HMMs
 
-{% include pdf.html file="p-compgen" name="pdf" show=0 dot=1
-%} {% include youtube.html id="1WM4QI2qx8A" name="video" show=0 dot=1
+{% include pdf.html file="p-compgen" name="pdf" show=1 dot=1
+%} {% include youtube.html id="1WM4QI2qx8A" name="video" show=1 dot=1
 %} {% if false %} BV chapter 5, ZB chapter 9.8, 10.8, {% endif %}
 
 #### TI:  Substitution models
@@ -181,12 +181,12 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 %} {% include pdf.html file="ci-chains-en" name="pdf" show=0 dot=0
 %}
 
-#### TB: Project proposals, practical phylogenetic trees
+#### TB: Bootstrap, tree rooting, practical phylogenetic trees
 
-{% include notes.html file="cb-phylo2" name="notes" show=0 dot=0
-%} {% include notes.html file="cb-compgen" name="notes" show=0 dot=0
-%}
-<!-- compgen sa nestihlo -->
+{% include notes.html file="cb-phylo1" name="notes1" show=1 dot=1
+%} {% include pdf.html file="cb-phylo" name="pdf" show=1 dot=1
+%} {% include notes.html file="cb-phylo2" name="notes2" show=1 dot=0
+%} 
 
 <a name="W9"></a>
 ### Nov. 19
