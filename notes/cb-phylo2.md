@@ -68,7 +68,7 @@ title: "Cvičenia pre biológov: Fylogenetické stromy"
 Zostavili sme strom aj IQ-TREE pomocou metódy maximálnej vierohodnosti na Galaxy, viď nižšie
 - [modely](https://github.com/Cibiv/IQ-TREE/wiki/Substitution-Models) v IQ-TREE
 - [výsledok](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb06/cb06-iqtree.txt)
-- na strom v newickovom formáte (zátvorky) použijeme vizualizáciu stromov, napr. <https://phylotree.hyphy.org/> aby sme ho mohli správne zakoreniť
+- na strom v newickovom formáte (zátvorky) použijeme vizualizáciu stromov, napr. [iTOL](https://itol.embl.de/upload.cgi) alebo  [phylotree](https://phylotree.hyphy.org/), aby sme ho mohli správne zakoreniť
 
 ### Stromy na Galaxy
 
@@ -90,6 +90,6 @@ Pre ďalšie pokusy: nezarovnané sekvencie proteínov z rôznych organizmov:
   - Zarovnáme na Galaxy pomocou muscle, strom spravíme cez rapidnj alebo
     IQ-tree
   - Dáta nahráme ikonou Upload úplne vľavo hore, v dolnom rade tlačidiel treba dať `Paste/Fetch data`
-  - Strom zobrazíme ikonkou grafu alebo cez [phylotree](https://phylotree.hyphy.org/).
+  - Strom zobrazíme ikonkou grafu alebo cez online vitualizačné nástroje uvedené vyššie.
   - [Predpočítané výsledky](https://usegalaxy.eu/u/brejova/h/cb-phylo2-musclerapidnj)
 
