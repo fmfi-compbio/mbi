@@ -193,8 +193,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Gene expression, differential expression, clustering, transcription factors, sequence motifs
 
-{% include pdf.html file="p-expr" name="pdf" show=0 dot=1
-%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=0 dot=1
+{% include pdf.html file="p-expr" name="pdf" show=1 dot=1
+%} {% include youtube.html id="GFJ_oDV1KGU" name="video" show=1 dot=1
 %} {% if false %} DEKM chapter 5.1, 11.5, ZB chapter 6.6,15.1,16.1-16.5,17.1 {% endif %}
 
 #### TI: Felsenstein algorithm, algorithms for HMM and phyloHMM
