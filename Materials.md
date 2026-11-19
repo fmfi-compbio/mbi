@@ -205,11 +205,10 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 #### TB: K-means clustering, enrichment, expression data
 
 {% include notes.html file="cb-expr" name="notes k-means, enrichment" show=1 dot=1
+%} {% include pdf.html file="cb-kmeans" name="pdf kmeans" show=1 dot=1
 %} {% include notes.html file="cb-expr2" name="notes enrichment2" show=1 dot=1
-%} {% include pdf.html file="cb-kmeans" name="pdf kmeans" show=1 dot=0
 %} {% include notes.html file="cb-expr3" name="notes expression" show=1 dot=1
-%} {% include notebook.html file="cb-expr" name="notebook expression" show=1 dot=1
-%} 
+%} {% include notebook.html file="cb-expr" name="notebook expression" show=1 dot=0 %} 
 
 <a name="W10"></a>
 ### Nov. 26
