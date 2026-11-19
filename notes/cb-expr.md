@@ -112,8 +112,7 @@ zhlukovania a postupne ho zlepšuje.
         and EnrichmentMap." Nature protocols 14.2 (2019): 482.
         [1](https://www.nature.com/articles/s41596-018-0103-9)
 
-  - Existuju web servery, napr. GOrilla pre ludske geny:
-    <https://cbl-gorilla.cs.technion.ac.il/>, DAVID
+  - Existuju web servery, napr. DAVID
     <https://davidbioinformatics.nih.gov/>, g:Profiler
     <https://biit.cs.ut.ee/gprofiler/>
   - Treba dat pozor, ci pocitaju to, co chceme

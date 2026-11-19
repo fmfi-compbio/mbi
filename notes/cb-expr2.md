@@ -10,13 +10,14 @@ title: "Cvičenia pre biológov: Nadreprezentácia"
 Data o expresii ludskych genov v roznych tkanivach a podobne v **UCSC
 genome browseri**
 
-  - Chodte na [genome browser](https://genome-euro.ucsc.edu)
-  - Zvolte *Tools-\>Other tools-\>Gene Sorter*, 'assembly'' na *hg38*, *sort by* na
-    *Expression (GTEx)*, a do okienka *search* zadajme identifikator
-    genu *PTPRZ1*
-      - Dostane tabulku genov s podobnym profilom expresie ako PTPRZ1
-        (červená je vysoká expresia, zelená nízka)
-      - Pouzijeme predspracovany [zoznam tychto genov](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt) v textovom formate
+  - Použijeme nástroj [Gene sorter](https://genome-euro.ucsc.edu/cgi-bin/hgNear), ktorý je súčasťou
+    UCSC prehliadača genómov, v súčasnoti žiaľ nefunguje.
+  - Zvolme `assembly` na `hg38`, `sort by` na
+    `Expression (GTEx)`, a do okienka `search` zadajme identifikator
+    genu `PTPRZ1`
+  - Dostali tabulku genov s podobnym profilom expresie ako PTPRZ1
+    (červená je vysoká expresia, zelená nízka)
+  - Pouzijeme predspracovany [zoznam tychto genov](https://compbio.fmph.uniba.sk/vyuka/mbi-data/cb08/zoznam_genov.txt) v textovom formate
   - <https://biit.cs.ut.ee/gprofiler/> mena genov skopirujme do policka
     *Query*, stlacte g:Profile\!
       - Ak by výpočet dlho trval, nájdete ho aj
