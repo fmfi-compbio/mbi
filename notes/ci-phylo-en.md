@@ -69,8 +69,11 @@ $N[v,a] = [a\ne b]$
 - We need $B[v,a]$: the probability of data if we replace subtree $v$ with a leaf having base $a$.
     - i.e., probability of all data except subtree rooted at $v$
 - We compute $B[v,a]$ from root to leaves.
-- At the root we have $B[v,a] = q_a$.
+- At the root we have $B[v,a] = q_a$ (recall: prior probability for that particular nucleotide, i.e., the equilibrium of the substitution model).
 - At vertex $v$ with parent $u$ and sibling $x$ we have
-    $B[v,a]=\sum_{b,c} B[u,b]A[x,c]\Pr(b\stackrel{t_v}{\rightarrow} a) \Pr(b\stackrel{t_x}{\rightarrow} c)$.
+    $B[v,a]=\sum_{b,c} B[u,b]\Pr(b\stackrel{t_v}{\rightarrow} a) A[x,c]\Pr(b\stackrel{t_x}{\rightarrow} c)$.
+- Complexity is $O(n\|\\Sigma\|^3)$ but can be improved to $O(n\|\\Sigma\|^2)$ by rewriting
+    $B[v,a]=\sum_{b} B[u,b]\Pr(b\stackrel{t_v}{\rightarrow} a) \sum_{c} A[x,c]\Pr(b\stackrel{t_x}{\rightarrow} c)$
+  (the inner sum does not depend on $a$ and can be precomputed in $O(\|\\Sigma\|^2)$, thus making the computation of a node $O(\|\\Sigma\|^2)$).
 - The desired probability is $B[v,a]A[v,a] / \\Pr(X_1=x_1, X_2=x_2,\dots X_n=x_n\|T,R)$.
 
