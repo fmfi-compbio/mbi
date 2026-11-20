@@ -123,7 +123,7 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     <td>Nov. 18, 2026 22:00</td>
   </tr>
   <tr>
-        {% if false %}
+        {% if true %}
     <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#extended-proposal">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=135722">Moodle</a></td>
         {% endif %}
   </tr>
@@ -134,8 +134,8 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     End of semester or January, TBA</td>
   </tr>
   <tr>
-        {% if false %}
-    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#preliminary-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a> (submit 30 minutes before the meeting start)</td>
+        {% if true %}
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#preliminary-report">Instructions</a><!--, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=141007">Moodle</a> (submit 30 minutes before the meeting start)--></td>
             {% endif %}
   </tr>
   <tr>
@@ -145,8 +145,8 @@ All assignments should be submitted to Moodle as a pdf (or as directed in the as
     {% if false %}<td>Jan. 23, 2025 22:00 or Jan. 30, 2025 22:00</td> {% endif %}
   </tr>
   <tr>
-        {% if false %}
-    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a>, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a></td>
+        {% if true %}
+    <td colspan="3"><a href="https://fmfi-compbio.github.io/mbi/Project.html#final-report">Instructions</a><!--, <a href="https://moodle.uniba.sk/mod/assign/view.php?id=101339">Moodle</a>--></td>
         {% endif %}
   </tr>
 </table>
