@@ -215,8 +215,8 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 
 #### L: Protein structure and function
 
-{% include pdf.html file="p-prot" name="pdf" show=0 dot=1
-%} {% include youtube.html id="ugMM81jZRpc" name="video" show=0 dot=1
+{% include pdf.html file="p-prot" name="pdf" show=1 dot=1
+%} {% include youtube.html id="ugMM81jZRpc" name="video" show=1 dot=1
 %} {% if false %} DEKM chapter 5; ZB chapter 4.8-4.10, 6.1-6.2, 13.1-13.2 {% endif %}
 
 #### TI:  Motif finding by EM and Gibbs sampling

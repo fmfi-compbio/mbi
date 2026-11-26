@@ -48,7 +48,8 @@ title: "Cvičenia pre biológov: Proteíny"
 
 ## FoldSeek
 
-* Pre zadaný proteín hľadá podobné 3D štruktúry
+* Pre zadaný proteín hľadá podobné 3D štruktúry.
+  * Kvôli rýchlosti prepíše údaje zo štruktúry do formy umelej sekvencie a hľadá heuristickým algoritmom lokálne zarovnania medzi takýmito umelými sekvenciami.
 * Choďte na stránku <https://search.foldseek.com/>
 * Zvoľte `Load accession`, zadajte PDB identifikátor 1FHI pre ľudský FHIT používaný aj vyššie
 * Vo výsledkoch zvoľte záložku Swissprot
@@ -56,6 +57,7 @@ title: "Cvičenia pre biológov: Proteíny"
   * HNT1 (pod názvom Adenosine 5'-monophosphoramidase) zo *Saccharomyces cerevisiae*
   * Galactose-1-phosphate uridylyltransferase z *Haemophilus influenzae*
 * V pravom stĺpci si môžete pozrieť zarovnané štruktúry. Dá sa prepnúť, aby zobrazil celú štruktúru, nielen zarovnanú časť.
+* Namiesto štruktúry môžete zadať aj sekvenciu, ku ktorej predikuje rýchlymi približnými metódami štruktúru alebo len jej textový zápis použitý na hľadanie.
 
 ## Alphafold
 
