@@ -3,7 +3,7 @@ title: Materials
 ---
 
 [Week 1](#W1) · [Week 2](#W2) · [Week 3](#W3) · [Week 4](#W4) · [Week 5](#W5) · [Week 6](#W6) · [Week 7](#W7)
-· [Week 8](#W8) · **[Week 9](#W9)** · [Week 10](#W10) · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
+· [Week 8](#W8) · [Week 9](#W9) · **[Week 10](#W10)** · [Week 11](#W11) · [Week 12](#W12) · [Week 13](#W13)
 
 
 ## Literature
@@ -224,11 +224,11 @@ L: lecture (everybody), TI: tutorial for computer science/informatics students, 
 {% include notes.html file="ci-motifs-en" name="notes" show=0 dot=0
 %}
 
-#### TB:  Introduction to context-free grammars, uniprot
+#### TB:  Introduction to context-free grammars, proteins
 
-{% include notes.html file="cb-grammars" name="notes grammars" show=0 dot=1
-%} {% include notes.html file="cb-prot" name="notes proteins" show=0 dot=0
-%} {% include notes.html file="cb-uniprot" name="notes uniprot" show=0 dot=1
+{% include notes.html file="cb-grammars" name="notes grammars" show=1 dot=1
+%} {% include notes.html file="cb-uniprot" name="notes uniprot" show=1 dot=1
+%} {% include notes.html file="cb-prot" name="notes proteins" show=1 dot=0
 %} 
 
 <a name="W11"></a>

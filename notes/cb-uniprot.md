@@ -1,5 +1,5 @@
 ---
-title: "Cvičenia pre biológov: Uniprot pre projekty"
+title: "Cvičenia pre biológov: Uniprot"
 ---
 
 * TOC

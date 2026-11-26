@@ -36,19 +36,15 @@ title: "Cvičenia pre biológov: Proteíny"
     spustime program **PSI-BLAST**, E-value zvýšená na **0.1**.
   - V prvom kole PSI-BLAST spúšťa bežný BLASTP
   - Vidíte medzi výsledkami naše dva proteíny? S akou E-hodnotou?
-    - HNT1 zo *Saccharomyces cerevisiae*
-    - GAL-1-P z *Haemophilus influenzae*
+    - HNT1 zo *Saccharomyces cerevisiae* (Q04344.2)
+    - GAL-1-P z *Haemophilus influenzae* (P31764.2)
   - Spustíme teraz druhú iteráciu PSI-BLAST, ktorá zostaví profil z
     proteínov s nízkou E-hodnotou v prvej iterácii
   - Ako sa zmenili výsledky pre HNT1 a GAL-1-P?
 
-<!--
   - Ak by výpočet dlho trval, výsledky sú tu:
-      - [1.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UHJWVB013)
-      - [2.
-        kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=N2UMV18C016)
--->
+    - [1. kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=GE4P25S1014), [textová forma](../data/cb-prot-psiblast-round1.txt) 
+    - [2. kolo](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&RID=GE4U8Y7T014), [textová forma](../data/cb-prot-psiblast-round2.txt) 
 
 ## FoldSeek
 
