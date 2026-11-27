@@ -45,15 +45,15 @@ for i in [0..n):			# for all strings
   - Iterate:
       - Compute *W* from occurrences *O*
       - Randomly select one sequence $S_i$
-      - For each possible position *j* in $S_i$ compute the score $p_{i,j}$ (as in EM) of occurrence of *W* at this position
-      - Choose $o_i$ randomly weighted by $p_{i,j}$
+	  - Build matrix $W_{-i}$ by frequency over all other sequences
+	  - Compute $p_{i,j} = P(o_i​=j∣s_i, W_{-i})* for sequence $i$ (as in the E-step of EM)
+      - Choose the new $o_i$ randomly weighted by $p_{i,j}$, update *O* and reiterate
 
 
   - In this way, we get a sequence of samples $O^{(0)}, O^{(1)}, \dots$.
   - Consecutive samples are similar (differ only in one component $o_i$), so they are not independent.
   - For each sample $O^{(t)}$ we find the best $W^{(t)}$ and compute the likelihood $\Pr(S\|W^{(t)},O^{(t)})$. Finally, we select *O* and *W* where the likelihood was the highest.
   - This algorithm (with minor modifications) was used in the paper Lawrence, Charles E., et al. (1993) "Detecting subtle sequence signals: a Gibbs sampling strategy for multiple alignment." Science.
-      - In the paper, in each iteration, the matrix *W* is computed from all sequences except $S_i$.
       - Occasionally, they make a step where they randomly try to shift all occurrences one position left or right.
       - This algorithm is not strictly mathematically correct Gibbs sampling (it does not even have a properly defined distribution from which it samples). For information, at the bottom of the page we provide the Gibbs sampling algorithm for motif finding from another paper.
 
